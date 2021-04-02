@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>General Discussion | Self-Modeling in Inference about Absence</title>
+  <meta name="description" content="General Discussion | Self-Modeling in Inference about Absence" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="General Discussion | Self-Modeling in Inference about Absence" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="General Discussion | Self-Modeling in Inference about Absence" />
+  
+  
+  
+
+<meta name="author" content="Matan Mazor" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="4-ch-MVS.html"/>
+<link rel="next" href="A-app1-SDT.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="0.1" data-path="introduction.html"><a href="introduction.html#inference-about-absence"><i class="fa fa-check"></i><b>0.1</b> Inference about absence</a></li>
+<li class="chapter" data-level="0.2" data-path="introduction.html"><a href="introduction.html#formalabsence"><i class="fa fa-check"></i><b>0.2</b> Probabilistic reasoning, criterion setting, and self knowledge</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#symmetrical-definition"><i class="fa fa-check"></i>Symmetrical definition:</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#dissymmetrical-definition"><i class="fa fa-check"></i>Dissymmetrical definition:</a></li>
+<li class="chapter" data-level="0.2.1" data-path="introduction.html"><a href="introduction.html#second-order-cognition"><i class="fa fa-check"></i><b>0.2.1</b> Second-order cognition</a></li>
+<li class="chapter" data-level="0.2.2" data-path="introduction.html"><a href="introduction.html#detectionmodels"><i class="fa fa-check"></i><b>0.2.2</b> Computational models of detection</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#htm"><i class="fa fa-check"></i>The High-Threshold model</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sdt"><i class="fa fa-check"></i>Signal Detection Theory</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="introduction.html"><a href="introduction.html#detection-i-would-have-noticed-it"><i class="fa fa-check"></i><b>0.3</b> Detection: “I would have noticed it”</a></li>
+<li class="chapter" data-level="0.4" data-path="introduction.html"><a href="introduction.html#intro:search"><i class="fa fa-check"></i><b>0.4</b> Visual search: “I would have found it”</a></li>
+<li class="chapter" data-level="0.5" data-path="introduction.html"><a href="introduction.html#memory-i-would-have-remembered-it"><i class="fa fa-check"></i><b>0.5</b> Memory: “I would have remembered it”</a></li>
+<li class="chapter" data-level="0.6" data-path="introduction.html"><a href="introduction.html#the-development-of-a-self-model"><i class="fa fa-check"></i><b>0.6</b> The development of a self-model</a></li>
+<li class="chapter" data-level="0.7" data-path="introduction.html"><a href="introduction.html#this-thesis"><i class="fa fa-check"></i><b>0.7</b> This thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-ch-search.html"><a href="1-ch-search.html"><i class="fa fa-check"></i><b>1</b> Zero-shot search termination reveals a dissociation between implicit and explicit metacognitive knowledge</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-ch-search.html"><a href="1-ch-search.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="1-ch-search.html"><a href="1-ch-search.html#experiment-1"><i class="fa fa-check"></i><b>1.2</b> Experiment 1</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-ch-search.html"><a href="1-ch-search.html#participants"><i class="fa fa-check"></i><b>1.2.1</b> Participants</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-ch-search.html"><a href="1-ch-search.html#procedure"><i class="fa fa-check"></i><b>1.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-ch-search.html"><a href="1-ch-search.html#data-analysis"><i class="fa fa-check"></i><b>1.2.3</b> Data analysis</a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-ch-search.html"><a href="1-ch-search.html#results"><i class="fa fa-check"></i><b>1.2.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-ch-search.html"><a href="1-ch-search.html#experiment-2"><i class="fa fa-check"></i><b>1.3</b> Experiment 2</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-ch-search.html"><a href="1-ch-search.html#participants-1"><i class="fa fa-check"></i><b>1.3.1</b> Participants</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-ch-search.html"><a href="1-ch-search.html#procedure-1"><i class="fa fa-check"></i><b>1.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.3.3" data-path="1-ch-search.html"><a href="1-ch-search.html#results-1"><i class="fa fa-check"></i><b>1.3.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="1-ch-search.html"><a href="1-ch-search.html#discussion"><i class="fa fa-check"></i><b>1.4</b> Discussion</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-ch-search.html"><a href="1-ch-search.html#is-implicit-metacognitive-knowledge-metacognitive"><i class="fa fa-check"></i><b>1.4.1</b> Is implicit metacognitive knowledge metacognitive?</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-ch-search.html"><a href="1-ch-search.html#inference-about-absence-as-a-tool-for-studying-implicit-self-knowledge"><i class="fa fa-check"></i><b>1.4.2</b> Inference about absence as a tool for studying implicit self knowledge</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-ch-search.html"><a href="1-ch-search.html#conclusion"><i class="fa fa-check"></i><b>1.4.3</b> Conclusion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-ch-RC.html"><a href="2-ch-RC.html"><i class="fa fa-check"></i><b>2</b> Paradoxical evidence weightings in confidence judgments for detection and discrimination</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#introduction-2"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#experiment-1-1"><i class="fa fa-check"></i><b>2.2</b> Experiment 1</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#methods"><i class="fa fa-check"></i><b>2.2.1</b> Methods</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#analysis"><i class="fa fa-check"></i><b>2.2.2</b> Analysis</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#results-2"><i class="fa fa-check"></i><b>2.2.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#experiment-2-1"><i class="fa fa-check"></i><b>2.3</b> Experiment 2</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#methods-1"><i class="fa fa-check"></i><b>2.3.1</b> Methods</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#results-3"><i class="fa fa-check"></i><b>2.3.2</b> Results</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#detection-signal-trials-1"><i class="fa fa-check"></i><b>2.3.3</b> Detection signal trials</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-ch-RC.html"><a href="2-ch-RC.html#discussion-1"><i class="fa fa-check"></i><b>2.4</b> Discussion</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-1-a-rational-agent-symmetric-evidence-structure"><i class="fa fa-check"></i><b>2.4.1</b> Model 1: a rational agent + symmetric evidence structure</a></li>
+<li class="chapter" data-level="2.4.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-2-a-rational-agent-symmetric-evidence-structure"><i class="fa fa-check"></i><b>2.4.2</b> Model 2: a rational agent + symmetric evidence structure</a></li>
+<li class="chapter" data-level="2.4.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-3-confidence-decision-cross"><i class="fa fa-check"></i><b>2.4.3</b> Model 3: confidence decision cross</a></li>
+<li class="chapter" data-level="2.4.4" data-path="2-ch-RC.html"><a href="2-ch-RC.html#evidence-for-absence"><i class="fa fa-check"></i><b>2.4.4</b> Evidence for absence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><i class="fa fa-check"></i><b>3</b> Distinct neural contributions to metacognition for detecting (but not discriminating) visual stimuli</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#introduction-3"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#methods-and-materials"><i class="fa fa-check"></i><b>3.2</b> Methods and Materials</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#participants-4"><i class="fa fa-check"></i><b>3.2.1</b> Participants</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#design-and-procedure"><i class="fa fa-check"></i><b>3.2.2</b> Design and procedure</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#scanning-parameters"><i class="fa fa-check"></i><b>3.2.3</b> Scanning parameters</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#analysis-1"><i class="fa fa-check"></i><b>3.2.4</b> Analysis</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#exclusion-criteria"><i class="fa fa-check"></i><b>3.2.5</b> Exclusion criteria</a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#response-conditional-type-ii-roc-curves"><i class="fa fa-check"></i><b>3.2.6</b> Response conditional type-II ROC curves</a></li>
+<li class="chapter" data-level="3.2.7" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#imaging-analysis"><i class="fa fa-check"></i><b>3.2.7</b> Imaging analysis</a></li>
+<li class="chapter" data-level="3.2.8" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#statistical-inference-1"><i class="fa fa-check"></i><b>3.2.8</b> Statistical inference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#results-4"><i class="fa fa-check"></i><b>3.3</b> Results</a></li>
+<li class="chapter" data-level="3.4" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#behavioural-results"><i class="fa fa-check"></i><b>3.4</b> Behavioural results</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#imaging-results"><i class="fa fa-check"></i><b>3.4.1</b> Imaging results</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#computational-models"><i class="fa fa-check"></i><b>3.4.2</b> Computational models</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#discussion-2"><i class="fa fa-check"></i><b>3.5</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html"><i class="fa fa-check"></i><b>4</b> Prospective search time estimates for unseen displays reveal a rich intuitive theory of visual search</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#introduction-4"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#experiments-1-and-2-shape-orientation-and-color"><i class="fa fa-check"></i><b>4.2</b> Experiments 1 and 2: shape, orientation, and color</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#participants-5"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#procedure-2"><i class="fa fa-check"></i><b>4.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#results-5"><i class="fa fa-check"></i><b>4.2.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#experiments-3-and-4-complex-unfamiliar-stimuli"><i class="fa fa-check"></i><b>4.3</b> Experiments 3 and 4: complex, unfamiliar stimuli</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#participants-6"><i class="fa fa-check"></i><b>4.3.1</b> Participants</a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#procedure-3"><i class="fa fa-check"></i><b>4.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#results-6"><i class="fa fa-check"></i><b>4.3.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i>General Discussion</a><ul>
+<li class="chapter" data-level="4.4" data-path="general-discussion.html"><a href="general-discussion.html#summary-of-results"><i class="fa fa-check"></i><b>4.4</b> Summary of results</a></li>
+<li class="chapter" data-level="4.5" data-path="general-discussion.html"><a href="general-discussion.html#what-i-didnt-find"><i class="fa fa-check"></i><b>4.5</b> What I didn’t find</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="general-discussion.html"><a href="general-discussion.html#chapter-1-no-correlation-with-explicit-metacognition"><i class="fa fa-check"></i><b>4.5.1</b> Chapter 1: no correlation with explicit metacognition</a></li>
+<li class="chapter" data-level="4.5.2" data-path="general-discussion.html"><a href="general-discussion.html#chapter-2-no-effect-of-confidence-in-signal-presence"><i class="fa fa-check"></i><b>4.5.2</b> Chapter 2: no effect of confidence in signal presence</a></li>
+<li class="chapter" data-level="4.5.3" data-path="general-discussion.html"><a href="general-discussion.html#chapter-3-small-differences-in-brain-activity-between-inference-about-absence-and-presence"><i class="fa fa-check"></i><b>4.5.3</b> Chapter 3: small differences in brain activity between inference about absence and presence</a></li>
+<li class="chapter" data-level="4.5.4" data-path="general-discussion.html"><a href="general-discussion.html#section"><i class="fa fa-check"></i><b>4.5.4</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="general-discussion.html"><a href="general-discussion.html#future-directions"><i class="fa fa-check"></i><b>4.6</b> Future directions</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="general-discussion.html"><a href="general-discussion.html#failures-of-a-self-model"><i class="fa fa-check"></i><b>4.6.1</b> Failures of a self-model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="general-discussion.html"><a href="general-discussion.html#conclusion-1"><i class="fa fa-check"></i><b>4.7</b> Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html"><i class="fa fa-check"></i><b>A</b> Signal Detection Theory</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:ROC"><i class="fa fa-check"></i><b>A.1</b> ROC and zROC curves</a></li>
+<li class="chapter" data-level="A.2" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:uvSDT"><i class="fa fa-check"></i><b>A.2</b> Unequal-variance (uv) SDT</a></li>
+<li class="chapter" data-level="A.3" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:mc"><i class="fa fa-check"></i><b>A.3</b> SDT Measures for Metacognition</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html"><i class="fa fa-check"></i><b>B</b> Supp. materials for ch. 2</a><ul>
+<li class="chapter" data-level="B.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#app2:PDRC"><i class="fa fa-check"></i><b>B.1</b> Pseudo-discrimination analysis</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#exp.-1"><i class="fa fa-check"></i><b>B.1.1</b> Exp. 1</a></li>
+<li class="chapter" data-level="B.1.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#exp.-2"><i class="fa fa-check"></i><b>B.1.2</b> Exp. 2</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#app2:simulation"><i class="fa fa-check"></i><b>B.2</b> Unequal-variance model</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#discrimination"><i class="fa fa-check"></i><b>B.2.1</b> Discrimination</a></li>
+<li class="chapter" data-level="B.2.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#detection-1"><i class="fa fa-check"></i><b>B.2.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html"><i class="fa fa-check"></i><b>C</b> Supp. materials for ch. 3</a><ul>
+<li class="chapter" data-level="C.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:buttonpresses"><i class="fa fa-check"></i><b>C.1</b> Confidence button presses</a></li>
+<li class="chapter" data-level="C.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:zROC"><i class="fa fa-check"></i><b>C.2</b> zROC curves</a></li>
+<li class="chapter" data-level="C.3" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:GC-DM"><i class="fa fa-check"></i><b>C.3</b> Global confidence design matrix</a></li>
+<li class="chapter" data-level="C.4" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:ROIconf"><i class="fa fa-check"></i><b>C.4</b> Effect of confidence in our pre-specified ROIs</a></li>
+<li class="chapter" data-level="C.5" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:varianceRat"><i class="fa fa-check"></i><b>C.5</b> SDT variance ratio correlation with the quadratic confidence effect</a></li>
+<li class="chapter" data-level="C.6" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:efficiency"><i class="fa fa-check"></i><b>C.6</b> Correlation of metacognitive efficiency with linear and quadratic confidence effects</a></li>
+<li class="chapter" data-level="C.7" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:cross"><i class="fa fa-check"></i><b>C.7</b> Confidence-decision cross classification</a></li>
+<li class="chapter" data-level="C.8" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:SDT"><i class="fa fa-check"></i><b>C.8</b> Static Signal Detection Theory</a><ul>
+<li class="chapter" data-level="C.8.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-1"><i class="fa fa-check"></i><b>C.8.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.8.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-2"><i class="fa fa-check"></i><b>C.8.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="C.9" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:Dynamic"><i class="fa fa-check"></i><b>C.9</b> Dynamic Criterion</a><ul>
+<li class="chapter" data-level="C.9.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-2"><i class="fa fa-check"></i><b>C.9.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.9.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-3"><i class="fa fa-check"></i><b>C.9.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="C.10" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:Monitoring"><i class="fa fa-check"></i><b>C.10</b> Attention Monitoring</a><ul>
+<li class="chapter" data-level="C.10.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-3"><i class="fa fa-check"></i><b>C.10.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.10.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-4"><i class="fa fa-check"></i><b>C.10.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Self-Modeling in Inference about Absence</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="general-discussion" class="section level1 unnumbered">
+<h1>General Discussion</h1>
+<p>In this thesis I investigated inference about absence in visual perception, and its relation with self-modeling and default-mode reasoning. In chapter <a href="1-ch-search.html#ch:search">1</a> I focused on the first few-trials in a visual search task to trace the origins of the metacognitive knowledge that allows subjects to efficiently decide that visual items are missing from a display. In Chapter <a href="2-ch-RC.html#ch:RC">2</a> I used reverse correlation to ask what information is incorporated into confidence judgments in decisions about the presence and absence of a stimulus. Then, in chapter <a href="#ch:fMRI"><strong>??</strong></a> I used functional imaging to compare the neural processes governing metacognitive evaluation of decisions about stimulus type and stimulus presence or absence. Finally, in chapter @(ref:asymmetry) I borrowed ideas from the visual search literature to ask at what cognitive level does the metacognitive asymmetry between judgments of presence and absence emerge.</p>
+<p>In what follows I will provide a summary of the results from all chapters. I will then evaluate my original proposal, that inference about absence critically relies on self-knowledge, in light of my findings. Specifically, I will examine alternative interpretations and first-order accounts of inference about absence. Before concluding, I will briefly describe two directions for future research that build on and extend my work here.</p>
+<div id="summary-of-results" class="section level2">
+<h2><span class="header-section-number">4.4</span> Summary of results</h2>
+</div>
+<div id="what-i-didnt-find" class="section level2">
+<h2><span class="header-section-number">4.5</span> What I didn’t find</h2>
+<div id="chapter-1-no-correlation-with-explicit-metacognition" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Chapter 1: no correlation with explicit metacognition</h3>
+</div>
+<div id="chapter-2-no-effect-of-confidence-in-signal-presence" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Chapter 2: no effect of confidence in signal presence</h3>
+<p>mention project with Roy</p>
+</div>
+<div id="chapter-3-small-differences-in-brain-activity-between-inference-about-absence-and-presence" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Chapter 3: small differences in brain activity between inference about absence and presence</h3>
+</div>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">4.5.4</span> </h3>
+</div>
+</div>
+<div id="future-directions" class="section level2">
+<h2><span class="header-section-number">4.6</span> Future directions</h2>
+<div id="failures-of-a-self-model" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Failures of a self-model</h3>
+</div>
+</div>
+<div id="conclusion-1" class="section level2">
+<h2><span class="header-section-number">4.7</span> Conclusion</h2>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="4-ch-MVS.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A-app1-SDT.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduction | Self-Modeling in Inference about Absence</title>
+  <meta name="description" content="Introduction | Self-Modeling in Inference about Absence" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Introduction | Self-Modeling in Inference about Absence" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction | Self-Modeling in Inference about Absence" />
+  
+  
+  
+
+<meta name="author" content="Matan Mazor" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="1-ch-search.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="0.1" data-path="introduction.html"><a href="introduction.html#inference-about-absence"><i class="fa fa-check"></i><b>0.1</b> Inference about absence</a></li>
+<li class="chapter" data-level="0.2" data-path="introduction.html"><a href="introduction.html#formalabsence"><i class="fa fa-check"></i><b>0.2</b> Probabilistic reasoning, criterion setting, and self knowledge</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#symmetrical-definition"><i class="fa fa-check"></i>Symmetrical definition:</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#dissymmetrical-definition"><i class="fa fa-check"></i>Dissymmetrical definition:</a></li>
+<li class="chapter" data-level="0.2.1" data-path="introduction.html"><a href="introduction.html#second-order-cognition"><i class="fa fa-check"></i><b>0.2.1</b> Second-order cognition</a></li>
+<li class="chapter" data-level="0.2.2" data-path="introduction.html"><a href="introduction.html#detectionmodels"><i class="fa fa-check"></i><b>0.2.2</b> Computational models of detection</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#htm"><i class="fa fa-check"></i>The High-Threshold model</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sdt"><i class="fa fa-check"></i>Signal Detection Theory</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="introduction.html"><a href="introduction.html#detection-i-would-have-noticed-it"><i class="fa fa-check"></i><b>0.3</b> Detection: “I would have noticed it”</a></li>
+<li class="chapter" data-level="0.4" data-path="introduction.html"><a href="introduction.html#intro:search"><i class="fa fa-check"></i><b>0.4</b> Visual search: “I would have found it”</a></li>
+<li class="chapter" data-level="0.5" data-path="introduction.html"><a href="introduction.html#memory-i-would-have-remembered-it"><i class="fa fa-check"></i><b>0.5</b> Memory: “I would have remembered it”</a></li>
+<li class="chapter" data-level="0.6" data-path="introduction.html"><a href="introduction.html#the-development-of-a-self-model"><i class="fa fa-check"></i><b>0.6</b> The development of a self-model</a></li>
+<li class="chapter" data-level="0.7" data-path="introduction.html"><a href="introduction.html#this-thesis"><i class="fa fa-check"></i><b>0.7</b> This thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-ch-search.html"><a href="1-ch-search.html"><i class="fa fa-check"></i><b>1</b> Zero-shot search termination reveals a dissociation between implicit and explicit metacognitive knowledge</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-ch-search.html"><a href="1-ch-search.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="1-ch-search.html"><a href="1-ch-search.html#experiment-1"><i class="fa fa-check"></i><b>1.2</b> Experiment 1</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-ch-search.html"><a href="1-ch-search.html#participants"><i class="fa fa-check"></i><b>1.2.1</b> Participants</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-ch-search.html"><a href="1-ch-search.html#procedure"><i class="fa fa-check"></i><b>1.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-ch-search.html"><a href="1-ch-search.html#data-analysis"><i class="fa fa-check"></i><b>1.2.3</b> Data analysis</a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-ch-search.html"><a href="1-ch-search.html#results"><i class="fa fa-check"></i><b>1.2.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-ch-search.html"><a href="1-ch-search.html#experiment-2"><i class="fa fa-check"></i><b>1.3</b> Experiment 2</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-ch-search.html"><a href="1-ch-search.html#participants-1"><i class="fa fa-check"></i><b>1.3.1</b> Participants</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-ch-search.html"><a href="1-ch-search.html#procedure-1"><i class="fa fa-check"></i><b>1.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.3.3" data-path="1-ch-search.html"><a href="1-ch-search.html#results-1"><i class="fa fa-check"></i><b>1.3.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="1-ch-search.html"><a href="1-ch-search.html#discussion"><i class="fa fa-check"></i><b>1.4</b> Discussion</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-ch-search.html"><a href="1-ch-search.html#is-implicit-metacognitive-knowledge-metacognitive"><i class="fa fa-check"></i><b>1.4.1</b> Is implicit metacognitive knowledge metacognitive?</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-ch-search.html"><a href="1-ch-search.html#inference-about-absence-as-a-tool-for-studying-implicit-self-knowledge"><i class="fa fa-check"></i><b>1.4.2</b> Inference about absence as a tool for studying implicit self knowledge</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-ch-search.html"><a href="1-ch-search.html#conclusion"><i class="fa fa-check"></i><b>1.4.3</b> Conclusion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-ch-RC.html"><a href="2-ch-RC.html"><i class="fa fa-check"></i><b>2</b> Paradoxical evidence weightings in confidence judgments for detection and discrimination</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#introduction-2"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#experiment-1-1"><i class="fa fa-check"></i><b>2.2</b> Experiment 1</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#methods"><i class="fa fa-check"></i><b>2.2.1</b> Methods</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#analysis"><i class="fa fa-check"></i><b>2.2.2</b> Analysis</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#results-2"><i class="fa fa-check"></i><b>2.2.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#experiment-2-1"><i class="fa fa-check"></i><b>2.3</b> Experiment 2</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#methods-1"><i class="fa fa-check"></i><b>2.3.1</b> Methods</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#results-3"><i class="fa fa-check"></i><b>2.3.2</b> Results</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#detection-signal-trials-1"><i class="fa fa-check"></i><b>2.3.3</b> Detection signal trials</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-ch-RC.html"><a href="2-ch-RC.html#discussion-1"><i class="fa fa-check"></i><b>2.4</b> Discussion</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-1-a-rational-agent-symmetric-evidence-structure"><i class="fa fa-check"></i><b>2.4.1</b> Model 1: a rational agent + symmetric evidence structure</a></li>
+<li class="chapter" data-level="2.4.2" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-2-a-rational-agent-symmetric-evidence-structure"><i class="fa fa-check"></i><b>2.4.2</b> Model 2: a rational agent + symmetric evidence structure</a></li>
+<li class="chapter" data-level="2.4.3" data-path="2-ch-RC.html"><a href="2-ch-RC.html#model-3-confidence-decision-cross"><i class="fa fa-check"></i><b>2.4.3</b> Model 3: confidence decision cross</a></li>
+<li class="chapter" data-level="2.4.4" data-path="2-ch-RC.html"><a href="2-ch-RC.html#evidence-for-absence"><i class="fa fa-check"></i><b>2.4.4</b> Evidence for absence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><i class="fa fa-check"></i><b>3</b> Distinct neural contributions to metacognition for detecting (but not discriminating) visual stimuli</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#introduction-3"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#methods-and-materials"><i class="fa fa-check"></i><b>3.2</b> Methods and Materials</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#participants-4"><i class="fa fa-check"></i><b>3.2.1</b> Participants</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#design-and-procedure"><i class="fa fa-check"></i><b>3.2.2</b> Design and procedure</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#scanning-parameters"><i class="fa fa-check"></i><b>3.2.3</b> Scanning parameters</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#analysis-1"><i class="fa fa-check"></i><b>3.2.4</b> Analysis</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#exclusion-criteria"><i class="fa fa-check"></i><b>3.2.5</b> Exclusion criteria</a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#response-conditional-type-ii-roc-curves"><i class="fa fa-check"></i><b>3.2.6</b> Response conditional type-II ROC curves</a></li>
+<li class="chapter" data-level="3.2.7" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#imaging-analysis"><i class="fa fa-check"></i><b>3.2.7</b> Imaging analysis</a></li>
+<li class="chapter" data-level="3.2.8" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#statistical-inference-1"><i class="fa fa-check"></i><b>3.2.8</b> Statistical inference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#results-4"><i class="fa fa-check"></i><b>3.3</b> Results</a></li>
+<li class="chapter" data-level="3.4" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#behavioural-results"><i class="fa fa-check"></i><b>3.4</b> Behavioural results</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#imaging-results"><i class="fa fa-check"></i><b>3.4.1</b> Imaging results</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#computational-models"><i class="fa fa-check"></i><b>3.4.2</b> Computational models</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html"><a href="3-distinct-neural-contributions-to-metacognition-for-detecting-but-not-discriminating-visual-stimuli.html#discussion-2"><i class="fa fa-check"></i><b>3.5</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html"><i class="fa fa-check"></i><b>4</b> Prospective search time estimates for unseen displays reveal a rich intuitive theory of visual search</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#introduction-4"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#experiments-1-and-2-shape-orientation-and-color"><i class="fa fa-check"></i><b>4.2</b> Experiments 1 and 2: shape, orientation, and color</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#participants-5"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#procedure-2"><i class="fa fa-check"></i><b>4.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#results-5"><i class="fa fa-check"></i><b>4.2.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#experiments-3-and-4-complex-unfamiliar-stimuli"><i class="fa fa-check"></i><b>4.3</b> Experiments 3 and 4: complex, unfamiliar stimuli</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#participants-6"><i class="fa fa-check"></i><b>4.3.1</b> Participants</a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#procedure-3"><i class="fa fa-check"></i><b>4.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-ch-MVS.html"><a href="4-ch-MVS.html#results-6"><i class="fa fa-check"></i><b>4.3.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i>General Discussion</a><ul>
+<li class="chapter" data-level="4.4" data-path="general-discussion.html"><a href="general-discussion.html#summary-of-results"><i class="fa fa-check"></i><b>4.4</b> Summary of results</a></li>
+<li class="chapter" data-level="4.5" data-path="general-discussion.html"><a href="general-discussion.html#what-i-didnt-find"><i class="fa fa-check"></i><b>4.5</b> What I didn’t find</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="general-discussion.html"><a href="general-discussion.html#chapter-1-no-correlation-with-explicit-metacognition"><i class="fa fa-check"></i><b>4.5.1</b> Chapter 1: no correlation with explicit metacognition</a></li>
+<li class="chapter" data-level="4.5.2" data-path="general-discussion.html"><a href="general-discussion.html#chapter-2-no-effect-of-confidence-in-signal-presence"><i class="fa fa-check"></i><b>4.5.2</b> Chapter 2: no effect of confidence in signal presence</a></li>
+<li class="chapter" data-level="4.5.3" data-path="general-discussion.html"><a href="general-discussion.html#chapter-3-small-differences-in-brain-activity-between-inference-about-absence-and-presence"><i class="fa fa-check"></i><b>4.5.3</b> Chapter 3: small differences in brain activity between inference about absence and presence</a></li>
+<li class="chapter" data-level="4.5.4" data-path="general-discussion.html"><a href="general-discussion.html#section"><i class="fa fa-check"></i><b>4.5.4</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="general-discussion.html"><a href="general-discussion.html#future-directions"><i class="fa fa-check"></i><b>4.6</b> Future directions</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="general-discussion.html"><a href="general-discussion.html#failures-of-a-self-model"><i class="fa fa-check"></i><b>4.6.1</b> Failures of a self-model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="general-discussion.html"><a href="general-discussion.html#conclusion-1"><i class="fa fa-check"></i><b>4.7</b> Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html"><i class="fa fa-check"></i><b>A</b> Signal Detection Theory</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:ROC"><i class="fa fa-check"></i><b>A.1</b> ROC and zROC curves</a></li>
+<li class="chapter" data-level="A.2" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:uvSDT"><i class="fa fa-check"></i><b>A.2</b> Unequal-variance (uv) SDT</a></li>
+<li class="chapter" data-level="A.3" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1:mc"><i class="fa fa-check"></i><b>A.3</b> SDT Measures for Metacognition</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html"><i class="fa fa-check"></i><b>B</b> Supp. materials for ch. 2</a><ul>
+<li class="chapter" data-level="B.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#app2:PDRC"><i class="fa fa-check"></i><b>B.1</b> Pseudo-discrimination analysis</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#exp.-1"><i class="fa fa-check"></i><b>B.1.1</b> Exp. 1</a></li>
+<li class="chapter" data-level="B.1.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#exp.-2"><i class="fa fa-check"></i><b>B.1.2</b> Exp. 2</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#app2:simulation"><i class="fa fa-check"></i><b>B.2</b> Unequal-variance model</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#discrimination"><i class="fa fa-check"></i><b>B.2.1</b> Discrimination</a></li>
+<li class="chapter" data-level="B.2.2" data-path="B-supp-materials-for-ch-2.html"><a href="B-supp-materials-for-ch-2.html#detection-1"><i class="fa fa-check"></i><b>B.2.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html"><i class="fa fa-check"></i><b>C</b> Supp. materials for ch. 3</a><ul>
+<li class="chapter" data-level="C.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:buttonpresses"><i class="fa fa-check"></i><b>C.1</b> Confidence button presses</a></li>
+<li class="chapter" data-level="C.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:zROC"><i class="fa fa-check"></i><b>C.2</b> zROC curves</a></li>
+<li class="chapter" data-level="C.3" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:GC-DM"><i class="fa fa-check"></i><b>C.3</b> Global confidence design matrix</a></li>
+<li class="chapter" data-level="C.4" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:ROIconf"><i class="fa fa-check"></i><b>C.4</b> Effect of confidence in our pre-specified ROIs</a></li>
+<li class="chapter" data-level="C.5" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:varianceRat"><i class="fa fa-check"></i><b>C.5</b> SDT variance ratio correlation with the quadratic confidence effect</a></li>
+<li class="chapter" data-level="C.6" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:efficiency"><i class="fa fa-check"></i><b>C.6</b> Correlation of metacognitive efficiency with linear and quadratic confidence effects</a></li>
+<li class="chapter" data-level="C.7" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:cross"><i class="fa fa-check"></i><b>C.7</b> Confidence-decision cross classification</a></li>
+<li class="chapter" data-level="C.8" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:SDT"><i class="fa fa-check"></i><b>C.8</b> Static Signal Detection Theory</a><ul>
+<li class="chapter" data-level="C.8.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-1"><i class="fa fa-check"></i><b>C.8.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.8.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-2"><i class="fa fa-check"></i><b>C.8.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="C.9" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:Dynamic"><i class="fa fa-check"></i><b>C.9</b> Dynamic Criterion</a><ul>
+<li class="chapter" data-level="C.9.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-2"><i class="fa fa-check"></i><b>C.9.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.9.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-3"><i class="fa fa-check"></i><b>C.9.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="C.10" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#app3:Monitoring"><i class="fa fa-check"></i><b>C.10</b> Attention Monitoring</a><ul>
+<li class="chapter" data-level="C.10.1" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#discrimination-3"><i class="fa fa-check"></i><b>C.10.1</b> Discrimination</a></li>
+<li class="chapter" data-level="C.10.2" data-path="C-supp-materials-for-ch-3.html"><a href="C-supp-materials-for-ch-3.html#detection-4"><i class="fa fa-check"></i><b>C.10.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Self-Modeling in Inference about Absence</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p>You are in the grocery shop. On your grocery list are one carton of oat milk and one guava. You search through the shelves and find your favourite oat milk. You place the carton in your basket and move on to the fruit aisle. You visually scan the fruit boxes, but you already have a strong feeling that you will not find guavas in this store. You would have already smelled the guavas if they were anywhere around you. But then again, maybe something is wrong with your sense of smell? You grab a mandarin and sniff it. Your sense of smell is intact. You can be confident that there are no guavas around.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-guava"></span>
+<img src="figure/intro/guava.jpg" alt="Guavas." width="\textwidth" />
+<p class="caption">
+Figure 0.1: Guavas.
+</p>
+</div>
+<div id="inference-about-absence" class="section level2">
+<h2><span class="header-section-number">0.1</span> Inference about absence</h2>
+<p>Finding the oat milk carton was straightforward. As soon as you identified it you were convinced in its presence, no reflection or deliberation required. In contrast, concluding that no guavas were present took you longer and involved more complex cognitive processes. You had to rely on the absence of smell or sight of the fruit to reach a conclusion. In philosophical writings, this is known as Argument from ignorance (<em>Argumentum ad ignorantiam</em>): the fallacy of accepting a statement as true only because it hasn’t been disproved <span class="citation">(Locke, 1836)</span>. Although logically unsound, <em>Argumentum ad ignorantiam</em> is widely applied by humans in different situations and contexts <span class="citation">(Oaksford &amp; Hahn, 2004)</span>. One particular context which invites such reasoning is that of inference about absence. Positive evidence is rarely available to support inference about absence, and so it is almost exclusively made on the basis of a failure to find evidence for presence.</p>
+<p>Basing inference on the absence of evidence can sometimes be rational from a Bayesian standpoint <span class="citation">(Oaksford &amp; Hahn, 2004)</span>. For this to be the case, the individual must know the sensitivity and specificity of the perceptual or cognitive system at hand. For example, in order for the inference “I don’t smell a guava, therefore there are no guavas in this store” to be logically sound, I need to know that the probability of me not smelling a guava is very low if it is nearby, and so is the probability of me imagining the smell of a guava when it is not there. In other words, in order to make valid inferences about absences I need to know things about myself and my cognitive processes (see next section <a href="introduction.html#detectionmodels">0.2.2</a> for a formal unpacking of this logical derivation). In the above example, this is evident in that my certainty in the absence of a guava increased after smelling the mandarin. Critically, smelling the mandarin did not provide me with any additional information about the layout of the shop or the seasonal availability of tropical fruit, but about my own perceptual system.</p>
+<!-- This example of inference about absence is exceptional in that I am able to justify my reasoning. If later my friend asks me why I concluded that no guavas were in the store, I will be able to convince them by explaining how I normally smell guavas from a distance, how I was able to smell the mandarin, and how I concluded that I would have detected a guava if it was present. But explicitly representing a derivation chain from assumptions to conclusions is the exception, not the rule. I can tell with confidence that there is no cup of water on my desk right now. If my friend asks me how I concluded that there was no cup of water on my desk, I would probably answer that I could see that it was not there. But this does not mean that I perceived its absence. It means that I did not perceive its presence, and that I would see if it was there. The first part is a fact about my perception, but the second part is based on intricate knowledge that details how hypothetical glasses of water may look like to me if they were on my desk right now. This builds on my knowledge of glasses, but more relevant to us here, on a *mental self-model*: a simplified description of one's own cognition, perception and attention that allows agents to predict their mental states under different world states.  -->
+<!-- Here I argue that this necessary role of a mental self-model for inference about absence makes inference about absence a promising tool to probe people's self-knowledge. Beliefs about my sense of smell, or the expected appearance of cups of water, are only part of a rich and complex knowledge structure, comprising beliefs about the senses (for example, the belief that my hearing is better in the right ear), attention (that I'm easily distracted by noises), and cognition (that I have bad memory for faces). Indeed, mental self-models have been suggested to play an important role in attention control [@wilterson2020attention], theory of mind [@graziano2019attributing], and subjectivity more generally [@metzinger2003phenomenal]. While I can report some of those beliefs, some are not available to report, potentially not even to introspection [@flavell1979metacognition]. This cognitive impenetrability is not different from how grammar rules are represented in cognition. Native English speakers would agree that the question "Who did you see Mary with?" is grammatically acceptable and that the question "Who did you see Mary and?" is not [@ross1967constraints], but most would not be able to tell what rule is violated by the second question. Similarly, one may immediately appreciate that an object is missing, even if they will not be able to provide a better justification for this impression other than "I could see that it was not there".  -->
+<p>The following section introduces a computational formulation of this self-knowledge account, based in formal semantics and Bayesian theories of cognition, and exemplifies how different patterns of results can be interpreted in light of this formulation. This formulation is then followed by descriptions of several independent lines of experimental work that all share a role for self-knowledge in inference about absence.</p>
+</div>
+<div id="formalabsence" class="section level2">
+<h2><span class="header-section-number">0.2</span> Probabilistic reasoning, criterion setting, and self knowledge</h2>
+<p>The intimate link between inference about absence and self-knowledge has been recognized in the fields of linguistics, formal logic, and artificial intelligence. In <em>default-reasoning logic</em> <span class="citation">(Reiter, 1980)</span>, a failure to provide a proof for a statement is transformed into a proof for the negation of the statement using the <em>closed world assumption</em>: the assumption that a proof would have been found if it was available. Similarly, Linguist Benoît de Cornulier’s refers to <em>epistemic closure</em>: the notion that all there is to be known is in fact known. This is reflected in his two definitions of <em>knowing whether</em> <span class="citation">(De Cornulier, 1988)</span>:</p>
+<div id="symmetrical-definition" class="section level3 unnumbered">
+<h3>Symmetrical definition:</h3>
+<p>‘John knows whether P’ means that:</p>
+<ol style="list-style-type: decimal">
+<li>If P, John knows that P.</li>
+<li>If not-P, John knows that not-P.</li>
+</ol>
+</div>
+<div id="dissymmetrical-definition" class="section level3 unnumbered">
+<h3>Dissymmetrical definition:</h3>
+<p>‘John knows whether P’ means that:</p>
+<ol style="list-style-type: decimal">
+<li>If P, John knows that P.</li>
+<li>John knows that 1 holds.</li>
+</ol>
+</div>
+<div id="second-order-cognition" class="section level3">
+<h3><span class="header-section-number">0.2.1</span> Second-order cognition</h3>
+<p>The symmetric definition entails a <em>first-order process</em>, as no knowledge about the system itself is used in the process of inferring about the world state. This definition applies to scenarios in which it is possible to have direct knowledge against the veracity of a proposition. For example, a hypothetical organism can be equipped with sensors <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> that are tuned to the presence or absence of a predator, respectively. This organism can be said to know whether there is a predator around or not. It will know that a predator is nearby if <span class="math inline">\(A\)</span> is on and <span class="math inline">\(B\)</span> is off, and it will know there is no predator around if <span class="math inline">\(B\)</span> is on and <span class="math inline">\(A\)</span> is off (similar to the <em>Neuron-Antineuron</em> architecture in <span class="citation">Gold &amp; Shadlen (2001)</span>). Such an organism can be said to implement the symmetrical definition of to know whether presented above.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-symmetric"></span>
+<img src="figure/intro/symmetric.png" alt="A symmetric implementation of a predator-detector." width="50%" />
+<p class="caption">
+Figure 0.2: A symmetric implementation of a predator-detector.
+</p>
+</div>
+<p>The symmetric architecture is redundant: assuming perfect information flow there is a perfect negative correlation between the activations of sensors <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. Conversely, the asymmetric definition only necessitates one sensor that is sensitive to the presence of a predator. The organism will know that the predator is around if the sensor is activated, and will conclude that it is not around if the sensor is not activated. This inference is dependent on the confidence of the organism that the sensor will always be activated by the presence of a predator (the negative test validity of its sensor, see section <a href="introduction.html#detectionmodels">0.2.2</a>). In that sense, the asymmetric definition entails a <em>second-order process</em>.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-asymmetric"></span>
+<img src="figure/intro/asymmetric.png" alt="An asymmetric implementation of a predator-detector." width="50%" />
+<p class="caption">
+Figure 0.3: An asymmetric implementation of a predator-detector.
+</p>
+</div>
+<p>This implementation assumes that the absence of a predator is a default state. Making this assumption makes the system leaner: instead of having two sensors, only one sensor is needed to mark deviations from a <em>default state</em> <span class="citation">(Reiter, 1980)</span>. This default-reasoning has an interesting property: it is <em>non-monotonous</em>. Accepting the default state (the absence of a predator in the above example) can only be done tentatively and can potentially be overridden by future evidence. This is not true for the deviant state (here, the presence of a predator), which once accepted cannot be retracted based on the absence of new evidence. In other words, while beliefs about the absence of a predator can be overturn by evidence for presence, beliefs about the presence of a predator cannot be overturn by the absence of evidence for presence.</p>
+<p>The asymmetric architecture requires that the organism knows that the presence of a predator would activate sensor <span class="math inline">\(A\)</span>. Only then can the organism take the absence of input from <span class="math inline">\(A\)</span> as evidence for the absence of a predator. Without this knowledge, the organism will be able to represent the presence of a predator (when <span class="math inline">\(A\)</span> is activated), but not its absence.</p>
+<p>The mirror architecture is also possible: taking the presence of a predator to be a default state and using a sensor to mark deviations from this state, i.e., the absence of a predator.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-pessimistic"></span>
+<img src="figure/intro/pessimistic.png" alt="An asymmetric implementation of a predator-detector with a pessimistic prior." width="50%" />
+<p class="caption">
+Figure 0.4: An asymmetric implementation of a predator-detector with a pessimistic prior.
+</p>
+</div>
+<p>This architecture is perfectly equivalent to the previous one for systems that are composed of sensors only. All activated sensors in the first architecture are silenced in the second architecture and vice versa. However, for multi-layered systems that generate higher-level representations from sensory input, the second architecture becomes unreasonably huge. In such systems, if the default state is taken to be “everything is happening”, then for every sensory input the system should generate the abstract representation of all possible <em>combinations</em> of sensory inputs that were not experienced — <span class="math inline">\(2^n-1\)</span> in total, <span class="math inline">\(n\)</span> being the number of sensors. This number becomes unrealistic even with a modest number of 100 sensors (<span class="math inline">\(2^{99}\)</span>, or more than a million million million million millions), and is even less realistic for complex systems that are equipped with eyes, thalami and cortices.</p>
+<p>This has dramatic consequences for systems that need to flexibly represent a rich space of entities or events, using a set of finite building blocks such as sensors and atomic concepts. Such hierarchical, complex systems are compelled to implement an architecture analog to the one in figure <a href="introduction.html#fig:intro-pessimistic">0.4</a>, namely to represent presences only, and infer absence by relying on their own self-representation. In other words, the maintenance of a reliable self-representation can be costly, but not nearly as costly as the alternative of representing absences and presences in a symmetrical way.</p>
+</div>
+<div id="detectionmodels" class="section level3">
+<h3><span class="header-section-number">0.2.2</span> Computational models of detection</h3>
+<!-- The symmetrical definition is available for statements that can be supported or negated by evidence. For example, the statement "It is not yet 3pm" can be supported if the time on one's phone indicates that it is 2:30pm, or negated if the time on one's phone indicates it is 3:30pm. Therefore, knowing whether it is now 3pm does not rely on self-knowledge. Conversely, statements such as "I have met this person before" can only be supported by positive evidence. This leaves inference about their negation to be made based on the absence of evidence, in conjunction with self-knowledge ("I don't recall seeing this person before, and this is not a face that I would forget"). This is an example of the De Cornulier's dissymmetrical definition: knowing that I would not have forgotten this person's face is in this case 'knowing that 1 holds'.  -->
+<p>In psychological experiments of near-threshold detection, participants are required to decide whether a stimulus (for example a faint dot) was present or absent from a display. Using De Cornulier’s formulation, we can ask which of the two definitions better describes the inferential machinery that is engaged in detection tasks. Is it the case that participants perceive positive evidence for he absence of a target (symmetrical definition), or alternatively, do they rely on the metacognitive belief that they would have seen the target if it was present (dissymetrical definition)?</p>
+</div>
+<div id="htm" class="section level3 unnumbered">
+<h3>The High-Threshold model</h3>
+<p>The <em>high-threshold model</em> of visual detection <span class="citation">(Blackwell, 1952)</span> formalizes this process in a way that shares conceptual similarity with De Cornulier’s dissymemetrical definition. According to this model, the probability of detecting the signal <span class="math inline">\(d\)</span> scales with stimulus intensity. If participants detect the signal, they respond with ‘yes’. The parameter <span class="math inline">\(d\)</span> is a perceptual parameter: it captures variables such as objective stimulus intensity (for example, in units of luminance) and sensory sensitivity (for example, of photoreceptors in the retina, or neurons in the visual cortex). The value of this parameter corresponds to the degree to which statement 1 in the dissymetrical definition is true: “If P [a stimulus is presented] John knows that P”, or to the reliability of the excitatory edge feeding into sensor <em>B</em> in figure <a href="introduction.html#fig:intro-asymmetric">0.3</a>. Critically, in the high-threshold model no similar parameter exists to control the probability of detecting the absence of a signal. In other words, the presence/absence asymmetry is expressed in the absence of a direct edge from ‘stimulus absent’ to a ‘no’ response (leftmost dashed line in Fig. <a href="introduction.html#fig:intro-htm">0.5</a>). In this model, ‘no’ responses are controlled by the ‘guessing’ parameter <span class="math inline">\(g\)</span>. Unlike <span class="math inline">\(d\)</span>, the <span class="math inline">\(g\)</span> parameter is under participants’ cognitive control, and can be optimally set to maximize accuracy based on beliefs about the probability of a stimulus, the incentive structure, and critically, metacognitive beliefs about the perceptual sensitivity parameter <span class="math inline">\(d\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-htm"></span>
+<img src="figure/intro/htm.png" alt="In discrete high-threshold models the presence of a signal can sometimes lead directly to a 'yes' response, but the absence of a signal is never sufficient to lead to a 'no' response. 'No' responses are controlled by the parameter *g* - a 'guessing parameter' that determines the probability of responding 'yes' in case no stimulus was detected." width="70%" />
+<p class="caption">
+Figure 0.5: In discrete high-threshold models the presence of a signal can sometimes lead directly to a ‘yes’ response, but the absence of a signal is never sufficient to lead to a ‘no’ response. ‘No’ responses are controlled by the parameter <em>g</em> - a ‘guessing parameter’ that determines the probability of responding ‘yes’ in case no stimulus was detected.
+</p>
+</div>
+<p>Given accurate knowledge about the parameter <span class="math inline">\(d\)</span> and the prior probability of signal presence, observers can use <em>Bayes’ rule</em> to extract the <em>negative test validity</em> <span class="citation">(Oaksford &amp; Hahn, 2004)</span>: the probability that a signal is absent, given that the they did not perceive a signal. Formally, this equals <span class="math inline">\(p(\neg T|\neg e)\)</span>, where <span class="math inline">\(T\)</span> stands for my theory (here, a signal is present) and <span class="math inline">\(e\)</span> for the availability of evidence (here, I can see the signal). Using Bayes’ rule, this quantity is determined by the system’s <em>correct rejection rate</em> (<span class="math inline">\(p(\neg e|\neg T)\)</span>), <em>hit rate</em> (<span class="math inline">\(p(e|T)\)</span>), and the prior probability of <span class="math inline">\(T\)</span>. In the high threshold model, the correct rejection rate is always 1 (the threshold is never exceeded by noise alone), so the negative test validity equals:</p>
+<p><span class="math display">\[\begin{equation}
+p(\neg T|\neg e)=\frac{\overbrace{p(\neg e|\neg T))}^{CR}(1-p(T))}{1-p(e)} = \frac{1-p(T)}{1-p(e)}
+\end{equation}\]</span>
+where
+<span class="math display">\[\begin{equation}
+p(e)=\overbrace{p(e|\neg T)}^{FA}(1-p(T))+\overbrace{p(e|T)}^{Hit}p(T) = \overbrace{p(e|T)}^{Hit}p(T)
+\end{equation}\]</span></p>
+<p>Subjects can then use the negative test validity to inform their setting of the <span class="math inline">\(g\)</span> parameter. For example, consider a setting where you know that a target will appear on exactly half of the trials (<span class="math inline">\(p(T)=0.5\)</span>), and that half of the targets will be detected (<span class="math inline">\(p(e|T)=0.5\)</span>). Using the above formula, and given that in the high-threshold model <span class="math inline">\(p(e|\neg T)=0\)</span>, you can conclude that <span class="math inline">\(p(\neg e|\neg T)=\frac{1-0.5}{1-0.5*0.5}=\frac{2}{3}\)</span>. In other words, given that a target was not detected, it is twice as likely that no target was present than that a target was present. This information can now be used to inform your setting of the <span class="math inline">\(g\)</span> parameter before the next experimental trial.</p>
+</div>
+<div id="sdt" class="section level3 unnumbered">
+<h3>Signal Detection Theory</h3>
+<p>Given its simplicity, the high-threshold model is useful for demonstrating the utility of self-knowledge for inference about absence. Without veridical knowledge about the sensitivity parameter <span class="math inline">\(d\)</span>, subjects cannot tell whether they can rely on the absence of evidence when making inference about the absence of a stimulus. Continuous and graded models of perception based on Signal Detection Theory (SDT) express the same asymmetrical nature of presence/absence judgments, where clear evidence can be available for presence but less so for absence (see appendix <a href="A-app1-SDT.html#app1:SDT">A</a> for an overview of Signal Detection Theory). In signal detection terms, this is expressed as high between-trial variance in sensory strength when a signal is present, but low variance when a signal is absent (see Fig. <a href="introduction.html#fig:intro-sdt">0.6</a>). Here, instead of controlling the parameter <span class="math inline">\(g\)</span>, participants control the placement of a decision criterion. Only trials in which the sensory signal (also termed perceptual evidence, or decision variable) exceeds this criterion will be classified as ‘stimulus present’ trials. Optimal positioning of the criterion is dependent on beliefs about the likelihood of a stimulus to be present, as well as the spread of the signal and noise distributions and the distance between them <span class="citation">(the stimulus-conditional <em>Probability Density Functions</em>; Gold &amp; Shadlen, 2001)</span>. Due to the unequal-variance structure, sensory strength in trials where a stimulus is present will be on average farther from the decision criterion compared to when no stimulus is present. As a result, similar to the setting of the <span class="math inline">\(g\)</span> parameter in the high-threshold model, the exact placement of the SDT decision criterion will affect accuracy more when a stimulus is absent, compared to when a stimulus is present.</p>
+<p>Common to both frameworks is the reliance on knowledge about one’s own perception (the <span class="math inline">\(d\)</span> parameter in the first case, the shape and position of the sensory distributions in the second) for optimally setting a heuristic for response on trials in which no clear evidence is available for the presence of a signal. As a result, these models draw a strong link between participants’ beliefs about their own perception and their behaviour on target-absent trials. In what follows I provide empirical examples for how humans make inference about the absence of objects and memories, and link those examples to the core idea, that inference about absence critically relies on access to a self-model.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-sdt"></span>
+<img src="figure/intro/sdt.png" alt="In unequal-variance SDT models, decisions are made based on the relative position of the sensory sample to a decision  criterion. The presense/absence asymmetry manifests in the fact that only in some 'target-present' trials, but no in 'target-absent' trials, the sensory sample falls far away from the decision criterion." width="70%" />
+<p class="caption">
+Figure 0.6: In unequal-variance SDT models, decisions are made based on the relative position of the sensory sample to a decision criterion. The presense/absence asymmetry manifests in the fact that only in some ‘target-present’ trials, but no in ‘target-absent’ trials, the sensory sample falls far away from the decision criterion.
+</p>
+</div>
+</div>
+</div>
+<div id="detection-i-would-have-noticed-it" class="section level2">
+<h2><span class="header-section-number">0.3</span> Detection: “I would have noticed it”</h2>
+<p>We start our exploration of inference about absence in cognition with perhaps the most basic of psychophysical tasks - visual detection. In visual detection, participants report the presence or absence of a target stimulus, commonly presented near perceptual threshold. In such tasks, accuracy alone cannot reveal a difference in processing between decisions about presence and decisions about absence, because task accuracy is a function of both ‘yes’ and ‘no’ responses.</p>
+<p>However, when asked to report how confident they are in their decision, subjective confidence reports reveal a metacognitive asymmetry between judgments about presence and absence. Decisions about target absence are accompanied by lower confidence, even for correctly rejected ‘stimulus absence’ trials <span class="citation">(Kanai, Walsh, &amp; Tseng, 2010; M. Mazor et al., 2020; Meuwese, Loon, Lamme, &amp; Fahrenfort, 2014)</span>. Put differently, often participants cannot tell if they missed an existing target, or correctly perceived the absence of a target.</p>
+<p>For example, in a study by <span class="citation">Meuwese et al. (2014)</span>, participants were asked to rate their confidence after performing either a perceptual detection task (“Was there an animal present?”) or a categorization task (“Was the animal a bird?”). Stimuli were identical for the two conditions, apart from phase-scrambled ‘noise’ images that were only shown on detection blocks (see figure <a href="introduction.html#fig:intro-meuwese">0.7</a>). Metacognitive sensitivity was quantified as the area under the response-conditional type-II receiver-operating characteristic curve (AUROC2; see Appendix <a href="A-app1-SDT.html#app1:mc">A.3</a>). This measure reflects the agreement between confidence ratings and objective accuracy. AUROC2 was higher for the categorization than for the detection task even when performance on the primary tasks was equated. This difference originated from degraded metacognitive ability for trials in which the subjects reported not detecting an animal. More specifically, it was driven by lower confidence ratings for correct rejection trials rather than high confidence ratings for misses.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-meuwese"></span>
+<img src="figure/intro/Meuwese.jpg" alt="Task design for Meuwese et al (2014). Subjects performed both the detection task and the categorization task in 12 interleaved blocks of 60 trials. Stimulus visibility was manipulated between subjects, by either pattern masking or degrading (phase scrambling). During the detection task, the degraded or masked stimulus contained either an animal (cat, bird, or fish; target) or a fully phase-scrambled image (distractor). On every trial, subjects were asked “Was there an animal present?” For the categorization task, a target category was randomly selected for each block (i.e., “bird”), and the stimuli consisted of a degraded/masked cat, bird, or fish. Subjects were asked whether the animal was a member of the target category (i.e., “Was the animal a bird?”). Subjects rated their confidence in the correctness of their response on a scale from 1 (not at all confident) to 6 (very confident). By linking confidence ratings with objective performance, metacognitive ability (MA) was calculated. b An image that is phase scrambled to different coherence levels: from left to right, 0.4 to 0.75  phase coherence, which was the range of phase coherence levels and step sizes used in degraded condition of the experiment." width="70%" />
+<p class="caption">
+Figure 0.7: Task design for Meuwese et al (2014). Subjects performed both the detection task and the categorization task in 12 interleaved blocks of 60 trials. Stimulus visibility was manipulated between subjects, by either pattern masking or degrading (phase scrambling). During the detection task, the degraded or masked stimulus contained either an animal (cat, bird, or fish; target) or a fully phase-scrambled image (distractor). On every trial, subjects were asked “Was there an animal present?” For the categorization task, a target category was randomly selected for each block (i.e., “bird”), and the stimuli consisted of a degraded/masked cat, bird, or fish. Subjects were asked whether the animal was a member of the target category (i.e., “Was the animal a bird?”). Subjects rated their confidence in the correctness of their response on a scale from 1 (not at all confident) to 6 (very confident). By linking confidence ratings with objective performance, metacognitive ability (MA) was calculated. b An image that is phase scrambled to different coherence levels: from left to right, 0.4 to 0.75 phase coherence, which was the range of phase coherence levels and step sizes used in degraded condition of the experiment.
+</p>
+</div>
+<p>These and similar observations of a metacognitive disadvantage for inference about absence <span class="citation">(Kanai et al., 2010; Kellij, Fahrenfort, Lau, Peters, &amp; Odegaard, 2018; Mazor et al., 2020; Meuwese et al., 2014)</span>, as well as a similar pattern in response times <span class="citation">(decisions about absence tend to be slower than decisions about presence; Mazor et al., 2020)</span> fit well with the high-threshold and unequal-variance SDT models described above. Only in the presence of a target stimulus can participants make a decision without deliberation (without passing in the <em>A</em> node in the high-threshold model, or based on a sample very far from the decision criterion in unequal-variance SDT). On these trials, participants can be highly confident in that a target was present – more confident than when deciding that a target was present after deliberation. These high-confidence trials will only be available when a target is indeed present, giving rise to a metacognitive disadvantage for inference about absence.</p>
+<p>In line with a central role for self-monitoring in inference about absence, this metacognitive blindspot for ‘stimulus absence’ judgments diminishes or reverses when targets are masked from awareness by means of an attentional manipulation <span class="citation">(Kanai et al., 2010; Kellij et al., 2018)</span>. For example, when an attentional-blink paradigm is used to control stimulus visibility, participants are significantly more confident in their correct rejection trials than in their misses. What is it in attentional manipulations that improves participants’ metacognitive insight into their judgments about stimulus absence? One compelling possibility is that a blockage of sensory information at the perceptual stage is not accessible to awareness <span class="citation">(and is thus phenomenally transparent; Metzinger, 2003)</span>, whereas fluctuations in attention are accessible to introspection <span class="citation">(and are thus phenomenally opaque; Limanowski &amp; Friston, 2018)</span>. This monitoring of one’s attention state makes it possible to use premises such as “I would not have missed the target” in rating confidence in absence under attentional, but not under perceptual manipulations of visibility. Put in more formal terms, attentional manipulations increase metacognitive access to the likelihood function going from world-states to perceptual states, thereby allowing trial-to-trial tuning of the decision criterion or the <em>g</em> parameter.</p>
+<p>Studies contrasting detection responses and confidence ratings under different levels of attention provide more support for this metacognitive account of detection ‘no’ responses. For example, participants are more likely to report the absence of a target in a specific location if their attention was directed to this location before stimulus onset, compared to when their attention was directed to a different location <span class="citation">(Rahnev et al., 2011)</span>. Similarly, participants are more likely to correctly report the absence of a target embedded in a stimulus (for example, a grating embedded in noise) when the stimulus is presented at the center of their visual field, compared to the periphery <span class="citation">(Odegaard, Chang, Lau, &amp; Cheung, 2018; Solovey, Graney, &amp; Lau, 2015)</span>. Note that both effects are the exact opposite of what is expected based on that attention boosts sensory gain <span class="citation">(Parr &amp; Friston, 2019)</span>, because an increase in sensory gain without a change to the decision criterion would make false alarms, not correct rejections, more prevalent. They are however consistent with the idea that participants deploy a metacognitive strategy, shifting their decision criterion to accord with the expected strength of evidence given their current attentional state. If participants overestimate the effect of attention on their visual sensitivity, decision criterion, as measured in Signal Detection Theory, will be lower for attended versus unattended stimuli (see Fig. <a href="introduction.html#fig:intro-detection">0.8</a>). Indeed, detection criterion is typically found to be lower for unattended stimuli <span class="citation">(Odegaard et al., 2018; Rahnev et al., 2011; Solovey et al., 2015)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-detection"></span>
+<img src="figure/intro/detection.png" alt="Left panel: Sensitivity to near-threshold stimuli is lower in the visual periphery. For example, d' equals 1.0 in top left of the screen, but is much higher near the center. Right panel: the perceptual decision criterion is lower (more 'yes' responses) in the visual periphery.  Middle panel: if the effect of eccentricity on visual sensitivity is overestimated in participants' mental self-model (here d' in the top left corner is estimated to be 0.3), a lowering of the decision criterion in the visual periphery as observed in Odegaard et al. (2018) is expected." width="100%" />
+<p class="caption">
+Figure 0.8: Left panel: Sensitivity to near-threshold stimuli is lower in the visual periphery. For example, d’ equals 1.0 in top left of the screen, but is much higher near the center. Right panel: the perceptual decision criterion is lower (more ‘yes’ responses) in the visual periphery. Middle panel: if the effect of eccentricity on visual sensitivity is overestimated in participants’ mental self-model (here d’ in the top left corner is estimated to be 0.3), a lowering of the decision criterion in the visual periphery as observed in Odegaard et al. (2018) is expected.
+</p>
+</div>
+</div>
+<div id="intro:search" class="section level2">
+<h2><span class="header-section-number">0.4</span> Visual search: “I would have found it”</h2>
+<p>In visual search tasks, participants are presented with an array of stimuli and are asked to report, as quickly and accurately as possible, whether a target stimulus was present or absent in the array. Moving one step up the complexity ladder, the accumulation of information in visual search is not only a function of stimulus strength and sensory precision, but is also affected by the endogenous allocation of attention to items in the visual array. As a result, search time varies as a function of the number of distractors, their perceptual similarity to the target and their spatial arrangement, among other factors <span class="citation">(for a review, see Wolfe &amp; Horowitz, 2008)</span>. These factors affect not only the time taken to report the presence of a target, but also the time taken to report its absence. For example, when searching for an orange target among red and green distractors, the number of distractors has virtually no effect on search time <span class="citation">(e.g., D’Zmura, 1991)</span> - a phenomenon known as ‘pop-out’. The bottom-up pop-out of a target can explain the immediate recognition of the presence of a target, irrespective of distractor set size. But this perceptual pop-out cannot, by itself, explain the immediate recognition of target absence, because in target absence trials there is nothing in the display to pop out.</p>
+<p>Computational models of visual search provide different accounts for search termination in target-absent trials. In <em>Feature Integration Theory</em>, visual search comprises a pre-attentive, automatic process, and a later stage that is under participants’ cognitive control. According to this model, difficult target-absent ‘conjunction’ searches terminate once participants scan all the items in the display <span class="citation">(a <em>self-terminating exhaustive search</em>; Treisman &amp; Gelade, 1980)</span>. However, this model predicts that search-time variability in conjunction target-absent trials should be lower than in conjunction target-present trials - a pattern that is not observed in empirical data <span class="citation">(Moran, Zehetleitner, Liesefeld, Müller, &amp; Usher, 2016; Wolfe, Palmer, &amp; Horowitz, 2010)</span>. Furthermore, Feature Integration Theory does not provide an explicit account of target-absent responses in highly efficient parallel searches.</p>
+<p>In early versions of the <em>Guided Search</em> model, ‘target absent’ judgments are the result of exhausting the search only on items that surpass a learned ‘activation threshold’ <span class="citation">(Chun &amp; Wolfe, 1996; Wolfe, 1994)</span>. In difficult searches, the activation threshold was set to a low value, thereby requiring the scanning of multiple items before a ‘no’ response can be delivered. In contrast, in easy searches the activation threshold could be set to a high value, reflecting a belief that a target would be highly salient (see Fig. <a href="introduction.html#fig:intro-termination-models">0.9</a>). Furthermore, some very long searches terminated once subjects concluded that “it rarely takes this long to find a target” <span class="citation">(Wolfe, 1994)</span></p>
+<p>A more recent version of the Guided Search model (<em>Competitive Guided Search</em>) described visual search as a stochastic process where items are selected for inspection based on their dynamic weight in a salience map. Critically, this model also included a <em>quitting unit</em> that can be chosen with a certain probability <span class="citation">(Moran, Zehetleitner, Müller, &amp; Usher, 2013)</span>. The search terminates once an item is recognized as the target, or once the quitting unit is selected. In this model, the salience of the quitting unit changes following the rejection of distractors. This incremental change was controlled by a parameter (<span class="math inline">\(\Delta w_{quit}\)</span>) that is “under strategic control of the observer”. For difficult searches, this parameter can be set to a low value, so that more items can be scanned before search termination. In very easy ‘pop-out’ searches this parameter can be set to a high value, making it possible to terminate the search after rejecting only one item.</p>
+<p>In a more recent formulation of the Guided Search model <span class="citation">(Wolfe, 2021)</span>, the search terminated once a noisy accumulator reached a <em>quitting threshold</em>. Setting the quitting threshold high allows participants to scan more items before concluding that a target is absent. The mechanism by which participants calibrate the quitting threshold is not specified in the model. Finally, in a fixation-based model of visual search, the number of items that are concurrently scanned within a single fixation (the <em>functional visual field</em>) was dependent on search difficulty: with more items for easy searches and less items for more difficult ones <span class="citation">(Hulleman &amp; Olivers, 2017)</span>.</p>
+<p>Importantly for our point here, the activation threshold, <span class="math inline">\(\Delta w_{quit}\)</span>, the quitting threshold and the functional visual field all share high similarity with the SDT criterion or the high-threshold <em>g</em> parameter, and reflects explicit or implicit beliefs about the subjective salience of a hypothetical target in the array – a form of self-knowledge.</p>
+<div class="figure" style="text-align: center"><span id="fig:intro-termination-models"></span>
+<img src="figure/intro/termination_models.png" alt="Models of search termination. For the same visual array (uppermost panel) search terminated immediately for one target (a green 7, right column), but takes longer for another target (a purple 7, left column). Different models of visual search explain this difference by postulating search termination mechanisms that are sensitive to the counterfactual difficulty of finding a hypothetical target." width="100%" />
+<p class="caption">
+Figure 0.9: Models of search termination. For the same visual array (uppermost panel) search terminated immediately for one target (a green 7, right column), but takes longer for another target (a purple 7, left column). Different models of visual search explain this difference by postulating search termination mechanisms that are sensitive to the counterfactual difficulty of finding a hypothetical target.
+</p>
+</div>
+<!-- @moran2013competitive proposed a Competitive Guided Search model, according to which 'target absent' responses are the result of selecting a 'quit unit' with probability that inversely scales with the salience of items in the display. In this model too, bottom-up activation is not sufficient to explain the lack of a distractor set-size effect on 'no' responses in feature search. The authors note that this effect may be driven by participants' expectation that in feature search, it is unlikely that attention will be drawn to a distractor when a target exists. Again, this is a form of self-knowledge, and more specifically beliefs and predictions about attention and search difficulty.  -->
+<p>Usually, search times in target-present and target-absent trials are highly correlated, such that if participants take longer to find the target in a given display, they will also take longer to conclude that it is absent from it <span class="citation">(Wolfe, 1998)</span>. This alignment speaks to the accuracy of the mental self-model: participants take longer to conclude that a target is missing when they believe they would take longer to find the target, and these beliefs about hypothetical search times are generally accurate. In the two upper panels of Fig. <a href="introduction.html#fig:intro-search">0.10</a> I provide two examples of cases where beliefs about search behaviour perfectly align with actual serach behaviour, leading to optimal search termination. However, self-knowledge about attention in visual search is not always accurate. For example, when searching for an unfamiliar letter (for example, an inverted N) among familiar letters (for example, Ns), the unfamiliar letter draws immediate attention without a need for serially attending to each item in the display. However, participants are slow in concluding that no unfamiliar letter is present, exhibiting a search time pattern consistent with a serial search for ‘target absent’ responses only <span class="citation">(Wang, Cavanagh, &amp; Green, 1994; Zhang &amp; Onyper, 2020)</span>. In the context of my proposal here, this can be an indication for a blind-spot of the mental self-model, failing to represent the fact that an unfamiliar letter would stand out (see Fig. <a href="introduction.html#fig:intro-search">0.10</a>, lower panel).</p>
+<!-- Importantly, collecting explicit metacognitive judgments of expected search times may lead to underestimating the richness and accuracy of the mental self-model. For example, participants may not have introspective access to their knowledge about color pop-out, but may still be able to act on this information when deciding to terminating their search. Here also, inference about absence provides a unique window into the mental self-model that does not depend on introspective access. -->
+<div class="figure" style="text-align: center"><span id="fig:intro-search"></span>
+<img src="figure/intro/search.png" alt="Upper panel: A target that is marked by a unique colour imemdiately captures attention (left). This fact is available to particiapnts' self-model (middle). As a result, participants can immediately terminate a search when no distractor shares the color of the target (right). Middle panel: When searching for the letter N among inverted Ns, the target does not immediately capture attention, and the serial deployment of attention is necessary (left). Participants are aware of this (middle). As a result, participants perform an exhaustive serial search before concluding that a target is absent (right. Lower panel: When searching for an inverted N among canincally presented Ns, the inverted letter immediately captures attention (left). This fact is not specified in the self-model (middle). As a result, participants perform an unncessary exhaustive serial search before concluding that a target is absent (right)." width="70%" />
+<p class="caption">
+Figure 0.10: Upper panel: A target that is marked by a unique colour imemdiately captures attention (left). This fact is available to particiapnts’ self-model (middle). As a result, participants can immediately terminate a search when no distractor shares the color of the target (right). Middle panel: When searching for the letter N among inverted Ns, the target does not immediately capture attention, and the serial deployment of attention is necessary (left). Participants are aware of this (middle). As a result, participants perform an exhaustive serial search before concluding that a target is absent (right. Lower panel: When searching for an inverted N among canincally presented Ns, the inverted letter immediately captures attention (left). This fact is not specified in the self-model (middle). As a result, participants perform an unncessary exhaustive serial search before concluding that a target is absent (right).
+</p>
+</div>
+</div>
+<div id="memory-i-would-have-remembered-it" class="section level2">
+<h2><span class="header-section-number">0.5</span> Memory: “I would have remembered it”</h2>
+<p>Inference about absence not only applies to external objects (such as guavas, or visual items on the screen), but also to mental variables such as memories and thoughts. For example, upon being introduced to a new colleague, one can be certain that they have not met this person before. In the memory literature, this is known as <em>Negative recognition</em>: remembering that something did not happen <span class="citation">(Brown, Lewis, &amp; Monk, 1977)</span>. In the lab, a typical recognition memory experiment comprises a learning phase and a test phase. In the learning phase participants are presented with a list of items, and in the test phase they are asked to classify different items as ‘old’ (presented in the learning phase) or ‘new’ (not presented in the learning phase).</p>
+<p>Recognition memory is often modeled using threshold or signal detection models (see sections <a href="introduction.html#htm"><strong>??</strong></a> and <a href="introduction.html#sdt"><strong>??</strong></a>), or a combination of the two <span class="citation">(<em>Dual Process models</em>; Wixted, 2007; Yonelinas, Dobbins, Szymanski, Dhaliwal, &amp; King, 1996)</span>. For example, in SDT models <span class="citation">(Banks, 1970)</span>, participants compare a ‘memory trace’ against an internal criterion to determine whether the item should be classified as old or new. Like perceptual detection, the placement of the decision threshold reflects beliefs about the expected signal for old and new items. If participants believe that learned items would give rise to very salient memory traces, they can safely increase the decision criterion without risking mistaking old items for being new.</p>
+<p>The role of self-knowledge in negative recognition is exemplified in the <em>mirror effect</em>: items that are more likely to be correctly endorsed as ‘old’ are also more likely to be correctly rejected as ‘new’. In SDT terms, this effect can be described as the adjustment of the decision criterion to the expected memory trace of an item, had it been present <span class="citation">(its <em>memorability</em>; Brown et al., 1977)</span>. For example, <span class="citation">Brown et al. (1977)</span> found that when asked to memorize a list of names, subjects are more confident in remembering that their own name was on the list, but also in correctly remembering when it was <em>not</em> on the list. For this effect to manifest, it is not sufficient that subjects’ memory was better for their own name. They also had to know this fact, and to use it in their counterfactual thinking (“I would have remembered if my name was on the list”). The mirror effect has also been demonstrated for the name of one’s hometown <span class="citation">(Brown et al., 1977)</span>, for word frequency <span class="citation">(rare words are more likely to be correctly endorsed or rejected with confidence; Brown et al., 1977; Glanzer &amp; Bowles, 1976)</span>, word imaginability <span class="citation">(Cortese, Khanna, &amp; Hacker, 2010; Cortese, McCarty, &amp; Schock, 2015)</span> and for study time <span class="citation">(subjects are more likely to correctly reject items if learned items are presented for longer; Stretch &amp; Wixted, 1998; Starns, White, &amp; Ratcliff, 2012)</span>.</p>
+<p>In a clever set of experiments, <span class="citation">Strack, Förster, &amp; Werth (2005)</span> established a causal link from metacognitive beliefs about item memorability and decisions about the absence of memories. In two experiments, participants in one group were led to believe that high-frequency words (words that are used relatively often) are more memorable than low-frequency words, while participants in a second group were led to believe that low-frequency words were more memorable than high-frequency words. This manipulation affected participants’ tendency to reject high-frequency or low-frequency items in a later recognition-memory task. Participants who believed that high-frequency words were more memorable were more likely to classify high-frequency words as ‘new’, suggesting that their metacognitive belief informed their inference about the absence of a memory (‘I would have remembered this word’). Inversely, participants who believed that low frequency words were more memorable showed the opposite pattern.</p>
+<p>One formal description of this inferential process is provided by the <em>likelihood ratio</em> rule. According to this model, subjects compare the likelihood of incoming evidence under two competing models of the world - the presence or absence of a memory trace, and choose the model under which the incoming evidence is more likely. In order to be able to compare the likelihood of an observation under alternative models, subjects must have a model of their cognition that is sufficiently detailed to yield conditional probability distributions. In experiments where the probabilities of an item to be old or new is equal, the likelihood ratio strategy is optimal <span class="citation">(Neyman &amp; Pearson, 1933)</span>. As a cartoon example, a participant may expect the perceived memory trace for frequent words to be centered around 0.3, and around 0.6 for infrequent words. Using the likelihood ratio rule, this particiapnt will be more confident in that a word is new if the observed memory is 0 and the word is infrequent, compared to when the word is frequent. The likelihood ratio approach has been successful in explaining several features of recognition memory, including the mirror effect in negative recognition <span class="citation">(Glanzer, Adams, Iverson, &amp; Kim, 1993; Glanzer, Hilford, &amp; Maloney, 2009)</span>.</p>
+<p>Just like in the cases of near-threshold detection and visual search, the intuitive metacognitive knowledge behind the mirror effect may not be available for explicit report, at least not in the absence of direct experience with the task itself. In their explicit memorability reports, subjects often have little to no declarative metacognitive knowledge of which items are more likely to be remembered, even under conditions that give rise to a mirror effect. For example, although more frequent words are more likely to be forgotten (and incorrectly classified as old), participants tended to judge them as more memorable than infrequent words <span class="citation">(Begg, Duft, Lalonde, Melnick, &amp; Sanvito, 1989; Benjamin, 2003; Greene &amp; Thapar, 1994; Wixted, 1992)</span>. However, participants showed metacognitive insight into the negative effect of word frequency on memorability when memorability was rated after (and not before) negative recognition judgments <span class="citation">(Benjamin, 2003; Guttentag &amp; Carroll, 1998)</span>. Thus, the implicit metacognitive knowledge that supports accurate negative recognition may become available for explicit report only when participants introspect over their recognition attempts.</p>
+</div>
+<div id="the-development-of-a-self-model" class="section level2">
+<h2><span class="header-section-number">0.6</span> The development of a self-model</h2>
+<p>As exemplified above, the inferential processes that result in judgments of absence share important commonalities, regardless of whether it is the absence of an isolated target stimulus, of one target in an array of distractors, or of a non-physical entity such as a memory. First, in all three cases, to infer absence agents must possess some self-knowledge (under what conditions are they likely to miss a target, how long they should expect to search before finding a target in an array of distractors, or which items are likely or unlikely to be remembered). Second, agents must be able to use this counterfactual knowledge and compare it with their current state (for example, having no recollection of an item, or not seeing a target stimulus).</p>
+<p>At what developmental stage do humans master the necessary self knowledge and inferential machinery to make efficient and accurate inference about absence? In the context of memory, evidence suggests that the necessary self-knowledge and the capacity for counterfactual thinking exist in primary form already in early childhood, but continue to develop until adulthood. For example, children as young as 5 were able to give meaningful assessments the memorability of hypothetical life events and to use this metacognitive knowledge to inform their judgments about the nonoccurrence of an event, but this ability did not reach full maturation until the age of 9 <span class="citation">(Ghetti &amp; Alexander, 2004)</span>. Other studies identified a qualitative transition between the ages 7 and 8 in the ability of children to rely on expected event memorability for inference about the absence of a memory <span class="citation">(Ghetti, Castelli, &amp; Lyons, 2010; Ghetti, Lyons, Lazzarin, &amp; Cornoldi, 2008)</span>. This developmental discontinuity was attributed to the development of counterfactual thinking and second-order theory of mind. Indeed, the ability to infer that something did not happen based on that it would have been remembered critically relies on one’s ability to ascribe mental states to their counterfactual self.</p>
+<p>In perception, the ability to represent absences lags behind the ability to represent presences, but reaches maturation much earlier than in the case of memory. In a study by <span class="citation">Coldren &amp; Haaf (2000)</span>, 4 month-old infants were familiarized with a pair of identical letters (e.g., the letter ‘O’), presented side by side. In the test phase, one of the letters was replaced with a novel letter, which differed from the familiar letter either in the presence or the absence of a distinctive feature. For example, when infants that were familiarized with the letter O were tested on a display of one O and one Q, the novel letter (Q) was marked by the presence of a distinctive feature. Conversely, for infants that were familiarized with the letter Q, the novel letter O was marked by the absence of a distinctive feature. Infants showed preferential looking at the novel letter only when this letter was marked by the presence, not the absence, of a distinctive feature. A similar feature-positive effect was still evident in the learning behaviour of preschool children. When presented with two similar displays, 4 and 5 year old children were able to learn to approach the display with a distinctive feature but were at chance when trained to approach a display that is marked by the absence of a distinctive feature <span class="citation">(Sainsbury, 1971)</span>.</p>
+<p>Together, these results suggest that the capacity to infer the absence of physical and mental entities develops through infancy and early childhood. In context of this thesis, the development of this capacity can reflect the gradual expansion of different aspects a mental self-model, and the development of the capacity to use this model for counterfactual reasoning. For example, a baby that is not drawn to the new letter ‘O’ after being habituated to the letter ‘Q’ may not yet represent the absence of the distinguishing feature, because they lack the implicit self knowledge to know that they would have noticed the lower diagonal line if it was present. More abstractly, a 7 year-old may not be able to confidently tell that they did not spread a lotion on a chair <span class="citation">(a highly memorable action, due to its bizarreness; Ghetti et al., 2008)</span>, because they lack the self-knowledge to know that if they had, they would have remembered doing so.</p>
+</div>
+<div id="this-thesis" class="section level2">
+<h2><span class="header-section-number">0.7</span> This thesis</h2>
+<p>This thesis is centred around inference about absence in perception, and its reliance on self-modeling. First, in Chapter <a href="1-ch-search.html#ch:search">1</a> I look at inference about absence in visual search. Not unlike near-threshold detection and memory, in visual search too inference about the absence of a target item must rely on some form of self-knowledge (see section <a href="introduction.html#intro:search">0.4</a>). This study sought to pinpoint the origin of this knowledge. For example, is the knowledge that some visual searches are easier than others available to subjects in everyday life, or is it learned from experience in the artificial context of performing many trials of the same visual search task again and again? Due to the typical many-trials/few-subjects structure of lab-based experiments, classical visual search studies could not tell between these alternative options. By collecting data from a large number of online participants, in this first study we were able to reliably characterise participants’ asearch termination in the first few trials of an experiment.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="1-ch-search.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
