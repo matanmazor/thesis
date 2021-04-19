@@ -2,7 +2,7 @@
 
 ## Acknowledgements {-}
 
-I want to thank a few people.
+Rani, Roni, Halely, Dina, Karl, Josh, Alisa, Lesley, B7, SIPS & Neurohackademy (Ariel and Tal), Steve, Noam, scihub, Roy, Chudi, Dan, Peter Zeidman, Rani, Dominic and the Hari Krishna volunteers, my participants, imaging team, Kamlyn, Maddi and Shiv, the developers of JATOS (Elisa and Kristian), labjs (Felix), thesisdown (Chester Ismay) and the numerous other pacakges that I've used, stackoverflow community, funders (UCL, Bogue, Wellcome)
 
 ## Preface {-}
 

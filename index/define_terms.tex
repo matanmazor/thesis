@@ -1,0 +1,7 @@
+\newcommand{\margintext}[1]{\setstretch{0.4}	\raggedright{\tiny{\textsf{\uppercase{#1}}}}}
+
+\catcode`\"=13  % make the double quote character " active
+\gdef"#1"{\textit{#1}\marginpar{\margintext{#1}}\index{#1}}
+
+\newcommand{\new}[2]
+{\textit{#2}\marginpar{\margintext{#1}}\index{#1}}

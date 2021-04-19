@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.9)  2 APR 2021 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.9)  19 APR 2021 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -301,6 +301,25 @@ Package: chemarr 2001/06/22 v1.1 Chemical reaction arrows (HO)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/colo
+r.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref
 .sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
@@ -452,7 +471,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip70
-) (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+(c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -546,9 +567,8 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 )
-Package color Info: Redefining color shadecolor on input line 81.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
-7.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 20
+8.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -560,32 +580,32 @@ File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Info: Redefining \microtypecontext on input line 187.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Info: Redefining \microtypecontext on input line 208.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 187.
+LaTeX Info: Redefining \showhyphens on input line 208.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -606,7 +626,7 @@ pdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 187.
+Package hyperref Info: Link coloring ON on input line 208.
 
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -622,47 +642,47 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 187.
-LaTeX Info: Redefining \pageref on input line 187.
-LaTeX Info: Redefining \nameref on input line 187.
+LaTeX Info: Redefining \ref on input line 208.
+LaTeX Info: Redefining \pageref on input line 208.
+LaTeX Info: Redefining \nameref on input line 208.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-91.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+12.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-91.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+12.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-191.
+212.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-191.
+212.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 191.
+(Font)              <12> on input line 212.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 191.
+(Font)              <8> on input line 212.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 191.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 19
-1.
+(Font)              <6> on input line 212.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 21
+2.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 191
+LaTeX Font Info:    Trying to load font information for U+msa on input line 212
 .
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -671,7 +691,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 191
+LaTeX Font Info:    Trying to load font information for U+msb on input line 212
 .
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -700,159 +720,137 @@ ex.map}] [2
 ] [3] [4
 
 
-] (./thesis.toc [5]
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
-[6])
+] (./thesis.toc [5] [6] [7])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
-[7] [8
-
-] (./thesis.lot)
+[8] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
-[9] [10
+[9
 
-] (./thesis.lof
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [10
 
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[12]
-Underfull \vbox (badness 4765) has occurred while \output is active []
-
-[13])
+] (./thesis.lof [11])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
-[14] [15
+[12] [13
 
-] [16
+] [14
 
 
-] [17] [18
+] [15] [16
 
 
 ]
-<figure/intro/guava.jpg, id=860, 513.92pt x 513.92pt>
+<figure/intro/guava.jpg, id=907, 513.92pt x 513.92pt>
 File: figure/intro/guava.jpg Graphic file (type jpg)
 <use figure/intro/guava.jpg>
-Package pdftex.def Info: figure/intro/guava.jpg  used on input line 224.
+Package pdftex.def Info: figure/intro/guava.jpg  used on input line 245.
 (pdftex.def)             Requested size: 433.62pt x 433.62677pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.227 ... absence}\label{inference-about-absence}}
-                                                   [1
+l.254 T
+       he following section introduces a computational formulation of this s...
+[1
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.230 
-       [2 <./figure/intro/guava.jpg>]pdfTeX warning (ext4): destination with th
-e same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.264   J
-         ohn knows that 1 holds. [3]
-<figure/intro/symmetric.png, id=881, 250.536pt x 182.1204pt>
+l.260 
+       [2 <./figure/intro/guava.jpg>]
+<figure/intro/symmetric.png, id=918, 250.536pt x 182.1204pt>
 File: figure/intro/symmetric.png Graphic file (type png)
 <use figure/intro/symmetric.png>
-Package pdftex.def Info: figure/intro/symmetric.png  used on input line 271.
+Package pdftex.def Info: figure/intro/symmetric.png  used on input line 292.
 (pdftex.def)             Requested size: 216.81pt x 157.60422pt.
-<figure/intro/asymmetric.png, id=884, 250.536pt x 198.5016pt>
+<figure/intro/asymmetric.png, id=921, 250.536pt x 198.5016pt>
 File: figure/intro/asymmetric.png Graphic file (type png)
 <use figure/intro/asymmetric.png>
-Package pdftex.def Info: figure/intro/asymmetric.png  used on input line 275.
+Package pdftex.def Info: figure/intro/asymmetric.png  used on input line 296.
 (pdftex.def)             Requested size: 216.81pt x 171.78027pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299 
+       [3]
+<figure/intro/pessimistic.png, id=934, 250.536pt x 193.4427pt>
+File: figure/intro/pessimistic.png Graphic file (type png)
+<use figure/intro/pessimistic.png>
+Package pdftex.def Info: figure/intro/pessimistic.png  used on input line 304.
+(pdftex.def)             Requested size: 216.81pt x 167.40236pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1831) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.277 T
-       his implementation assumes that the absence of a predator is a defaul...
-[4 <./figure/intro/symmetric.png>]
-<figure/intro/pessimistic.png, id=892, 250.536pt x 193.4427pt>
-File: figure/intro/pessimistic.png Graphic file (type png)
-<use figure/intro/pessimistic.png>
-Package pdftex.def Info: figure/intro/pessimistic.png  used on input line 283.
-(pdftex.def)             Requested size: 216.81pt x 167.40236pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[5 <./figure/intro/asymmetric.png>]
-<figure/intro/htm.png, id=901, 231.0231pt x 112.9821pt>
+l.307 
+       [4 <./figure/intro/symmetric.png> <./figure/intro/asymmetric.png>] [5 <.
+/figure/intro/pessimistic.png>]
+<figure/intro/htm.png, id=954, 231.0231pt x 112.9821pt>
 File: figure/intro/htm.png Graphic file (type png)
 <use figure/intro/htm.png>
-Package pdftex.def Info: figure/intro/htm.png  used on input line 300.
+Package pdftex.def Info: figure/intro/htm.png  used on input line 321.
 (pdftex.def)             Requested size: 303.53267pt x 148.45584pt.
-
-Underfull \vbox (badness 1466) has occurred while \output is active []
-
-[6 <./figure/intro/pessimistic.png>] [7 <./figure/intro/htm.png>]
-<figure/intro/sdt.png, id=919, 277.9986pt x 104.7915pt>
+[6 <./figure/intro/htm.png>]
+<figure/intro/sdt.png, id=963, 277.9986pt x 104.7915pt>
 File: figure/intro/sdt.png Graphic file (type png)
 <use figure/intro/sdt.png>
-Package pdftex.def Info: figure/intro/sdt.png  used on input line 320.
+Package pdftex.def Info: figure/intro/sdt.png  used on input line 341.
 (pdftex.def)             Requested size: 303.53267pt x 114.42833pt.
-[8]
-<figure/intro/Meuwese.jpg, id=932, 824.07875pt x 631.35875pt>
-File: figure/intro/Meuwese.jpg Graphic file (type jpg)
-<use figure/intro/Meuwese.jpg>
-Package pdftex.def Info: figure/intro/Meuwese.jpg  used on input line 331.
-(pdftex.def)             Requested size: 303.53267pt x 232.549pt.
-[9 <./figure/intro/sdt.png>] [10 <./figure/intro/Meuwese.jpg>]
-<figure/intro/detection.png, id=945, 476.7411pt x 135.6267pt>
+[7] [8 <./figure/intro/sdt.png>]
+<figure/intro/detection.png, id=982, 476.7411pt x 135.6267pt>
 File: figure/intro/detection.png Graphic file (type png)
 <use figure/intro/detection.png>
-Package pdftex.def Info: figure/intro/detection.png  used on input line 339.
+Package pdftex.def Info: figure/intro/detection.png  used on input line 358.
 (pdftex.def)             Requested size: 433.62pt x 123.3646pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[11] [12 <./figure/intro/detection.png>]
-<figure/intro/termination_models.png, id=957, 422.5386pt x 577.9191pt>
-File: figure/intro/termination_models.png Graphic file (type png)
-<use figure/intro/termination_models.png>
-Package pdftex.def Info: figure/intro/termination_models.png  used on input lin
-e 356.
-(pdftex.def)             Requested size: 433.62pt x 593.07637pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[13]
-Overfull \vbox (39.64636pt too high) has occurred while \output is active []
-
-[14 <./figure/intro/termination_models.png>]
-<figure/intro/search.png, id=969, 461.8053pt x 402.7848pt>
+[9] [10 <./figure/intro/detection.png>]
+<figure/intro/termination_models_wide.png, id=993, 702.2235pt x 303.0522pt>
+File: figure/intro/termination_models_wide.png Graphic file (type png)
+<use figure/intro/termination_models_wide.png>
+Package pdftex.def Info: figure/intro/termination_models_wide.png  used on inpu
+t line 367.
+(pdftex.def)             Requested size: 433.62pt x 187.13205pt.
+[11 <./figure/intro/termination_models_wide.png>]
+<figure/intro/search.png, id=1003, 461.8053pt x 402.7848pt>
 File: figure/intro/search.png Graphic file (type png)
 <use figure/intro/search.png>
-Package pdftex.def Info: figure/intro/search.png  used on input line 360.
+Package pdftex.def Info: figure/intro/search.png  used on input line 379.
 (pdftex.def)             Requested size: 303.53267pt x 264.75095pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[15] [16 <./figure/intro/search.png>]
+[12]
+Underfull \vbox (badness 7486) has occurred while \output is active []
+
+[13 <./figure/intro/search.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[17] [18] [19] [20]
-Chapter 1.
-[21
+[14] [15]
+
+LaTeX Warning: Reference `ch:search' on page 16 undefined on input line 410.
+
+[16] [17] [18
 
 ]
+Chapter 1.
+[19]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-16.
+43.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -864,17 +862,15 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[22]
-<figure/ch1/designExp1.png, id=1020, 467.1051pt x 532.389pt>
-File: figure/ch1/designExp1.png Graphic file (type png)
-<use figure/ch1/designExp1.png>
-Package pdftex.def Info: figure/ch1/designExp1.png  used on input line 428.
-(pdftex.def)             Requested size: 433.62pt x 494.23117pt.
-
+[20]
+<figure/termination/designExp1.png, id=1063, 467.1051pt x 532.389pt>
+File: figure/termination/designExp1.png Graphic file (type png)
+<use figure/termination/designExp1.png>
+Package pdftex.def Info: figure/termination/designExp1.png  used on input line 
+455.
+(pdftex.def)             Requested size: 260.17464pt x 296.54358pt.
+[21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[23]
-Overfull \vbox (56.80116pt too high) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
@@ -884,12 +880,34 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[24 <./figure/ch1/designExp1.png>]
-<figure/ch1/models.png, id=1036, 726.7953pt x 476.982pt>
-File: figure/ch1/models.png Graphic file (type png)
-<use figure/ch1/models.png>
-Package pdftex.def Info: figure/ch1/models.png  used on input line 463.
-(pdftex.def)             Requested size: 433.62pt x 284.57565pt.
+[22 <./figure/termination/designExp1.png>]
+<figure/termination/models.png, id=1085, 726.7953pt x 476.982pt>
+File: figure/termination/models.png Graphic file (type png)
+<use figure/termination/models.png>
+Package pdftex.def Info: figure/termination/models.png  used on input line 490.
+
+(pdftex.def)             Requested size: 260.17464pt x 170.74539pt.
+[23]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[24 <./figure/termination/models.png>]
+<thesis_files/figure-latex/termination-exp1-results-1.pdf, id=1105, 469.755pt x
+ 325.215pt>
+File: thesis_files/figure-latex/termination-exp1-results-1.pdf Graphic file (ty
+pe pdf)
+<use thesis_files/figure-latex/termination-exp1-results-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/termination-exp1-results-1.p
+df  used on input line 514.
+(pdftex.def)             Requested size: 433.62pt x 300.19887pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [25]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
@@ -899,17 +917,21 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[26 <./figure/ch1/models.png>] [27]
-<thesis_files/figure-latex/ch1-exp1-results-1.pdf, id=1066, 469.755pt x 325.215
-pt>
-File: thesis_files/figure-latex/ch1-exp1-results-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch1-exp1-results-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch1-exp1-results-1.pdf  used
- on input line 487.
+[26 <./thesis_files/figure-latex/termination-exp1-results-1.pdf>]
+Overfull \hbox (134.39091pt too wide) in paragraph at lines 535--536
+\T1/lmr/m/n/12 (-20) A static ver-sion of Ex-per-i-ment 2 can be ac-cessed on [
+][]matan-ma-zor.github.io/termination/experiments/demos/exp2/[][].
+ []
+
+[27]
+<thesis_files/figure-latex/termination-exp2-results-1.pdf, id=1135, 469.755pt x
+ 325.215pt>
+File: thesis_files/figure-latex/termination-exp2-results-1.pdf Graphic file (ty
+pe pdf)
+<use thesis_files/figure-latex/termination-exp2-results-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/termination-exp2-results-1.p
+df  used on input line 552.
 (pdftex.def)             Requested size: 433.62pt x 300.19887pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.11652pt, for example:
@@ -918,14 +940,8 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[28 <./thesis_files/figure-latex/ch1-exp1-results-1.pdf>]
+[28] [29 <./thesis_files/figure-latex/termination-exp2-results-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[29]
-Overfull \hbox (134.39091pt too wide) in paragraph at lines 508--509
-\T1/lmr/m/n/12 (-20) A static ver-sion of Ex-per-i-ment 2 can be ac-cessed on [
-][]matan-ma-zor.github.io/termination/experiments/demos/exp2/[][].
- []
 
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
@@ -936,29 +952,9 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
 [30]
-<thesis_files/figure-latex/ch1-exp2-results-1.pdf, id=1097, 469.755pt x 325.215
-pt>
-File: thesis_files/figure-latex/ch1-exp2-results-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch1-exp2-results-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch1-exp2-results-1.pdf  used
- on input line 525.
-(pdftex.def)             Requested size: 433.62pt x 300.19887pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [31]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[32 <./thesis_files/figure-latex/ch1-exp2-results-1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -969,23 +965,11 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[35]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[36]
-Chapter 2.
-[37
+[32] [33] [34
 
 ]
+Chapter 2.
+[35]
 Underfull \vbox (badness 1019) has occurred while \output is active []
 
 
@@ -996,14 +980,14 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[38] [39]
-<figure/ch4/methods1.png, id=1165, 645.1302pt x 466.8642pt>
-File: figure/ch4/methods1.png Graphic file (type png)
-<use figure/ch4/methods1.png>
-Package pdftex.def Info: figure/ch4/methods1.png  used on input line 638.
+[36] [37]
+<figure/MVS/methods1.png, id=1206, 645.1302pt x 466.8642pt>
+File: figure/MVS/methods1.png Graphic file (type png)
+<use figure/MVS/methods1.png>
+Package pdftex.def Info: figure/MVS/methods1.png  used on input line 665.
 (pdftex.def)             Requested size: 433.62pt x 313.79471pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-44.
+71.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1015,27 +999,44 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[40 <./figure/ch4/methods1.png>]
-
-LaTeX Warning: Reference `fig:slopeHistograms' on page 41 undefined on input li
-ne 661.
-
-[41]
-<thesis_files/figure-latex/ch4-e1-e2-slopes-1.pdf, id=1185, 469.755pt x 325.215
+[38] [39 <./figure/MVS/methods1.png>]
+<thesis_files/figure-latex/MVS-e1-e2-slopes-1.pdf, id=1228, 469.755pt x 325.215
 pt>
-File: thesis_files/figure-latex/ch4-e1-e2-slopes-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch4-e1-e2-slopes-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch4-e1-e2-slopes-1.pdf  used
- on input line 672.
+File: thesis_files/figure-latex/MVS-e1-e2-slopes-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/MVS-e1-e2-slopes-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/MVS-e1-e2-slopes-1.pdf  used
+ on input line 700.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 672--673
- [][] 
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 700--700
+[][] 
+ []
+
+<thesis_files/figure-latex/MVS-e1-e2-scaled-slopes-1.pdf, id=1229, 469.755pt x 
+325.215pt>
+File: thesis_files/figure-latex/MVS-e1-e2-scaled-slopes-1.pdf Graphic file (typ
+e pdf)
+<use thesis_files/figure-latex/MVS-e1-e2-scaled-slopes-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/MVS-e1-e2-scaled-slopes-1.pd
+f  used on input line 708.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 708--708
+[][] 
  []
 
 
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[41 <./thesis_files/figure-latex/MVS-e1-e2-slopes-1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.11652pt, for example:
@@ -1044,56 +1045,97 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[42] [43 <./thesis_files/figure-latex/ch4-e1-e2-slopes-1.pdf>]
-<figure/ch4/methods2.png, id=1207, 555.7563pt x 298.2342pt>
-File: figure/ch4/methods2.png Graphic file (type png)
-<use figure/ch4/methods2.png>
-Package pdftex.def Info: figure/ch4/methods2.png  used on input line 696.
+[42 <./thesis_files/figure-latex/MVS-e1-e2-scaled-slopes-1.pdf>]
+<figure/MVS/methods2.png, id=1266, 555.7563pt x 298.2342pt>
+File: figure/MVS/methods2.png Graphic file (type png)
+<use figure/MVS/methods2.png>
+Package pdftex.def Info: figure/MVS/methods2.png  used on input line 733.
 (pdftex.def)             Requested size: 433.62pt x 232.69pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[44]
-Underfull \vbox (badness 3138) has occurred while \output is active []
-
-[45 <./figure/ch4/methods2.png>]
-<thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf, id=1226, 469.755
+[43]
+<thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf, id=1276, 469.755
 pt x 325.215pt>
 File: thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf Graphic file
  (type pdf)
 <use thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/ch-4-exp3-estimation-scatter
--1.pdf  used on input line 719.
+-1.pdf  used on input line 755.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 719--720
- [][] 
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 755--755
+[][] 
  []
 
-<thesis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf, id=1227, 469.755
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[44 <./figure/MVS/methods2.png>]
+<thesis_files/figure-latex/MVS-self-other-permutations-1.pdf, id=1284, 469.755p
+t x 325.215pt>
+File: thesis_files/figure-latex/MVS-self-other-permutations-1.pdf Graphic file 
+(type pdf)
+<use thesis_files/figure-latex/MVS-self-other-permutations-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/MVS-self-other-permutations-
+1.pdf  used on input line 763.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 763--763
+[][] 
+ []
+
+<thesis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf, id=1285, 469.755
 pt x 325.215pt>
 File: thesis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf Graphic file
  (type pdf)
 <use thesis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/ch-4-exp4-estimation-scatter
--1.pdf  used on input line 724.
+-1.pdf  used on input line 766.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 724--725
- [][] 
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 766--766
+[][] 
+ []
+
+[45 <./thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[46 <./thesis_files/figure-latex/MVS-self-other-permutations-1.pdf>] [47 <./the
+sis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf>]
+<thesis_files/figure-latex/ch-4-exp4-asymmetry-fig-1.pdf, id=1328, 469.755pt x 
+325.215pt>
+File: thesis_files/figure-latex/ch-4-exp4-asymmetry-fig-1.pdf Graphic file (typ
+e pdf)
+<use thesis_files/figure-latex/ch-4-exp4-asymmetry-fig-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/ch-4-exp4-asymmetry-fig-1.pd
+f  used on input line 786.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 786--786
+[][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[48]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[49 <./thesis_files/figure-latex/ch-4-exp4-asymmetry-fig-1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.11652pt, for example:
@@ -1102,23 +1144,359 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
-[46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[47 <./thesis_files/figure-latex/ch-4-exp3-estimation-scatter-1.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[48 <./thesis_files/figure-latex/ch-4-exp4-estimation-scatter-1.pdf>] [49] [50
+[50]
+Chapter 3.
+[51
 
 ]
-Chapter 3.
-[51]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[52]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 841.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 841.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 841.
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 841.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 841.
+
+<figure/RC/designExp1.png, id=1371, 963.6pt x 542.025pt>
+File: figure/RC/designExp1.png Graphic file (type png)
+<use figure/RC/designExp1.png>
+Package pdftex.def Info: figure/RC/designExp1.png  used on input line 845.
+(pdftex.def)             Requested size: 433.62pt x 243.90898pt.
+[53]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[54 <./figure/RC/designExp1.png (PNG copy)>]
+<thesis_files/figure-latex/RC-exp1-hists-1.pdf, id=1391, 469.755pt x 325.215pt>
+
+File: thesis_files/figure-latex/RC-exp1-hists-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/RC-exp1-hists-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp1-hists-1.pdf  used on
+ input line 881.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 881--881
+[][] 
+ []
+
+[55]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[56 <./thesis_files/figure-latex/RC-exp1-hists-1.pdf>]
+<thesis_files/figure-latex/RC-exp1-rcROC-1.pdf, id=1417, 469.755pt x 325.215pt>
+
+File: thesis_files/figure-latex/RC-exp1-rcROC-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/RC-exp1-rcROC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp1-rcROC-1.pdf  used on
+ input line 892.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 892--892
+[][] 
+ []
+
+<thesis_files/figure-latex/RC-exp1-discrimination-RC-1.pdf, id=1418, 469.755pt 
+x 325.215pt>
+File: thesis_files/figure-latex/RC-exp1-discrimination-RC-1.pdf Graphic file (t
+ype pdf)
+<use thesis_files/figure-latex/RC-exp1-discrimination-RC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp1-discrimination-RC-1.
+pdf  used on input line 905.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 905--905
+[][] 
+ []
+
+[57]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[58 <./thesis_files/figure-latex/RC-exp1-rcROC-1.pdf>] [59 <./thesis_files/figu
+re-latex/RC-exp1-discrimination-RC-1.pdf>]
+<thesis_files/figure-latex/RC-exp1-detection-RC-figure-1.pdf, id=1459, 469.755p
+t x 325.215pt>
+File: thesis_files/figure-latex/RC-exp1-detection-RC-figure-1.pdf Graphic file 
+(type pdf)
+<use thesis_files/figure-latex/RC-exp1-detection-RC-figure-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp1-detection-RC-figure-
+1.pdf  used on input line 919.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 919--919
+[][] 
+ []
+
+<thesis_files/figure-latex/RC-exp1-signal-RC-figure-1.pdf, id=1461, 469.755pt x
+ 325.215pt>
+File: thesis_files/figure-latex/RC-exp1-signal-RC-figure-1.pdf Graphic file (ty
+pe pdf)
+<use thesis_files/figure-latex/RC-exp1-signal-RC-figure-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp1-signal-RC-figure-1.p
+df  used on input line 932.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 932--932
+[][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[60] [61 <./thesis_files/figure-latex/RC-exp1-detection-RC-figure-1.pdf>]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[62 <./thesis_files/figure-latex/RC-exp1-signal-RC-figure-1.pdf>]
+<figure/RC/designExp2.png, id=1499, 963.6pt x 542.025pt>
+File: figure/RC/designExp2.png Graphic file (type png)
+<use figure/RC/designExp2.png>
+Package pdftex.def Info: figure/RC/designExp2.png  used on input line 966.
+(pdftex.def)             Requested size: 433.62pt x 243.90898pt.
+[63]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[64 <./figure/RC/designExp2.png (PNG copy)>]
+<thesis_files/figure-latex/RC-exp2-hists-1.pdf, id=1518, 469.755pt x 325.215pt>
+
+File: thesis_files/figure-latex/RC-exp2-hists-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/RC-exp2-hists-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp2-hists-1.pdf  used on
+ input line 987.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 987--987
+[][] 
+ []
+
+<thesis_files/figure-latex/RC-exp2-rcROC-1.pdf, id=1520, 469.755pt x 325.215pt>
+
+File: thesis_files/figure-latex/RC-exp2-rcROC-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/RC-exp2-rcROC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp2-rcROC-1.pdf  used on
+ input line 994.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 994--994
+[][] 
+ []
+
+<thesis_files/figure-latex/RC-exp2-discrimination-RC-1.pdf, id=1521, 469.755pt 
+x 325.215pt>
+File: thesis_files/figure-latex/RC-exp2-discrimination-RC-1.pdf Graphic file (t
+ype pdf)
+<use thesis_files/figure-latex/RC-exp2-discrimination-RC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp2-discrimination-RC-1.
+pdf  used on input line 1001.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1001--1001
+[][] 
+ []
+
+[65]
+<thesis_files/figure-latex/RC-exp2-detection-RC-figure-1.pdf, id=1540, 469.755p
+t x 325.215pt>
+File: thesis_files/figure-latex/RC-exp2-detection-RC-figure-1.pdf Graphic file 
+(type pdf)
+<use thesis_files/figure-latex/RC-exp2-detection-RC-figure-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp2-detection-RC-figure-
+1.pdf  used on input line 1021.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1021--1021
+[][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[66 <./thesis_files/figure-latex/RC-exp2-hists-1.pdf>]
+<thesis_files/figure-latex/RC-exp2-signal-RC-1.pdf, id=1560, 469.755pt x 325.21
+5pt>
+File: thesis_files/figure-latex/RC-exp2-signal-RC-1.pdf Graphic file (type pdf)
+
+<use thesis_files/figure-latex/RC-exp2-signal-RC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-exp2-signal-RC-1.pdf  use
+d on input line 1028.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1028--1028
+[][] 
+ []
+
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[67 <./thesis_files/figure-latex/RC-exp2-rcROC-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[68 <./thesis_files/figure-latex/RC-exp2-discrimination-RC-1.pdf>]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[69 <./thesis_files/figure-latex/RC-exp2-detection-RC-figure-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[70 <./thesis_files/figure-latex/RC-exp2-signal-RC-1.pdf>]
+<thesis_files/figure-latex/RC-analyze-simulation1-1.pdf, id=1624, 469.755pt x 3
+25.215pt>
+File: thesis_files/figure-latex/RC-analyze-simulation1-1.pdf Graphic file (type
+ pdf)
+<use thesis_files/figure-latex/RC-analyze-simulation1-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-analyze-simulation1-1.pdf
+  used on input line 1048.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1048--1048
+[][] 
+ []
+
+[71]
+Underfull \vbox (badness 4713) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[72 <./thesis_files/figure-latex/RC-analyze-simulation1-1.pdf>]
+
+LaTeX Warning: Reference `REF' on page 73 undefined on input line 1057.
+
+
+LaTeX Warning: Reference `RC-analyze-simulation2' on page 73 undefined on input
+ line 1059.
+
+<thesis_files/figure-latex/RC-analyze-simulation2-1.pdf, id=1641, 469.755pt x 3
+25.215pt>
+File: thesis_files/figure-latex/RC-analyze-simulation2-1.pdf Graphic file (type
+ pdf)
+<use thesis_files/figure-latex/RC-analyze-simulation2-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-analyze-simulation2-1.pdf
+  used on input line 1061.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1061--1061
+[][] 
+ []
+
+<thesis_files/figure-latex/RC-analyze-simulation3-1.pdf, id=1642, 469.755pt x 3
+25.215pt>
+File: thesis_files/figure-latex/RC-analyze-simulation3-1.pdf Graphic file (type
+ pdf)
+<use thesis_files/figure-latex/RC-analyze-simulation3-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/RC-analyze-simulation3-1.pdf
+  used on input line 1068.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1068--1068
+[][] 
+ []
+
+[73]
+
+LaTeX Warning: Reference `fig:RC-exp1-signal-RC' on page 74 undefined on input 
+line 1075.
+
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[74 <./thesis_files/figure-latex/RC-analyze-simulation2-1.pdf>]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[75 <./thesis_files/figure-latex/RC-analyze-simulation3-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+
+[76]
+Chapter 4.
+[77
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1129,15 +1507,24 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[52] [53]
-<figure/ch3/design.png, id=1288, 859.2903pt x 548.2884pt>
-File: figure/ch3/design.png Graphic file (type png)
-<use figure/ch3/design.png>
-Package pdftex.def Info: figure/ch3/design.png  used on input line 786.
+[78] [79]
+<figure/fMRI/design.png, id=1697, 859.2903pt x 548.2884pt>
+File: figure/fMRI/design.png Graphic file (type png)
+<use figure/fMRI/design.png>
+Package pdftex.def Info: figure/fMRI/design.png  used on input line 1124.
 (pdftex.def)             Requested size: 433.62pt x 276.67848pt.
 
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
+
+[80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[81 <./figure/fMRI/design.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.85004pt, for example:
@@ -1146,7 +1533,7 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[54] [55 <./figure/ch3/design.png>]
+[82] [83]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.85004pt, for example:
@@ -1155,7 +1542,7 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[56] [57]
+[84] [85]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.85004pt, for example:
@@ -1164,32 +1551,23 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[58] [59]
+[86] [87]
 
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.85004pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.85004pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[60] [61]
-
-LaTeX Warning: Command \textpm invalid in math mode on input line 949.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1287.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 949.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1287.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 949.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1287.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 949.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1287.
 
-<figure/ch3/behaviour.png, id=1350, 454.3374pt x 317.0244pt>
-File: figure/ch3/behaviour.png Graphic file (type png)
-<use figure/ch3/behaviour.png>
-Package pdftex.def Info: figure/ch3/behaviour.png  used on input line 953.
+<figure/fMRI/behaviour.png, id=1759, 454.3374pt x 317.0244pt>
+File: figure/fMRI/behaviour.png Graphic file (type png)
+<use figure/fMRI/behaviour.png>
+Package pdftex.def Info: figure/fMRI/behaviour.png  used on input line 1291.
 (pdftex.def)             Requested size: 433.62pt x 302.58398pt.
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
@@ -1199,40 +1577,38 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[62] [63 <./figure/ch3/behaviour.png>]
+[88]
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
-
-
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
 
-LaTeX Warning: Command \textpm invalid in math mode on input line 957.
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
 
-<figure/ch3/figure3.png, id=1367, 645.612pt x 242.5863pt>
-File: figure/ch3/figure3.png Graphic file (type png)
-<use figure/ch3/figure3.png>
-Package pdftex.def Info: figure/ch3/figure3.png  used on input line 968.
+
+LaTeX Warning: Command \textpm invalid in math mode on input line 1295.
+
+[89 <./figure/fMRI/behaviour.png>]
+<figure/fMRI/figure3.png, id=1777, 645.612pt x 242.5863pt>
+File: figure/fMRI/figure3.png Graphic file (type png)
+<use figure/fMRI/figure3.png>
+Package pdftex.def Info: figure/fMRI/figure3.png  used on input line 1306.
 (pdftex.def)             Requested size: 433.62pt x 162.93175pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.85004pt, for example:
 (fancyhdr)                \setlength{\headheight}{27.85004pt}.
@@ -1240,47 +1616,23 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[64] [65 <./figure/ch3/figure3.png>]
-<figure/ch3/figure4.png, id=1392, 393.1488pt x 707.0415pt>
-File: figure/ch3/figure4.png Graphic file (type png)
-<use figure/ch3/figure4.png>
-Package pdftex.def Info: figure/ch3/figure4.png  used on input line 986.
+[90 <./figure/fMRI/figure3.png>]
+<figure/fMRI/figure4.png, id=1794, 393.1488pt x 707.0415pt>
+File: figure/fMRI/figure4.png Graphic file (type png)
+<use figure/fMRI/figure4.png>
+Package pdftex.def Info: figure/fMRI/figure4.png  used on input line 1324.
 (pdftex.def)             Requested size: 303.53267pt x 545.90167pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.85004pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.85004pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[66] [67 <./figure/ch3/figure4.png>]
-<figure/ch3/figure5.png, id=1406, 1410.77063pt x 1073.00874pt>
-File: figure/ch3/figure5.png Graphic file (type png)
-<use figure/ch3/figure5.png>
-Package pdftex.def Info: figure/ch3/figure5.png  used on input line 992.
+[91]
+<figure/fMRI/figure5.png, id=1806, 1410.77063pt x 1073.00874pt>
+File: figure/fMRI/figure5.png Graphic file (type png)
+<use figure/fMRI/figure5.png>
+Package pdftex.def Info: figure/fMRI/figure5.png  used on input line 1330.
 (pdftex.def)             Requested size: 433.62pt x 329.79678pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.85004pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.85004pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[68]
-<figure/ch3/models.png, id=1416, 1811.76875pt x 1404.24625pt>
-File: figure/ch3/models.png Graphic file (type png)
-<use figure/ch3/models.png>
-Package pdftex.def Info: figure/ch3/models.png  used on input line 999.
+<figure/fMRI/models.png, id=1812, 1811.76875pt x 1404.24625pt>
+File: figure/fMRI/models.png Graphic file (type png)
+<use figure/fMRI/models.png>
+Package pdftex.def Info: figure/fMRI/models.png  used on input line 1337.
 (pdftex.def)             Requested size: 433.62pt x 336.08319pt.
-[69 <./figure/ch3/figure5.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
 (fancyhdr)                Make it at least 27.85004pt, for example:
@@ -1288,505 +1640,246 @@ Package fancyhdr Warning: \headheight is too small (14.5pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
 (fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[70 <./figure/ch3/models.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[71]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.85004pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.85004pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[73]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.85004pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.85004pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
-
-[74] [75] [76
-
-]
-Chapter 4.
-[77]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[78]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1070.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1070.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1070.
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 1070.
-
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 1070.
-
-
-<figure/ch2/designExp1.png, id=1476, 963.6pt x 542.025pt>
-File: figure/ch2/designExp1.png Graphic file (type png)
-<use figure/ch2/designExp1.png>
-Package pdftex.def Info: figure/ch2/designExp1.png  used on input line 1074.
-(pdftex.def)             Requested size: 433.62pt x 243.90898pt.
-[79]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[80 <./figure/ch2/designExp1.png (PNG copy)>]
-<thesis_files/figure-latex/ch2-exp1-hists-1.pdf, id=1496, 469.755pt x 325.215pt
->
-File: thesis_files/figure-latex/ch2-exp1-hists-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch2-exp1-hists-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-hists-1.pdf  used o
-n input line 1110.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1110--1110
-[][] 
- []
-
-[81]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[82 <./thesis_files/figure-latex/ch2-exp1-hists-1.pdf>]
-<thesis_files/figure-latex/ch2-exp1-rcROC-1.pdf, id=1523, 469.755pt x 325.215pt
->
-File: thesis_files/figure-latex/ch2-exp1-rcROC-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch2-exp1-rcROC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-rcROC-1.pdf  used o
-n input line 1121.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1121--1121
-[][] 
- []
-
-[83 <./thesis_files/figure-latex/ch2-exp1-rcROC-1.pdf>]
-<thesis_files/figure-latex/ch2-exp1-discrimination-RC-1.pdf, id=1536, 469.755pt
- x 325.215pt>
-File: thesis_files/figure-latex/ch2-exp1-discrimination-RC-1.pdf Graphic file (
-type pdf)
-<use thesis_files/figure-latex/ch2-exp1-discrimination-RC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-discrimination-RC-1
-.pdf  used on input line 1134.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1134--1134
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[84] [85 <./thesis_files/figure-latex/ch2-exp1-discrimination-RC-1.pdf>]
-<thesis_files/figure-latex/ch2-exp1-detection-RC-figure-1.pdf, id=1562, 469.755
-pt x 325.215pt>
-File: thesis_files/figure-latex/ch2-exp1-detection-RC-figure-1.pdf Graphic file
- (type pdf)
-<use thesis_files/figure-latex/ch2-exp1-detection-RC-figure-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-detection-RC-figure
--1.pdf  used on input line 1148.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1148--1148
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[86] [87 <./thesis_files/figure-latex/ch2-exp1-detection-RC-figure-1.pdf>]
-<thesis_files/figure-latex/ch2-exp1-signal-RC-figure-1.pdf, id=1586, 469.755pt 
-x 325.215pt>
-File: thesis_files/figure-latex/ch2-exp1-signal-RC-figure-1.pdf Graphic file (t
-ype pdf)
-<use thesis_files/figure-latex/ch2-exp1-signal-RC-figure-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-signal-RC-figure-1.
-pdf  used on input line 1161.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1161--1161
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[88] [89 <./thesis_files/figure-latex/ch2-exp1-signal-RC-figure-1.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[90]
-<figure/ch2/designExp2.png, id=1618, 963.6pt x 542.025pt>
-File: figure/ch2/designExp2.png Graphic file (type png)
-<use figure/ch2/designExp2.png>
-Package pdftex.def Info: figure/ch2/designExp2.png  used on input line 1195.
-(pdftex.def)             Requested size: 433.62pt x 243.90898pt.
-[91 <./figure/ch2/designExp2.png (PNG copy)>]
-<thesis_files/figure-latex/ch2-exp2-hists-1.pdf, id=1627, 469.755pt x 325.215pt
->
-File: thesis_files/figure-latex/ch2-exp2-hists-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch2-exp2-hists-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-hists-1.pdf  used o
-n input line 1216.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1216--1216
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
 
 [92]
-<thesis_files/figure-latex/ch2-exp2-rcROC-1.pdf, id=1638, 469.755pt x 325.215pt
->
-File: thesis_files/figure-latex/ch2-exp2-rcROC-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch2-exp2-rcROC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-rcROC-1.pdf  used o
-n input line 1223.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1223--1223
-[][] 
- []
+LaTeX Warning: Text page 93 contains only floats.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1158) has occurred while \output is active []
 
-[93 <./thesis_files/figure-latex/ch2-exp2-hists-1.pdf>]
-<thesis_files/figure-latex/ch2-exp2-discrimination-RC-1.pdf, id=1654, 469.755pt
- x 325.215pt>
-File: thesis_files/figure-latex/ch2-exp2-discrimination-RC-1.pdf Graphic file (
-type pdf)
-<use thesis_files/figure-latex/ch2-exp2-discrimination-RC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-discrimination-RC-1
-.pdf  used on input line 1230.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+[93 <./figure/fMRI/figure4.png>]
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1230--1230
-[][] 
- []
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
+[94 <./figure/fMRI/figure5.png>]
+
+LaTeX Warning: Text page 95 contains only floats.
+
+[95 <./figure/fMRI/models.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[94 <./thesis_files/figure-latex/ch2-exp2-rcROC-1.pdf>] [95 <./thesis_files/fig
-ure-latex/ch2-exp2-discrimination-RC-1.pdf>]
-<thesis_files/figure-latex/ch2-exp2-detection-RC-figure-1.pdf, id=1693, 469.755
-pt x 325.215pt>
-File: thesis_files/figure-latex/ch2-exp2-detection-RC-figure-1.pdf Graphic file
- (type pdf)
-<use thesis_files/figure-latex/ch2-exp2-detection-RC-figure-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-detection-RC-figure
--1.pdf  used on input line 1250.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1250--1250
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
 [96]
-<thesis_files/figure-latex/ch2-exp2-signal-RC-1.pdf, id=1703, 469.755pt x 325.2
-15pt>
-File: thesis_files/figure-latex/ch2-exp2-signal-RC-1.pdf Graphic file (type pdf
-)
-<use thesis_files/figure-latex/ch2-exp2-signal-RC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-signal-RC-1.pdf  us
-ed on input line 1257.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+Underfull \vbox (badness 2556) has occurred while \output is active []
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1257--1257
-[][] 
- []
-
-[97 <./thesis_files/figure-latex/ch2-exp2-detection-RC-figure-1.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[98 <./thesis_files/figure-latex/ch2-exp2-signal-RC-1.pdf>] [99]
-<thesis_files/figure-latex/ch2-analyze-simulation1-1.pdf, id=1744, 469.755pt x 
-325.215pt>
-File: thesis_files/figure-latex/ch2-analyze-simulation1-1.pdf Graphic file (typ
-e pdf)
-<use thesis_files/figure-latex/ch2-analyze-simulation1-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-analyze-simulation1-1.pd
-f  used on input line 1277.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1277--1277
-[][] 
- []
-
-
+[97]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[100] [101 <./thesis_files/figure-latex/ch2-analyze-simulation1-1.pdf>]
-
-LaTeX Warning: Reference `REF' on page 102 undefined on input line 1286.
-
-
-LaTeX Warning: Reference `ch2-analyze-simulation2' on page 102 undefined on inp
-ut line 1288.
-
-<thesis_files/figure-latex/ch2-analyze-simulation2-1.pdf, id=1759, 469.755pt x 
-325.215pt>
-File: thesis_files/figure-latex/ch2-analyze-simulation2-1.pdf Graphic file (typ
-e pdf)
-<use thesis_files/figure-latex/ch2-analyze-simulation2-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-analyze-simulation2-1.pd
-f  used on input line 1290.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1290--1290
-[][] 
- []
-
-
+[98]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[99]
 
 Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-13.35004pt}.
 
-[102]
-<thesis_files/figure-latex/ch2-analyze-simulation3-1.pdf, id=1764, 469.755pt x 
-325.215pt>
-File: thesis_files/figure-latex/ch2-analyze-simulation3-1.pdf Graphic file (typ
-e pdf)
-<use thesis_files/figure-latex/ch2-analyze-simulation3-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-analyze-simulation3-1.pd
-f  used on input line 1297.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1297--1297
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[103 <./thesis_files/figure-latex/ch2-analyze-simulation2-1.pdf>]
-
-LaTeX Warning: Reference `fig:ch2-exp1-signal-RC' on page 104 undefined on inpu
-t line 1304.
-
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[104 <./thesis_files/figure-latex/ch2-analyze-simulation3-1.pdf>] [105] [106
+[100]
+Chapter 5.
+[101
 
 ]
+<figure/asymmetry/asymmetry.png, id=1868, 832.10875pt x 799.48688pt>
+File: figure/asymmetry/asymmetry.png Graphic file (type png)
+<use figure/asymmetry/asymmetry.png>
+Package pdftex.def Info: figure/asymmetry/asymmetry.png  used on input line 139
+0.
+(pdftex.def)             Requested size: 260.17464pt x 249.97322pt.
 
-LaTeX Warning: Reference `ch:fMRI' on page 107 undefined on input line 1316.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[107]
+[102] [103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+[104 <./figure/asymmetry/asymmetry.png>]
+<figure/asymmetry/trial_structure_noVS.png, id=1887, 829.9005pt x 521.3076pt>
+File: figure/asymmetry/trial_structure_noVS.png Graphic file (type png)
+<use figure/asymmetry/trial_structure_noVS.png>
+Package pdftex.def Info: figure/asymmetry/trial_structure_noVS.png  used on inp
+ut line 1433.
+(pdftex.def)             Requested size: 433.62pt x 272.38605pt.
+[105] [106 <./figure/asymmetry/trial_structure_noVS.png (PNG copy)>] [107] [108
+] [109] [110]
+<figure/asymmetry/hists.png, id=1953, 615.9813pt x 475.0548pt>
+File: figure/asymmetry/hists.png Graphic file (type png)
+<use figure/asymmetry/hists.png>
+Package pdftex.def Info: figure/asymmetry/hists.png  used on input line 1572.
+(pdftex.def)             Requested size: 433.62pt x 334.42076pt.
+<figure/asymmetry/rcROCs.png, id=1954, 695.9601pt x 431.9337pt>
+File: figure/asymmetry/rcROCs.png Graphic file (type png)
+<use figure/asymmetry/rcROCs.png>
+Package pdftex.def Info: figure/asymmetry/rcROCs.png  used on input line 1575.
+(pdftex.def)             Requested size: 433.62pt x 269.12086pt.
 
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[108]
+[111] [112 <./figure/asymmetry/hists.png>]
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
+[113 <./figure/asymmetry/rcROCs.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[114] [115] [116]
+
+LaTeX Warning: Reference `fig:summary' on page 117 undefined on input line 1675
+.
+
+<figure/asymmetry/summary.png, id=1995, 859.2903pt x 356.2911pt>
+File: figure/asymmetry/summary.png Graphic file (type png)
+<use figure/asymmetry/summary.png>
+Package pdftex.def Info: figure/asymmetry/summary.png  used on input line 1679.
+
+(pdftex.def)             Requested size: 433.62pt x 179.79237pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[117] [118 <./figure/asymmetry/summary.png>]
+
+LaTeX Warning: Reference `fig:rcROC7' on page 119 undefined on input line 1694.
+
+
+<figure/asymmetry/results7.png, id=2008, 680.3016pt x 325.215pt>
+File: figure/asymmetry/results7.png Graphic file (type png)
+<use figure/asymmetry/results7.png>
+Package pdftex.def Info: figure/asymmetry/results7.png  used on input line 1700
+.
+(pdftex.def)             Requested size: 433.62pt x 207.29327pt.
+[119 <./figure/asymmetry/results7.png>]
+<thesis_files/figure-latex/asymmetry-correlations-fig-1.pdf, id=2020, 469.755pt
+ x 325.215pt>
+File: thesis_files/figure-latex/asymmetry-correlations-fig-1.pdf Graphic file (
+type pdf)
+<use thesis_files/figure-latex/asymmetry-correlations-fig-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/asymmetry-correlations-fig-1
+.pdf  used on input line 1721.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1721--1721
+[][] 
+ []
+
+[120]
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[121 <./thesis_files/figure-latex/asymmetry-correlations-fig-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[123] [124] [125
+
+] [126] [127] [128] [129] [130] [131] [132
+
+]
 Appendix A.
-<figure/app-SDT/SDT.png, id=1819, 463.7325pt x 313.17pt>
-File: figure/app-SDT/SDT.png Graphic file (type png)
-<use figure/app-SDT/SDT.png>
-Package pdftex.def Info: figure/app-SDT/SDT.png  used on input line 1356.
-(pdftex.def)             Requested size: 303.53267pt x 204.98688pt.
-[109
+<figure/app-SDT/SDT_rep.png, id=2125, 215.1237pt x 138.7584pt>
+File: figure/app-SDT/SDT_rep.png Graphic file (type png)
+<use figure/app-SDT/SDT_rep.png>
+Package pdftex.def Info: figure/app-SDT/SDT_rep.png  used on input line 1827.
+(pdftex.def)             Requested size: 303.53267pt x 195.81027pt.
+[133 <./figure/app-SDT/SDT_rep.png>]
+<figure/app-SDT/ROC_rep.png, id=2132, 842.64813pt x 780.41562pt>
+File: figure/app-SDT/ROC_rep.png Graphic file (type png)
+<use figure/app-SDT/ROC_rep.png>
+Package pdftex.def Info: figure/app-SDT/ROC_rep.png  used on input line 1853.
+(pdftex.def)             Requested size: 260.17464pt x 240.96178pt.
+<figure/app-SDT/zROC_rep.png, id=2134, 371.4678pt x 365.6862pt>
+File: figure/app-SDT/zROC_rep.png Graphic file (type png)
+<use figure/app-SDT/zROC_rep.png>
+Package pdftex.def Info: figure/app-SDT/zROC_rep.png  used on input line 1857.
+(pdftex.def)             Requested size: 260.17464pt x 256.14041pt.
+[134] [135 <./figure/app-SDT/ROC_rep.png>]
+<figure/app-SDT/kunimoto_rep.png, id=2147, 191.9973pt x 149.1171pt>
+File: figure/app-SDT/kunimoto_rep.png Graphic file (type png)
+<use figure/app-SDT/kunimoto_rep.png>
+Package pdftex.def Info: figure/app-SDT/kunimoto_rep.png  used on input line 18
+73.
+(pdftex.def)             Requested size: 260.17464pt x 202.09575pt.
+[136 <./figure/app-SDT/zROC_rep.png>] [137 <./figure/app-SDT/kunimoto_rep.png>]
+[138
 
- <./figure/app-SDT/SDT.png>]
-<figure/app-SDT/ROC.png, id=1826, 423.83344pt x 375.65344pt>
-File: figure/app-SDT/ROC.png Graphic file (type png)
-<use figure/app-SDT/ROC.png>
-Package pdftex.def Info: figure/app-SDT/ROC.png  used on input line 1382.
-(pdftex.def)             Requested size: 260.17464pt x 230.60419pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[110]
-<figure/app-SDT/zROC.png, id=1833, 249.93375pt x 239.39438pt>
-File: figure/app-SDT/zROC.png Graphic file (type png)
-<use figure/app-SDT/zROC.png>
-Package pdftex.def Info: figure/app-SDT/zROC.png  used on input line 1386.
-(pdftex.def)             Requested size: 260.17464pt x 249.22728pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[111 <./figure/app-SDT/ROC.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[112 <./figure/app-SDT/zROC.png (PNG copy)>]
-<figure/app-SDT/kunimoto.png, id=1846, 695.59875pt x 639.89063pt>
-File: figure/app-SDT/kunimoto.png Graphic file (type png)
-<use figure/app-SDT/kunimoto.png>
-Package pdftex.def Info: figure/app-SDT/kunimoto.png  used on input line 1402.
-(pdftex.def)             Requested size: 260.17464pt x 239.3335pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[113] [114 <./figure/app-SDT/kunimoto.png>]
+]
 Appendix B.
-<thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf, id=1858, 469.755pt x 32
+<thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf, id=2167, 469.755pt x 32
 5.215pt>
 File: thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf Graphic file (type 
 pdf)
 <use thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf 
- used on input line 1423.
+ used on input line 1894.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1423--1423
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1894--1894
+[][] 
+ []
+
+[139]
+<thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf, id=2174, 469.755pt x 325.215pt
+>
+File: thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf  used o
+n input line 1905.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (36.13387pt too wide) in paragraph at lines 1905--1905
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[115
-
-] [116 <./thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf>]
-<thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf, id=1878, 469.755pt x 325.215pt
->
-File: thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf  used o
-n input line 1432.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (36.13387pt too wide) in paragraph at lines 1432--1432
-[][] 
- []
-
-[117 <./thesis_files/figure-latex/ch2-exp2-PD-RC-1.pdf>]
+[140 <./thesis_files/figure-latex/ch2-exp1-RC-PD-figure-1.pdf>] [141 <./thesis_
+files/figure-latex/ch2-exp2-PD-RC-1.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1481.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1954.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-1492.
+1966.
 (c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [118]
-Underfull \vbox (badness 10000) detected at line 1558
+) [142]
+Underfull \vbox (badness 10000) detected at line 2061
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1558
+Underfull \vbox (badness 10000) detected at line 2061
  []
 
-[119]
-Overfull \hbox (114.29185pt too wide) detected at line 1575
+[143]
+Underfull \vbox (badness 10000) detected at line 2061
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2061
+ []
+
+[144]
+Overfull \hbox (114.29185pt too wide) detected at line 2078
 []\OML/lmm/m/it/12 LLR \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 log\OT1/lmr/m/n/12 (0
 \OML/lmm/m/it/12 :\OT1/lmr/m/n/12 5 \OMS/lmsy/m/n/12 ^^B \OML/lmm/m/it/12 p\OT1
 /lmr/m/n/12 ([\OML/lmm/m/it/12 x[]; x[]\OT1/lmr/m/n/12 ]\OMS/lmsy/m/n/12 j\OML/
@@ -1799,171 +1892,174 @@ OML/lmm/m/it/12 stim \OT1/lmr/m/n/12 = [\OML/lmm/m/it/12 x[]; x[]\OT1/lmr/m/n/1
 /n/12 = [\OML/lmm/m/it/12 x[]; x[]\OT1/lmr/m/n/12 ])
  []
 
-[120] [121] [122]
-Appendix C.
-<figure/ch3/buttonPresses.png, id=1941, 1882.03125pt x 1505.625pt>
-File: figure/ch3/buttonPresses.png Graphic file (type png)
-<use figure/ch3/buttonPresses.png>
-Package pdftex.def Info: figure/ch3/buttonPresses.png  used on input line 1654.
+[145]
+Underfull \vbox (badness 10000) detected at line 2170
+ []
 
-(pdftex.def)             Requested size: 433.62pt x 346.88379pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (2.23666pt too high) detected at line 2170
+ []
 
-[123
+[146] [147] [148
 
 ]
-<figure/ch3/zROC.jpg, id=1948, 1505.625pt x 1249.66875pt>
-File: figure/ch3/zROC.jpg Graphic file (type jpg)
-<use figure/ch3/zROC.jpg>
-Package pdftex.def Info: figure/ch3/zROC.jpg  used on input line 1659.
+Appendix C.
+<figure/fMRI/buttonPresses.png, id=2258, 1882.03125pt x 1505.625pt>
+File: figure/fMRI/buttonPresses.png Graphic file (type png)
+<use figure/fMRI/buttonPresses.png>
+Package pdftex.def Info: figure/fMRI/buttonPresses.png  used on input line 2177
+.
+(pdftex.def)             Requested size: 433.62pt x 346.88379pt.
+<figure/fMRI/zROC.jpg, id=2259, 1505.625pt x 1249.66875pt>
+File: figure/fMRI/zROC.jpg Graphic file (type jpg)
+<use figure/fMRI/zROC.jpg>
+Package pdftex.def Info: figure/fMRI/zROC.jpg  used on input line 2182.
 (pdftex.def)             Requested size: 433.62pt x 359.8967pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[124 <./figure/ch3/buttonPresses.png
-
-pdfTeX warning: pdflatex.exe (file ./figure/ch3/buttonPresses.png): large inter
-laced PNG might cause out of memory (use non-interlaced PNG to fix this)
->]
-<figure/ch3/GC-DM.jpg, id=1953, 1505.625pt x 700.6175pt>
-File: figure/ch3/GC-DM.jpg Graphic file (type jpg)
-<use figure/ch3/GC-DM.jpg>
-Package pdftex.def Info: figure/ch3/GC-DM.jpg  used on input line 1664.
+<figure/fMRI/GC-DM.jpg, id=2260, 1505.625pt x 700.6175pt>
+File: figure/fMRI/GC-DM.jpg Graphic file (type jpg)
+<use figure/fMRI/GC-DM.jpg>
+Package pdftex.def Info: figure/fMRI/GC-DM.jpg  used on input line 2187.
 (pdftex.def)             Requested size: 433.62pt x 201.7734pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[125 <./figure/ch3/zROC.jpg>]
-<figure/ch3/allROIs.png, id=1959, 1014.9117pt x 758.1123pt>
-File: figure/ch3/allROIs.png Graphic file (type png)
-<use figure/ch3/allROIs.png>
-Package pdftex.def Info: figure/ch3/allROIs.png  used on input line 1684.
+<figure/fMRI/allROIs.png, id=2261, 1014.9117pt x 758.1123pt>
+File: figure/fMRI/allROIs.png Graphic file (type png)
+<use figure/fMRI/allROIs.png>
+Package pdftex.def Info: figure/fMRI/allROIs.png  used on input line 2207.
 (pdftex.def)             Requested size: 433.62pt x 323.89972pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[126 <./figure/ch3/GC-DM.jpg>]
-Underfull \hbox (badness 1616) in paragraph at lines 1687--1687
+Underfull \hbox (badness 1616) in paragraph at lines 2210--2210
 []\T1/lmr/bx/n/17.28 (+20) SDT vari-ance ra-tio cor-re-la-tion with the
  []
 
-<figure/ch3/varianceRatio.jpg, id=1967, 1505.625pt x 1033.8625pt>
-File: figure/ch3/varianceRatio.jpg Graphic file (type jpg)
-<use figure/ch3/varianceRatio.jpg>
-Package pdftex.def Info: figure/ch3/varianceRatio.jpg  used on input line 1689.
-
+<figure/fMRI/varianceRatio.jpg, id=2262, 1505.625pt x 1033.8625pt>
+File: figure/fMRI/varianceRatio.jpg Graphic file (type jpg)
+<use figure/fMRI/varianceRatio.jpg>
+Package pdftex.def Info: figure/fMRI/varianceRatio.jpg  used on input line 2212
+.
 (pdftex.def)             Requested size: 433.62pt x 297.74586pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[127 <./figure/ch3/allROIs.png>]
-<figure/ch3/efficiency.png, id=1973, 1514.15688pt x 1574.38188pt>
-File: figure/ch3/efficiency.png Graphic file (type png)
-<use figure/ch3/efficiency.png>
-Package pdftex.def Info: figure/ch3/efficiency.png  used on input line 1694.
+<figure/fMRI/efficiency.png, id=2263, 1514.15688pt x 1574.38188pt>
+File: figure/fMRI/efficiency.png Graphic file (type png)
+<use figure/fMRI/efficiency.png>
+Package pdftex.def Info: figure/fMRI/efficiency.png  used on input line 2217.
 (pdftex.def)             Requested size: 433.62pt x 450.86559pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[128 <./figure/ch3/varianceRatio.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[149] [150 <./figure/fMRI/buttonPresses.png
 
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.61652pt}.
-
-[129 <./figure/ch3/efficiency.png>]
-<figure/ch3/confidence_cross_resp.png, id=1986, 1422.7554pt x 542.025pt>
-File: figure/ch3/confidence_cross_resp.png Graphic file (type png)
-<use figure/ch3/confidence_cross_resp.png>
-Package pdftex.def Info: figure/ch3/confidence_cross_resp.png  used on input li
-ne 1703.
+pdfTeX warning: pdflatex.exe (file ./figure/fMRI/buttonPresses.png): large inte
+rlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>]
+<figure/fMRI/confidence_cross_resp.png, id=2281, 1422.7554pt x 542.025pt>
+File: figure/fMRI/confidence_cross_resp.png Graphic file (type png)
+<use figure/fMRI/confidence_cross_resp.png>
+Package pdftex.def Info: figure/fMRI/confidence_cross_resp.png  used on input l
+ine 2226.
 (pdftex.def)             Requested size: 433.62pt x 165.18918pt.
-[130 <./figure/ch3/confidence_cross_resp.png (PNG copy)>] [131] [132] [133] [13
-4] [135] [136
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+[151 <./figure/fMRI/zROC.jpg>] [152 <./figure/fMRI/GC-DM.jpg>]
+Underfull \vbox (badness 3302) has occurred while \output is active []
+
+[153 <./figure/fMRI/allROIs.png>]
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+[154 <./figure/fMRI/varianceRatio.jpg>]
+Underfull \vbox (badness 2426) has occurred while \output is active []
+
+[155 <./figure/fMRI/efficiency.png>] [156 <./figure/fMRI/confidence_cross_resp.
+png (PNG copy)>] [157] [158] [159] [160
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[137
+[161
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[138]
+[162]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[139]
+[163]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[140]
+[164]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[141]
+[165]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[142]
+[166]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[143]
+[167]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[144]
+[168]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[145]
+[169]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[146]
+[170]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[147] [148] (./thesis.aux)
+[171]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[172]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[173]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[174] [175] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 334628B44C4E2B169E952D7E131D30D8;21133.
+(rerunfilecheck)             Checksum: 66D5DCEED2A912375AF59DE23AE1623A;26219.
  ) 
 Here is how much of TeX's memory you used:
- 15077 strings out of 481009
- 244636 string characters out of 5907701
- 590905 words of memory out of 5000000
- 30816 multiletter control sequences out of 15000+600000
- 489200 words of font info for 239 fonts, out of 8000000 for 9000
+ 15832 strings out of 481009
+ 257661 string characters out of 5907701
+ 588206 words of memory out of 5000000
+ 31357 multiletter control sequences out of 15000+600000
+ 495429 words of font info for 256 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,15n,74p,2574b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1
 .enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
 ec.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
-m-mathsy.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvip
-s/lm/lm-mathex.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
-c/dvips/lm/lm-rm.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/
-enc/dvips/lm/lm-mathit.enc}<c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/
+m-rm.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm
+/lm-mathit.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/
+enc/dvips/lm/lm-mathex.enc}<c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmbx12.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf
--dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX
-/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/mmazor/AppData/Roaming/T
-inyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/mmazor/AppData/Roam
-ing/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/mmazor/AppData
-/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/mmazor/Ap
-pData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/mmazo
-r/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/m
-mazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/U
-sers/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb
-><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy
-10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
-m/lmsy8.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmtk10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmtt12.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (170 pages, 5718447 bytes).
+-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTe
+X/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/mmazor/AppData/Roaming/
+TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/mmazor/AppData/Ro
+aming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/Users/mmazor/AppDa
+ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/mmazor/
+AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/mm
+azor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Use
+rs/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:
+/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb
+><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8
+.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/
+lmri12.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publ
+ic/lm/lmro12.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/fonts/type
+1/public/lm/lmsy10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmsy8.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texmf-dist
+/fonts/type1/public/lm/lmtk10.pfb><c:/Users/mmazor/AppData/Roaming/TinyTeX/texm
+f-dist/fonts/type1/public/lm/lmtt12.pfb><c:/Users/mmazor/AppData/Roaming/TinyTe
+X/texmf-dist/fonts/type1/public/lm/lmtti10.pfb><c:/Users/mmazor/AppData/Roaming
+/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (195 pages, 7597610 bytes).
 PDF statistics:
- 2548 PDF objects out of 2984 (max. 8388607)
- 2235 compressed objects within 23 object streams
- 797 named destinations out of 1000 (max. 500000)
- 44146 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 2977 PDF objects out of 2984 (max. 8388607)
+ 2609 compressed objects within 27 object streams
+ 962 named destinations out of 1000 (max. 500000)
+ 46423 words of extra memory for PDF output out of 51595 (max. 10000000)
 

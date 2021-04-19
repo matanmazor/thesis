@@ -36,11 +36,25 @@
 \usepackage{longtable,booktabs,setspace}
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage[hyphens]{url}
-\usepackage[colorlinks]{hyperref}
+\usepackage{xcolor}
+% added by MM
+
+\definecolor{IBM1}{HTML}{648fff}
+\definecolor{IBM2}{HTML}{785ef0}
+\definecolor{IBM3}{HTML}{dc267f}
+\definecolor{IBM4}{HTML}{fe6100}
+\definecolor{IBM5}{HTML}{ffb000}
+
+\usepackage[colorlinks=true]{hyperref}
+ \hypersetup{
+     colorlinks=true,
+     allcolors=IBM1
+     }
+
 % Added by CII
 \usepackage{lmodern}
 \usepackage{float}
-\floatplacement{figure}{H}
+\floatplacement{figure}{!ht}
 % Thanks, @Xyv
 \usepackage{calc}
 % End of CII addition
