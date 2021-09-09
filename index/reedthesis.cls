@@ -271,6 +271,16 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
+\newenvironment{impact}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter*{Impact Statement}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+
 
 \newenvironment{declaration}{%
   \if@twocolumn
@@ -367,5 +377,6 @@
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\Declaration}[1]{\def\@Declaration{#1}}
+\newcommand{\Impact}[1]{\def\@Impact{#1}}
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
 % End of CII add
