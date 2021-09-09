@@ -1,0 +1,570 @@
+% This is the Reed College LaTeX thesis template. Most of the work
+% for the document class was done by Sam Noble (SN), as well as this
+% template. Later comments etc. by Ben Salzberg (BTS). Additional
+% restructuring and APA support by Jess Youngberg (JY).
+% Your comments and suggestions are more than welcome; please email
+% them to cus@reed.edu
+%
+% See https://www.reed.edu/cis/help/LaTeX/index.html for help. There are a
+% great bunch of help pages there, with notes on
+% getting started, bibtex, etc. Go there and read it if you're not
+% already familiar with LaTeX.
+%
+% Any line that starts with a percent symbol is a comment.
+% They won't show up in the document, and are useful for notes
+% to yourself and explaining commands.
+% Commenting also removes a line from the document;
+% very handy for troubleshooting problems. -BTS
+
+% As far as I know, this follows the requirements laid out in
+% the 2002-2003 Senior Handbook. Ask a librarian to check the
+% document before binding. -SN
+
+%%
+%% Preamble
+%%
+% \documentclass{<something>} must begin each LaTeX document
+\documentclass[12pt,twoside]{reedthesis}
+% Packages are extensions to the basic LaTeX functions. Whatever you
+% want to typeset, there is probably a package out there for it.
+% Chemistry (chemtex), screenplays, you name it.
+% Check out CTAN to see: https://www.ctan.org/
+%%
+\usepackage{graphicx,latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{longtable,booktabs,setspace}
+\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[hyphens]{url}
+\usepackage{xcolor}
+% \usepackage{minitoc}
+
+% added by MM
+\usepackage{float}
+\definecolor{IBM1}{HTML}{648fff}
+\definecolor{IBM2}{HTML}{785ef0}
+\definecolor{IBM3}{HTML}{dc267f}
+\definecolor{IBM4}{HTML}{fe6100}
+\definecolor{IBM5}{HTML}{ffb000}
+
+\usepackage[colorlinks=true]{hyperref}
+ \hypersetup{
+     colorlinks=true,
+     allcolors=IBM1
+     }
+
+% Added by CII
+\usepackage{lmodern}
+\usepackage{float}
+\floatplacement{figure}{!ht}
+% Thanks, @Xyv
+\usepackage{calc}
+% End of CII addition
+\usepackage{rotating}
+
+% Next line commented out by CII
+%%% \usepackage{natbib}
+% Comment out the natbib line above and uncomment the following two lines to use the new
+% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
+% bibliography is included.
+%\usepackage{biblatex-chicago}
+%\bibliography{thesis}
+
+
+% Added by CII (Thanks, Hadley!)
+% Use ref for internal links
+\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+% End of CII addition
+
+% Added by CII
+\usepackage{caption}
+\captionsetup{width=5in}
+% End of CII addition
+
+% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+
+% Syntax highlighting #22
+
+% To pass between YAML and LaTeX the dollar signs are added by CII
+\title{Self-Modelling in Inference about Absence}
+\author{Matan Mazor}
+% The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
+\date{August 2021}
+\division{Wellcome Centre for Human Neuroimaging; Institute of Neurology}
+\advisor{Stephen M. Fleming}
+\institution{University College London}
+\degree{Doctor of Philosophy}
+%If you have two advisors for some reason, you can use the following
+% Uncommented out by CII
+\altadvisor{Karl J. Friston}
+% End of CII addition
+
+%%% Remember to use the correct department!
+\department{Brain Sciences}
+% if you're writing a thesis in an interdisciplinary major,
+% uncomment the line below and change the text as appropriate.
+% check the Senior Handbook if unsure.
+%\thedivisionof{The Established Interdisciplinary Committee for}
+% if you want the approval page to say "Approved for the Committee",
+% uncomment the next line
+%\approvedforthe{Committee}
+
+% Added by CII
+%%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+%Added by @MyKo101, code provided by @GerbrichFerdinands
+
+\renewcommand{\contentsname}{Table of Contents}
+% End of CII addition
+
+\setlength{\parskip}{0pt}
+
+% Added by CII
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% 
+% \Declaration{
+% To my fellow non-human primates of Queen Square, whose experience of London was very different to mine.
+% }
+% 
+% \Acknowledgements{
+% I would like to thank my supervisors, Steve Fleming, for being a wonderful scientific mentor and role-model, and Karl Friston, for your generous advice and support. Steve, I am ever grateful for these four years of training in the supportive, excellence-seeking environment that you cultivated in the UCL MetaLab. I was fortunate to work with amazing collaborators, including Lucie Charles, Rani Moran, Roy Tal, Chudi Gong and Nadine Dijkstra, and to get help and support from my friends at UCL, including Peter Zeidman, Dan Bang, Max Rollwage, Marion Rouault, a from generous and welcoming online community of scientists, including Felix Henninger, Elisa Filevich, Kristian Lange, Chester Ismay, Brian Maniscalco, Arial Zylberberg, Jorge Morales, and the twitter and Stack Exchange communities - thank you for sharing your experience and wisdom with me. I thank Josh Tenenbaum and Tomer Ullman for your mentorship in my visit to MIT and Harvard, and the Bogue Fellowship committee for their decision to support this career-changing visit. This PhD would not have been possible without UCL's Graduate and Overseas Research Scholarships, and it would have been much harder without the support of a Kenneth Lindsay Scholarship. I am grateful to my mentors from Tel Aviv University: Roy Mukamel, Liad Mudrik, Naama Friedman and Roni Katzir, for believing in me as a junior cognitive scientist and patiently guiding me in my first steps. My friends at the Wellcome Centre for Human Neuroimaging and MetaLab - you made these years not only enriching and educating, but also enjoyable. Dina Silanteva, Alisa Loosen and the Hackney Wick gang - thanks for being the best support bubble in times of a global pandemic. I thank the Mary Ward Cafe at Queen Square and the Hari Krishna volunteers for the wonderful food that kept my brain going. My friends and family from home: my parents, Ora and Shai, and friends Darya Mosenzon, Halely Balaban, Maya Ankaoua, Maayan Keshev, Roni Maimon, Netta Green, Alon Rubin, Ezer Rasin and Yohai Szulszepper - thanks for being there for me. Amnon David Ar - you taught me how to be a painter. I'll forever be indebted for your lessons about observation, friendship and perseverance, which are still shaping the person and researcher I am sriving to be today. Finally, I would like to thank my brother and closest friend, Noam, and our four-legged, hairy and smelly flatmate, B7, for being my companions and compass in this long journey. Thank you \textless3
+% }
+% 
+% \Dedication{
+% To my fellow non-human primates of Queen Square, whose experience of London was very different to mine.
+% }
+% 
+% \Preface{
+% 
+% }
+% 
+% \Abstract{
+% Representing the absence of an object requires one to know that they would know if it were present. This form of second-order, counterfactual reasoning critically relies on access to a mental self-model, specifying expected perceptual and cognitive states under different world states. This thesis addresses open questions regarding inference about absence in perceptual decision making: its reliance on prior metacognitive knowledge, relative encapsulation from metacognitive monitoring, neural underpinning, and relation with default-reasoning. I start by showing that in visual search, implicit metacognitive knowledge about spatial attention supports inference about the absence in the first trial of an experiment, and that this knowledge is dissociable from explicit metacognitive knowledge. Further underscoring the richness and complexity of this knowledge, I find that people are able to accurately predict their future search times, even for complex, unfamiliar displays. Participants' predictions were better aligned with their own search times than with those of other participants, suggesting that this self-knowledge is person-specific. I then ask what factors contribute to confidence in decisions about presence and absence. Reverse-correlation analysis reveals stimulus features that contribute to detection decisions and confidence. I discuss these findings in the context of sensory noise estimation. Using functional MRI, I find that a network of frontal and parietal regions that are implicated in decision confidence are mostly invariant to whether subjective confidence is rated with respect to decisions about presence or absence. In interpreting these results, I formulate computational models that monitor fluctuations in external stimulus strength and in internal attentional states. Finally, in six behavioural experiments, different levels of the cognitive hierarchy are found to be sensitive to different notions of absence. I conclude with a discussion of ways in which inference about absence can be used by cognitive scientists for probing implicit metacognitive beliefs and studying the mental self-model.
+% }
+
+% End of CII addition
+%%
+%% End Preamble
+%%
+%
+\begin{document}
+
+% Everything below added by CII
+  \maketitle
+
+\frontmatter % this stuff will be roman-numbered
+\pagestyle{empty} % this removes page numbers from the frontmatter
+  \begin{acknowledgements}
+    I would like to thank my supervisors, Steve Fleming, for being a wonderful scientific mentor and role-model, and Karl Friston, for your generous advice and support. Steve, I am ever grateful for these four years of training in the supportive, excellence-seeking environment that you cultivated in the UCL MetaLab. I was fortunate to work with amazing collaborators, including Lucie Charles, Rani Moran, Roy Tal, Chudi Gong and Nadine Dijkstra, and to get help and support from my friends at UCL, including Peter Zeidman, Dan Bang, Max Rollwage, Marion Rouault, a from generous and welcoming online community of scientists, including Felix Henninger, Elisa Filevich, Kristian Lange, Chester Ismay, Brian Maniscalco, Arial Zylberberg, Jorge Morales, and the twitter and Stack Exchange communities - thank you for sharing your experience and wisdom with me. I thank Josh Tenenbaum and Tomer Ullman for your mentorship in my visit to MIT and Harvard, and the Bogue Fellowship committee for their decision to support this career-changing visit. This PhD would not have been possible without UCL's Graduate and Overseas Research Scholarships, and it would have been much harder without the support of a Kenneth Lindsay Scholarship. I am grateful to my mentors from Tel Aviv University: Roy Mukamel, Liad Mudrik, Naama Friedman and Roni Katzir, for believing in me as a junior cognitive scientist and patiently guiding me in my first steps. My friends at the Wellcome Centre for Human Neuroimaging and MetaLab - you made these years not only enriching and educating, but also enjoyable. Dina Silanteva, Alisa Loosen and the Hackney Wick gang - thanks for being the best support bubble in times of a global pandemic. I thank the Mary Ward Cafe at Queen Square and the Hari Krishna volunteers for the wonderful food that kept my brain going. My friends and family from home: my parents, Ora and Shai, and friends Darya Mosenzon, Halely Balaban, Maya Ankaoua, Maayan Keshev, Roni Maimon, Netta Green, Alon Rubin, Ezer Rasin and Yohai Szulszepper - thanks for being there for me. Amnon David Ar - you taught me how to be a painter. I'll forever be indebted for your lessons about observation, friendship and perseverance, which are still shaping the person and researcher I am sriving to be today. Finally, I would like to thank my brother and closest friend, Noam, and our four-legged, hairy and smelly flatmate, B7, for being my companions and compass in this long journey. Thank you \textless3
+  \end{acknowledgements}
+
+  \hypersetup{linkcolor=black}
+  \setcounter{secnumdepth}{2}
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+  \listoftables
+
+  \listoffigures
+  \begin{abstract}
+    Representing the absence of an object requires one to know that they would know if it were present. This form of second-order, counterfactual reasoning critically relies on access to a mental self-model, specifying expected perceptual and cognitive states under different world states. This thesis addresses open questions regarding inference about absence in perceptual decision making: its reliance on prior metacognitive knowledge, relative encapsulation from metacognitive monitoring, neural underpinning, and relation with default-reasoning. I start by showing that in visual search, implicit metacognitive knowledge about spatial attention supports inference about the absence in the first trial of an experiment, and that this knowledge is dissociable from explicit metacognitive knowledge. Further underscoring the richness and complexity of this knowledge, I find that people are able to accurately predict their future search times, even for complex, unfamiliar displays. Participants' predictions were better aligned with their own search times than with those of other participants, suggesting that this self-knowledge is person-specific. I then ask what factors contribute to confidence in decisions about presence and absence. Reverse-correlation analysis reveals stimulus features that contribute to detection decisions and confidence. I discuss these findings in the context of sensory noise estimation. Using functional MRI, I find that a network of frontal and parietal regions that are implicated in decision confidence are mostly invariant to whether subjective confidence is rated with respect to decisions about presence or absence. In interpreting these results, I formulate computational models that monitor fluctuations in external stimulus strength and in internal attentional states. Finally, in six behavioural experiments, different levels of the cognitive hierarchy are found to be sensitive to different notions of absence. I conclude with a discussion of ways in which inference about absence can be used by cognitive scientists for probing implicit metacognitive beliefs and studying the mental self-model.
+  \end{abstract}
+  \begin{dedication}
+    To my fellow non-human primates of Queen Square, whose experience of London was very different to mine.
+  \end{dedication}
+\mainmatter % here the regular arabic numbering starts
+\pagestyle{fancyplain} % turns page numbering back on
+
+\hypertarget{introduction}{%
+\chapter*{Introduction}\label{introduction}}
+\addcontentsline{toc}{chapter}{Introduction}
+
+You are in the grocery shop. On your grocery list are one carton of oat milk and one guava. You search through the shelves and find your favourite oat milk. You place the carton in your basket and move on to the fruit aisle. You visually scan the fruit boxes, but you already have a strong feeling that you will not find guavas in this store. You would have already smelled the guavas if they were anywhere around you. But then again, maybe something is wrong with your sense of smell? You grab a mandarin and sniff it. Your sense of smell is intact. You can be confident that there are no guavas around.
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{figure/intro/guava} \caption[Guavas]{Guavas.}\label{fig:intro-guava}
+\end{figure}
+\hypertarget{inference-about-absence}{%
+\section{Inference about absence}\label{inference-about-absence}}
+
+Finding the oat milk carton was straightforward. As soon as you identified it you were convinced in its presence, no reflection or deliberation required. In contrast, concluding that no guavas were present took you longer and involved more complex cognitive processes. You had to rely on the absence of smell or sight of the fruit to reach a conclusion. In philosophical writings, this is known as Argument from Ignorance (\emph{Argumentum ad ignorantiam}): the fallacy of accepting a statement as true only because it hasn't been disproved (Locke, 1836). Although logically unsound, \emph{Argumentum ad ignorantiam} is widely applied by humans in different situations and contexts (Oaksford \& Hahn, 2004). One particular context which invites such reasoning is that of inference about absence. Positive evidence is rarely available to support inference about absence, and so it is almost exclusively made on the basis of a failure to find evidence for presence.
+
+Basing inference on the absence of evidence can sometimes be rational from a Bayesian standpoint (Oaksford \& Hahn, 2004). For this to be the case, the individual must know the sensitivity and specificity of the perceptual or cognitive system at hand. For example, in order for the inference ``I don't smell a guava, therefore there are no guavas in this store'' to be logically sound, I need to know that the probability of me not smelling a guava is very low if it is nearby, and so is the probability of me imagining the smell of a guava when it is not there. In other words, in order to make valid inferences about absences I need to know things about myself and my cognitive processes (see next section \ref{detectionmodels} for a formal unpacking of this logical derivation). In the above example, this is evident in that my certainty in the absence of a guava increased after smelling the mandarin. Critically, smelling the mandarin did not provide me with any additional information about the layout of the shop or the seasonal availability of tropical fruit, but about my own perceptual system.
+
+The following section introduces a computational formulation of this self-knowledge account, based in formal semantics and Bayesian theories of cognition, and exemplifies how different patterns of results can be interpreted in light of this formulation. This formulation is then followed by descriptions of several independent lines of experimental findings that all demonstrate a role for self-knowledge in inference about absence.
+
+\hypertarget{formalabsence}{%
+\section{Probabilistic reasoning, criterion setting, and self knowledge}\label{formalabsence}}
+
+The intimate link between inference about absence and self-knowledge has been recognized in the fields of linguistics, formal logic, and artificial intelligence. In \emph{default-reasoning logic} (Reiter, 1980), a failure to provide a proof for a statement is transformed into a proof for the negation of the statement using the \emph{closed world assumption}: the assumption that a proof would have been found if it was available. Similarly, Linguist Benoît de Cornulier's refers to \emph{epistemic closure}: the notion that all there is to be known is in fact known. This is reflected in his two definitions of \emph{knowing whether} (De Cornulier, 1988):
+
+\hypertarget{symmetrical-definition}{%
+\subsection*{Symmetrical definition:}\label{symmetrical-definition}}
+\addcontentsline{toc}{subsection}{Symmetrical definition:}
+
+`John knows whether P' means that:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If P, John knows that P.
+\item
+  If not-P, John knows that not-P.
+\end{enumerate}
+\hypertarget{dissymmetrical-definition}{%
+\subsection*{Dissymmetrical definition:}\label{dissymmetrical-definition}}
+\addcontentsline{toc}{subsection}{Dissymmetrical definition:}
+
+`John knows whether P' means that:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If P, John knows that P.
+\item
+  John knows that 1 holds.
+\end{enumerate}
+\hypertarget{intro-2nd-order}{%
+\subsection{Second-order cognition}\label{intro-2nd-order}}
+
+The symmetric definition entails a \emph{first-order process}, as no knowledge about the system itself is used in the process of inferring the world state. This definition applies to scenarios in which it is possible to have direct evidence against the veracity of a proposition. For example, a hypothetical organism can be equipped with sensors \(A\) and \(B\) that are tuned to the presence or absence of a predator, respectively. This organism can be said to know whether there is a predator around or not. It will know that a predator is nearby if \(A\) is on and \(B\) is off, and it will know there is no predator around if \(B\) is on and \(A\) is off (similar to the \emph{Neuron-Antineuron} architecture in Gold \& Shadlen (2001)). Such an organism can be said to implement the symmetrical definition of to know whether presented above.
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figure/intro/symmetric} \caption[A symmetric implementation of a predator-detector.]{A symmetric implementation of a predator-detector.}\label{fig:intro-symmetric}
+\end{figure}
+The symmetric architecture is redundant: assuming perfect information flow there is a perfect negative correlation between the activations of sensors \(A\) and \(B\). Conversely, the asymmetric definition only necessitates one sensor that is sensitive to the presence of a predator. The organism will know that the predator is around if the sensor is activated, and will conclude that it is not around if the sensor is not activated. This inference is dependent on the confidence of the organism that the sensor will always be activated by the presence of a predator (the negative test validity of its sensor, see section \ref{detectionmodels}). In that sense, the asymmetric definition entails a \emph{second-order process}.
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figure/intro/asymmetric} \caption[An asymmetric implementation of a predator-detector.]{An asymmetric implementation of a predator-detector.}\label{fig:intro-asymmetric}
+\end{figure}
+This implementation assumes that the absence of a predator is a \emph{default state}. Making this assumption makes the system leaner: instead of having two sensors, only one sensor is needed to mark deviations from a default state (Reiter, 1980). This default-reasoning has an interesting property: it is \emph{non-monotonous}. Accepting the default state (the absence of a predator in the above example) can only be done tentatively and can potentially be overridden by future evidence. This is not true for the deviant state (here, the presence of a predator), which once accepted cannot be retracted based on the absence of new evidence. In other words, while beliefs about the absence of a predator can be overturn by evidence for presence, beliefs about the presence of a predator cannot be overturn by the absence of evidence for presence.
+
+The asymmetric architecture requires that the organism knows that the presence of a predator would activate sensor \(A\). Only then can the organism take the absence of input from \(A\) as evidence for the absence of a predator. Without this knowledge, the organism will be able to represent the presence of a predator (when \(A\) is activated), but not its absence. Indeed, it has been pointed out that Reiter's Default Logic is an \emph{autoepistemic logic}, which is based on an agent's ability to introspect over their own belief states (Denecker, Marek, \& Truszczynski, 2011).
+
+The mirror architecture is also possible: taking the presence of a predator to be a default state and using a sensor to mark deviations from this state, i.e., the absence of a predator.
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figure/intro/pessimistic} \caption{An asymmetric implementation of a predator-detector with a pessimistic prior.}\label{fig:intro-pessimistic}
+\end{figure}
+This architecture is perfectly equivalent to the previous one for systems that are composed of sensors only. All activated sensors in the first architecture are silenced in the second architecture and vice versa. However, for multi-layered systems that generate higher-level representations from sensory input, the second architecture becomes unreasonably huge. In such systems, if the default state is taken to be ``everything is happening'', then for every sensory input the system should generate the abstract representation of all possible \emph{combinations} of sensory inputs that were not experienced --- \(2^n-1\) in total, \(n\) being the number of sensors. This number becomes unrealistic even with a modest number of 100 sensors (\(2^{99}\), or more than a million million million million millions), and is even less realistic for complex systems that are equipped with eyes, thalami and cortices.
+
+This has dramatic consequences for systems that need to flexibly represent a rich space of entities or events, using a set of finite building blocks such as sensors and atomic concepts. Such hierarchical, complex systems are compelled to implement an architecture analog to the one in figure \ref{fig:intro-pessimistic}, namely to represent presences only, and infer absence by relying on their own self-representation. In other words, the maintenance of a reliable self-representation can be costly, but not nearly as costly as the alternative of representing absences and presences in a symmetrical way.
+
+\hypertarget{detectionmodels}{%
+\subsection{Computational models of detection}\label{detectionmodels}}
+
+In psychological experiments of near-threshold detection, participants are required to decide whether a stimulus (for example a faint dot) was present or absent from a display. Using De Cornulier's formulation, we can ask which of the two definitions better describes the inferential machinery that is engaged in detection tasks. Is it the case that participants perceive positive evidence for the absence of a target (symmetrical definition), or alternatively, do they rely on the metacognitive belief that they would have seen the target if it was present (dissymetrical definition)?
+
+\hypertarget{htm}{%
+\subsection*{The High-Threshold model}\label{htm}}
+\addcontentsline{toc}{subsection}{The High-Threshold model}
+
+The \emph{high-threshold model} of visual detection (Blackwell, 1952) formalizes this process in a way that shares conceptual similarity with De Cornulier's dissymemetrical definition. According to this model, the probability of detecting the signal \(d\) scales with stimulus intensity. If participants detect the signal, they respond with `yes'. The parameter \(d\) is a perceptual parameter: it captures variables such as objective stimulus intensity (for example, in units of luminance) and sensory sensitivity (for example, of photoreceptors in the retina, or neurons in the visual cortex). The value of this parameter corresponds to the degree to which statement 1 in the dissymetrical definition is true: ``If P {[}a stimulus is presented{]} John knows that P'', or to the reliability of the excitatory edge feeding into sensor \emph{B} in figure \ref{fig:intro-asymmetric}. Critically, in the high-threshold model no similar parameter exists to control the probability of detecting the absence of a signal. In other words, the presence/absence asymmetry is expressed in the absence of a direct edge from `stimulus absent' to a `no' response (leftmost dashed line in Fig. \ref{fig:intro-htm}). In this model, `no' responses are controlled by the `guessing' parameter \(g\). Unlike \(d\), the \(g\) parameter is under participants' cognitive control, and can be optimally set to maximize accuracy based on beliefs about the probability of a stimulus, the incentive structure, and critically, metacognitive beliefs about the perceptual sensitivity parameter \(d\).
+
+
+\begin{figure}
+\includegraphics[width=0.7\linewidth]{figure/intro/htm} \caption[The high threshold model]{In discrete high-threshold models the presence of a signal can sometimes lead directly to a `yes' response, but the absence of a signal is never sufficient to lead to a `no' response. Agents enter node \emph{A} when a stimulus is not detected. `No' responses are then controlled by the parameter \emph{g} - a `guessing parameter' that determines the probability of responding `yes' in case no stimulus was detected.}\label{fig:intro-htm}
+\end{figure}
+Given accurate knowledge about the parameter \(d\) and the prior probability of signal presence, observers can use \emph{Bayes' rule} to extract the \emph{negative test validity} (Oaksford \& Hahn, 2004): the probability that a signal is absent, given that the they did not perceive a signal. Formally, this equals \(p(\neg T|\neg e)\), where \(T\) stands for my theory (here, a signal is present) and \(e\) for the availability of evidence (here, I can see the signal). Using Bayes' rule, this quantity is determined by the system's \emph{correct rejection rate} (\(p(\neg e|\neg T)\)), \emph{hit rate} (\(p(e|T)\)), and the prior probability of \(T\). In the high threshold model, the correct rejection rate is always 1 (the threshold is never exceeded by noise alone), so the negative test validity equals:
+\begin{equation}
+p(\neg T|\neg e)=\frac{\overbrace{p(\neg e|\neg T))}^{CR}(1-p(T))}{1-p(e)} = \frac{1-p(T)}{1-p(e)}
+\end{equation}
+where
+\begin{equation}
+p(e)=\overbrace{p(e|\neg T)}^{FA}(1-p(T))+\overbrace{p(e|T)}^{Hit}p(T) = \overbrace{p(e|T)}^{Hit}p(T)
+\end{equation}
+Subjects can then use the negative test validity to inform their setting of the \(g\) parameter. For example, consider a setting where you know that a target will appear on exactly half of the trials (\(p(T)=0.5\)), and that half of the targets will be detected (\(p(e|T)=0.5\)). Using the above formula, and given that in the high-threshold model \(p(e|\neg T)=0\), you can conclude that \(p(\neg T|\neg e)=\frac{1-0.5}{1-0.5*0.5}=\frac{2}{3}\). In other words, given that a target was not detected, it is twice as likely that no target was present than that a target was present. This information can now be used to inform your setting of the \(g\) parameter before the next experimental trial.
+
+\hypertarget{sdt}{%
+\subsection*{Signal Detection Theory}\label{sdt}}
+\addcontentsline{toc}{subsection}{Signal Detection Theory}
+
+Given its simplicity, the high-threshold model is useful for demonstrating the utility of self-knowledge for inference about absence. Without veridical knowledge about the sensitivity parameter \(d\), subjects cannot tell whether they can rely on the absence of evidence when making inference about the absence of a stimulus. Continuous and graded models of perception based on Signal Detection Theory (SDT) express the same asymmetrical nature of presence/absence judgments, where clear evidence can be available for presence but less so for absence (see appendix \ref{app1:SDT} for an overview of Signal Detection Theory). In signal detection terms, this is expressed as high between-trial variance in sensory strength when a signal is present, but low variance when a signal is absent (see Fig. \ref{fig:intro-sdt}). Here, instead of controlling the parameter \(g\), participants control the placement of a decision criterion. Only trials in which the sensory signal (also termed perceptual evidence, or decision variable) exceeds this criterion will be classified as `stimulus present' trials. Optimal positioning of the criterion is dependent on beliefs about the likelihood of a stimulus to be present, as well as the spread of the signal and noise distributions and the distance between them (the stimulus-conditional \emph{Probability Density Functions}; Gold \& Shadlen, 2001). Due to the unequal-variance structure, sensory strength in trials where a stimulus is present will be on average farther from the decision criterion compared to when no stimulus is present. As a result, similar to the setting of the \(g\) parameter in the high-threshold model, the exact placement of the SDT decision criterion will affect accuracy more when a stimulus is absent, compared to when a stimulus is present.
+
+Common to both frameworks is the reliance on knowledge about one's own perception (the \(d\) parameter in the first case, the shape and position of the sensory distributions in the second) for optimally setting a heuristic for response on trials in which no clear evidence is available for the presence of a signal. As a result, these models draw a strong link between participants' beliefs about their own perception and their behaviour on target-absent trials. In what follows I provide empirical examples for how humans make inference about the absence of objects and memories, and link those examples to the core idea, that inference about absence critically relies on access to a self-model.
+\begin{figure}
+\includegraphics[width=0.7\linewidth]{figure/intro/sdt} \caption[The unequal variance Signal Detection model]{In unequal-variance SDT models, decisions are made based on the relative position of the sensory sample to a decision  criterion. The presense/absence asymmetry manifests in the fact that only in some 'target-present' trials, but not in 'target-absent' trials, the sensory sample falls far away from the decision criterion. The dashed line represents the missing tail of the noise distribution: without it, definite evidence is sometimes available for presence, but never for absence.}\label{fig:intro-sdt}
+\end{figure}
+\hypertarget{detection-i-would-have-noticed-it}{%
+\section{Detection: ``I would have noticed it''}\label{detection-i-would-have-noticed-it}}
+
+We start our exploration of inference about absence in cognition with perhaps the most basic of psychophysical tasks - visual detection. In visual detection, participants report the presence or absence of a target stimulus, commonly presented near perceptual threshold. In such tasks, accuracy alone cannot reveal a difference in processing between decisions about presence and decisions about absence, because task accuracy is a function of both `yes' and `no' responses.
+
+However, when asked to report how confident they are in their decision, subjective confidence reports reveal a metacognitive asymmetry between judgments about presence and absence. Decisions about target absence are accompanied by lower confidence, even for correctly rejected `stimulus absence' trials (Kanai, Walsh, \& Tseng, 2010; Mazor, Friston, \& Fleming, 2020; Meuwese, Loon, Lamme, \& Fahrenfort, 2014). Put differently, often participants cannot tell if they missed an existing target, or correctly perceived the absence of a target.
+
+For example, in a study by Meuwese et al. (2014), participants were asked to rate their confidence after performing either a perceptual detection task (``Was there an animal present?'') or a categorization task (``Was the animal a bird?''). Stimuli were identical for the two conditions, apart from phase-scrambled `noise' images that were only shown on detection blocks. Metacognitive sensitivity was quantified as the area under the response-conditional type-II receiver-operating characteristic curve (AUROC2; see Appendix \ref{app1:mc}). This measure reflects the agreement between confidence ratings and objective accuracy. AUROC2 was higher for the categorization than for the detection task even when performance on the primary tasks was equated. This difference originated from degraded metacognitive ability for trials in which the subjects reported not detecting an animal. More specifically, it was driven by lower confidence ratings for correct rejection trials rather than high confidence ratings for misses.
+
+These and similar observations of a metacognitive disadvantage for inference about absence (Kanai et al., 2010; Kellij, Fahrenfort, Lau, Peters, \& Odegaard, 2018; Mazor et al., 2020; Meuwese et al., 2014), as well as a similar pattern in response times (decisions about absence tend to be slower than decisions about presence; Mazor et al., 2020) fit well with the high-threshold and unequal-variance SDT models described above. Only in a subset of target-present trials, but in no target-absent trial, can participants make a decision without deliberation (without passing in the \emph{A} node in the high-threshold model, or based on a sample very far from the decision criterion in unequal-variance SDT). On these trials, participants can be highly confident in that a target was present -- more confident than when deciding that a target was present after deliberation. These high-confidence trials will only be available when a target is indeed present, giving rise to a metacognitive disadvantage for inference about absence.
+
+In line with a central role for self-monitoring in inference about absence, the lower metacognitive sensitivity for `stimulus absence' judgments diminishes or reverses when targets are masked from awareness by means of an attentional manipulation (Kanai et al., 2010; Kellij et al., 2018). For example, when an attentional-blink paradigm is used to control stimulus visibility, participants are significantly more confident in their correct rejection trials than in their misses. What is it in attentional manipulations that improves participants' metacognitive insight into their judgments about stimulus absence? One compelling possibility is that a blockage of sensory information at the perceptual stage is not accessible to awareness (and is thus phenomenally transparent; Metzinger, 2003), whereas fluctuations in attention are accessible to introspection (and are thus phenomenally opaque; Limanowski \& Friston, 2018). This monitoring of one's attention state makes it possible to use premises such as ``I would not have missed the target'' in rating confidence in absence under attentional, but not under perceptual manipulations of visibility. Put in more formal terms, attentional manipulations increase metacognitive access to the likelihood function going from world-states to perceptual states, thereby allowing trial-to-trial tuning of the decision criterion or the \emph{g} parameter.
+
+Studies contrasting detection responses and confidence ratings under different levels of attention provide more support for this metacognitive account of detection `no' responses. For example, participants are more likely to report the absence of a target in a specific location if their attention was directed to this location before stimulus onset, compared to when their attention was directed to a different location (Rahnev et al., 2011). Similarly, participants are more likely to correctly report the absence of a target embedded in a stimulus (for example, a grating embedded in noise) when the stimulus is presented at the center of their visual field, compared to the periphery (Odegaard, Chang, Lau, \& Cheung, 2018; Solovey, Graney, \& Lau, 2015). Note that both effects are the exact opposite of what is expected based on that attention boosts sensory gain (Parr \& Friston, 2019), because an increase in sensory gain without a change to the decision criterion would make false alarms, not correct rejections, more prevalent. They are however consistent with the idea that participants deploy a metacognitive strategy, shifting their decision criterion to accord with the expected strength of evidence given their current attentional state. If participants overestimate the effect of attention on their visual sensitivity, decision criterion, as measured in Signal Detection Theory, will be higher for attended versus unattended stimuli (see Fig. \ref{fig:intro-detection}). Indeed, detection criterion is typically found to be lower for unattended stimuli (Odegaard et al., 2018; Rahnev et al., 2011; Solovey et al., 2015).
+\begin{figure}
+\includegraphics[width=1\linewidth]{figure/intro/detection} \caption[The effect of erroneous beliefs about perceptual sensitivity on decision criterion]{Left panel: Sensitivity to near-threshold stimuli is lower in the visual periphery. For example, d' equals 1.0 in top left of the screen, but is much higher near the center. Right panel: the perceptual decision criterion is lower (more 'yes' responses) in the visual periphery.  Middle panel: if the effect of eccentricity on visual sensitivity is overestimated in participants' mental self-model (here d' in the top left corner is estimated to be 0.3), a lowering of the decision criterion in the visual periphery as observed in Odegaard et al. (2018) is expected.}\label{fig:intro-detection}
+\end{figure}
+\hypertarget{intro:search}{%
+\section{Visual search: ``I would have found it''}\label{intro:search}}
+
+In visual search tasks, participants are presented with an array of stimuli and are asked to report, as quickly and accurately as possible, whether a target stimulus was present or absent in the array. Moving one step up the complexity ladder, the accumulation of information in visual search is not only a function of stimulus strength and sensory precision, but is also affected by the endogenous allocation of attention to items in an observed scene. As a result, search time varies as a function of the number of distractors, their perceptual similarity to the target and their spatial arrangement, among other factors (for a review, see Wolfe \& Horowitz, 2008). These factors affect not only the time taken to report the presence of a target, but also the time taken to report its absence. For example, when searching for an orange target among red and green distractors, the number of distractors has virtually no effect on search time (e.g., D'Zmura, 1991) - a phenomenon known as `pop-out'. The bottom-up pop-out of a target can explain the immediate recognition of the presence of a target, irrespective of distractor set size. But this perceptual pop-out cannot, by itself, explain the immediate recognition of target absence, because in target absence trials there is nothing in the display to pop out.
+
+Computational models of visual search provide different accounts for search termination in target-absent trials. In \emph{Feature Integration Theory}, visual search comprises a pre-attentive, automatic process, and a later stage that is under participants' cognitive control. According to this model, difficult searches for a conjunction of features (\emph{conjunction searches}, for example, searching for a purple \emph{7} among orange and purple digits) terminate with a `no' response once participants finished scanning all the items in the display (a \emph{self-terminating exhaustive search}; Treisman \& Gelade, 1980). However, this model predicts that search-time variability in such conjunction target-absent trials should be lower than in conjunction target-present trials - a pattern that is not observed in empirical data (Moran, Zehetleitner, Liesefeld, Müller, \& Usher, 2016; Wolfe, Palmer, \& Horowitz, 2010). Furthermore, Feature Integration Theory does not provide an explicit account of target-absent responses in highly efficient parallel searches.
+\begin{figure}
+\includegraphics[width=1\linewidth]{figure/intro/termination_models_wide} \caption[Models of search termination]{Models of search termination. For the same visual array (left panel) search terminated immediately for one target (a green 7, lower row), but takes longer for another target (a purple 7, upper row). Different models of visual search explain this difference by postulating search termination mechanisms that are sensitive to the counterfactual difficulty of finding a hypothetical target.}\label{fig:intro-termination-models}
+\end{figure}
+In early versions of the \emph{Guided Search} model, `target absent' judgments are the result of exhausting the search only on items that surpass a learned `activation threshold' (Chun \& Wolfe, 1996; Wolfe, 1994). In difficult searches, the activation threshold is set to a low value, thereby requiring the scanning of multiple items before a `no' response can be delivered. In contrast, in easy searches the activation threshold is set to a high value, reflecting a belief that a target would be highly salient (see Fig. \ref{fig:intro-termination-models}). Furthermore, some very long searches are terminated once subjects concluded that ``it rarely takes this long to find a target'' (Wolfe, 1994).
+
+A more recent version of the Guided Search model (\emph{Competitive Guided Search}) described visual search as a stochastic process where items are selected for inspection based on their dynamic weight in a salience map. Critically, this model also included a \emph{quitting unit} that is selected with a certain probability (Moran, Zehetleitner, Müller, \& Usher, 2013). The search terminates once an item is recognized as the target, or once the quitting unit is selected. In this model, the salience of the quitting unit changes following the rejection of distractors. This incremental change is controlled by a parameter (\(\Delta w_{quit}\)) that is ``under strategic control of the observer''. For difficult searches, this parameter can be set to a low value, so that more items can be scanned before search termination. In very easy `pop-out' searches this parameter can be set to a high value, making it possible to terminate a search after rejecting only one item.
+
+In the latest formulation of the Guided Search model (Wolfe, 2021), searches are terminated once a noisy accumulator reaches a \emph{quitting threshold}. Setting the quitting threshold high allows participants to scan more items before concluding that a target is absent. The mechanism by which participants calibrate the quitting threshold is not specified in the model.
+
+Finally, in a fixation-based model of visual search, the number of items that are concurrently scanned within a single fixation (the \emph{functional visual field}) is dependent on search difficulty: with more items for easy searches and less items for more difficult ones (Hulleman \& Olivers, 2017).
+
+Importantly for our point here, the activation threshold, \(\Delta w_{quit}\), the quitting threshold and the functional visual field all share high similarity with the SDT criterion or the high-threshold \emph{g} parameter, and are influenced by explicit or implicit beliefs about the subjective salience of a hypothetical target in the array -- a form of self-knowledge.
+
+Usually, search times in target-present and target-absent trials are highly correlated, such that if participants take longer to find the target in a given display, they will also take longer to conclude that it is absent from it (Wolfe, 1998). This alignment speaks to the accuracy of the mental self-model: participants take longer to conclude that a target is missing when they believe they would take longer to find the target, and these beliefs about hypothetical search times are generally accurate. In the two upper panels of Fig. \ref{fig:intro-search} I provide two examples of cases where beliefs about search behaviour perfectly align with actual serach behaviour, leading to optimal search termination.
+
+However, self-knowledge about attention in visual search is not always accurate. For example, when searching for an unfamiliar letter (for example, an inverted N) among familiar letters (for example, Ns), the unfamiliar letter draws immediate attention without a need for serially attending to each item in the display. However, participants are slow in concluding that no unfamiliar letter is present, exhibiting a search time pattern consistent with a serial search for `target absent' responses only (Wang, Cavanagh, \& Green, 1994; Zhang \& Onyper, 2020). In the context of my proposal here, this can be an indication for a blind-spot of the mental self-model, failing to represent the fact that an unfamiliar letter would stand out (see Fig. \ref{fig:intro-search}, lower panel).
+\begin{figure}
+\includegraphics[width=0.7\linewidth]{figure/intro/search} \caption[Computational models of visual search]{Upper panel: A target that is marked by a unique colour imemdiately captures attention (left). This fact is available to participants' self-model (middle). As a result, participants can immediately terminate a search when no distractor shares the color of the target (right). Middle panel: When searching for the letter N among inverted Ns, the target does not immediately capture attention, and the serial deployment of attention is necessary (left). Participants are aware of this (middle). As a result, participants perform an exhaustive serial search before concluding that a target is absent (right). Lower panel: When searching for an inverted N among canonically presented Ns, the inverted letter immediately captures attention (left). This fact is not specified in the self-model (middle). As a result, participants perform an unncessary exhaustive serial search before concluding that a target is absent (right).}\label{fig:intro-search}
+\end{figure}
+\hypertarget{memory-i-would-have-remembered-it}{%
+\section{Memory: ``I would have remembered it''}\label{memory-i-would-have-remembered-it}}
+
+Inference about absence not only applies to external objects (such as guavas, or visual items on the screen), but also to mental variables such as memories and thoughts. For example, upon being introduced to a new colleague, one can be certain that they have not met this person before. In the memory literature, this is known as \emph{Negative recognition}: remembering that something did not happen (Brown, Lewis, \& Monk, 1977). In the lab, a typical recognition memory experiment comprises a learning phase and a test phase. In the learning phase participants are presented with a list of items, and in the test phase they are asked to classify different items as `old' (presented in the learning phase) or `new' (not presented in the learning phase).
+
+Recognition memory is often modeled using threshold or signal detection models (see section \ref{htm}), or a combination of the two (\emph{Dual Process models}; Wixted, 2007; Yonelinas, Dobbins, Szymanski, Dhaliwal, \& King, 1996). For example, in SDT models (Banks, 1970), participants compare a `memory trace' against an internal criterion to determine whether the item should be classified as old or new. Like perceptual detection, the placement of the decision threshold reflects beliefs about the expected signal for old and new items. If participants believe that learned items would produce very salient memory traces, they can safely increase the decision criterion without risking mistaking old items for being new.
+
+The role of self-knowledge in negative recognition is exemplified in the \emph{mirror effect}: items that are more likely to be correctly endorsed as `old' are also more likely to be correctly rejected as `new'. In SDT terms, this effect can be described as the adjustment of the decision criterion to the expected memory trace of an item, had it been present (its \emph{memorability}; Brown et al., 1977). For example, Brown et al. (1977) found that when asked to memorize a list of names, subjects are more confident in remembering that their own name was on the list, but also in correctly remembering when it was \emph{not} on the list. For this effect to manifest, it is not sufficient that subjects' memory was better for their own name. They also had to know this fact, and to use it in their counterfactual thinking (``I would remember if my name were on the list'').
+
+The mirror effect has also been demonstrated for the name of one's hometown (Brown et al., 1977), for word frequency (rare words are more likely to be correctly endorsed or rejected with confidence; Brown et al., 1977; Glanzer \& Bowles, 1976), word imaginability (Cortese, Khanna, \& Hacker, 2010; Cortese, McCarty, \& Schock, 2015) and for study time (subjects are more likely to correctly classify new items as new if learned items are presented for longer; Stretch \& Wixted, 1998; Starns, White, \& Ratcliff, 2012).
+
+In a clever set of experiments, Strack, Förster, \& Werth (2005) established a causal link from metacognitive beliefs about item memorability and decisions about the absence of memories. In two experiments, participants in one group were led to believe that high-frequency words (words that are used relatively often) are more memorable than low-frequency words, while participants in a second group were led to believe that low-frequency words were more memorable than high-frequency words. This manipulation affected participants' tendency to reject high-frequency or low-frequency items in a later recognition-memory task. Participants who believed that high-frequency words were more memorable were more likely to classify high-frequency words as `new', suggesting that their metacognitive belief informed their inference about the absence of a memory (`I would have remembered this word'). Inversely, participants who believed that low frequency words were more memorable showed the opposite pattern.
+
+One formal description of this inferential process is provided by the \emph{likelihood ratio} rule. According to this model, subjects compare the likelihood of incoming evidence under two competing models of the world - the presence or absence of a memory trace, and choose the model under which the incoming evidence is more likely. In order to be able to compare the likelihood of an observation under alternative models, subjects must have a model of their cognition that is sufficiently detailed to yield conditional probability distributions. In experiments where the probabilities of an item to be old or new is equal, the likelihood ratio strategy is optimal (Neyman \& Pearson, 1933). As a cartoon example, a participant may expect the perceived memory trace for frequent words to be centered around 0.3, and around 0.6 for infrequent words. Using the likelihood ratio rule, this participant will be more confident in that a word is new if the observed memory is 0 and the word is infrequent, compared to when the word is frequent. The likelihood ratio approach has been successful in explaining several features of recognition memory, including the mirror effect in negative recognition (Glanzer, Adams, Iverson, \& Kim, 1993; Glanzer, Hilford, \& Maloney, 2009).
+
+Just like in the cases of near-threshold detection and visual search, the intuitive metacognitive knowledge behind the mirror effect may not be available for explicit report, at least not in the absence of direct experience with the task itself. In their explicit memorability reports, subjects often have little to no declarative metacognitive knowledge of which items are more likely to be remembered, even under conditions that give rise to a mirror effect. For example, although more frequent words are more likely to be forgotten (and incorrectly classified as old), participants tended to judge them as more memorable than infrequent words (Begg, Duft, Lalonde, Melnick, \& Sanvito, 1989; Benjamin, 2003; Greene \& Thapar, 1994; Wixted, 1992). However, participants showed metacognitive insight into the negative effect of word frequency on memorability when memorability was rated after (and not before) negative recognition judgments (Benjamin, 2003; Guttentag \& Carroll, 1998). Thus, the implicit metacognitive knowledge that supports accurate negative recognition may become available for explicit report only when participants introspect about their recognition attempts.
+
+\hypertarget{the-development-of-a-self-model}{%
+\section{The development of a self-model}\label{the-development-of-a-self-model}}
+
+As exemplified above, the inferential processes that result in judgments of absence share important commonalities, regardless of whether it is the absence of an isolated target stimulus, of one target in an array of distractors, or of a non-physical entity such as a memory. First, in all three cases, to infer absence agents must possess some self-knowledge (under what conditions are they likely to miss a target, how long they should expect to search before finding a target in an array of distractors, or which items are likely or unlikely to be remembered). Second, agents must be able to use this counterfactual knowledge and compare it with their current state (for example, having no recollection of an item, or not seeing a target stimulus).
+
+At what developmental stage do humans master the necessary self knowledge and inferential machinery to make efficient and accurate inference about absence? In the context of memory, evidence suggests that the necessary self-knowledge and the capacity for counterfactual thinking exist in primary form already in early childhood, but continue to develop until adulthood. For example, children as young as 5 were able to give meaningful assessments the memorability of hypothetical life events and to use this metacognitive knowledge to inform their judgments about the nonoccurrence of an event, but this ability did not reach full maturation until the age of 9 (Ghetti \& Alexander, 2004). Other studies identified a qualitative transition between the ages 7 and 8 in the ability of children to rely on expected event memorability for inference about the absence of a memory (Ghetti, Castelli, \& Lyons, 2010; Ghetti, Lyons, Lazzarin, \& Cornoldi, 2008). This developmental discontinuity was attributed to the development of counterfactual thinking and second-order theory of mind. Indeed, the ability to infer that something did not happen based on that it would have been remembered critically relies on one's ability to ascribe mental states to their counterfactual self.
+
+In perception, the ability to represent absences lags behind the ability to represent presences, but reaches maturation much earlier than in the case of memory. In a study by Coldren \& Haaf (2000), 4 month-old infants were familiarized with a pair of identical letters (e.g., the letter `O'), presented side by side. In the test phase, one of the letters was replaced with a novel letter, which differed from the familiar letter either in the presence or the absence of a distinctive feature. For example, when infants that were familiarized with the letter O were tested on a display of one O and one Q, the novel letter (Q) was marked by the presence of a distinctive feature. Conversely, for infants that were familiarized with the letter Q, the novel letter O was marked by the absence of a distinctive feature. Infants showed preferential looking at the novel letter only when this letter was marked by the presence, not the absence, of a distinctive feature. A similar feature-positive effect was still evident in the learning behaviour of preschool children. When presented with two similar displays, 4 and 5 year old children were able to learn to approach the display with a distinctive feature but were at chance when trained to approach a display that is marked by the absence of a distinctive feature (Sainsbury, 1971).
+
+Together, these results suggest that the capacity to infer the absence of physical and mental entities and the ability to use beliefs about absence to guide learning develop through infancy and early childhood. In the context of this thesis, the development of this capacity may reflect, at least in part, the gradual expansion of different aspects a mental self-model, and the development of the capacity to use this model for counterfactual reasoning. For example, a baby that is not drawn to the new letter `O' after being habituated to the letter `Q' may not yet represent the absence of the distinguishing feature, because they lack the implicit self knowledge to know that they would notice the lower diagonal line if it was present. More abstractly, a 7 year-old may not be able to confidently tell that they did not spread a lotion on a chair (a highly memorable action, due to its bizarreness; Ghetti et al., 2008), because they lack the self-knowledge to know that if they had, they would remember doing so.
+
+\hypertarget{this-thesis}{%
+\section{This thesis}\label{this-thesis}}
+
+This thesis revolves around inference about absence in perception, and its reliance on self-modeling. First, in Chapter \ref{ch:termination} I look at inference about absence in visual search. Like detection and memory, in visual search too inference about the absence of a target item must rely on some form of self-knowledge (see section \ref{intro:search}). This study sought to pinpoint the origin of this knowledge. For example, is the knowledge that some visual searches are easier than others available to subjects in everyday life, or is it learned from experience in the artificial context of performing many trials of the same visual search task again and again? Due to the typical many-trials/few-subjects structure of lab-based experiments, classical visual search studies could not tell between these alternative options. By collecting data from a large number of online participants, in this first study we were able to reliably characterize participants' search termination in the first few trials of an experiment.
+
+In Chapter \ref{ch:termination}, Exp. 2, we found that participants gave accurate estimates of search difficulty, showing good metacognitive knowledge of key findings in the visual search literature. However, metacognitive estimates were given at the end of the experiment, allowing participants to base their estimates on their recent task experience. In Chapter \ref{ch:MVS} I asked participants to estimate search times for new search arrays, before performing these searches. Here I found that an internal model of visual search is rich and accurate, and also that it is person-specific in that it is better aligned with subjects' own search behaviour than with the search behaviour of other participants.
+
+In Chapters \ref{ch:RC} and \ref{ch:fMRI} I looked at a different perceptual task in which participants make inference about presence and absence: near-threshold detection. Detection was compared against discrimination as a control task in which stimulus category is inferred in a symmetrical setting (for example, right versus left motion). In Chapter \ref{ch:RC}, I used reverse correlation to ask what perceptual features contribute to decision and confidence in detection and discrimination. In three experiments (one lab-based and two conducted online), I replicated the `positive evidence bias' in discrimination confidence, and found that a similar bias exists in detection response, establishing a link between confidence in disrimination and decisions about presence and absence.
+
+In Chapter \ref{ch:fMRI} I used functional magnetic resonance imaging (fMRI) to compare brain activation in decisions about stimulus type, stimulus presence, and stimulus absence, as well as in confidence ratings in these decisions. I found a quadratic modulation of brain activity by confidence in prefrontal and parietal cortices. This modulation was stronger for detection judgments (decisions about stimulus presence or absence) than for discrimination judgments (decisions about stimulus type). Computational models of internal and external precision monitoring captured some, but not all aspects of the observed data.
+
+Finally, in Chapter \ref{ch:asymmetry} I focused on three behavioural asymmetries in detection (in confidence, response time, and metacognitive sensitivity), and asked whether similar asymmetries exist for the detection not of entire objects or stimuli, but also of stimulus parts, stimulus features, and expectation violations. The idea to look at presence and absence of sub-stimulus entities drew inspiration from reports of \emph{visual search asymmetries}, where finding a stimulus that is marked by the presence of a feature relative to distractors is easier than finding a stimulus that is marked by the absence of a feature. Results from six pre-registered experiments indicated at least two sources of asymmetry between presence and absence, that independently contribute to differences in response time and confidence on the one hand, and in metacognitive sensitivity on the other hand.
+
+\backmatter
+
+\hypertarget{references}{%
+\chapter*{References}\label{references}}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\noindent
+
+\setlength{\parindent}{-0.20in}
+\setlength{\leftskip}{0.20in}
+\setlength{\parskip}{8pt}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-angel2000}{}%
+Angel, E. (2000). \emph{Interactive computer graphics : A top-down approach with opengl}. Boston, MA: Addison Wesley Longman.
+
+\leavevmode\hypertarget{ref-angel2001}{}%
+Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up approach with quicktime}. Boston, MA: Wesley Addison Longman.
+
+\leavevmode\hypertarget{ref-angel2002a}{}%
+Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley Addison Longman.
+
+\leavevmode\hypertarget{ref-banks1970signal}{}%
+Banks, W. P. (1970). Signal detection theory and human memory. \emph{Psychological Bulletin}, \emph{74}(2), 81.
+
+\leavevmode\hypertarget{ref-begg1989memory}{}%
+Begg, I., Duft, S., Lalonde, P., Melnick, R., \& Sanvito, J. (1989). Memory predictions are based on ease of processing. \emph{Journal of Memory and Language}, \emph{28}(5), 610--632.
+
+\leavevmode\hypertarget{ref-benjamin2003predicting}{}%
+Benjamin, A. S. (2003). Predicting and postdicting the effects of word frequency on memory. \emph{Memory \& Cognition}, \emph{31}(2), 297--305.
+
+\leavevmode\hypertarget{ref-blackwell1952studies}{}%
+Blackwell, H. R. (1952). Studies of psychophysical methods for measuring visual thresholds. \emph{JOSA}, \emph{42}(9), 606--616.
+
+\leavevmode\hypertarget{ref-brown1977memorability}{}%
+Brown, J., Lewis, V., \& Monk, A. (1977). Memorability, word frequency and negative recognition. \emph{The Quarterly Journal of Experimental Psychology}, \emph{29}(3), 461--473.
+
+\leavevmode\hypertarget{ref-chun1996just}{}%
+Chun, M. M., \& Wolfe, J. M. (1996). Just say no: How are visual searches terminated when there is no target present? \emph{Cognitive Psychology}, \emph{30}(1), 39--78.
+
+\leavevmode\hypertarget{ref-coldren2000asymmetries}{}%
+Coldren, J. T., \& Haaf, R. A. (2000). Asymmetries in infants' attention to the presence or absence of features. \emph{The Journal of Genetic Psychology}, \emph{161}(4), 420--434.
+
+\leavevmode\hypertarget{ref-cortese2010recognition}{}%
+Cortese, M. J., Khanna, M. M., \& Hacker, S. (2010). Recognition memory for 2,578 monosyllabic words. \emph{Memory}, \emph{18}(6), 595--609.
+
+\leavevmode\hypertarget{ref-cortese2015mega}{}%
+Cortese, M. J., McCarty, D. P., \& Schock, J. (2015). A mega recognition memory study of 2897 disyllabic words. \emph{Quarterly Journal of Experimental Psychology}, \emph{68}(8), 1489--1501.
+
+\leavevmode\hypertarget{ref-de1988knowing}{}%
+De Cornulier, B. (1988). Knowing whether, knowing who, and epistemic closure. \emph{Questions and Questioning}, 182--192.
+
+\leavevmode\hypertarget{ref-denecker2011reiter}{}%
+Denecker, M., Marek, V. W., \& Truszczynski, M. (2011). Reiter's default logic is a logic of autoepistemic reasoning and a good one, too. \emph{arXiv Preprint arXiv:1108.3278}.
+
+\leavevmode\hypertarget{ref-d1991color}{}%
+D'Zmura, M. (1991). Color in visual search. \emph{Vision Research}, \emph{31}(6), 951--966.
+
+\leavevmode\hypertarget{ref-ghetti2004if}{}%
+Ghetti, S., \& Alexander, K. W. (2004). ``If it happened, i would remember it'': Strategic use of event memorability in the rejection of false autobiographical events. \emph{Child Development}, \emph{75}(2), 542--561.
+
+\leavevmode\hypertarget{ref-ghetti2010knowing}{}%
+Ghetti, S., Castelli, P., \& Lyons, K. E. (2010). Knowing about not remembering: Developmental dissociations in lack-of-memory monitoring. \emph{Developmental Science}, \emph{13}(4), 611--621.
+
+\leavevmode\hypertarget{ref-ghetti2008development}{}%
+Ghetti, S., Lyons, K. E., Lazzarin, F., \& Cornoldi, C. (2008). The development of metamemory monitoring during retrieval: The case of memory strength and memory absence. \emph{Journal of Experimental Child Psychology}, \emph{99}(3), 157--181.
+
+\leavevmode\hypertarget{ref-glanzer1993regularities}{}%
+Glanzer, M., Adams, J. K., Iverson, G. J., \& Kim, K. (1993). The regularities of recognition memory. \emph{Psychological Review}, \emph{100}(3), 546.
+
+\leavevmode\hypertarget{ref-glanzer1976analysis}{}%
+Glanzer, M., \& Bowles, N. (1976). Analysis of the word-frequency effect in recognition memory. \emph{Journal of Experimental Psychology: Human Learning and Memory}, \emph{2}(1), 21.
+
+\leavevmode\hypertarget{ref-glanzer2009likelihood}{}%
+Glanzer, M., Hilford, A., \& Maloney, L. T. (2009). Likelihood ratio decisions in memory: Three implied regularities. \emph{Psychonomic Bulletin \& Review}, \emph{16}(3), 431--455.
+
+\leavevmode\hypertarget{ref-gold2001neural}{}%
+Gold, J. I., \& Shadlen, M. N. (2001). Neural computations that underlie decisions about sensory stimuli. \emph{Trends in Cognitive Sciences}, \emph{5}(1), 10--16.
+
+\leavevmode\hypertarget{ref-greene1994mirror}{}%
+Greene, R. L., \& Thapar, A. (1994). Mirror effect in frequency discrimination. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{20}(4), 946.
+
+\leavevmode\hypertarget{ref-guttentag1998memorability}{}%
+Guttentag, R., \& Carroll, D. (1998). Memorability judgments for high-and low-frequency words. \emph{Memory \& Cognition}, \emph{26}(5), 951--958.
+
+\leavevmode\hypertarget{ref-hulleman2017impending}{}%
+Hulleman, J., \& Olivers, C. N. (2017). The impending demise of the item in visual search. \emph{Behavioral and Brain Sciences}, \emph{40}.
+
+\leavevmode\hypertarget{ref-kanai2010subjective}{}%
+Kanai, R., Walsh, V., \& Tseng, C.-h. (2010). Subjective discriminability of invisibility: A framework for distinguishing perceptual and attentional failures of awareness. \emph{Consciousness and Cognition}, \emph{19}(4), 1045--1057.
+
+\leavevmode\hypertarget{ref-kellij2018foundations}{}%
+Kellij, S., Fahrenfort, J., Lau, H., Peters, M. A., \& Odegaard, B. (2018). The foundations of introspective access: How the relative precision of target encoding influences metacognitive performance.
+
+\leavevmode\hypertarget{ref-limanowski2018seeing}{}%
+Limanowski, J., \& Friston, K. (2018). ``Seeing the dark'': Grounding phenomenal transparency and opacity in precision estimation for active inference. \emph{Frontiers in Psychology}, \emph{9}, 643.
+
+\leavevmode\hypertarget{ref-locke1836essay}{}%
+Locke, J. (1836). \emph{An essay concerning human understanding}. T. Tegg; Son.
+
+\leavevmode\hypertarget{ref-mazor2020distinct}{}%
+Mazor, M., Friston, K. J., \& Fleming, S. M. (2020). Distinct neural contributions to metacognition for detecting, but not discriminating visual stimuli. \emph{Elife}, \emph{9}, e53900.
+
+\leavevmode\hypertarget{ref-metzinger2003phenomenal}{}%
+Metzinger, T. (2003). Phenomenal transparency and cognitive self-reference. \emph{Phenomenology and the Cognitive Sciences}, \emph{2}(4), 353--393.
+
+\leavevmode\hypertarget{ref-meuwese2014subjective}{}%
+Meuwese, J. D., Loon, A. M. van, Lamme, V. A., \& Fahrenfort, J. J. (2014). The subjective experience of object recognition: Comparing metacognition for object detection and object categorization. \emph{Attention, Perception, \& Psychophysics}, \emph{76}(4), 1057--1068.
+
+\leavevmode\hypertarget{ref-moran2016serial}{}%
+Moran, R., Zehetleitner, M., Liesefeld, H. R., Müller, H. J., \& Usher, M. (2016). Serial vs. Parallel models of attention in visual search: Accounting for benchmark rt-distributions. \emph{Psychonomic Bulletin \& Review}, \emph{23}(5), 1300--1315.
+
+\leavevmode\hypertarget{ref-moran2013competitive}{}%
+Moran, R., Zehetleitner, M., Müller, H. J., \& Usher, M. (2013). Competitive guided search: Meeting the challenge of benchmark rt distributions. \emph{Journal of Vision}, \emph{13}(8), 24--24.
+
+\leavevmode\hypertarget{ref-neyman1933ix}{}%
+Neyman, J., \& Pearson, E. S. (1933). IX. On the problem of the most efficient tests of statistical hypotheses. \emph{Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character}, \emph{231}(694-706), 289--337.
+
+\leavevmode\hypertarget{ref-Oaksford2004}{}%
+Oaksford, M., \& Hahn, U. (2004). A bayesian approach to the argument from ignorance. \emph{Canadian Journal of Experimental Psychology = Revue Canadienne de Psychologie Experimentale}, \emph{58}(November 2015), 75--85. \url{http://doi.org/10.1037/h0085798}
+
+\leavevmode\hypertarget{ref-odegaard2018inflation}{}%
+Odegaard, B., Chang, M. Y., Lau, H., \& Cheung, S.-H. (2018). Inflation versus filling-in: Why we feel we see more than we actually do in peripheral vision. \emph{Philosophical Transactions of the Royal Society B: Biological Sciences}, \emph{373}(1755), 20170345.
+
+\leavevmode\hypertarget{ref-parr2019attention}{}%
+Parr, T., \& Friston, K. J. (2019). Attention or salience? \emph{Current Opinion in Psychology}, \emph{29}, 1--5.
+
+\leavevmode\hypertarget{ref-rahnev2011attention}{}%
+Rahnev, D., Maniscalco, B., Graves, T., Huang, E., De Lange, F. P., \& Lau, H. (2011). Attention induces conservative subjective biases in visual perception. \emph{Nature Neuroscience}, \emph{14}(12), 1513--1515.
+
+\leavevmode\hypertarget{ref-reiter1980logic}{}%
+Reiter, R. (1980). A logic for default reasoning. \emph{Artificial Intelligence}, \emph{13}(1-2), 81--132.
+
+\leavevmode\hypertarget{ref-sainsbury1971feature}{}%
+Sainsbury, R. (1971). The ``feature positive effect'' and simultaneous discrimination learning. \emph{Journal of Experimental Child Psychology}, \emph{11}(3), 347--356.
+
+\leavevmode\hypertarget{ref-solovey2015decisional}{}%
+Solovey, G., Graney, G. G., \& Lau, H. (2015). A decisional account of subjective inflation of visual perception at the periphery. \emph{Attention, Perception, \& Psychophysics}, \emph{77}(1), 258--271.
+
+\leavevmode\hypertarget{ref-starns2012strength}{}%
+Starns, J. J., White, C. N., \& Ratcliff, R. (2012). The strength-based mirror effect in subjective strength ratings: The evidence for differentiation can be produced without differentiation. \emph{Memory \& Cognition}, \emph{40}(8), 1189--1199.
+
+\leavevmode\hypertarget{ref-strack2005know}{}%
+Strack, F., Förster, J., \& Werth, L. (2005). ``Know thyself!'' The role of idiosyncratic self-knowledge in recognition memory. \emph{Journal of Memory and Language}, \emph{52}(4), 628--638.
+
+\leavevmode\hypertarget{ref-stretch1998difference}{}%
+Stretch, V., \& Wixted, J. T. (1998). On the difference between strength-based and frequency-based mirror effects in recognition memory. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{24}(6), 1379.
+
+\leavevmode\hypertarget{ref-treisman1980feature}{}%
+Treisman, A. M., \& Gelade, G. (1980). A feature-integration theory of attention. \emph{Cognitive Psychology}, \emph{12}(1), 97--136.
+
+\leavevmode\hypertarget{ref-wang1994familiarity}{}%
+Wang, Q., Cavanagh, P., \& Green, M. (1994). Familiarity and pop-out in visual search. \emph{Perception \& Psychophysics}, \emph{56}(5), 495--500.
+
+\leavevmode\hypertarget{ref-wixted1992subjective}{}%
+Wixted, J. T. (1992). Subjective memorability and the mirror effect. \emph{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \emph{18}(4), 681.
+
+\leavevmode\hypertarget{ref-wixted2007dual}{}%
+Wixted, J. T. (2007). Dual-process theory and signal-detection theory of recognition memory. \emph{Psychological Review}, \emph{114}(1), 152.
+
+\leavevmode\hypertarget{ref-wolfe2021guided}{}%
+Wolfe, J. (2021). Guided search 6.0: An updated model of visual search. \emph{Psychonomic Bulletin \& Review}.
+
+\leavevmode\hypertarget{ref-wolfe2008visual}{}%
+Wolfe, J., \& Horowitz, T. S. (2008). Visual search. \emph{Scholarpedia}, \emph{3}(7), 3325.
+
+\leavevmode\hypertarget{ref-wolfe1994guided}{}%
+Wolfe, J. M. (1994). Guided search 2.0 a revised model of visual search. \emph{Psychonomic Bulletin \& Review}, \emph{1}(2), 202--238.
+
+\leavevmode\hypertarget{ref-wolfe1998can}{}%
+Wolfe, J. M. (1998). What can 1 million trials tell us about visual search? \emph{Psychological Science}, \emph{9}(1), 33--39.
+
+\leavevmode\hypertarget{ref-wolfe2010reaction}{}%
+Wolfe, J. M., Palmer, E. M., \& Horowitz, T. S. (2010). Reaction time distributions constrain models of visual search. \emph{Vision Research}, \emph{50}(14), 1304--1311.
+
+\leavevmode\hypertarget{ref-yonelinas1996signal}{}%
+Yonelinas, A. P., Dobbins, I., Szymanski, M. D., Dhaliwal, H. S., \& King, L. (1996). Signal-detection, threshold, and dual-process models of recognition memory: ROCs and conscious recollection. \emph{Consciousness and Cognition}, \emph{5}(4), 418--441.
+
+\leavevmode\hypertarget{ref-zhang2020visual}{}%
+Zhang, Y. R., \& Onyper, S. (2020). Visual search asymmetry depends on target-distractor feature similarity: Is the asymmetry simply a result of distractor rejection speed? \emph{Attention, Perception, \& Psychophysics}, \emph{82}(1), 80--97.
+
+
+% Index?
+
+\end{document}
