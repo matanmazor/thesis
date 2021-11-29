@@ -1,8 +1,8 @@
-# Metacognitive asymmetries in visual perception {#ch:asymmetry}
+# Metacognitive asymmetries in visual perception {#ch-asymmetry}
 
 #### Matan Mazor, Rani Moran & Stephen M. Fleming {.unnumbered}
 
-In previous chapters we examined inference about absence and its relation to self-modelling, focusing on the absence of entire shapes (Chapter \@ref(ch:termination)), visual gratings (Chapter \@ref(ch:fMRI)) and non-random patterns in otherwise random displays (Chapter \@ref(ch:RC)). In all cases we find that decisions about absence are slower than decisions about presence, and in chapters \@ref(ch:RC) and \@ref(ch:fMRI) we further replicate findings of higher levels of confidence and improved metacognitive sensitivity for decisions about the presence compared to the absence of objects. in this last chapter, based on a Registered Report, I ask how far can we stretch the definition of 'absence', focusing on the absence of stimulus features or expectation violations, rather than entire objects or stimuli. Our pre-registered prediction was that differences in the processing of presence and absence reflect a default mode of reasoning: assuming absence unless evidence is available for presence. In a Registered Report, we predicted asymmetries in response time, confidence, and metacognitive sensitivity in discriminating between stimulus categories that vary in the presence or absence of a distinguishing feature, or in their compliance with an expected default state. Six experiments, using six pairs of stimuli, provide evidence that like the presence of entire shapes or gratings, the presence of local and global stimulus features gives rise to faster, more confident responses. Contrary to our hypothesis, however, the presence or absence of a local feature has no effect on metacognitive sensitivity. Our results weigh against our proposal of a link between the detection metacognitive asymmetry and default reasoning, and are instead consistent with a low-level visual origin of the metacognitive asymmetry between detection 'yes' and 'no' responses.    
+In previous chapters we examined inference about absence and its relation to self-modelling, focusing on the absence of entire shapes (Chapter \@ref(ch-termination)), visual gratings (Chapter \@ref(ch-fMRI)) and non-random patterns in otherwise random displays (Chapter \@ref(ch-RC)). In all cases we find that decisions about absence are slower than decisions about presence, and in chapters \@ref(ch-RC) and \@ref(ch-fMRI) we further replicate findings of higher levels of confidence and improved metacognitive sensitivity for decisions about the presence compared to the absence of objects. in this last chapter, based on a Registered Report, I ask how far can we stretch the definition of 'absence', focusing on the absence of stimulus features or expectation violations, rather than entire objects or stimuli. Our pre-registered prediction was that differences in the processing of presence and absence reflect a default mode of reasoning: assuming absence unless evidence is available for presence. In a Registered Report, we predicted asymmetries in response time, confidence, and metacognitive sensitivity in discriminating between stimulus categories that vary in the presence or absence of a distinguishing feature, or in their compliance with an expected default state. Six experiments, using six pairs of stimuli, provide evidence that like the presence of entire shapes or gratings, the presence of local and global stimulus features gives rise to faster, more confident responses. Contrary to our hypothesis, however, the presence or absence of a local feature has no effect on metacognitive sensitivity. Our results weigh against our proposal of a link between the detection metacognitive asymmetry and default reasoning, and are instead consistent with a low-level visual origin of the metacognitive asymmetry between detection 'yes' and 'no' responses.    
 
 ```{r asymmetry_load_pkgs, echo=FALSE, message=FALSE, include=FALSE}
 library("papaja")
@@ -979,23 +979,29 @@ testzROC <- function(e) {
   
   e$zROC_slopes1 <- e$conf_bi_counts %>%
     group_by(subj_id) %>%
-    do(model=lm(z_1~z_2,data=.)) %>%
-    tidy(model) %>%
-    filter(term=='z_2')%>%
-    mutate(slope1=estimate)%>%
-    dplyr::select('subj_id','slope1') %>%
-    drop_na();
+     nest() %>%
+      mutate(model = map(data, ~ lm(z_1~z_2, data = .x)), 
+             tidy = map(model, ~ tidy(.x))) %>%
+      unnest(tidy) %>%
+      filter(term == 'z_2') %>%
+      mutate(slope1=estimate)%>%
+      dplyr::select('subj_id','slope1') %>%
+      drop_na();
   
+
   # To control for regression to the mean, fit the opposite model and average the two slopes
   # (see Wickens, p. 56)
   e$zROC_slopes2 <- e$conf_bi_counts %>%
     group_by(subj_id) %>%
-    do(model=lm(z_2~z_1,data=.)) %>%
-    tidy(model) %>%
-    filter(term=='z_1')%>%
-    mutate(slope2=1/estimate)%>%
-    dplyr::select('subj_id','slope2') %>%
-    drop_na();
+      nest() %>%
+      mutate(model = map(data, ~ lm(z_2~z_1, data = .x)), 
+             tidy = map(model, ~ tidy(.x))) %>%
+      unnest(tidy) %>%
+      filter(term == 'z_1') %>%
+      mutate(slope2=1/estimate)%>%
+      dplyr::select('subj_id','slope2') %>%
+      drop_na();
+
   
   e$zROC_slopes <- merge(
     e$zROC_slopes1 %>%

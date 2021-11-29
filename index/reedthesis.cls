@@ -56,6 +56,7 @@
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 \usepackage{color}
+\usepackage{ragged2e}
 %\newcommand{\VerbBar}{|}
 %\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{xleftmargin=-1em}
@@ -261,15 +262,30 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
-\newenvironment{dedication}{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \chapter*{Dedication}
-  \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
+% \newenvironment{dedication}{%
+%   \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%   \else
+%     \@restonecolfalse
+%   \fi
+%   \chapter*{Dedication}
+%   \fontsize{12}{14}\selectfont
+% }{\clearpage \if@restonecol\twocolumn\fi}%
+
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top 
+   \raggedleft          % Flush with right margin
+   % \section*{Dedication}% Formatting of dedication title (as section*)
+   \itshape             % the text is in italics
+   \justifying          % layout of dedication paragraph
+
+  }
+  {\par                 % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
 
 \newenvironment{impact}{%
   \if@twocolumn

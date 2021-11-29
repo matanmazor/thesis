@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Internal models of visual search are rich, person-specific, and mostly accurate | Self-Modelling in Inference about Absence</title>
+  <meta name="description" content="Chapter 2 Internal models of visual search are rich, person-specific, and mostly accurate | Self-Modelling in Inference about Absence" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Internal models of visual search are rich, person-specific, and mostly accurate | Self-Modelling in Inference about Absence" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Internal models of visual search are rich, person-specific, and mostly accurate | Self-Modelling in Inference about Absence" />
+  
+  
+  
+
+<meta name="author" content="Matan Mazor" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="1-ch-termination.html"/>
+<link rel="next" href="3-ch-RC.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#impact-statement"><i class="fa fa-check"></i>Impact Statement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="introduction.html"><a href="introduction.html#inference-about-absence"><i class="fa fa-check"></i><b>0.1</b> Inference about absence</a></li>
+<li class="chapter" data-level="0.2" data-path="introduction.html"><a href="introduction.html#formalabsence"><i class="fa fa-check"></i><b>0.2</b> Probabilistic reasoning, criterion setting, and self knowledge</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#symmetrical-definition"><i class="fa fa-check"></i>Symmetrical definition:</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#dissymmetrical-definition"><i class="fa fa-check"></i>Dissymmetrical definition:</a></li>
+<li class="chapter" data-level="0.2.1" data-path="introduction.html"><a href="introduction.html#intro-2nd-order"><i class="fa fa-check"></i><b>0.2.1</b> Second-order cognition</a></li>
+<li class="chapter" data-level="0.2.2" data-path="introduction.html"><a href="introduction.html#detectionmodels"><i class="fa fa-check"></i><b>0.2.2</b> Computational models of detection</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#htm"><i class="fa fa-check"></i>The High-Threshold model</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sdt"><i class="fa fa-check"></i>Signal Detection Theory</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="introduction.html"><a href="introduction.html#detection-i-would-have-noticed-it"><i class="fa fa-check"></i><b>0.3</b> Detection: “I would have noticed it”</a></li>
+<li class="chapter" data-level="0.4" data-path="introduction.html"><a href="introduction.html#intro:search"><i class="fa fa-check"></i><b>0.4</b> Visual search: “I would have found it”</a></li>
+<li class="chapter" data-level="0.5" data-path="introduction.html"><a href="introduction.html#memory-i-would-have-remembered-it"><i class="fa fa-check"></i><b>0.5</b> Memory: “I would have remembered it”</a></li>
+<li class="chapter" data-level="0.6" data-path="introduction.html"><a href="introduction.html#the-development-of-a-self-model"><i class="fa fa-check"></i><b>0.6</b> The development of a self-model</a></li>
+<li class="chapter" data-level="0.7" data-path="introduction.html"><a href="introduction.html#this-thesis"><i class="fa fa-check"></i><b>0.7</b> This thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-ch-termination.html"><a href="1-ch-termination.html"><i class="fa fa-check"></i><b>1</b> Efficient search termination without task experience: the role of second-order knowledge about visual search</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1-ch-termination.html"><a href="1-ch-termination.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="1-ch-termination.html"><a href="1-ch-termination.html#experiment-1"><i class="fa fa-check"></i><b>1.2</b> Experiment 1</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="1-ch-termination.html"><a href="1-ch-termination.html#participants"><i class="fa fa-check"></i><b>1.2.1</b> Participants</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-ch-termination.html"><a href="1-ch-termination.html#procedure"><i class="fa fa-check"></i><b>1.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-ch-termination.html"><a href="1-ch-termination.html#randomization"><i class="fa fa-check"></i><b>1.2.3</b> Randomization</a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-ch-termination.html"><a href="1-ch-termination.html#data-analysis"><i class="fa fa-check"></i><b>1.2.4</b> Data analysis</a></li>
+<li class="chapter" data-level="1.2.5" data-path="1-ch-termination.html"><a href="1-ch-termination.html#results"><i class="fa fa-check"></i><b>1.2.5</b> Results</a></li>
+<li class="chapter" data-level="1.2.6" data-path="1-ch-termination.html"><a href="1-ch-termination.html#additional-analysis-first-trial-only"><i class="fa fa-check"></i><b>1.2.6</b> Additional analysis: first trial only</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-ch-termination.html"><a href="1-ch-termination.html#experiment-2"><i class="fa fa-check"></i><b>1.3</b> Experiment 2</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="1-ch-termination.html"><a href="1-ch-termination.html#participants-1"><i class="fa fa-check"></i><b>1.3.1</b> Participants</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-ch-termination.html"><a href="1-ch-termination.html#procedure-1"><i class="fa fa-check"></i><b>1.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.3.3" data-path="1-ch-termination.html"><a href="1-ch-termination.html#results-1"><i class="fa fa-check"></i><b>1.3.3</b> Results</a></li>
+<li class="chapter" data-level="1.3.4" data-path="1-ch-termination.html"><a href="1-ch-termination.html#additional-analyses"><i class="fa fa-check"></i><b>1.3.4</b> Additional Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="1-ch-termination.html"><a href="1-ch-termination.html#discussion"><i class="fa fa-check"></i><b>1.4</b> Discussion</a></li>
+<li class="chapter" data-level="1.5" data-path="1-ch-termination.html"><a href="1-ch-termination.html#conclusion"><i class="fa fa-check"></i><b>1.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html"><i class="fa fa-check"></i><b>2</b> Internal models of visual search are rich, person-specific, and mostly accurate</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#introduction-2"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#experiments-1-and-2-shape-orientation-and-color"><i class="fa fa-check"></i><b>2.2</b> Experiments 1 and 2: shape, orientation, and color</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#participants-2"><i class="fa fa-check"></i><b>2.2.1</b> Participants</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#procedure-2"><i class="fa fa-check"></i><b>2.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#results-2"><i class="fa fa-check"></i><b>2.2.3</b> Results</a></li>
+<li class="chapter" data-level="" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#estimation-accuracy"><i class="fa fa-check"></i>Estimation accuracy</a></li>
+<li class="chapter" data-level="" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#a-graded-representation-of-search-efficiency"><i class="fa fa-check"></i>A graded representation of search efficiency</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#experiments-3-and-4-complex-unfamiliar-stimuli"><i class="fa fa-check"></i><b>2.3</b> Experiments 3 and 4: complex, unfamiliar stimuli</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#participants-3"><i class="fa fa-check"></i><b>2.3.1</b> Participants</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#procedure-3"><i class="fa fa-check"></i><b>2.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#results-3"><i class="fa fa-check"></i><b>2.3.3</b> Results</a></li>
+<li class="chapter" data-level="" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#estimation-time"><i class="fa fa-check"></i>Estimation time</a></li>
+<li class="chapter" data-level="" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#asymmetry"><i class="fa fa-check"></i>Visual search asymmetry</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-ch-MVS.html"><a href="2-ch-MVS.html#discussion-1"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-ch-RC.html"><a href="3-ch-RC.html"><i class="fa fa-check"></i><b>3</b> Evidence weightings in confidence judgments for detection and discrimination</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-ch-RC.html"><a href="3-ch-RC.html#introduction-3"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-ch-RC.html"><a href="3-ch-RC.html#experiment-1-1"><i class="fa fa-check"></i><b>3.2</b> Experiment 1</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="3-ch-RC.html"><a href="3-ch-RC.html#methods"><i class="fa fa-check"></i><b>3.2.1</b> Methods</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-ch-RC.html"><a href="3-ch-RC.html#randomization-1"><i class="fa fa-check"></i><b>3.2.2</b> Randomization</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-ch-RC.html"><a href="3-ch-RC.html#analysis"><i class="fa fa-check"></i><b>3.2.3</b> Analysis</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-ch-RC.html"><a href="3-ch-RC.html#results-4"><i class="fa fa-check"></i><b>3.2.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-ch-RC.html"><a href="3-ch-RC.html#experiment-2-1"><i class="fa fa-check"></i><b>3.3</b> Experiment 2</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="3-ch-RC.html"><a href="3-ch-RC.html#methods-1"><i class="fa fa-check"></i><b>3.3.1</b> Methods</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-ch-RC.html"><a href="3-ch-RC.html#randomization-2"><i class="fa fa-check"></i><b>3.3.2</b> Randomization</a></li>
+<li class="chapter" data-level="3.3.3" data-path="3-ch-RC.html"><a href="3-ch-RC.html#results-5"><i class="fa fa-check"></i><b>3.3.3</b> Results</a></li>
+<li class="chapter" data-level="3.3.4" data-path="3-ch-RC.html"><a href="3-ch-RC.html#detection-signal-trials-1"><i class="fa fa-check"></i><b>3.3.4</b> Detection signal trials</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3-ch-RC.html"><a href="3-ch-RC.html#experiment-3"><i class="fa fa-check"></i><b>3.4</b> Experiment 3</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="3-ch-RC.html"><a href="3-ch-RC.html#methods-2"><i class="fa fa-check"></i><b>3.4.1</b> Methods</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-ch-RC.html"><a href="3-ch-RC.html#results-6"><i class="fa fa-check"></i><b>3.4.2</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-ch-RC.html"><a href="3-ch-RC.html#discussion-2"><i class="fa fa-check"></i><b>3.5</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html"><i class="fa fa-check"></i><b>4</b> Distinct neural contributions to metacognition for detecting (but not discriminating) visual stimuli</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#introduction-4"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#methods-and-materials"><i class="fa fa-check"></i><b>4.2</b> Methods and Materials</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#participants-7"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#design-and-procedure"><i class="fa fa-check"></i><b>4.2.2</b> Design and procedure</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#scanning-parameters"><i class="fa fa-check"></i><b>4.2.3</b> Scanning parameters</a></li>
+<li class="chapter" data-level="4.2.4" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#analysis-1"><i class="fa fa-check"></i><b>4.2.4</b> Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#results-7"><i class="fa fa-check"></i><b>4.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#behavioural-results"><i class="fa fa-check"></i><b>4.3.1</b> Behavioural results</a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#imaging-results"><i class="fa fa-check"></i><b>4.3.2</b> Imaging results</a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#computational-models"><i class="fa fa-check"></i><b>4.3.3</b> Computational models</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="4-ch-fMRI.html"><a href="4-ch-fMRI.html#discussion-3"><i class="fa fa-check"></i><b>4.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html"><i class="fa fa-check"></i><b>5</b> Metacognitive asymmetries in visual perception</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#introduction-5"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#methods-3"><i class="fa fa-check"></i><b>5.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#participants-8"><i class="fa fa-check"></i><b>5.2.1</b> Participants</a></li>
+<li class="chapter" data-level="5.2.2" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#procedure-4"><i class="fa fa-check"></i><b>5.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="5.2.3" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#data-analysis-1"><i class="fa fa-check"></i><b>5.2.3</b> Data analysis</a></li>
+<li class="chapter" data-level="5.2.4" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#analysis-plan"><i class="fa fa-check"></i><b>5.2.4</b> Dependent variables and analysis plan</a></li>
+<li class="chapter" data-level="5.2.5" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#statistical-power"><i class="fa fa-check"></i><b>5.2.5</b> Statistical power</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#data-availability"><i class="fa fa-check"></i><b>5.3</b> Data availability</a></li>
+<li class="chapter" data-level="5.4" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#code-availability"><i class="fa fa-check"></i><b>5.4</b> Code availability</a></li>
+<li class="chapter" data-level="5.5" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#deviations"><i class="fa fa-check"></i><b>5.5</b> Deviations from pre-registration</a></li>
+<li class="chapter" data-level="5.6" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#results-8"><i class="fa fa-check"></i><b>5.6</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-1-q-vs.-o"><i class="fa fa-check"></i><b>5.6.1</b> Experiment 1: <em>Q</em> vs. <em>O</em></a></li>
+<li class="chapter" data-level="5.6.2" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-2-c-vs.-o"><i class="fa fa-check"></i><b>5.6.2</b> Experiment 2: C vs. O</a></li>
+<li class="chapter" data-level="5.6.3" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-3-tilted-vs.-vertical-lines"><i class="fa fa-check"></i><b>5.6.3</b> Experiment 3: tilted vs. vertical lines</a></li>
+<li class="chapter" data-level="5.6.4" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-4-curved-vs.-straight-lines"><i class="fa fa-check"></i><b>5.6.4</b> Experiment 4: curved vs. straight lines</a></li>
+<li class="chapter" data-level="5.6.5" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-5-upward-tilted-vs.-downward-tilted-cubes"><i class="fa fa-check"></i><b>5.6.5</b> Experiment 5: upward-tilted vs. downward-tilted cubes</a></li>
+<li class="chapter" data-level="5.6.6" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-6-flipped-vs.-normal-letters"><i class="fa fa-check"></i><b>5.6.6</b> Experiment 6: flipped vs. normal letters</a></li>
+<li class="chapter" data-level="5.6.7" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#asymmetry-summary"><i class="fa fa-check"></i><b>5.6.7</b> Experiments 1-6: summary</a></li>
+<li class="chapter" data-level="5.6.8" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#experiment-7-exploratory-grating-vs.-noise"><i class="fa fa-check"></i><b>5.6.8</b> Experiment 7 (exploratory): grating vs. noise</a></li>
+<li class="chapter" data-level="5.6.9" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#exploratory-analysis"><i class="fa fa-check"></i><b>5.6.9</b> Exploratory analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#discussion-4"><i class="fa fa-check"></i><b>5.7</b> Discussion</a></li>
+<li class="chapter" data-level="5.8" data-path="5-ch-asymmetry.html"><a href="5-ch-asymmetry.html#conclusion-1"><i class="fa fa-check"></i><b>5.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i>General Discussion</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#didnotfind"><i class="fa fa-check"></i>What I didn’t find</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-1-no-correlation-with-explicit-metacognition"><i class="fa fa-check"></i>Chapter 1: no correlation with explicit metacognition</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-3-no-effect-of-confidence-in-signal-presence"><i class="fa fa-check"></i>Chapter 3: no effect of confidence in signal presence</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-4-only-minor-differences-in-brain-activity-between-inference-about-absence-and-presence"><i class="fa fa-check"></i>Chapter 4: only minor differences in brain activity between inference about absence and presence</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-5-no-metacognitive-asymmetry-between-default-complying-and-default-violating-signals"><i class="fa fa-check"></i>Chapter 5: no metacognitive asymmetry between default-complying and default-violating signals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#withoutselfmodel"><i class="fa fa-check"></i>Inference about absence without self-modelling</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#patch"><i class="fa fa-check"></i>Patch-leaving in foraging</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#absenceperception"><i class="fa fa-check"></i>Direct perception</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#future-directions"><i class="fa fa-check"></i>Future directions</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#failures"><i class="fa fa-check"></i>Failures of a self-model</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#inference-about-asbence-in-multi-dimensional-and-hierarchical-representational-spaces"><i class="fa fa-check"></i>Inference about asbence in multi-dimensional and hierarchical representational spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#conclusion-2"><i class="fa fa-check"></i>Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html"><i class="fa fa-check"></i><b>A</b> Signal Detection Theory</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1-ROC"><i class="fa fa-check"></i><b>A.1</b> ROC and zROC curves</a></li>
+<li class="chapter" data-level="A.2" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1-uvSDT"><i class="fa fa-check"></i><b>A.2</b> Unequal-variance (uv) SDT</a></li>
+<li class="chapter" data-level="A.3" data-path="A-app1-SDT.html"><a href="A-app1-SDT.html#app1-mc"><i class="fa fa-check"></i><b>A.3</b> SDT Measures for Metacognition</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="B-app1-RT.html"><a href="B-app1-RT.html"><i class="fa fa-check"></i><b>B</b> Supp. materials for ch. 1</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="B-app1-RT.html"><a href="B-app1-RT.html#effect-of-rt-based-trial-exclusion"><i class="fa fa-check"></i><b>B.1</b> Effect of RT-based trial exclusion</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="B-app1-RT.html"><a href="B-app1-RT.html#experiment-1-2"><i class="fa fa-check"></i><b>B.1.1</b> Experiment 1</a></li>
+<li class="chapter" data-level="B.1.2" data-path="B-app1-RT.html"><a href="B-app1-RT.html#experiment-2-2"><i class="fa fa-check"></i><b>B.1.2</b> Experiment 2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="C-supp.-materials-for-ch.-2.html"><a href="C-supp.-materials-for-ch.-2.html"><i class="fa fa-check"></i><b>C</b> Supp. materials for ch. 2</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="C-supp.-materials-for-ch.-2.html"><a href="C-supp.-materials-for-ch.-2.html#app2-bonus"><i class="fa fa-check"></i><b>C.1</b> Bonus structure</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html"><i class="fa fa-check"></i><b>D</b> Supp. materials for ch. 3</a>
+<ul>
+<li class="chapter" data-level="D.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#additional-analyses-exp.-1"><i class="fa fa-check"></i><b>D.1</b> Additional analyses: Exp. 1</a>
+<ul>
+<li class="chapter" data-level="D.1.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#appRC-asymmetries1"><i class="fa fa-check"></i><b>D.1.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.1.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#zroc-curves"><i class="fa fa-check"></i><b>D.1.2</b> zROC curves</a></li>
+<li class="chapter" data-level="D.1.3" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#confidence-response-time-alignment"><i class="fa fa-check"></i><b>D.1.3</b> Confidence response-time alignment</a></li>
+<li class="chapter" data-level="D.1.4" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#global-metacognitive-estimates"><i class="fa fa-check"></i><b>D.1.4</b> Global metacognitive estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="D.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#additional-analyses-exp.-2"><i class="fa fa-check"></i><b>D.2</b> Additional analyses: Exp. 2</a>
+<ul>
+<li class="chapter" data-level="D.2.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#appRC-asymmetries2"><i class="fa fa-check"></i><b>D.2.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.2.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#zroc-curves-1"><i class="fa fa-check"></i><b>D.2.2</b> zROC curves</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#additional-analyses-exp.-3"><i class="fa fa-check"></i><b>D.3</b> Additional analyses: Exp. 3</a>
+<ul>
+<li class="chapter" data-level="D.3.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#appRC-asymmetries3"><i class="fa fa-check"></i><b>D.3.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.3.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#appRC-standardonly"><i class="fa fa-check"></i><b>D.3.2</b> Reverse correlation analysis of standard trials only</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#appRC-PDRC"><i class="fa fa-check"></i><b>D.4</b> Pseudo-discrimination analysis</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#exp.-1"><i class="fa fa-check"></i><b>D.4.1</b> Exp. 1</a></li>
+<li class="chapter" data-level="D.4.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#exp.-2"><i class="fa fa-check"></i><b>D.4.2</b> Exp. 2</a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#app2-simulation"><i class="fa fa-check"></i><b>D.5</b> Stimulus-dependent noise model</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#discrimination"><i class="fa fa-check"></i><b>D.5.1</b> Discrimination</a></li>
+<li class="chapter" data-level="D.5.2" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#detection-2"><i class="fa fa-check"></i><b>D.5.2</b> Detection</a></li>
+<li class="chapter" data-level="D.5.3" data-path="D-appRC-everything.html"><a href="D-appRC-everything.html#effects-of-evidence-on-decision-and-confidence-exp.-2-and-3"><i class="fa fa-check"></i><b>D.5.3</b> Effects of evidence on decision and confidence: Exp. 2 and 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html"><i class="fa fa-check"></i><b>E</b> Supp. materials for ch. 4</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-buttonpresses"><i class="fa fa-check"></i><b>E.1</b> Confidence button presses</a></li>
+<li class="chapter" data-level="E.2" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-zROC"><i class="fa fa-check"></i><b>E.2</b> zROC curves</a></li>
+<li class="chapter" data-level="E.3" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-GC-DM"><i class="fa fa-check"></i><b>E.3</b> Global confidence design matrix</a></li>
+<li class="chapter" data-level="E.4" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-ROIconf"><i class="fa fa-check"></i><b>E.4</b> Effect of confidence in our pre-specified ROIs</a></li>
+<li class="chapter" data-level="E.5" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-varianceRat"><i class="fa fa-check"></i><b>E.5</b> SDT variance ratio correlation with the quadratic confidence effect</a></li>
+<li class="chapter" data-level="E.6" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-efficiency"><i class="fa fa-check"></i><b>E.6</b> Correlation of metacognitive efficiency with linear and quadratic confidence effects</a></li>
+<li class="chapter" data-level="E.7" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-cross"><i class="fa fa-check"></i><b>E.7</b> Confidence-decision cross classification</a></li>
+<li class="chapter" data-level="E.8" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-SDT"><i class="fa fa-check"></i><b>E.8</b> Static Signal Detection Theory</a>
+<ul>
+<li class="chapter" data-level="E.8.1" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#discrimination-1"><i class="fa fa-check"></i><b>E.8.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.8.2" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#detection-3"><i class="fa fa-check"></i><b>E.8.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="E.9" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3:Dynamic"><i class="fa fa-check"></i><b>E.9</b> Dynamic Criterion</a>
+<ul>
+<li class="chapter" data-level="E.9.1" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#discrimination-2"><i class="fa fa-check"></i><b>E.9.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.9.2" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#detection-4"><i class="fa fa-check"></i><b>E.9.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="E.10" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#app3-Monitoring"><i class="fa fa-check"></i><b>E.10</b> Attention Monitoring</a>
+<ul>
+<li class="chapter" data-level="E.10.1" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#discrimination-3"><i class="fa fa-check"></i><b>E.10.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.10.2" data-path="E-supp.-materials-for-ch.-4.html"><a href="E-supp.-materials-for-ch.-4.html#detection-5"><i class="fa fa-check"></i><b>E.10.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="F-supp.-materials-for-ch.-5.html"><a href="F-supp.-materials-for-ch.-5.html"><i class="fa fa-check"></i><b>F</b> Supp. materials for ch. 5</a>
+<ul>
+<li class="chapter" data-level="F.1" data-path="F-supp.-materials-for-ch.-5.html"><a href="F-supp.-materials-for-ch.-5.html#robustness-region"><i class="fa fa-check"></i><b>F.1</b> Robustness Region</a></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="G-reproducibility-receipt.html"><a href="G-reproducibility-receipt.html"><i class="fa fa-check"></i><b>G</b> Reproducibility receipt</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Self-Modelling in Inference about Absence</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ch-MVS" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Internal models of visual search are rich, person-specific, and mostly accurate</h1>
+<div id="matan-mazor-max-siegel-joshua-b.-tenenbaum" class="section level4 unnumbered">
+<h4>Matan Mazor, Max Siegel &amp; Joshua B. Tenenbaum</h4>
+<p>Having an internal model of one’s attention can be useful for effectively managing limited perceptual and cognitive resources. For example, in the previous Chapter I argued that knowledge of the attentional capture of shape or colour singletons allows participants to immediately recognize the absence of objects in displays. While this and other work has hinted to the existence of an internal model of attention, it is still unknown how rich and flexible this model is, whether it corresponds to one’s own attention or alternatively to a generic person-invariant schema, and whether it is specified as a list of facts and rules, or alternatively as a probabilistic simulation model. To this end, we designed a task to test participants’ ability to estimate their own behavior in a visual search task with novel displays. In four online experiments (two exploratory and two pre-registered), prospective search time estimates reflected accurate metacognitive knowledge of key findings in the visual search literature, including the set-size effect, higher efficiency of feature- over conjunction- searches, and visual search asymmetry for familiar and unfamiliar stimuli. We further find that participants’ estimates fit better with their own search times compared to the search times of other participants. Together, we interpret our findings as suggesting that people hold an internal model of visual search that is rich, person specific, and mostly accurate.</p>
+</div>
+<div id="introduction-2" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>In order to efficiently interact with the world, agents construct <em>mental models</em>: simplified representations of the environment and of other agents that are accurate enough to generate useful predictions and handle missing data <span class="citation">(Forrester, 1971; Friston, 2010; Tenenbaum, Kemp, Griffiths, &amp; Goodman, 2011)</span>. For example, participants’ ability to predict the temporal unfolding of physical scenes has been attributed to an ‘intuitive physics engine’: a simplified model of the physical world that uses approximate, probabilistic simulations to make rapid inferences <span class="citation">(Battaglia, Hamrick, &amp; Tenenbaum, 2013)</span>. Similarly, having a simplified model of planning and decision-making allows humans to infer the beliefs and desires of other agents based on their observed behaviour <span class="citation">(Baker, Saxe, &amp; Tenenbaum, 2011)</span>. Finally, in motor control, an internal model of one’s motor system and body allows subjects to monitor and control their body <span class="citation">(Wolpert, Ghahramani, &amp; Jordan, 1995)</span>. This internal forward model has also been proposed to play a role in differentiating self and other <span class="citation">(Blakemore, Wolpert, &amp; Frith, 1998)</span>. In recent years, careful experimental and computational work has advanced our understanding of these internal models: their scope, the abstractions that they make, and the consequences of these abstractions for faithfully and efficiently modeling the environment.</p>
+<p>Agents may benefit from having a simplified model not only of the environment, other agents, and their motor system, but also of their own perceptual, cognitive and psychological states. Chapter <a href="1-ch-termination.html#ch-termination">1</a> demonstrated the utility in a mental self-model for efficient inference about absence without task experience. But the utility in a mental self-model goes beyond visual search. For example, it has been suggested that knowing which items are more subjectively memorable is useful for making negative recognition judgments [“I would have remembered this object if I saw it”; <span class="citation">Brown, Lewis, &amp; Monk (1977)</span>]. Similarly, children guided their decisions and evidence accumulation based on model-based expectations about the perception of hidden items <span class="citation">(Siegel, Magid, Pelz, Tenenbaum, &amp; Schulz, 2021)</span>. In the context of perception and attention, <span class="citation">Graziano &amp; Webb (2015)</span> argued that having a simplified Attention Schema - a simplified model of attention and its dynamics - is crucial for monitoring and controlling one’s attention, similar to how a body-schema supports motor control.</p>
+<p>Indeed, people are not only capable of predicting the temporal unfolding of physical scenes, or the behaviour of other agents, but also the workings of their own attention under hypothetical scenarios. In one study, participants held accurate beliefs about the serial nature of visual search for a conjunction of features, and the parallel nature of visual search for a distinct color <span class="citation">(Levin &amp; Angelone, 2008)</span>. Similarly, the majority of third graders knew that the addition of distractors makes finding the target harder, particularly if the distractors and target are of the same color <span class="citation">(Miller &amp; Bigi, 1977)</span>. These and similar studies established the existence of metacognitive knowledge about visual search, as a result raising new questions about its structure, limits, and origins. We identify three such open questions. First, do internal models of visual search represent search difficulty along a continuum, or alternatively classify search displays as being either ‘easy’ or ‘hard?’ Second, to what extent is knowledge about visual search learned or calibrated based on first-person experience? And third, are internal models of visual search structured as a list of facts and laws, or as an approximate probabilistic simulation?</p>
+<p>Here we take a first step toward providing answers to these three questions, using visual search as our model test case for internal models of perception and attention more generally. Participants estimated their prospective search times in visual search tasks and then performed the same searches. Similar to using colliding balls <span class="citation">(Smith &amp; Vul, 2013)</span> and falling blocks <span class="citation">(Battaglia, Hamrick, &amp; Tenenbaum, 2013)</span> to study intuitive physics, here we chose visual search for being thoroughly studied and for following robust behavioural laws. In Experiments 1 and 2, we used simple colored shapes as our stimuli, and compared participants’ internal models to scientific theories of attention that distinguish parallel from serial processing. We found that participants represented the relative efficiency of different search tasks along a continuum, but had a persistent bias to assume serial search. In experiments 3 and 4 we used unfamiliar stimuli from the Omniglot dataset <span class="citation">(Lake, Salakhutdinov, Gross, &amp; Tenenbaum, 2011)</span> with the purpose of testing the richness and compositional nature of participants’ internal models, and their reliance on person-specific knowledge. We find that participants do remarkably well in predicting their search times for novel stimuli. Furthermore, we show that internal models of visual search are person-specific, in that they are better fitted to one’s own search behaviour compared with the search behaviour of other participants. Although estimation time analysis failed to provide direct evidence for online simulation, we suggest that a graded, person-specific representation of visual search is most consistent with a simulation account.</p>
+</div>
+<div id="experiments-1-and-2-shape-orientation-and-color" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Experiments 1 and 2: shape, orientation, and color</h2>
+<p>An internal model of visual search may take a similar form to that of a scientific theory, by specifying an ontology of concepts and a set of causal laws that operate over them <span class="citation">(Gerstenberg &amp; Tenenbaum, 2017; Gopnik &amp; Meltzoff, 1997)</span>. For example, participants may hold an internal model of visual search that is similar to Anne Treisman’s <em>Feature Integration Theory</em>. According to this theory, visual search comprises two stages: a pre-attentive parallel stage, and a serial focused attention stage <span class="citation">(A. Treisman, 1986; A. Treisman &amp; Sato, 1990)</span>. In the first stage, visual features (such as color, orientation, and intensity) are extracted from the display to generate spatial ‘feature maps.’ Targets that are defined by a single feature with respect to their surroundings can be located based on these feature maps alone (<em>feature search</em>; for example searching for a red car in a road full of yellow taxis). Since the extraction of a feature map is pre-attentive, in these cases search can be completed immediately. In contrast, sometimes the target can only be identified by integrating over multiple features (<em>conjunction search</em>; for example if the road has not only yellow taxis, but also red buses). In such cases, attention must be serially deployed to items in the display until the target is identified.</p>
+<p>A simplifying assumption of Feature Integration Theory is that there is no transfer of information between the pre-attentive and focused attention stages. In other words, observers cannot selectively direct their focused attention to items that produced strong activations in the pre-attentive stage. <em>Guided Search</em> models <span class="citation">(J. M. Wolfe, 1994, 2021; J. M. Wolfe, Cave, &amp; Franzel, 1989)</span> assume instead that participants use these pre-attentive guiding signals in their serial search. Compared to Feature Integration Theory, Guided Search models provide much better fit to empirical data, at the expense of being more complex and rich in detail. To date, it is unknown where do internal models of visual search fall on this performance-complexity trade-off: do people differentiate between ‘easy’ and ‘hard’ searches like in Feature Integration Theory, or do they represent search difficulty on a continuum, more like Guided Search?</p>
+<p>In Experiments 1 and 2 we used stimuli that lend themselves to a categorical distinction between parallel and serial search: simple geometrical shapes of different colors and orientations. We asked whether participants’ internal models of visual search predict which search displays demand serial deployment of attention and which don’t. Critically, participants gave their search time estimates before they were asked to perform searches involving these or similar stimuli, so their search time estimates reflected prior beliefs about search efficiency. Experiment 2 was designed to replicate and generalize the results of Exp. 1 to a new stimulus dimension (orientation) and distractor set sizes. Our hypotheses and analysis plan for Experiment 2, based on the results of Experiment 1, were pre-registered prior to data collection (pre-registration document: <a href="osf.io/2dpq9">osf.io/2dpq9</a>). Raw data and full analysis scripts are available at <a href="github.com/matanmazor/metaVisualSearch">github.com/matanmazor/metaVisualSearch</a>.</p>
+<div id="participants-2" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Participants</h3>
+<p>For Exp. 1, 100 participants were recruited from Amazon’s crowdsourcing web-service Mechanical Turk. Exp. 1 took about 20 minutes to complete. Each participant was paid $2.50. The highest performing 30% of participants received an additional bonus of $1.50. For Exp. 2, 100 participants were recruited from the Prolific crowdsourcing web-service. The experiment took about 15 minutes to complete. Each participant was paid £1.5. The highest performing 30% of participants received an additional bonus of £1.</p>
+</div>
+<div id="procedure-2" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Procedure</h3>
+<p>The study was built using the Lab.js platform <span class="citation">(Henninger, Shevchenko, Mertens, Kieslich, &amp; Hilbig, 2019)</span> and hosted on a JATOS server <span class="citation">(Lange, Kühn, &amp; Filevich, 2015)</span>. Static versions of all four experiments are available at <a href="github.com/matanmazor/metaVisualSearch">github.com/matanmazor/metaVisualSearch</a>.</p>
+<div id="familiarization" class="section level4 unnumbered">
+<h4>Familiarization</h4>
+<p>First, participants were acquainted with the visual search task. The instructions for this part were as follows:</p>
+<blockquote>
+<p>In the first part, you will find a target hidden among distractors. First, a gray cross will appear on the screen. Look at the cross. Then, the target and distractors will appear. When you spot the target, press the spacebar as quickly as possible. Upon pressing the spacebar, the target and distractors will be replaced by up to 5 numbers. To move to the next trial, type in the number that replaced the target.</p>
+</blockquote>
+<p>The instructions were followed by four trials of an example visual search task (searching for a <em>T</em> among 7 <em>L</em>s). Feedback was delivered on speed and accuracy. The purpose of this part of the experiment was to familiarize participants with the task.</p>
+</div>
+<div id="estimation" class="section level4 unnumbered">
+<h4>Estimation</h4>
+<p>After familiarization, participants estimated how long it would take them to perform various visual search tasks involving novel stimuli and various set sizes. On each trial, they were presented with a target stimulus and a display of distractors and were asked to estimate how long it would take to find the target if it was hidden among the distractors (see Fig. <a href="2-ch-MVS.html#fig:MVS-methods1">2.1</a>).</p>
+<p>To motivate accurate estimates, we explained that these visual search tasks will be performed in the last part of the experiment, and that bonus points will be awarded for trials in which participants detect the target as fast or faster than their search time estimate. The number of points awarded for a successful search changed as a function of the search time estimate according to the rule
+<span class="math inline">\(points=\frac{1}{\sqrt{secs}}\)</span>. This rule was chosen for being exponential with respect to the log response times, incentivizing participants to be consistent in their ratings across short and long search tasks (see Appendix <a href="C-supp.-materials-for-ch.-2.html#app2-bonus">C.1</a>). The report scale ranged from 0.1 to 4 seconds in Exp. 1 and to 2 seconds in Exp. 2.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-methods1"></span>
+<img src="figure/MVS/methods1.png" alt="Experimental design. Participants first performed five similar visual search trials and received feedback about their speed and accuracy. Then, they were asked to estimate the duration of novel visual search tasks. Bonus points were awarded for accurate estimates, and more points were awarded for risky estimates. Finally, in the visual search part participants performed three consecutive trials of each visual search task for which they gave a search time estimates. Right panels: stimuli used for Experiments 1 and 2." width="100%" />
+<p class="caption">
+Figure 2.1: Experimental design. Participants first performed five similar visual search trials and received feedback about their speed and accuracy. Then, they were asked to estimate the duration of novel visual search tasks. Bonus points were awarded for accurate estimates, and more points were awarded for risky estimates. Finally, in the visual search part participants performed three consecutive trials of each visual search task for which they gave a search time estimates. Right panels: stimuli used for Experiments 1 and 2.
+</p>
+</div>
+<p>After one practice trial (estimating search time for finding one <em>T</em> among 3 randomly positioned <em>L</em>s), we turned to our stimuli of interest. In Experiment 1, participants estimated how long it would take them to find a red (#FF5733) square among green (#16A085) squares (color condition), red circles (shape condition) and a mix of green squares, red circles, and green circles (shape-color conjunction condition), for set sizes 1, 5, 15 and 30. Together, participants estimated the expected search time of 12 different search tasks (see Figure <a href="2-ch-MVS.html#fig:MVS-methods1">2.1</a>, upper right panel). In Experiment 2, participants rated how long it would take them to find a red tilted bar (20° off vertical) among green titled bars (color condition), red vertical bars (orientation condition) and a mix of green tilted and red vertical bars (orientation-color conjunction condition) for set sizes 2, 4, and 8. Together, participants estimated the expected search time of 9 different search tasks (see Figure <a href="2-ch-MVS.html#fig:MVS-methods1">2.1</a>, lower right panel). In both experiments, the order of estimation trials was randomized between participants.</p>
+</div>
+<div id="visual-search" class="section level4 unnumbered">
+<h4>Visual Search</h4>
+<p>Participants performed three consecutive search tasks for each of the 12 (Exp. 1) or 9 (Exp. 2) search types. The order of presentation was randomized between participants. No feedback was delivered about speed. To motivate accurate responses, error trials were followed by a 5-second pause.</p>
+</div>
+</div>
+<div id="results-2" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Results</h3>
+<p>Accuracy in the visual search task was reasonably high in both Experiments (Exp. 1: <span class="math inline">\(M = 0.93\)</span>, 95% CI <span class="math inline">\([0.90\)</span>, <span class="math inline">\(0.96]\)</span>; Exp. 2: <span class="math inline">\(M = 0.82\)</span>, 95% CI <span class="math inline">\([0.77\)</span>, <span class="math inline">\(0.87]\)</span>). Error trials and visual search trials that took shorter than 200 milliseconds or longer than 5 seconds were excluded from all further analysis. Participants were excluded if more than 30% of their trials were excluded based on the aforementioned criteria, leaving 89 and 74 participants for the main analysis of Experiments 1 and 2, respectively.</p>
+<div id="search-times" class="section level4 unnumbered">
+<h4>Search times</h4>
+<p>For each participant and distractor type, we extracted the slope of the function relating RT to distractor set size. As expected, search slopes for color search were not significantly different from zero in Exp. 1 (-0.40 ms/item; <span class="math inline">\(t(88) = -0.45\)</span>, <span class="math inline">\(p = .652\)</span>, <span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 7.74\)</span>) and Exp. 2 (0.51 ms/item; <span class="math inline">\(t(73) = 0.07\)</span>, <span class="math inline">\(p = .946\)</span>, <span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 7.80\)</span>). This is consistent with color being a basic feature that is not dependent on serial attention for its extraction by the visual system <span class="citation">(A. Treisman, 1986; A. Treisman &amp; Sato, 1990)</span>. The slope for shape search was close, but significantly higher than zero (5.66 ms/item; <span class="math inline">\(t(88) = 4.35\)</span>, <span class="math inline">\(p &lt; .001\)</span>), and the slope for orientation was numerically higher than zero (11.05 ms/item) but not significantly so (<span class="math inline">\(t(73) = 1.50\)</span>, <span class="math inline">\(p = .139\)</span>, <span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 2.70\)</span>). In both Experiments, conjunction search gave rise to search slopes significantly higher than zero (Exp. 1: 14.80 ms/item (<span class="math inline">\(t(88) = 9.16\)</span>, <span class="math inline">\(p &lt; .001\)</span>; Exp. 2: 72.14 ms/item (<span class="math inline">\(t(73) = 7.50\)</span>, <span class="math inline">\(p &lt; .001\)</span>; see Figure <a href="2-ch-MVS.html#fig:MVS-e1-e2-slopes">2.2</a>).</p>
+</div>
+</div>
+<div id="estimation-accuracy" class="section level3 unnumbered">
+<h3>Estimation accuracy</h3>
+<p>We next turned to analyze participants’ prospective search time estimates, and their alignment with actual search times. In both Experiments, participants generally overestimated their search times. This was the case for all search types across the two Experiments (see Figure <a href="2-ch-MVS.html#fig:MVS-e1-e2-slopes">2.2</a>, left panels: all markers are above the dashed <span class="math inline">\(x=y\)</span> diagonal). This is expected, based on our bonus scheme that incentivized conservative estimates (see Appendix <a href="C-supp.-materials-for-ch.-2.html#app2-bonus">C.1</a>). Despite this bias, estimates were correlated with true search times, supporting a metacognitive insight into visual search behaviour (see Fig. <a href="2-ch-MVS.html#fig:MVS-e1-e2-slopes">2.2</a>, left panels. Within subject Spearman correlations, Exp. 1: <span class="math inline">\(M = 0.28\)</span>, 95% CI <span class="math inline">\([0.21\)</span>, <span class="math inline">\(0.35]\)</span>, <span class="math inline">\(t(88) = 7.77\)</span>, <span class="math inline">\(p &lt; .001\)</span>; Exp 2: <span class="math inline">\(M = 0.16\)</span>, 95% CI <span class="math inline">\([0.07\)</span>, <span class="math inline">\(0.26]\)</span>, <span class="math inline">\(t(73) = 3.48\)</span>, <span class="math inline">\(p = .001\)</span>).</p>
+<p>To test participants’ internal models of visual search, we analyzed their estimates as if they were search times, and extracted <em>estimation slopes</em> relating estimates to the number of distractors in the display (see Fig. <a href="2-ch-MVS.html#fig:MVS-e1-e2-slopes">2.2</a>, right panels). Estimation slopes (expected ms/item) were steeper than search slopes for all search types. In particular, although search time for a deviant color was unaffected by the number of distractors, participants estimated that color searches with more distractors should take longer (mean estimated slope in Exp. 1: 17.76 ms/item; <span class="math inline">\(t(88) = 6.35\)</span>, <span class="math inline">\(p &lt; .001\)</span>; in Exp 2: 29.43 ms/item; <span class="math inline">\(t(73) = 2.63\)</span>, <span class="math inline">\(p = .010\)</span>). In other words, at the group level, participants showed no metacognitive insight into the parallel nature of color search.</p>
+<p>Although they were significantly different from zero, in both Experiments estimation slopes for color search were significantly shallower than for conjunction search (Exp. 1: <span class="math inline">\(t(88) = 4.08\)</span>, <span class="math inline">\(p &lt; .001\)</span>, Exp. 2: <span class="math inline">\(t(73) = 3.87\)</span>, <span class="math inline">\(p &lt; .001\)</span>). In contrast, although true search slopes were shallower for shape and orientation than for conjunction (p’s&lt;0.001), the difference in estimation slopes was not significant (difference between shape and conjunction slopes: <span class="math inline">\(t(88) = 1.65\)</span>, <span class="math inline">\(p = .103\)</span>; difference between orientation and conjunction slopes: <span class="math inline">\(t(73) = 1.18\)</span>, <span class="math inline">\(p = .244\)</span>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-e1-e2-slopes"></span>
+<img src="thesis_files/figure-html/MVS-e1-e2-slopes-1.png" alt="Left panels: median estimated search times plotted against true search times for the different search types (coded by color), and set sizes (coded by circle size; from small to large), for Exp. 1 (upper panel) and 2 (lower panel). Error bars represent the standard error of the median. Right panels: distribution of search (top) and estimated (bottom) slopes for the three search types in Exp. 1 (upper panel) and 2 (lower panel). The dashed line indicates $y=x$." width="672" />
+<p class="caption">
+Figure 2.2: Left panels: median estimated search times plotted against true search times for the different search types (coded by color), and set sizes (coded by circle size; from small to large), for Exp. 1 (upper panel) and 2 (lower panel). Error bars represent the standard error of the median. Right panels: distribution of search (top) and estimated (bottom) slopes for the three search types in Exp. 1 (upper panel) and 2 (lower panel). The dashed line indicates <span class="math inline">\(y=x\)</span>.
+</p>
+</div>
+</div>
+<div id="a-graded-representation-of-search-efficiency" class="section level3 unnumbered">
+<h3>A graded representation of search efficiency</h3>
+<p>In Feature Integration Theory, searches come in two flavours: parallel and serial. If participants’ model of visual search shares this simplifying assumption, the results from the previous section indicate that their models also wrongly specify that shape and orientation searches are serial just like conjunction search. In contrast, an internal model of visual search may represent search efficiency along a continuum, with some searches being highly efficient, some highly inefficient, and others fall somewhere in between the two ends. This is more in line with Guided Search models <span class="citation">(Hoffman, 1979; J. M. Wolfe, 2021; J. M. Wolfe, Cave, &amp; Franzel, 1989)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-e1-e2-scaled-slopes"></span>
+<img src="thesis_files/figure-html/MVS-e1-e2-scaled-slopes-1.png" alt="Normalized slopes for feature searches in Experiments 1 (left) and 2 (right). Search and estimate slopes were normalized with respect to conjunction slopes, to yield subject specific estimates." width="672" />
+<p class="caption">
+Figure 2.3: Normalized slopes for feature searches in Experiments 1 (left) and 2 (right). Search and estimate slopes were normalized with respect to conjunction slopes, to yield subject specific estimates.
+</p>
+</div>
+<p>To decide between these two options, we focused on the slopes for shape and orientation. These searches were more efficient than conjunction search, but not as efficient as colour search. We tested if this efficiency gradient was represented in search time estimates of single individuals, or alternatively, emerged at the group level only. To this end, we scaled subject-specific RT and estimate slopes with respect to conjunction slopes <span class="math inline">\(\beta_{scaled}=\frac{\beta}{\beta_{conjunction}}\)</span>. If representations of search efficiency are dichotomous, single participants can represent shape search either as being equally difficult as conjunction search, or as equally easy as color search. This predicts that the distribution of scaled estimate slopes should peak either at 1 or at the same value as color search. Instead, scaled estimate slopes for both shape and orientation peaked at values lower than 1 and higher than color search, indicating a graded representation of search efficiency in the internal models of single subjects (See Fig. <a href="2-ch-MVS.html#fig:MVS-e1-e2-scaled-slopes">2.3</a>. Exp. 1: median: 0.85; mode: 0.92; One sided Wilcoxon test against 1: <span class="math inline">\(V = 914.00\)</span>, <span class="math inline">\(p = .040\)</span>; One sided Wilcoxon test against color slope: <span class="math inline">\(V = 1,488.00\)</span>, <span class="math inline">\(p = .047\)</span>. Exp. 2: median: 0.75; mode: 0.70; One sided Wilcoxon test against 1: <span class="math inline">\(V = 405.00\)</span>, <span class="math inline">\(p = .013\)</span>; One sided Wilcoxon test against color slope: <span class="math inline">\(V = 969.00\)</span>, <span class="math inline">\(p = .001\)</span>).</p>
+</div>
+</div>
+<div id="experiments-3-and-4-complex-unfamiliar-stimuli" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Experiments 3 and 4: complex, unfamiliar stimuli</h2>
+<p>In Experiments 1 and 2 an internal model of visual search allowed participants to accurately estimate how long it would take them to find a target stimulus in arrays of distractor stimuli. Participants had insight into the set-size effect and into the fact that conjunction searches are more difficult than feature searches. We also found that participants’ internal models of visual search represented search efficiency along a gradient, and were systematically biased to overestimate the effect of set-size, even in feature searches in which the number of distractors had no effect on search time.</p>
+<p>In Experiments 3 and 4 we asked how rich this model is, by using displays of complex stimuli with which participants are unlikely to have any prior experience (letters from a medieval Alphabet and from the Futurama TV series). Here, insight into the set size effect and its absence in feature searches would not be useful for generating accurate search time estimates. Instead, participants’ internal model of visual search must be capable of extracting relevant features from rich stimuli, and use these features to generate stimulus-specific predictions based on some intricate model of how visual search works. Using these more complex stimuli further allowed us to ask if search-time estimates rely on person-specific knowledge. Exp. 4 followed Exp. 3 and was pre-registered (pre-registration document: <a href="osf.io/dprtk">osf.io/dprtk</a>). Raw data and full analysis scripts are available at <a href="github.com/matanmazor/metaVisualSearch">github.com/matanmazor/metaVisualSearch</a>.</p>
+<div id="participants-3" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Participants</h3>
+<p>For Exp. 3, 100 participants were recruited from the Prolific crowdsourcing web-service. The experiment took about 15
+minutes to complete. Participants were paid £1.5. The highest performing 30% of participants received an additional bonus of £1. For Exp. 4, 200 participants were recruited from the Prolific crowdsourcing web-service. We recruited more participants for Exp. 4 in order to have sufficient statistical power for our inter-subject correlation analysis. The experiment took about 8 minutes to complete. Participants were paid $1.27. The highest performing 30% of participants received an additional bonus of $0.75.</p>
+</div>
+<div id="procedure-3" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Procedure</h3>
+<p>The procedure for Experiments 3 and 4 was similar to that of Exp. 1 with several changes.</p>
+<p>Stimuli were letters drawn by Mechanical Turk workers <span class="citation">(Lake, Salakhutdinov, Gross, &amp; Tenenbaum, 2011)</span>, instead of geometrical shapes (see Fig. <a href="2-ch-MVS.html#fig:MVS-methods2">2.4</a>). In Exp. 3, we used letters from the <em>Alphabet of the Magi</em>. In Exp. 4, we used letters from the <em>Futurama</em> television series as well as Latin letters. We explained to participants that they will search for a specific letter (the target letter) among copies of another letter (the distractor letter). In Exp. 3, both target and distractor were letters from the Alphabet of the Magi, and distractors were drawn by different Mechanical Turk workers. In Exp. 4, on half of the trials the target was a Latin letter and distractors were Futurama letters and on the other half the target was a Futurama letter and distractors were Latin letters. In these experiments, distractors were copies of the same letter drawn by the same Mechanical Turk worker. This was important for our visual search asymmetry analysis (see below).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-methods2"></span>
+<img src="figure/MVS/methods2.png" alt="In Exp. 3, stimuli were characters from the Alphabet of the Magi, and distractors were drawn by different Mechanical Turk users. In Exp. 4, stimuli were characters from the Latin and Futurama alphabets. Stimulus pairs 1-4 and 5-8 are identical except for the target assignment. In Exp. 4, all distractors in a display were drawn by the same Mechanical Turk user, and were presented on an invisible clock face." width="100%" />
+<p class="caption">
+Figure 2.4: In Exp. 3, stimuli were characters from the Alphabet of the Magi, and distractors were drawn by different Mechanical Turk users. In Exp. 4, stimuli were characters from the Latin and Futurama alphabets. Stimulus pairs 1-4 and 5-8 are identical except for the target assignment. In Exp. 4, all distractors in a display were drawn by the same Mechanical Turk user, and were presented on an invisible clock face.
+</p>
+</div>
+<p>In the familiarization part, we used as target and distractors two letters from the Alphabet of the Magi (Exp. 3) and two letters from the Futurama alphabet (Exp. 4). Importantly, these letters were only used for training, and did not appear in the Estimation or Visual search parts. In the Estimation part participants gave search time estimates for 8 search tasks, all involving 10 distractors, and in the Visual Search part they performed these search tasks. To minimize random variation in spatial configurations (which was important for the search asymmetry analysis), in Exp. 4 letters appeared on an invisible clock face. Finally, the report scale ranged from 0.1 to 4 seconds in Exp. 3 and to 2 seconds in Exp. 4.</p>
+</div>
+<div id="results-3" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Results</h3>
+<p>Accuracy in the visual search task was high in both experiments (Exp. 3: <span class="math inline">\(M = 0.89\)</span>, 95% CI <span class="math inline">\([0.86\)</span>, <span class="math inline">\(0.92]\)</span>; Exp. 4: <span class="math inline">\(M = 0.97\)</span>, 95% CI <span class="math inline">\([0.96\)</span>, <span class="math inline">\(0.98]\)</span>).
+Error trials and visual search trials that took shorter than 200 milliseconds or longer than 5 seconds were excluded from all further analysis. Participants were excluded if more than 30% of their trials were excluded based on the aforementioned criteria, leaving 88 and 200 participants for the main analysis of Experiments 3 and 4, respectively.</p>
+<div id="estimation-accuracy-1" class="section level4 unnumbered">
+<h4>Estimation accuracy</h4>
+<p>In both experiments, search time estimates were positively correlated with true search times (within-subject Spearman correlations in Exp. 3: <span class="math inline">\(M = 0.44\)</span>, 95% CI <span class="math inline">\([0.37\)</span>, <span class="math inline">\(0.52]\)</span>, <span class="math inline">\(t(86) = 12.16\)</span>, <span class="math inline">\(p &lt; .001\)</span>; Exp. 4: <span class="math inline">\(M = 0.10\)</span>, 95% CI <span class="math inline">\([0.05\)</span>, <span class="math inline">\(0.15]\)</span>, <span class="math inline">\(t(191) = 3.67\)</span>, <span class="math inline">\(p &lt; .001\)</span>; see Figures <a href="2-ch-MVS.html#fig:MVS-exp3-estimation-scatter">2.5</a> and <a href="2-ch-MVS.html#fig:MVS-exp4-fig">2.7</a>A). The correlation between search time and search time estimates was significantly weaker in Experiment 4 (<span class="math inline">\(\Delta M = 0.35\)</span>, 95% CI <span class="math inline">\([0.26\)</span>, <span class="math inline">\(0.43]\)</span>, <span class="math inline">\(t(181.02) = 7.60\)</span>, <span class="math inline">\(p &lt; .001\)</span>)). This difference in correlation strength is likely the result of a narrower range of search times in Exp. 4 (with median search times 566 - 684 ms, per display) than in Exp. 3 (649 - 1615 ms).</p>
+<p>Importantly, in both experiments all searches involved exactly 10 distractors, so a positive correlation could not be driven by the effect of distractor set size. Furthermore, since participants had no prior experience with our stimuli, their estimates could not have been informed by explicit knowledge about specific letters (‘The third letter in the <em>Alphabet of the Magi</em> pops out to attention when presented between instances of the fourth letter,’ or ‘the fifth letter in the <em>Futurama Alphabet</em> is difficult to find when presented among <em>d</em>s’). These positive correlations reveal a more intricate knowledge of visual search. Our next two analyses were designed to test whether estimates were based on person-specific knowledge, and whether their generation involved a simulation of the search process.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-exp3-estimation-scatter"></span>
+<img src="thesis_files/figure-html/MVS-exp3-estimation-scatter-1.png" alt="Estimated search times plotted against true search times in Experiment 2. The dashed line indicates $y=x$. Legend: each search task involved searching for one Omniglot character (top letter) among ten tokens of a second Omniglot character, drawn by 10 different MTurk workers (bottom letter)." width="672" />
+<p class="caption">
+Figure 2.5: Estimated search times plotted against true search times in Experiment 2. The dashed line indicates <span class="math inline">\(y=x\)</span>. Legend: each search task involved searching for one Omniglot character (top letter) among ten tokens of a second Omniglot character, drawn by 10 different MTurk workers (bottom letter).
+</p>
+</div>
+</div>
+<div id="selfself" class="section level4 unnumbered">
+<h4>Cross-participant correlations</h4>
+<p>We chose unfamiliar letters as stimuli for Experiments 3 and 4 in order to make heuristic-based estimation more difficult, and to encourage an introspective estimation process. If participants were using idiosyncratic knowledge about their own attention, we would expect to find higher correlations between their search time estimates and their own search times (<em>self-self alignment</em>), compared to with the search times of a random surrogate participant (<em>self-other alignment</em>). To test this, we ran a non-parametric permutation test, comparing self-self and self-other alignment in prospective search time estimates. In Exp. 3, a numerical difference between self-self (mean Spearman correlation <span class="math inline">\(M_r=\)</span> 0.44) and self-other alignment (<span class="math inline">\(M_r=\)</span> 0.41) was marginally significant (<span class="math inline">\(p_{perm}=\)</span> 0.05). In Experiment 4, we pre-registered this analysis and found a significant advantage for self-self alignment compared with self-other alignment (see Fig. <a href="2-ch-MVS.html#fig:MVS-self-other-permutations">2.6</a>; mean Spearman correlations for self-self <span class="math inline">\(M_r=\)</span> 0.10 and self-other <span class="math inline">\(M_r=\)</span> 0.04, <span class="math inline">\(p_{perm}=\)</span> 0.01). We interpret this result as indicating that at least some of participants’ internal model of visual search builds on idiosyncratic knowledge about their own attention.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-self-other-permutations"></span>
+<img src="thesis_files/figure-html/MVS-self-other-permutations-1.png" alt="True correlation between estimates and search times (self-self alignment, vertical lines) plotted against a null distribution of correlations, when matching the estimates of each participant with the search time of a random surrogate participant (self-other alignment)." width="672" />
+<p class="caption">
+Figure 2.6: True correlation between estimates and search times (self-self alignment, vertical lines) plotted against a null distribution of correlations, when matching the estimates of each participant with the search time of a random surrogate participant (self-other alignment).
+</p>
+</div>
+</div>
+</div>
+<div id="estimation-time" class="section level3 unnumbered">
+<h3>Estimation time</h3>
+<p>We next looked at the time taken to produce search time estimates in the Estimation part. We reasoned that if participants had to mentally simulate searching for the target in order to generate their search time estimates, they would take longer to estimate that a search task will terminate after 1500 compared to 1000 milliseconds. This is similar to how a linear alignment between the degree of rotation and response time in a mental rotation task was taken as support for an internal simulation that evolves over time <span class="citation">(Shepard &amp; Metzler, 1971)</span>. We find no evidence for within-subject correlation between estimates and the time taken to deliver them, not in Exp. 3 (<span class="math inline">\(t(86) = 0.40\)</span>, <span class="math inline">\(p = .692\)</span>) and not in Exp. 4 (<span class="math inline">\(t(191) = 0.74\)</span>, <span class="math inline">\(p = .458\)</span>). However, given that estimation times were three times longer than search time estimates (median time to estimate = 5 seconds in Exp. 3 and 3 seconds in Exp. 4), a simulation-driven correlation may have been masked by other factors that contributed to estimation times, such as motor control over the report slider.</p>
+</div>
+<div id="asymmetry" class="section level3 unnumbered">
+<h3>Visual search asymmetry</h3>
+<p>In Exp. 4, we put to the test an alternative interpretation for the remarkable alignment between search time and search time estimates that we observed in Exp. 3. We considered the possibility that participants were relying on a heuristic: since search time generally inversely scales with the perceived similarity between the target and distractor stimuli, participants could achieve high accuracy in their estimates by basing them not on an intuitive theory of visual search, but on their impressions of similarity between the stimulus pairs. If all participants know about their visual search behaviour is that searches are harder the more similar the target and distractor are, simply being able to rate the similarity between pairs of stimuli would produce a good alignment between search times and their estimates.</p>
+<p>To test if this was the case, we leveraged a well-established phenomenon in visual search: subjects are generally faster detecting an unfamiliar stimulus in an array of familiar distractors compared to when the target is familiar and the distractors are not <span class="citation">(Malinowski &amp; Hübner, 2001; Shen &amp; Reingold, 2001; Zhang &amp; Onyper, 2020)</span>. This asymmetry cannot be captured by a similarity-based heuristic <span class="citation">(at least if similarity is represented as a symmetric property, cf. Tversky, 1977)</span>. In Exp. 4, participants were presented with pairs of familiar and unfamiliar letters, and estimated their search time for finding the familiar letter among unfamiliar distractors and vice versa. This allowed us to ask if their internal models of visual search were solely based on visual similarity between the target and distractor stimuli.</p>
+<p>In addition to extracting correlation between search times and search time estimates, we extracted the same correlations after inverting the identity of the target and distractor stimuli in the estimates, but not in the actual search times. For example, instead of comparing search times for finding the letter v among 10 square spiral letters (stimulus pair 1) with estimates for the same search, we compared it with estimates for finding one square spiral letter among 10 v’s (stimulus pair 5). If estimates were affected by the assignment of stimuli to target and distractor, this inversion should attenuate the correlation, but if visual search estimates reflected a symmetric notion of similarity the correlation should not be affected.</p>
+<p>Inverting the target/distractor assignment dropped the correlation between estimates and search time to zero (<span class="math inline">\(M = -0.01\)</span>, 95% CI <span class="math inline">\([-0.06\)</span>, <span class="math inline">\(0.04]\)</span>), significantly lower than the original correlation (<span class="math inline">\(M_d = 0.10\)</span>, 95% CI <span class="math inline">\([0.03\)</span>, <span class="math inline">\(0.18]\)</span>, <span class="math inline">\(t(191) = 2.63\)</span>, <span class="math inline">\(p = .009\)</span>; see Fig. <a href="2-ch-MVS.html#fig:MVS-exp4-fig">2.7</a>B). This is in contrast to what is expected if search time estimates reflected symmetric similarity judgments, and in line with an interpretation of our findings as evidence for a rich internal model of visual search.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MVS-exp4-fig"></span>
+<img src="thesis_files/figure-html/MVS-exp4-fig-1.png" alt="A. Median estimated search times plotted against true search times in Exp. 4. The dashed line indicates y=x. Legend: each search task involved searching for one character (top letter) among ten tokens of a different character (bottom letter). In four searches, the target character was from the Latin alphabet (circles), and in the other four from the Futurama alphabet (squares). Search pairs that involved the same pair of stimuli with opposite roles are marked by the same color. B. Spearman correlations between estimates and search times for true labels (upper panel) and target-distractor flipped labels (lower panel) in Exp. 4. Spearman correlations significantly dropped, indicating that participants were aware of the search asymmetry for stimulus familiarity." width="672" />
+<p class="caption">
+Figure 2.7: A. Median estimated search times plotted against true search times in Exp. 4. The dashed line indicates y=x. Legend: each search task involved searching for one character (top letter) among ten tokens of a different character (bottom letter). In four searches, the target character was from the Latin alphabet (circles), and in the other four from the Futurama alphabet (squares). Search pairs that involved the same pair of stimuli with opposite roles are marked by the same color. B. Spearman correlations between estimates and search times for true labels (upper panel) and target-distractor flipped labels (lower panel) in Exp. 4. Spearman correlations significantly dropped, indicating that participants were aware of the search asymmetry for stimulus familiarity.
+</p>
+</div>
+</div>
+</div>
+<div id="discussion-1" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Discussion</h2>
+<p>Over more than four decades of research on spatial attention, experiments where participants report the presence or absence of a target in a display revealed basic principles such as the set-size effect <span class="citation">(A. Treisman, 1986; A. Treisman &amp; Sato, 1990; J. M. Wolfe, 1998)</span>, the advantage for feature search over more complicated conjunction and spatial configuration searches <span class="citation">(A. Treisman, 1986; A. Treisman &amp; Sato, 1990)</span>, and asymmetries in the representations of visual features <span class="citation">(Malinowski &amp; Hübner, 2001; Shen &amp; Reingold, 2001; A. Treisman &amp; Souther, 1985)</span>. Some of these findings are intuitive, but others are more surprising, suggesting that even without training in psychology, people have a set of expectations and beliefs about their own perception and attention, and about visual search more specifically.</p>
+<p>Here we measured these expectations and their alignment with actual visual search behavior. In four experiments, we show that naive participants provide reasonably accurate prospective estimates for their search times. In line with previous reports, prospective search time estimates reflected accurate knowledge of the set size effect and differences in efficiency between feature and conjunction searches <span class="citation">(Levin &amp; Angelone, 2008; Miller &amp; Bigi, 1977)</span>. We asked whether participants categorically distinguish ‘easy’ from ‘hard’ searches, or alternatively represent search efficiency along a continuum. The estimates of single participants revealed a graded representation of search efficiency, indicating metacognitive knowledge that is on par with contemporary theories of visual search such as Guided Search models. Furthermore, participants provided accurate search time estimates for complex stimuli and displays with which they had no prior experience, and had metacognitive insight into the search asymmetry for familiar and unfamiliar stimuli.</p>
+<p>In Exp. 4, we show that this internal model of visual search is person-specific: participants’ predictions fitted better their own search times compared to the search times of other participants. The fact that this model is not generic suggests that it is learned or calibrated based on first-person experience. Humans accumulate observations not only of external events and objects, but also of their own cognitive and perceptual states. Specifically, subjects have been shown to notice when their attention is captured by a distractor <span class="citation">(Adams &amp; Gaspelin, 2021)</span> even in the absence of an overt eye movement <span class="citation">(Adams &amp; Gaspelin, 2020)</span>. These observations can then be integrated into an internal model or an intuitive theory: which items are more or less likely to capture attention, under what circumstances, etc. Future research into the development of this simplified model and its expansion based on new evidence [for example, by measuring intuitions before and after exposure to some evidence; <span class="citation">Bonawitz, Ullman, Bridgers, Gopnik, &amp; Tenenbaum (2019)</span>] is needed to understand the relation between metacognitive monitoring of attention and metacognitive knowledge of attentional processes.</p>
+<p>This relates to recent theoretical and empirical advances underscoring the utility of keeping a <em>mental self-model</em>, or a <em>self-schema</em> for attention control <span class="citation">(Wilterson et al., 2020)</span>, social cognition <span class="citation">(Graziano, 2013)</span> , phenomenal experience <span class="citation">(Metzinger, 2003)</span>, and inference about absence <span class="citation">(Mazor, 2021; Mazor &amp; Fleming, 2021)</span>. For example, knowing that a red berry would be easy to find among green leaves, a forager can quickly decide that a certain bush bears no ripe fruit. Alternatively, knowing that a snake would be difficult to spot in the sand, they might allocate more attentional resources to scanning the ground. Experiments 3 and 4 show that this knowledge is more than a set of heuristics or rules, but reflects an intricate internal model of spatial attention that can be applied to unseen stimuli in novel displays, and is tailored to one’s own perceptual and cognitive machinery.</p>
+<p>Our final question concerned the structure of this internal model: is it specified as a list of facts and laws [similar to how the acquisition of knowledge about mental states between the ages of 2 and 4 was described as the development of a scientific theory; <span class="citation">Gopnik &amp; Meltzoff (1997)</span>], or alternatively as an approximate probabilistic model that can be used to run simulations [similar to the physics engine model of intuitive physics; <span class="citation">Battaglia, Hamrick, &amp; Tenenbaum (2013)</span>]? We found no direct evidence for a simulation account in the time taken to produce search time estimates. Nevertheless, participants’ ability to provide accurate estimates for displays of unfamiliar stimuli, and the better alignment of their estimates with their own search behavior compared to the search behavior of other participants, provide some indirect support for a simulation account - one that is based on a schematic version of one’s own attention. Still, we cannot exclude rule-based implementations of this internal model that are rich in detail and are based on one’s first-person experience, without involving a simulation.</p>
+<p>One important limitation of our current design is its reliance on explicit estimates, which may have potentially resulted in underestimating the richness and accuracy of these internal models. For example, in Experiments 1 and 2 participants’ prospective estimates showed no metacognitive insight into the pop-out effect for color search. This does not necessarily mean that this information was misrepresented in their internal model. Instead, our numeric report scheme may have encouraged participants to adopt an analytical disposition to the problem, rather than relying fully on their intuitions. In support of this, in Chapter <a href="1-ch-termination.html#ch-termination">1</a> a pop-out effect for color absence in the first few trials of a visual search task in interpreted as indicating accurate implicit metacognitive knowledge of the pop-out effect for color presence.</p>
+<p>Together, our results reveal an alignment between prospective search time estimates and search times. This alignment places a lower bound on the richness and complexity of participants’ internal model of visual search, and of attention more generally, and opens a promising avenue for studying humans’ intuitive understanding of their own mental processes.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-ch-termination.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-ch-RC.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

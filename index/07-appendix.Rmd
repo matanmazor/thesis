@@ -77,7 +77,7 @@ knitr::opts_chunk$set(message = FALSE)
 knitr::opts_chunk$set(warning = FALSE)
 ```
 
-# Signal Detection Theory {#app1:SDT}
+# Signal Detection Theory {#app1-SDT}
 
 "Signal Detection Theory" is a conceptual framework for the description of decision making between two alternatives in the presence of uncertainty. Examples include deciding whether a presented word has been studied before or not, to which of two groups does a noisy stimulus belong, or whether a stimulus was presented on the screen or not [@tanner1954decision; @stanislaw1999calculation]. Under this framework, on each experimental trial a "decision variable" is sampled from one of two distributions. I will refer to these distributions here as the *signal* and *noise* distributions, although depending on context they can have different labels, such as *old* and *new* distributions in recognition memory task or *right* and *left* in a movement discrimination task. On trials in which the decision variable exceeds a criterion $c$, a 'yes' response is executed, otherwise a 'no' response is executed (see Fig. \@ref(fig:app1-SDT)). 
 
@@ -96,7 +96,7 @@ Table: (\#tab:app1SDT) SDT response classification.
 
 Two conditional probabilities are sufficient to provide a full description of the behaviour profile of a participant, namely $p(yes|Signal)$ (the 'hit rate'), and $p(yes|Noise)$ (the 'false alarm rate'). SDT makes it possible to translate these two probabilities to properties of the signal and noise distributions and their positioning with respect to the decision criterion. The parameter $d'$ represents the distance between the two distributions in standard deviations. Under the assumption of equal variance of the two distributions $d'$ can be approximated as $\hat{d'}=Z(h)-Z(f)$, with $Z$ representing the inverse cumulative normal distribution. The parameter $\lambda$ stands for the position of the criterion relative to the mean of the noise distribution, and can be approximated as $\hat{\lambda}=-Z(f)$. 
 
-## ROC and zROC curves {#app1:ROC}
+## ROC and zROC curves {#app1-ROC}
 
 The false alarm and hit rates are often insufficient to provide a full description of a system. For example, they are not sufficient to determine the ratio between the variance terms of the two distributions, and therefore to decide if the equal variance assumption holds. To obtain a fuller picture, false alarm and hit rates can be recorded under different settings of the decision criterion. One way to experimentally shift the criterion is by manipulation of the task incentive structure. For example, in order to encourage participants to make more 'no' responses, rewards for correct rejections can be set higher than rewards for hits. Alternatively, confidence ratings can be collected for every decision. The criterion can then be theoretically placed between every two possible confidence ratings, to generate a full set of false positive and hit rates. 
 
@@ -113,13 +113,13 @@ Often it is informative to plot the inverse of the cumulative distribution for $
 include_graphics(path = "figure/app-SDT/zROC_rep.png")
 ```
 
-## Unequal-variance (uv) SDT {#app1:uvSDT}
+## Unequal-variance (uv) SDT {#app1-uvSDT}
 
 Unequal variance (uv) SDT can be applied to settings in which one distribution is assumed to be wider. For example, in perceptual detection tasks it is plausible that the signal distribution will be wider, as every sample comprises two sources of variance: a baseline noise component that is shared with the noise distribution, and the stimulus noise that represents fluctuations in the evidence strength available in the physical stimulus. A similar pattern is typically observed in recognition memory tasks. 
 
 This simple change to the model has profound effects on the decision making process. Under the assumption of equal-variance, the "log likelihood-ratio" (LLR; $log(\frac{p(x|signal)}{p(x|noise)})$) increases monotonically as a function of the decision variable, so that an optimal solution to the inference problem can rely on one decision criterion: samples to the right of the criterion are labeled as 'signal', and samples to its left are labeled as 'noise' [@wickens2002elementary, 30]. The introduction of unequal variance to the SDT model makes inference more complex. Both extreme positive and extreme negative values are more likely to be drawn from the signal distribution when it is wider than the noise distribution, making a single-criterion decision rule sub-optimal. More specifically, in an unequal-variance setting, the LLR is proportional to the square of the decision variable. This means that it can be arbitrarily high for extremely positive or negative decision variables, but has a strict lower bound around the peak of the noise distribution. 
 
-## SDT Measures for Metacognition {#app1:mc}
+## SDT Measures for Metacognition {#app1-mc}
 
 the ability to reliably track one's objective performance in a perceptual or a memory task is commonly taken as a measure of one's metacognitive ability [e.g., @fleming2012neural]. This ability can be quantified by asking participants for confidence judgments ("type-2 task") following their primary decision ("type-1 task"). The match or mismatch between objective performance and confidence can then be used as a proxy for their "metacognitive sensitivity". 
 
@@ -135,7 +135,7 @@ However, as discussed by @maniscalco2012signal, this approach is unwarranted if 
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-# Supp. materials for ch. 1 {#app1:RT}
+# Supp. materials for ch. 1 {#app1-RT}
 
 ## Effect of RT-based trial exclusion
 
@@ -351,7 +351,7 @@ ggsave('figure/termination/results_Exp2_no_RT_exp.pdf',width=5,height=4.5)
 
 # Supp. materials for ch. 2
 
-## Bonus structure {#app2:bonus}
+## Bonus structure {#app2-bonus}
 
 We assume that participants represent the distribution of response times conditional on a specific search array as a right-skewed, positive distribution. Here, we assume that internal distributions of response times abide by the rule that 
 
@@ -432,11 +432,11 @@ p2 <- ggplot(df,aes(x=alpha,y=bonus,color=mu))+
 grid.arrange(p1,p2)
 ```
 
-# Supp. materials for ch. 3 {#appRC:everything}
+# Supp. materials for ch. 3 {#appRC-everything}
 
 ## Additional analyses: Exp. 1
 
-### Response time, confidence, and metacognitive sensitivity differences {#appRC:asymmetries1}
+### Response time, confidence, and metacognitive sensitivity differences {#appRC-asymmetries1}
 
 In detection, participants were generally slower to deliver 'no' responses compared to 'yes' responses (median difference: `r RC$e1$detection_stats$contrast_responses%>%pull(RT)%>%median()%>%abs()%>%printnum()` ms, `r RC$e1$detection_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)` for a t-test on the log-transformed response times; see Fig. \@ref(fig:RC-exp1-asymmetries), third row). No significant difference in response times was observed for the discrimination task (median difference: `r RC$e1$discrimination_stats$contrast_responses%>%pull(RT)%>%mean()%>%abs()%>%printnum()` ms, `r RC$e1$discrimination_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)`).
 
@@ -474,19 +474,13 @@ Following our pre-registered analysis plan, we extracted a Spearman correlation 
 
 ```{r RC-global, echo=FALSE, message=FALSE, include=FALSE}
 
-RC$e1$global_df <- read_csv('data/RC/global_estimates.csv') %>%
-  drop_na();
+RC$e1$global_df <- read_csv('data/RC/global_estimates.csv', lazy=FALSE) %>%
+  drop_na() %>%
+  mutate(estimates = as.numeric(estimates))
 
 RC$e1$global_df_per_subj <- RC$e1$global_df %>%
   group_by(subj_id,detection) %>%
-  summarise(estimates = mean(estimates)/100) %>%
-  spread(detection,estimates,sep='_') %>%
-  mutate(diff=detection_0-detection_1);
-
-RC$e1$global_df_per_subj <- RC$e1$global_df %>%
-  filter(block_number>3)%>% 
-  group_by(subj_id,detection) %>%
-  summarise(estimates = mean(estimates)/100) %>%
+  summarise(estimates = mean(estimates,na.rm=TRUE)/100) %>%
   spread(detection,estimates,sep='_') %>%
   mutate(diff=detection_0-detection_1);
 
@@ -499,7 +493,7 @@ A difference of `r RC$e1$global_df_per_subj%>%pull(diff)%>%mean()%>%printnum()` 
 
 ## Additional analyses: Exp. 2
 
-### Response time, confidence, and metacognitive sensitivity differences {#appRC:asymmetries2}
+### Response time, confidence, and metacognitive sensitivity differences {#appRC-asymmetries2}
 
 Participants were slower to deliver 'no' responses compared to 'yes' responses (median difference: `r RC$e2$detection_stats$contrast_responses%>%pull(RT)%>%median()%>%abs()%>%printnum()` ms, `r RC$e2$detection_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)` for a t-test on the log-transformed response times; see Fig. \@ref(fig:RC-exp2-asymmetries), third row). No significant difference in response times was observed for the discrimination task (median difference: `r RC$e2$discrimination_stats$contrast_responses%>%pull(RT)%>%mean()%>%abs()%>%printnum()` ms, `r RC$e2$discrimination_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)`).
 
@@ -512,14 +506,14 @@ Unlike in Experiment 1, detection zROC slopes were not significantly different f
 
 ## Additional analyses: Exp. 3
 
-### Response time, confidence, and metacognitive sensitivity differences {#appRC:asymmetries3}
+### Response time, confidence, and metacognitive sensitivity differences {#appRC-asymmetries3}
 
 Participants were also slower to deliver 'no' responses compared to 'yes' responses (median difference: `r RC$e3$detection_stats$contrast_responses%>%pull(RT)%>%median()%>%abs()%>%printnum()` ms, `r RC$e3$detection_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)` for a t-test on the log-transformed response times; see Fig. \@ref(fig:RC-exp3-asymmetries), third row). No significant difference in response times was observed for the discrimination task (median difference: `r RC$e3$discrimination_stats$contrast_responses%>%pull(RT)%>%mean()%>%abs()%>%printnum()` ms, `r RC$e3$discrimination_stats$contrast_responses%>%pull(logRT)%>%t.test()%>%apa_print()%>%'$'(statistic)`).
 
 Confidence in detection was generally lower than in discrimination, consistent with lower accuracy in this task (`r t.test(RC$e3$task_stats%>%filter(detection==1)%>%pull(confidence), RC$e3$task_stats%>%filter(detection==0)%>%pull(confidence), paired=TRUE)%>%apa_print()%>%'$'(full_result)`; see Fig. \@ref(fig:RC-exp3-asymmetries), fourth row). Within detection, confidence in 'yes' responses was generally higher than confidence in 'no' responses (`r RC$e3$detection_stats$contrast_responses$confidence%>%t.test()%>%apa_print()%>%'$'(full_result)`). No difference in average confidence levels was observed between the two discrimination responses (`r RC$e3$discrimination_stats$contrast_responses$confidence%>%t.test()%>%apa_print()%>%'$'(full_result)`).
 
 
-### Reverse correlation analysis of standard trials only {#appRC:standardonly}
+### Reverse correlation analysis of standard trials only {#appRC-standardonly}
 
 In the following, we repeat the reverse correlation analysis for Exp 3. on the subset of trials where luminance was not increased by 2/255.
 
@@ -753,7 +747,7 @@ grid.arrange(p1, p2, p3, p4, p5, p6, ncol=2, heights=c(2,1,1))
 
 ```
 
-## Pseudo-discrimination analysis {#appRC:PDRC}
+## Pseudo-discrimination analysis {#appRC-PDRC}
 
 ```{r all-relevant-code-from-ch2, echo=FALSE, message=FALSE, warning=FALSE}
 
@@ -1257,7 +1251,7 @@ e2$RC$PDconfideneUnchosenOnly300 <- e2$PD_confidence_kernel %>%
 
 Similar to decision kernels in Exp. 2, random fluctuations in luminance during the first 300 milliseconds of the stimulus had a significant effect on decision (`r e2$RC$PDdecision300%>%pull(diff)%>%t.test()%>%apa_print()%>%'$'(statistic)`). However, in Exp. 2 this anslysis revealed no effect of luminance on decision confidence (`r e2$RC$PDconfidence300%>%pull(diff)%>%t.test()%>%apa_print()%>%'$'(statistic)`), and no positive evidence bias in confidence judgments (`r e2$RC$PDPEB300%>%pull(diff)%>%t.test()%>%apa_print()%>%'$'(statistic)`). 
 
-## Stimulus-dependent noise model { #app2:simulation}
+## Stimulus-dependent noise model { #app2-simulation}
 
 ### Discrimination
 
@@ -1649,7 +1643,7 @@ class DetectionModel(Model):
 
 To compare participants' empirical behaviour to our model simulations, we plotted optimal behaviour, participants' responses, and confidence in correct responses, as a function of perceptual evidence in a two-dimensional representational space. First, for each trial we extracted mean luminance (minus background luminance) in the first 300 milliseconds in the right and left stimuli. These numbers were rounded to the closest integer. For each tuple of such integers, we extracted the posterior probability for stimulus category (Fig. \@ref(fig:RC-2d-empirical), top row), participants' empirical discrimination and detection decisions (middle row), and participants' subjective confidence in correct responses (bottom row). 
 
-```{r RC-2d-empirical, fig.cap="Top row: posterior probability of stimulus category given perceptual evidence for discrimination (left) and detection (right). Middle row: decision probability as a function of perceptual evidence. Bottom row: mean confidence in correct responses as a function of perceptual evidence.", echo=FALSE, out.width="60%"}
+```{r RC-2d-empirical, fig.scap="Empirical two dimensional probability plots", fig.cap="Top row: posterior probability of stimulus category given perceptual evidence for discrimination (left) and detection (right). Middle row: decision probability as a function of perceptual evidence. Bottom row: mean confidence in correct responses as a function of perceptual evidence.", echo=FALSE, out.width="60%"}
 
 knitr::include_graphics('figure/RC/empirical_tile.png')
 
@@ -1658,7 +1652,7 @@ knitr::include_graphics('figure/RC/empirical_tile.png')
 
 # Supp. materials for ch. 4
 
-## Confidence button presses {#app3:buttonpresses}
+## Confidence button presses {#app3-buttonpresses}
 
 ```{r buttonpresses, fig.pos='H', echo=FALSE, out.width="\\linewidth", fig.scap = 'Button presses, imaging experiment', fig.cap="Average number of button presses for each confidence level, as a function of task. More button presses were needed on average to reach the extreme confidence ratings, hence the quadratic shape. No difference between the two tasks was observed in the mean number of button presses for any of the confidence levels. Error bars represent the standard error of the mean."}
 include_graphics(path = "figure/fMRI/buttonPresses.png")
@@ -1666,7 +1660,7 @@ include_graphics(path = "figure/fMRI/buttonPresses.png")
 
 \newpage
 
-## zROC curves {#app3:zROC}
+## zROC curves {#app3-zROC}
 
 ```{r zROC, echo=FALSE, fig.pos='H', out.width="\\linewidth", fig.scap = 'zROC curves, imaging experiment', fig.cap="mean zROC curves for the discrimination and detection tasks. As expected in a uv-SDT setting, the discrimination curve is approximately linear with a slope of 1, and the detection curve is approximately linear with a shallower slope. Error bars represent the standard error of the mean."}
 include_graphics(path = "figure/fMRI/zROC.jpg")
@@ -1674,7 +1668,7 @@ include_graphics(path = "figure/fMRI/zROC.jpg")
 
 \newpage
 
-## Global confidence design matrix {#app3:GC-DM}
+## Global confidence design matrix {#app3-GC-DM}
 
 ```{r GC-DM, echo=FALSE, fig.pos='H', out.width="\\linewidth", fig.scap = 'Parametric effect of confidence in correct responses', fig.cap="Effect of confidence in correct responses, from the global-confidence design matrix. Uncorrected, thresholded at p<0.001. Left: glass brain visualization of the whole brain contrast. Right: yellow-red represent a positive correlation with subjective confidence ratings, and green-blue represent a negative correlation."}
 include_graphics(path = "figure/fMRI/GC-DM.jpg")
@@ -1692,14 +1686,14 @@ From our pre-specified ROIs, only the vmPFC and BA46 ROIs showed a significant l
 | FPm              | -0.12   | -1.46   | 0.16               | 0.48 |
 | BA 46            | 0.37    | 3.77    | 6 × 10-4           | 0.57 |
 
-## Effect of confidence in our pre-specified ROIs {#app3:ROIconf}
+## Effect of confidence in our pre-specified ROIs {#app3-ROIconf}
 ```{r ROIconf, echo=FALSE, fig.pos='H', out.width="\\linewidth", fig.scap = 'Effect of confidence in Regions of Interest', fig.cap="Effect of confidence in all 4 ROIs, as a function of task and response, as extracted from the categorical design matrix. No significant interaction between the linear or quadratic effects and task or response was observed in any of the ROIs."}
 include_graphics(path = "figure/fMRI/allROIs.png")
 ```
 
 \newpage
 
-## SDT variance ratio correlation with the quadratic confidence effect {#app3:varianceRat}
+## SDT variance ratio correlation with the quadratic confidence effect {#app3-varianceRat}
 
 ```{r varianceRat, echo=FALSE, fig.pos='H', out.width="\\linewidth", fig.scap = 'Inter-subject correlation between the quadratic effect in the right hemisphere clusters and the ratio between the detection and discrimination distribution variances', fig.cap="Inter-subject correlation between the quadratic effect in the right hemisphere clusters and the ratio between the detection (top panel) and discrimination (lower panel) distribution variances, as estimated from the zROC curve slopes in the two tasks. Marker color indicates the goodness of fit of the second-order polynomial model to the BOLD data. All Spearman correlation coefficients are <0.25."}
 include_graphics(path = "figure/fMRI/varianceRatio.jpg")
@@ -1707,14 +1701,14 @@ include_graphics(path = "figure/fMRI/varianceRatio.jpg")
 
 \newpage
 
-## Correlation of metacognitive efficiency with linear and quadratic confidence effects {#app3:efficiency}
+## Correlation of metacognitive efficiency with linear and quadratic confidence effects {#app3-efficiency}
 ```{r varianceRatio, echo=FALSE, fig.pos='H', out.width="\\linewidth", fig.scap = 'Inter-subject correlation between the linear and quadratic effects in the right hemisphere clusters and metacognitive efficiency scores', fig.cap="Inter-subject correlation between the linear (upper panel) and quadratic (lower panel) effects in the right hemisphere clusters and metacognitive efficiency scores (measured as M ratio = meta-d'/d', Maniscalco and Lau, 2012)."}
 include_graphics(path = "figure/fMRI/efficiency.png")
 ```
 
 \newpage
 
-## Confidence-decision cross classification {#app3:cross}
+## Confidence-decision cross classification {#app3-cross}
 In order to dissociate between brain regions that encode stimulus visibility and brain regions that encode decision confidence, we performed a multivariate cross-classification analysis. We trained a linear classifier on detection decisions ('yes' and 'no'), and tested it on discrimination confidence (high and low), and vice versa. Shared information content between detection responses and confidence in discrimination is expected in brain regions that encode stimulus visibility, rather than accuracy estimation. In detection, yes responses are associated with higher stimulus visibility compared to no responses (regardless of decision confidence), and in discrimination high confidence trials are associated with higher visibility than low confidence trials (regardless of subjective confidence).
 
 Presented cross classification scores are the mean of cross classification accuracies in both directions. Detection-response and discrimination-confidence cross-classification was significantly above chance in in the pMFC ($t(29)=2.76, p<0.05$, corrected for family-wise error across the four ROIs), and in the BA46 anatomical subregion of the frontopolar ROI ($t(29)=2.64, p<0.05$, corrected).
@@ -1725,7 +1719,7 @@ include_graphics(path = "figure/fMRI/confidence_cross_resp.png")
 
 \newpage
 
-## Static Signal Detection Theory {#app3:SDT}
+## Static Signal Detection Theory {#app3-SDT}
 ### Discrimination
 #### Generative model {-}
 According to SDT, a decision variable $x$ is sampled from one of two distributions on each experimental trial.
@@ -1851,7 +1845,7 @@ In detection, $LLR=0$ at two points (see figure \@ref{fig:models). The decision 
 confidence \propto |LLR|
 \end{equation}
 
-## Attention Monitoring {#app3:Monitoring}
+## Attention Monitoring {#app3-Monitoring}
 
 Similar to the Dynamic Criterion model, in the Attention Monitoring model participants adjusts a decision criterion based on changing beliefs about the underlying distributions. However, unlike the Dynamic Criterion model, here beliefs change not as a function of recent perceptual samples, but as a function of access to an internal variable that represents the expected sensory precision (attention).
 
@@ -1985,4 +1979,14 @@ confidence_t \propto |LLR|
 
 ```{r app5-RR, echo=FALSE, fig.scap="Robustness region", fig.cap="A Robustness Region plot, visualizing Bayes Factors for hypothetical effect sizes and scale factors on the prior, for our sample size of 106 participants. Points above the horizontal line are significant in a one-tailed t-test. The dashed line indicates our choice of a scale factor on the prior.", out.width = '100%'}
 knitr::include_graphics("figure/asymmetry/RR.png")
+```
+
+# Reproducibility receipt
+
+```{r}
+## datetime
+Sys.time()
+
+## session info
+sessionInfo()
 ```

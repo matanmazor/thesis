@@ -1,4 +1,4 @@
-# Internal models of visual search are rich, person-specific, and mostly accurate {#ch:MVS}
+# Internal models of visual search are rich, person-specific, and mostly accurate {#ch-MVS}
 
 #### Matan Mazor, Max Siegel & Joshua B. Tenenbaum {.unnumbered}
  
@@ -19,6 +19,7 @@ library('grid')
 library('png')
 library('cowplot')
 library('modeest') # for mode
+library('purrr')
 options(warn=-1)
 
 ```
@@ -28,7 +29,7 @@ options(warn=-1)
 
 In order to efficiently interact with the world, agents construct *mental models*: simplified representations of the environment and of other agents that are accurate enough to generate useful predictions and handle missing data [@forrester1971counterintuitive; @friston2010free; @tenenbaum2011grow]. For example, participants' ability to predict the temporal unfolding of physical scenes has been attributed to an 'intuitive physics engine': a simplified model of the physical world that uses approximate, probabilistic simulations to make rapid inferences [@battaglia2013simulation].  Similarly, having a simplified model of planning and decision-making allows humans to infer the beliefs and desires of other agents based on their observed behaviour [@baker2011bayesian]. Finally, in motor control, an internal model of one's motor system and body allows subjects to monitor and control their body [@wolpert1995internal]. This internal forward model has also been proposed to play a role in differentiating self and other [@blakemore1998central].  In recent years, careful experimental and computational work has advanced our understanding of these internal models: their scope, the abstractions that they make, and the consequences of these abstractions for faithfully and efficiently modeling the environment.
 
-Agents may benefit from having a simplified model not only of the environment, other agents, and their motor system, but also of their own perceptual, cognitive and psychological states. Chapter  \@ref(ch:termination) demonstrated the utility in a mental self-model for efficient inference about absence without task experience. But the utility in a mental self-model goes beyond visual search. For example, it has been suggested that knowing which items are more subjectively memorable is useful for making negative recognition judgments ["I would have remembered this object if I saw it"; @brown1977memorability]. Similarly, children guided their decisions and evidence accumulation based on model-based expectations about the perception of hidden items [@siegel2021children]. In the context of perception and attention, @graziano2015attention argued that having a simplified Attention Schema - a simplified model of attention and its dynamics - is crucial for monitoring and controlling one's attention, similar to how a body-schema supports motor control. 
+Agents may benefit from having a simplified model not only of the environment, other agents, and their motor system, but also of their own perceptual, cognitive and psychological states. Chapter  \@ref(ch-termination) demonstrated the utility in a mental self-model for efficient inference about absence without task experience. But the utility in a mental self-model goes beyond visual search. For example, it has been suggested that knowing which items are more subjectively memorable is useful for making negative recognition judgments ["I would have remembered this object if I saw it"; @brown1977memorability]. Similarly, children guided their decisions and evidence accumulation based on model-based expectations about the perception of hidden items [@siegel2021children]. In the context of perception and attention, @graziano2015attention argued that having a simplified Attention Schema - a simplified model of attention and its dynamics - is crucial for monitoring and controlling one's attention, similar to how a body-schema supports motor control. 
 
 Indeed, people are not only capable of predicting the temporal unfolding of physical scenes, or the behaviour of other agents, but also the workings of their own attention under hypothetical scenarios. In one study, participants held accurate beliefs about the serial nature of visual search for a conjunction of features, and the parallel nature of visual search for a distinct color [@levin2008visual]. Similarly, the majority of third graders knew that the addition of distractors makes finding the target harder, particularly if the distractors and target are of the same color [@miller1977children]. These and similar studies established the existence of metacognitive knowledge about visual search, as a result raising new questions about its structure, limits, and origins. We identify three such open questions. First, do internal models of visual search represent search difficulty along a continuum, or alternatively classify search displays as being either 'easy' or 'hard'? Second, to what extent is knowledge about visual search learned or calibrated based on first-person experience? And third, are internal models of visual search structured as a list of facts and laws, or as an approximate probabilistic simulation? 
 
@@ -62,7 +63,7 @@ The instructions were followed by four trials of an example visual search task (
 After familiarization, participants estimated how long it would take them to perform various visual search tasks involving novel stimuli and various set sizes. On each trial, they were presented with a target stimulus and a display of distractors and were asked to estimate how long it would take to find the target if it was hidden among the distractors (see Fig. \@ref(fig:MVS-methods1)). 
 
 To motivate accurate estimates, we explained that these visual search tasks will be performed in the last part of the experiment, and that bonus points will be awarded for trials in which participants detect the target as fast or faster than their search time estimate. The number of points awarded for a successful search changed as a function of the search time estimate according to the rule
-$points=\frac{1}{\sqrt{secs}}$. This rule was chosen for being exponential with respect to the log response times, incentivizing participants to be consistent in their ratings across short and long search tasks (see Appendix \@ref(app2:bonus)). The report scale ranged from 0.1 to 4 seconds in Exp. 1 and to 2 seconds in Exp. 2. 
+$points=\frac{1}{\sqrt{secs}}$. This rule was chosen for being exponential with respect to the log response times, incentivizing participants to be consistent in their ratings across short and long search tasks (see Appendix \@ref(app2-bonus)). The report scale ranged from 0.1 to 4 seconds in Exp. 1 and to 2 seconds in Exp. 2. 
 
 ```{r MVS-methods1, cache=TRUE, echo=FALSE, fig.scap="Meta visual search: experimental design", fig.cap="Experimental design. Participants first performed five similar visual search trials and received feedback about their speed and accuracy. Then, they were asked to estimate the duration of novel visual search tasks. Bonus points were awarded for accurate estimates, and more points were awarded for risky estimates. Finally, in the visual search part participants performed three consecutive trials of each visual search task for which they gave a search time estimates. Right panels: stimuli used for Experiments 1 and 2.", fig.align='center', out.width = '100%'}
 knitr::include_graphics("figure/MVS/methods1.png")
@@ -156,9 +157,12 @@ getSlopes <- function(e) {
   # subject and search type
   e$search_slopes <- e$filtered_df %>%
     group_by(Subj_id,search_type) %>%
-    do(model=lm(RT~set_size,data=.)) %>%
-    tidy(model) %>%
-    filter(term=='set_size');
+     nest() %>%
+    mutate(model = map(data, ~ lm(RT ~ set_size, data = .x)), 
+           tidy = map(model, ~ tidy(.x))) %>%
+    unnest(tidy) %>%
+    filter(term == 'set_size') %>%
+    dplyr::select(!c(data, model))
   
   e$mean_search_slopes <- e$search_slopes %>%
   group_by(search_type) %>%
@@ -288,9 +292,13 @@ analyzeEstimates <- function(e) {
   
   e$est_slopes <- e$filtered_df %>%
   group_by(Subj_id,search_type) %>%
-  do(model=lm(estimates~set_size,data=.)) %>%
-  tidy(model) %>%
-  filter(term=='set_size');
+  nest() %>%
+  mutate(model = map(data, ~ lm(estimates ~ set_size, data = .x)), 
+         tidy = map(model, ~ tidy(.x))) %>%
+  unnest(tidy) %>%
+  filter(term == 'set_size') %>%
+  dplyr::select(!c(data, model))
+  
   
   e$mean_est_slopes <- e$est_slopes %>%
   group_by(search_type) %>%
@@ -452,7 +460,7 @@ e2$RT_est_corr_no_set_size_type <- e2$avgd %>%
 
 ### Estimation accuracy {-}
 
-We next turned to analyze participants' prospective search time estimates, and their alignment with actual search times. In both Experiments, participants generally overestimated their search times. This was the case for all search types across the two Experiments (see Figure \@ref(fig:MVS-e1-e2-slopes), left panels: all markers are above the dashed $x=y$ diagonal). This is expected, based on our bonus scheme that incentivized conservative estimates (see Appendix \@ref(app2:bonus)). Despite this bias, estimates were correlated with true search times, supporting a metacognitive insight into visual search behaviour (see Fig. \@ref(fig:MVS-e1-e2-slopes), left panels. Within subject Spearman correlations, Exp. 1: `r apa_print(t.test(e1$RT_est_corr$COR))$full_result`; Exp 2: `r apa_print(t.test(e2$RT_est_corr$COR))$full_result`). 
+We next turned to analyze participants' prospective search time estimates, and their alignment with actual search times. In both Experiments, participants generally overestimated their search times. This was the case for all search types across the two Experiments (see Figure \@ref(fig:MVS-e1-e2-slopes), left panels: all markers are above the dashed $x=y$ diagonal). This is expected, based on our bonus scheme that incentivized conservative estimates (see Appendix \@ref(app2-bonus)). Despite this bias, estimates were correlated with true search times, supporting a metacognitive insight into visual search behaviour (see Fig. \@ref(fig:MVS-e1-e2-slopes), left panels. Within subject Spearman correlations, Exp. 1: `r apa_print(t.test(e1$RT_est_corr$COR))$full_result`; Exp 2: `r apa_print(t.test(e2$RT_est_corr$COR))$full_result`). 
 
 To test participants' internal models of visual search, we analyzed their estimates as if they were search times, and extracted *estimation slopes* relating estimates to the number of distractors in the display (see Fig. \@ref(fig:MVS-e1-e2-slopes), right panels). Estimation slopes (expected ms/item) were steeper than search slopes for all search types. In particular, although search time for a deviant color was unaffected by the number of distractors, participants estimated that color searches with more distractors should take longer (mean estimated slope in Exp. 1: `r printnum(e1$mean_est_slopes$color)` ms/item; `r apa_print(e1$t_est_slope_color)$statistic`; in Exp 2: `r printnum(e2$mean_est_slopes$color)` ms/item; `r apa_print(e2$t_est_slope_color)$statistic`). In other words, at the group level, participants showed no metacognitive insight into the parallel nature of color search. 
 
@@ -1111,6 +1119,6 @@ This relates to recent theoretical and empirical advances underscoring the utili
 
 Our final question concerned the structure of this internal model: is it specified as a list of facts and laws [similar to how the acquisition of knowledge about mental states between the ages of 2 and 4 was described as the development of a scientific theory; @gopnik1997words], or alternatively as an approximate probabilistic model that can be used to run simulations [similar to the physics engine model of intuitive physics; @battaglia2013simulation]? We found no direct evidence for a simulation account in the time taken to produce search time estimates. Nevertheless, participants' ability to provide accurate estimates for displays of unfamiliar stimuli, and the better alignment of their estimates with their own search behavior compared to the search behavior of other participants, provide some indirect support for a simulation account - one that is based on a schematic version of one's own attention. Still, we cannot exclude rule-based implementations of this internal model that are rich in detail and are based on one's first-person experience, without involving a simulation.   
 
-One important limitation of our current design is its reliance on explicit estimates, which may have potentially resulted in underestimating the richness and accuracy of these internal models. For example, in Experiments 1 and 2 participants' prospective estimates showed no metacognitive insight into the pop-out effect for color search. This does not necessarily mean that this information was misrepresented in their internal model. Instead, our numeric report scheme may have encouraged participants to adopt an analytical disposition to the problem, rather than relying fully on their intuitions. In support of this, in Chapter \@ref(ch:termination) a pop-out effect for color absence in the first few trials of a visual search task in interpreted as indicating accurate implicit metacognitive knowledge of the pop-out effect for color presence. 
+One important limitation of our current design is its reliance on explicit estimates, which may have potentially resulted in underestimating the richness and accuracy of these internal models. For example, in Experiments 1 and 2 participants' prospective estimates showed no metacognitive insight into the pop-out effect for color search. This does not necessarily mean that this information was misrepresented in their internal model. Instead, our numeric report scheme may have encouraged participants to adopt an analytical disposition to the problem, rather than relying fully on their intuitions. In support of this, in Chapter \@ref(ch-termination) a pop-out effect for color absence in the first few trials of a visual search task in interpreted as indicating accurate implicit metacognitive knowledge of the pop-out effect for color presence. 
 
 Together, our results reveal an alignment between prospective search time estimates and search times. This alignment places a lower bound on the richness and complexity of participants' internal model of visual search, and of attention more generally, and opens a promising avenue for studying humans' intuitive understanding of their own mental processes.
