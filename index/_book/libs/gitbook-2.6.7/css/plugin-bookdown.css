@@ -103,9 +103,3 @@ div.proof>*:last-child:after {
 #header .date {
   margin-top: 1.5em;
 }
-
-#author{
-  text-align: center;
-  font-size: 120%;
-  font-weight: bold
-}

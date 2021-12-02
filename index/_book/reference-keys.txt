@@ -224,7 +224,7 @@ app3-cross
 app3-SDT
 discrimination-1
 detection-3
-app3:Dynamic
+app3-Dynamic
 discrimination-2
 detection-4
 app3-Monitoring

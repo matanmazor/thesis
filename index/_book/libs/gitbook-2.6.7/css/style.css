@@ -13,7 +13,3 @@ details > summary {display:list-item;cursor:pointer;}
 /*add whatsapp icon from FA 5.1.1
 TODO: remove when updating fontawesome*/
 .fa-whatsapp:before{content:"\f232"}
-
-#author{
-	color=blue;
-}

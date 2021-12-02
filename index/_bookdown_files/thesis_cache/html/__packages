@@ -1,4 +1,6 @@
 base
+remotes
+thesisdown
 broom
 papaja
 reticulate
@@ -21,7 +23,6 @@ coda
 Matrix
 BayesFactor
 jsonlite
-thesisdown
 knitr
 magrittr
 lme4
@@ -30,13 +31,13 @@ MASS
 ppcor
 png
 modeest
-remotes
 gridExtra
 egg
 zoo
 RColorBrewer
+bookdown
+shiny
 pracma
 proto
 gsubfn
 scales
-bookdown

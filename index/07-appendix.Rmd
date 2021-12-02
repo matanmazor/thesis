@@ -82,7 +82,7 @@ knitr::opts_chunk$set(warning = FALSE)
 "Signal Detection Theory" is a conceptual framework for the description of decision making between two alternatives in the presence of uncertainty. Examples include deciding whether a presented word has been studied before or not, to which of two groups does a noisy stimulus belong, or whether a stimulus was presented on the screen or not [@tanner1954decision; @stanislaw1999calculation]. Under this framework, on each experimental trial a "decision variable" is sampled from one of two distributions. I will refer to these distributions here as the *signal* and *noise* distributions, although depending on context they can have different labels, such as *old* and *new* distributions in recognition memory task or *right* and *left* in a movement discrimination task. On trials in which the decision variable exceeds a criterion $c$, a 'yes' response is executed, otherwise a 'no' response is executed (see Fig. \@ref(fig:app1-SDT)). 
 
 (ref:app1-SDT-caption) Distribution of the decision variable across noise and signal trials, showing d', c, and the likelihoods. Figure based on  Stanislaw & Todorov, 1999.
-```{r app1-SDT, echo=FALSE, out.width="70%", fig.scap = 'Signal Detection Theory', fig.cap='(ref:app1-SDT-caption'}
+```{r app1-SDT, echo=FALSE, out.width="70%", fig.scap = 'Signal Detection Theory', fig.cap='(ref:app1-SDT-caption)'}
 include_graphics(path = "figure/app-SDT/SDT_rep.png")
 ```
 
@@ -1799,7 +1799,7 @@ LLR = log(\phi(x,1.3,2))-log(\phi(x,0,1))
 confidence \propto |x_t-med(x)|
 \end{equation}
 
-## Dynamic Criterion {#app3:Dynamic}
+## Dynamic Criterion {#app3-Dynamic}
 
 In SDT, task performance depends on the degree of overlap between the underlying distributions (d’) and on the positioning of the decision criterion (c). Participants may optimize criterion placement based on their changing beliefs about the underlying distributions [@ko2012detection]. To model this dynamic process of criterion setting we simulated a model where beliefs about the underlying distributions are the Maximum Likelihood Estimates of the mean and standard deviation, based on the last 5 samples that were (correctly or not) categorized. 
 
