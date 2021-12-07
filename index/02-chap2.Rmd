@@ -43,10 +43,21 @@ A simplifying assumption of Feature Integration Theory is that there is no trans
 
 In Experiments 1 and 2 we used stimuli that lend themselves to a categorical distinction between parallel and serial search: simple geometrical shapes of different colors and orientations. We asked whether participants' internal models of visual search predict which search displays demand serial deployment of attention and which don't. Critically, participants gave their search time estimates before they were asked to perform searches involving these or similar stimuli, so their search time estimates reflected prior beliefs about search efficiency. Experiment 2 was designed to replicate and generalize the results of Exp. 1 to a new stimulus dimension (orientation) and distractor set sizes. Our hypotheses and analysis plan for Experiment 2, based on the results of Experiment 1, were pre-registered prior to data collection (pre-registration document: [osf.io/2dpq9](osf.io/2dpq9)). Raw data and full analysis scripts are available at [github.com/matanmazor/metaVisualSearch](github.com/matanmazor/metaVisualSearch).
 
+```{r MVS-exports, include=FALSE, cache=TRUE}
+
+# IMPORTANT: in the text, exp.2 is exp. 3 and vice versa
+E2.export <- read.csv('data/MVS/expt2-export.csv')%>%
+  filter(status=='APPROVED')
+
+E3.export <- read.csv('data/MVS/expt3-export.csv')%>%
+  filter(status=='APPROVED')
+
+E4.export <- read.csv('data/MVS/expt4-export.csv');
+```
 
 ### Participants
 
-For Exp. 1, 100 participants were recruited from Amazon's crowdsourcing web-service Mechanical Turk. Exp. 1 took about 20 minutes to complete. Each participant was paid \$2.50. The highest performing 30% of participants received an additional bonus of \$1.50.  For Exp. 2, 100 participants were recruited from the Prolific crowdsourcing web-service. The experiment took about 15 minutes to complete. Each participant was paid \£1.5. The highest performing 30\% of participants received an additional bonus of \£1. 
+For Exp. 1, 100 participants (no demographic data was collected) were recruited from Amazon's crowdsourcing web-service Mechanical Turk. Exp. 1 took about 20 minutes to complete. Each participant was paid \$2.50. The highest performing 30% of participants received an additional bonus of \$1.50.  For Exp. 2, 100 participants (median reported age: `r E3.export%>%pull(age)%>%median(na.rm=TRUE)%>%printnum()`; range: [`r E3.export%>%pull(age)%>%min(na.rm=TRUE)%>%printnum()`-`r E3.export%>%pull(age)%>%max(na.rm=TRUE)%>%printnum()`]) were recruited from the Prolific crowdsourcing web-service. The experiment took about 15 minutes to complete. Each participant was paid \£1.5. The highest performing 30\% of participants received an additional bonus of \£1. 
 
 ### Procedure
 The study was built using the Lab.js platform [@henninger2019lab] and hosted on a JATOS server [@lange2015just]. Static versions of all four experiments are available at [github.com/matanmazor/metaVisualSearch](github.com/matanmazor/metaVisualSearch).
@@ -627,8 +638,8 @@ In Experiments 3 and 4 we asked how rich this model is, by using displays of com
 
 ### Participants
 
-For Exp. 3, 100 participants were recruited from the Prolific crowdsourcing web-service. The experiment took about 15
-minutes to complete. Participants were paid \£1.5. The highest performing 30\% of participants received an additional bonus of \£1. For Exp. 4, 200 participants were recruited from the Prolific crowdsourcing web-service. We recruited more participants for Exp. 4 in order to have sufficient statistical power for our inter-subject correlation analysis. The experiment took about 8 minutes to complete. Participants were paid \$1.27. The highest performing 30\% of participants received an additional bonus of \$0.75. 
+For Exp. 3, 100 participants (median reported age: `r E2.export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r E2.export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r E2.export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from the Prolific crowdsourcing web-service. The experiment took about 15
+minutes to complete. Participants were paid \£1.5. The highest performing 30\% of participants received an additional bonus of \£1. For Exp. 4, 200 participants (median reported age: `r E4.export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r E4.export%>%pull(age)%>%min(na.rm=TRUE)%>%printnum()`-`r E4.export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from the Prolific crowdsourcing web-service. We recruited more participants for Exp. 4 in order to have sufficient statistical power for our inter-subject correlation analysis. The experiment took about 8 minutes to complete. Participants were paid \$1.27. The highest performing 30\% of participants received an additional bonus of \$0.75. 
 
 ### Procedure
 

@@ -189,7 +189,8 @@ e1$df <- read_csv('data/asymmetry/exp1.csv') %>%
   rename('subj_id' = 'subject_identifier')
  
 e1$export <- read_csv('data/asymmetry/exp1_export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 filterDataFrame <- function(e) {
   
@@ -281,7 +282,7 @@ this.expt <- e1;
 
 ```
 
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 1.
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 1.
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`. Participants reported seeing an *O* on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants based on our exclusion criteria, leaving `r this.expt$N` participants for the main analysis. Due to a technical error in data collection, this figure is higher than that specified in our preregistration document (N=106). Going forward, only data from included participants is analyzed.
 
@@ -686,7 +687,8 @@ e2$df <- read_csv('data/asymmetry/exp2.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e2$export <- read_csv('data/asymmetry/exp2-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e2 <- e2%>%
@@ -702,7 +704,7 @@ this.expt <- e2;
 
 ```
 
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 2.
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 2.
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing an *O* on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed.
 
@@ -731,7 +733,8 @@ e3$df <- read_csv('data/asymmetry/exp3.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e3$export <- read_csv('data/asymmetry/exp3-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e3 <- e3%>%
@@ -747,7 +750,7 @@ this.expt <- e3;
 
 ```
 
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 3. Due to shorter than expected completion times in the first 94 participants, the remaining participants were paid \£1.25, equivalent to an hourly wage of \£6.
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 3. Due to shorter than expected completion times in the first 94 participants, the remaining participants were paid \£1.25, equivalent to an hourly wage of \£6.
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing a vertical line on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed. 
 
@@ -775,7 +778,8 @@ e4$df <- read_csv('data/asymmetry/exp4.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e4$export <- read_csv('data/asymmetry/exp4-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e4 <- e4%>%
@@ -790,7 +794,8 @@ e4 <- e4%>%
 this.expt <- e4;
 
 ```
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 4. Due to shorter than expected completion times in previous experiments, participants were paid \£1.25, equivalent to an hourly wage of \£6. 
+
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 4. Due to shorter than expected completion times in previous experiments, participants were paid \£1.25, equivalent to an hourly wage of \£6. 
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing a straight line on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed. 
 
@@ -818,7 +823,8 @@ e5$df <- read_csv('data/asymmetry/exp5.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e5$export <- read_csv('data/asymmetry/exp5-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e5 <- e5%>%
@@ -834,7 +840,7 @@ this.expt <- e5;
 
 ```
 
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 5. 
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 5. 
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing a downward-tilted cube on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed. 
 
@@ -863,7 +869,8 @@ e6$df <- read_csv('data/asymmetry/exp6.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e6$export <- read_csv('data/asymmetry/exp6-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e6 <- e6%>%
@@ -879,7 +886,7 @@ this.expt <- e6;
 
 ```
 
-`r this.expt$N_total` participants were recruited from Prolific for Experiment 6. Due to shorter than expected completion times in previous experiments, participants were paid \£1.25, equivalent to an hourly wage of \£6. 
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for Experiment 6. Due to shorter than expected completion times in previous experiments, participants were paid \£1.25, equivalent to an hourly wage of \£6. 
 
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing a normal *N* on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. In a deviation from our pre-registration, we excluded `r this.expt$no_variance$subj_id%>%length()` participants for having zero variance in their confidence ratings for at least one of the two responses (see Section \@ref(deviations)). Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed. 
@@ -912,7 +919,6 @@ knitr::include_graphics("figure/asymmetry/summary.png")
 
 Results from Experiments 1-6 revealed that search asymmetry is not always accompanied by an asymmetry in metacognitive sensitivity. Given that we did not observe a true metacognitive asymmetry in the expected direction for any of our stimulus pairs, we were concerned that our experimental design may have been unsuitable for detecting classical metacognitive asymmetries in detection, for example due to an insufficient number of trials, the masking procedure, or the confidence report scheme. As a positive control, we collected data for an additional experiment that more closely resembled typical detection experiments. In this experiment, participants discriminated between two stimuli: random noise and a noisy grating (presented to participants as a 'zebra' stimulus; see Fig. \@ref(fig:asymmetry-rcROC7)). In Chapter \@ref(ch-fMRI), similar stimuli produced a robust metacognitive asymmetry between target absent (noise) and target present (noisy grating) responses [@mazor2020distinct]. We used black and white concentric circles as a mask. Apart from the choice of stimuli and mask, the procedure was identical to that of our pre-registered experiments.
 
-`r this.expt$N_total` participants were recruited from Prolific for exploratory Experiment 7. For this positive control, all four hypotheses were fulfilled. 
 
 
 ```{r asymmetry-e7, echo=FALSE, fig.show='hide', cache=TRUE}
@@ -923,7 +929,8 @@ e7$df <- read_csv('data/asymmetry/exp7.csv') %>%
   rename('subj_id' = 'subject_identifier')
 
 e7$export <- read_csv('data/asymmetry/exp7-export.csv')  %>%
-  rename('subj_id' = 'participant_id')
+  rename('subj_id' = 'participant_id') %>%
+  filter(status=='APPROVED')
 
 
 e7 <- e7%>%
@@ -938,6 +945,8 @@ e7 <- e7%>%
 this.expt <- e7;
 
 ```
+
+`r this.expt$N_total` participants (median reported age: `r this.expt$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r this.expt$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r this.expt$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited from Prolific for exploratory Experiment 7. For this positive control, all four hypotheses were fulfilled. 
 
 Median completion time was `r printnum(this.expt$median_completion_time)` minutes. Mean proportion correct was `r printnum(this.expt$disc_df_unfiltered$correct%>%mean())`, and participants reported seeing a grating on `r round((this.expt$disc_df_unfiltered$response%>%as.numeric()%>%mean()-1)*100)`% of trials. Overall we excluded `r this.expt$N_total-this.expt$N` participants, leaving `r this.expt$N` participants for the main analysis. Going forward, only data from included participants is analyzed. 
 
@@ -979,29 +988,29 @@ testzROC <- function(e) {
   
   e$zROC_slopes1 <- e$conf_bi_counts %>%
     group_by(subj_id) %>%
-     nest() %>%
-      mutate(model = map(data, ~ lm(z_1~z_2, data = .x)), 
-             tidy = map(model, ~ tidy(.x))) %>%
-      unnest(tidy) %>%
-      filter(term == 'z_2') %>%
-      mutate(slope1=estimate)%>%
-      dplyr::select('subj_id','slope1') %>%
-      drop_na();
+    nest() %>%
+    mutate(model = map(data, ~ lm(z_1~z_2, data = .x)), 
+           tidy = map(model, ~ tidy(.x))) %>%
+    unnest(tidy) %>%
+    filter(term == 'z_2') %>%
+    mutate(slope1=estimate)%>%
+    dplyr::select('subj_id','slope1') %>%
+    drop_na();
   
-
+  
   # To control for regression to the mean, fit the opposite model and average the two slopes
   # (see Wickens, p. 56)
   e$zROC_slopes2 <- e$conf_bi_counts %>%
     group_by(subj_id) %>%
-      nest() %>%
-      mutate(model = map(data, ~ lm(z_2~z_1, data = .x)), 
-             tidy = map(model, ~ tidy(.x))) %>%
-      unnest(tidy) %>%
-      filter(term == 'z_1') %>%
-      mutate(slope2=1/estimate)%>%
-      dplyr::select('subj_id','slope2') %>%
-      drop_na();
-
+    nest() %>%
+    mutate(model = map(data, ~ lm(z_2~z_1, data = .x)), 
+           tidy = map(model, ~ tidy(.x))) %>%
+    unnest(tidy) %>%
+    filter(term == 'z_1') %>%
+    mutate(slope2=1/estimate)%>%
+    dplyr::select('subj_id','slope2') %>%
+    drop_na();
+  
   
   e$zROC_slopes <- merge(
     e$zROC_slopes1 %>%
@@ -1012,7 +1021,7 @@ testzROC <- function(e) {
     rowwise()%>%
     mutate(
       logslope = log(slope1)/2+log(slope2)/2,
-       slope=exp(logslope)
+      slope=exp(logslope)
     )
   
   e$zROC_slopes <- merge(
@@ -1054,8 +1063,6 @@ In a signal-detection framework, metacognitive asymmetry appears when the signal
 zROC slopes were numerically shallower than one in Experiments 1 (Q vs. O; median slope = `r e1$zROC_slopes$slope%>%median%>%printnum()`), 3 (line tilt; median slope = `r e3$zROC_slopes$slope%>%median%>%printnum()`), 4 (line curvature; `r e4$zROC_slopes$slope%>%median%>%printnum()`) and 5 (cube orientation; `r e5$zROC_slopes$slope%>%median%>%printnum()`). This was significant only in Experiment 5 (`r apa_print(e5$zROCtest$t.test)$statistic`). In agreement with the results of our rcROC analysis, the zROC slope in Exp. 2 (C vs. O) was significantly higher than one, suggesting that the representation of the letter 'O' was more variable than that of the letter 'C' (median slope = `r e2$zROC_slopes$slope%>%median%>%printnum()`; `r apa_print(e2$zROCtest$t.test)$statistic`). A Bayes Factor analysis did not provide support for or against the null hypothesis for any of the six experiments (all Bayes Factors between 1/3 and 3).
 
 Previous studies reported similar variance structures for these stimuli when presented in visual search arrays. For example, confidence in a vertical/tilted visual search task revealed higher variance in the representation of tilted (feature positive) compared to vertical (feature negative) stimuli [ @vincent2011search]. Similarly, reverse correlation analysis revealed higher variance in the representation of *Q* (feature positive) compared to *O* (feature negative) stimuli [@saiki2008stimulus]. Finally, and in agreement with our results, variance in the representation of *O* (feature negative) was found to be higher than in the representation of *C* (feature positive) [@dosher2004parallel]. Note that for the case of line tilt and *Q* vs. *O*, finding a high-variance target among low-variance distractors is easier than finding a low-variance target among high-variance distractors. However, the opposite is true for *C* vs. *O*, where a low-variance target (*C*) renders the search easier. This last observation challenges the suggestion that variance structure is the determining factor for visual search asymmetries [@treisman1988feature; @dosher2004parallel; @vincent2011search; @saiki2008stimulus]. 
-
-
 #### Inter-subject correlations {-}
 
 
@@ -1070,8 +1077,8 @@ all_data <- rbind(
   e6$contrast_df%>%mutate(exp=6),
   e7$contrast_df%>%mutate(exp=7)) %>%
   mutate(exp=factor(exp,
-         levels=c(1,2,3,4,5,6,7),
-         labels=c(1,2,3,4,5,6,'detection')),
+                    levels=c(1,2,3,4,5,6,7),
+                    labels=c(1,2,3,4,5,6,'detection')),
          detection=exp==7);
 
 # test for a correlation between RT and confidence
@@ -1095,7 +1102,7 @@ experiment_palette = c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "#
 
 p1 <- all_data %>% 
   mutate(exp=factor(exp,
-         labels=c(1,2,3,4,5,6,'detection')))%>%
+                    labels=c(1,2,3,4,5,6,'detection')))%>%
   ggplot(aes(x=conf,y=RT,color=exp)) +
   geom_vline(xintercept=0) +
   geom_hline(yintercept=0) +
@@ -1159,19 +1166,15 @@ Starting from the end, Experiments 5 and 6 provide evidence against the proposal
 Moreover, in Exp. 6, default-complying *N* responses were faster, and accompanied by higher levels of subjective confidence, than default-violating flipped-*N* responses. This is in contrast to our prediction of a processing advantage for default-violating signals, and in line with previous reports of a processing advantage for familiar over unfamiliar stimuli in the context of face perception and reading. For example, in a breaking continuous flash suppression (bCFS) paradigm, inverted faces took longer to break into awareness than upright faces [@stein2021dissociating]. A similar processing advantage for familiar stimuli has been documented for the perception of words [@albonico2018perceptual] and Chinese letters [@xue2006language]. One possibility is that the perception of highly familiar stimuli such as letters and faces is supported by specific expert brain systems, affording a processing advantage beyond the general superior processing of default-violating signals [@yovel2005neural; @xue2006language]. Indeed, Exp. 6 was the only experiment in which we observed a processing advantage for familiar over unfamiliar stimuli.  
 
 Next, in Experiments 3 and 4 we looked at two features that have a global effect on stimulus appearance: tilt and curvature. Based on visual search asymmetries, @treisman1988feature proposed that tilt and curvature are represented as positive features in the visual system. This takes us one step closer to typical detection experiments: participants now detect the presence or absence of a basic visual feature. In agreement with our Hypotheses 1 and 4, participants were more confident in identifying tilted and curved lines (mean differences of `r e3$H1$raw_es%>%printnum()` and `r e4$H1$raw_es%>%printnum()` on a 0-1 confidence scale), and were faster in giving these responses (mean differences of `r e3$H4$raw_es%>%abs()%>%printnum()` and `r e4$H4$raw_es%>%abs()%>%printnum()` ms). However, we did not find evidence for or against a metacognitive asymmetry for these global visual features. 
-
 Our strongest candidate for a stimulus pair for which we expected to find a presence-absence asymmetry was *Q* vs. *O* (Exp. 1). The difference between these two letters is the presence of an additional line stroke: a concrete stimulus part that is localized in space and is independent of the rest of the stimulus. Theoretically, participants could approach this task as a detection task: ignore the common denominator (*O*) and focus on the presence or absence of the distinctive feature (','). As we hypothesized, participants were more confident in their *Q* responses (mean difference of `r e1$H1$raw_es%>%printnum()` on a 0-1 confidence scale). Participants were also faster in their *Q* responses (median difference of `r e1$H4$raw_es%>%abs()%>%round()` ms). However, unlike stimulus-level detection, a small difference of `r e1$H2$raw_es%>%abs()%>%printnum()` units in the area under the rcROC ROC curves was not different to what is expected based on a null SDT model. 
 
 Finally, In Experiment 2 we looked at discrimination between *C* and *O*s based on evidence from visual search that open edges are represented as a positive feature in the visual system [@treisman1985search; @takeda2000inhibitory; @treisman1988feature]. As we hypothesized, *C* responses were accompanied by higher levels of subjective confidence (mean difference of `r e2$H1$raw_es%>%printnum()` on a 0-1 confidence scale). However, in striking contrast to our original hypothesis, metacognitive sensitivity was *lower* for *C* responses (mean difference of `r e2$H2$raw_es%>%abs()%>%printnum()` AUC units), even when controlling for response bias. This result strongly supports different underlying mechanisms behind search and metacognitive asymmetries. Furthermore, the results of Experiment 2 suggest distinct factors mediate the processing advantage for presence over absence (as reflected in shorter response times and higher confidence for *C* responses), and the metacognitive asymmetry between presence and absence (as reflected in improved metacognitive sensitivity for *O* responses). 
 
 *C* and *O* are unique in that the difference between them corresponds to two contrasting notions of presence and absence. On the one hand, *C* is marked by the presence of one additional feature - open edges [@treisman1985search; @treisman1988feature]. On the other hand, it is marked by the absence of a piece: there is simply less of it relative to *O*. These two notions of presence and absence are typically coupled in detection. For example, the presence of a grating on a screen corresponds to the presence of additional features (such as orientation, contrast, and phase) as well as of more 'visual stuff', relative to the blank background. A compelling interpretation of the results of Exp. 2 is that it is the presence or absence of visual features such as open edges that is driving the difference in confidence and response time, whereas a more quantitative notion of presence or absence (the amount of 'visual stuff' presented) is driving the metacognitive asymmetry between these two responses. We note however that based on this interpretation, we would expect a metacognitive sensitivity to operate also in Experiment 1, where *O* is missing a piece relative to *Q*. As described above, Experiment 1 provided no evidence for such a metacognitive asymmetry beyond what is expected from an equal-variance signal-detection model.
 
-Notably, not one of the six pre-registered experiments produced a metacognitive asymmetry in the expected direction. This was in contrast to Experiment 7 (grating vs. noise), where metacognitive sensitivity for reporting noise was lower than for reporting a noisy grating (with a difference of `r e7$AUC$metacognitive_asymmetry%>%mean()%>%printnum()` auROC2 units, `r apa_print(e7$H3$BF)$statistic`). Positive control Experiment 7 was also the only experiment in which we found higher variance for stimulus S1 than for stimulus S2 (with a median variance ratio of `r e7$zROC_slopes$slope%>%median()%>%printnum()`). These two observations are likely to be related: across participants, metacognitive asymmetry and variance ratio were highly correlated (`r apa_print(cor.test(e7$zROC_slopes$logslope,-e7$zROC_slopes$metacognitive_asymmetry))$full_result`). Indeed, previous theoretical work has pointed out that response-dependent asymmetries in metacognition may be driven by an underlying unequal-variance SDT model, and, vice-versa, that findings of unequal variance might be due to a response-dependent metacognitive asymmetry. These two perspectives are interchangeable [@maniscalco2014signal]. However, a correlation between metacognitive asymmetry and variance structure, both estimated from confidence ratings, is not a satisfactory answer for *why* noise and gratings should exhibit a unique asymmetry in metacognitive sensitivity, or in variance structure. More theoretical and experimental work is needed to identify the sources of this asymmetry, perhaps focusing on the role of stimulus complexity and perceptual uncertainty as potential drivers of this effect.
-
 When interpreting our findings in a broader context, it is useful to note that in all six experiments we used backward masking for controlling the visibility level of our stimuli. Different visibility manipulations have been shown to affect detection metacognitive sensitivity in different ways. For example, whereas metacognitive sensitivity in detection 'no' responses is at chance when backward masking is used, it is significantly higher than chance when the attentional blink is used to control stimulus visibility [@kanai2010subjective]. Similarly, phase scrambling but not attentional blink produces a metacognitive advantage for 'yes' responses [@kellij2018foundations]. While our positive control (Exp. 7) produced a reliable metacognitive asymmetry between judgments of target presence and absence, it was also the only experiment where stimulus visibility was controlled with low contrast, in addition to backward masking (for the purpose of compatibility with previous experiments; see Fig. \@ref(fig:asymmetry-rcROC7)). Based on our findings alone, we cannot rule out the possibility that using other visibility manipulations may reveal metacognitive asymmetries for the presence or absence of abstract default violations. Furthermore, it is possible that some of the observed asymmetries for low-level features may reflect asymmetries in the joint perception of target stimulus and backward mask, rather than in the perception of the target stimulus by itself [@kahneman1968method; @jannati2012relative].
 
 Together, our findings weigh against our original proposal that metacognitive asymmetries in perceptual detection are a signature of higher-order default reasoning. Unlike search asymmetries that extend to abstract levels of representations such as familiarity [@wang1994familiarity; @wolfe2001asymmetries] and even social features such as ethnicity and gender [@levin2001visual; @gandolfo2020asymmetric], metacognitive asymmetries in visual discrimination are grounded in concrete visual processing. Furthermore, we provide evidence for a dissociation between asymmetries in metacognition and in response time and confidence, where the latter is linked to activation of basic feature-detectors, for example of orientation, open ends, or curvature. 
-
 
 ## Conclusion
 
@@ -1187,51 +1190,51 @@ plotHists = function(e, labels, filename) {
   
   c <- detection_colors; 
   
-    RTdf <- e$disc_df %>%
+  RTdf <- e$disc_df %>%
     group_by(response,subj_id) %>%
     summarise(RT=median(RT))
   
   RTplot <- ggplot(RTdf,aes(x=response,y=RT,group=response,fill=response,color=response)) +
-        ylim(0,2500)+
-        geom_boxplot(size=1,fill='white',outlier.alpha=0)+
-        geom_jitter(alpha=0.3,size=2, width=0.3) +
-        geom_path(data=RTdf%>%group_by(response)%>%summarise(RT=median(RT)),
-                  aes(x=response,y=RT,group=1),
-                  color='black',size=0.7)+
-        scale_color_manual(values=detection_colors) + 
-        theme_classic() +
-        labs(y='median RT (ms)')+
-        theme(axis.title.x=element_blank(),
-              axis.text.x=element_blank(),
-              axis.ticks.x=element_blank(),
-              legend.position='none');
-
+    ylim(0,2500)+
+    geom_boxplot(size=1,fill='white',outlier.alpha=0)+
+    geom_jitter(alpha=0.3,size=2, width=0.3) +
+    geom_path(data=RTdf%>%group_by(response)%>%summarise(RT=median(RT)),
+              aes(x=response,y=RT,group=1),
+              color='black',size=0.7)+
+    scale_color_manual(values=detection_colors) + 
+    theme_classic() +
+    labs(y='median RT (ms)')+
+    theme(axis.title.x=element_blank(),
+          axis.text.x=element_blank(),
+          axis.ticks.x=element_blank(),
+          legend.position='none');
+  
   
   confdf <- e$disc_df %>%
     group_by(response,subj_id) %>%
     summarise(confidence=mean(confidence));
-
+  
   
   
   confplot <- ggplot(confdf,aes(x=response,y=confidence,group=response,fill=response,color=response)) +
-        geom_boxplot(size=1,fill='white',outlier.alpha=0)+
-        geom_jitter(alpha=0.3,size=2, width=0.2) +
-        geom_path(data=confdf%>%group_by(response)%>%summarise(confidence=median(confidence)),
-                  aes(x=response,y=confidence,group=1),
-                  color='black',size=0.7)+
-        scale_color_manual(values=detection_colors) +
-        scale_color_manual(values=detection_colors) + 
-        theme_classic() +
-        labs(y='mean confidence')+
-        theme(axis.title.x=element_blank(),
-              axis.text.x=element_blank(),
-              axis.ticks.x=element_blank(),
-              legend.position='none')+
-      scale_y_continuous(position = "right");
+    geom_boxplot(size=1,fill='white',outlier.alpha=0)+
+    geom_jitter(alpha=0.3,size=2, width=0.2) +
+    geom_path(data=confdf%>%group_by(response)%>%summarise(confidence=median(confidence)),
+              aes(x=response,y=confidence,group=1),
+              color='black',size=0.7)+
+    scale_color_manual(values=detection_colors) +
+    scale_color_manual(values=detection_colors) + 
+    theme_classic() +
+    labs(y='mean confidence')+
+    theme(axis.title.x=element_blank(),
+          axis.text.x=element_blank(),
+          axis.ticks.x=element_blank(),
+          legend.position='none')+
+    scale_y_continuous(position = "right");
   
-
+  
   full_plot <- plot_grid(RTplot,confplot,ncol=2)
-
+  
   ggsave(filename,full_plot,width=3,height=3)
   
   e$hist_plots <- list('RT'=RTplot, 'confidence'=confplot);

@@ -1369,6 +1369,8 @@ e2$zROC <- rbind(e2$detection_zROC%>%mutate(detection=1),
 
 e2$zROC_contast_rsquare <- e2$zROC%>%group_by(subj_id)%>%summarize(fit_diff=r.squared[detection==1]-r.squared[detection==0])
 
+e2$export <- read.csv('data/RC/Flicker-export.csv')%>%
+  filter(status=='APPROVED')
 ```
 
 
@@ -1380,7 +1382,7 @@ In Exp. 2 we tested the robustness of these findings by employing a different ty
 
 #### Participants
 
-The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 147 participants were recruited via Prolific (prolific.co), and gave their informed consent prior to their participation. They were selected based on their acceptance rate (>95%) and for being native English speakers. Following our pre-registration, we aimed to collect data until we had reached 100 included participants based on our pre-specified inclusion criteria (see [https://osf.io/8u7dk/](https://osf.io/8u7dk/)). Our final data set includes observations from 102 included participants. The entire experiment took around 10 minutes to complete. Participants were paid £1.25 for their participation, equivalent to an hourly wage of £7.5.
+The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 147 participants (median reported age: `r e2$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r e2$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r e2$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited via Prolific (prolific.co), and gave their informed consent prior to their participation. They were selected based on their acceptance rate (>95%) and for being native English speakers. Following our pre-registration, we aimed to collect data until we had reached 100 included participants based on our pre-specified inclusion criteria (see [https://osf.io/8u7dk/](https://osf.io/8u7dk/)). Our final data set includes observations from 102 included participants. The entire experiment took around 10 minutes to complete. Participants were paid £1.25 for their participation, equivalent to an hourly wage of £7.5.
 
 #### Experimental paradigm
 
@@ -2140,15 +2142,6 @@ In Exp. 3 we aimed to replicate our findings using an experimental manipulation,
 
 ### Methods
 
-#### Participants
-
-The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 173 participants were recruited via Prolific (prolific.co), and gave their informed consent prior to their participation. They were selected based on their acceptance rate (>95%) and for being native English speakers. Following our pre-registration, we aimed to collect data until we had reached 100 included participants based on our pre-specified inclusion criteria (see [https://osf.io/hm3fn/](https://osf.io/hm3fn/)). Our final data set includes observations from 100 included participants. The entire experiment took around 20 minutes to complete. Participants were paid £2.5 for their participation, equivalent to an hourly wage of £7.5.
-
-#### Experimental paradigm
-
-Experiment 3 was identical to Experiment 2 with two changes. First, on half of the trials (*high-luminance* trials) the luminance of both sets of bars was increased by 2/255 for the entire duration of the display. Second, in order to increase our statistical power for detecting response-specific effects in detection, participants performed four detection blocks and two discrimination blocks. Each block comprised 56 trials. The order of blocks was [detection, discrimination, detection, discrimination, detection, detection] for all participants.
-
-
 ```{r RC-exp3-load-and-format-data, echo=FALSE, cache=TRUE, message=FALSE, warning=FALSE}
 
 e3=list()
@@ -2268,7 +2261,17 @@ e3$no_conf_PEB <- e3$trial_df %>%
 e3$H5$BF <- ttestBF(e3$no_conf_PEB$PEB,rscale=e3$H1$d);
 e3$H5$t.test <- t.test(e3$no_conf_PEB$PEB)
 
+e3$export <- read.csv('data/RC/Flicker2-export.csv');
+
 ```
+
+#### Participants
+
+The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 173 participants (median reported age: `r e3$export%>%pull(age)%>%median(na.rm=TRUE)%>%round()`; range: [`r e3$export%>%pull(age)%>%min(na.rm=TRUE)%>%round()`-`r e3$export%>%pull(age)%>%max(na.rm=TRUE)%>%round()`]) were recruited via Prolific (prolific.co), and gave their informed consent prior to their participation. They were selected based on their acceptance rate (>95%) and for being native English speakers. Following our pre-registration, we aimed to collect data until we had reached 100 included participants based on our pre-specified inclusion criteria (see [https://osf.io/hm3fn/](https://osf.io/hm3fn/)). Our final data set includes observations from 100 included participants. The entire experiment took around 20 minutes to complete. Participants were paid £2.5 for their participation, equivalent to an hourly wage of £7.5.
+
+#### Experimental paradigm
+
+Experiment 3 was identical to Experiment 2 with two changes. First, on half of the trials (*high-luminance* trials) the luminance of both sets of bars was increased by 2/255 for the entire duration of the display. Second, in order to increase our statistical power for detecting response-specific effects in detection, participants performed four detection blocks and two discrimination blocks. Each block comprised 56 trials. The order of blocks was [detection, discrimination, detection, discrimination, detection, detection] for all participants.
 
 ### Results
 

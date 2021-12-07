@@ -98,7 +98,7 @@ To test for such qualitative differences, here we set out to directly compare th
 
 ## Methods and Materials
 
-All design and analysis details were pre-registered before data acquisition and time-locked using pre-RNG randomization [@mazor2019novel]. The time-locked protocol folder is available [in the following GitHub repository](https://www.github.com/matanmazor/detectionVsDiscrimination\_fMRI). The entire set of preregistered analysis is available [in the following OSF Project](https://www.osf.io/98mv4). Whole-brain imaging results are available in [NeuroValut](https://neurovault.org/collections/VVLPQBWK/).
+All design and analysis details were pre-registered before data acquisition and time-locked using pre-RNG randomization [@mazor2019novel]. The time-locked protocol folder is available [in the following GitHub repository](https://github.com/matanmazor/detectionVsDiscrimination_fMRI/tree/master/protocol%20folder). The entire set of preregistered analysis is available [in the following OSF Project](https://www.osf.io/98mv4). Whole-brain imaging results are available in [NeuroValut](https://neurovault.org/collections/VVLPQBWK/).
 
 ### Participants
 46 participants took part in the study (ages 18-36, mean = 24 $\pm$ 4; 29 females). 35 participants met our pre-specified inclusion criteria (ages 18-36, mean=24 $\pm$ 4; 20 females). After applying our run-wise exclusion criteria to the data of the remaining 35 participants, our dataset consisted of 5 usable experimental runs from 15 participants, 4 usable experimental runs from 14 participants, 3 usable experimental runs from 5 participants, and 2 usable experimental runs from one participant. 
