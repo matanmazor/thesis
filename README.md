@@ -14,4 +14,4 @@ Chapter 3 is in preperation for submission.
 [Chapter 5](github.com/matanmazor/asymmetry) has been published as a Registered Report in [Neuroscience of Consciousness](https://academic.oup.com/nc/article/2021/1/niab025/6401197).
 
 
-A gitbook version of the entire thesis (written with [thesisdown](https://github.com/ismayc/thesisdown) to ensure reproducibility) is available [here](matanmazor.github.io/thesis).
+A gitbook version of the entire thesis (written with [thesisdown](https://github.com/ismayc/thesisdown) to ensure reproducibility) is available [here](https://matanmazor.github.io/thesis).
