@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Efficient search termination without task experience: the role of second-order knowledge about visual search | Self-Modelling in Inference about Absence</title>
+  <meta name="description" content="Chapter 1 Efficient search termination without task experience: the role of second-order knowledge about visual search | Self-Modelling in Inference about Absence" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Efficient search termination without task experience: the role of second-order knowledge about visual search | Self-Modelling in Inference about Absence" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Efficient search termination without task experience: the role of second-order knowledge about visual search | Self-Modelling in Inference about Absence" />
+  
+  
+  
+
+<meta name="author" content="Matan Mazor" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="ch-MVS.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#impact-statement"><i class="fa fa-check"></i>Impact Statement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="introduction.html"><a href="introduction.html#inference-about-absence"><i class="fa fa-check"></i><b>0.1</b> Inference about absence</a></li>
+<li class="chapter" data-level="0.2" data-path="introduction.html"><a href="introduction.html#formalabsence"><i class="fa fa-check"></i><b>0.2</b> Probabilistic reasoning, criterion setting, and self knowledge</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#symmetrical-definition"><i class="fa fa-check"></i>Symmetrical definition:</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#dissymmetrical-definition"><i class="fa fa-check"></i>Dissymmetrical definition:</a></li>
+<li class="chapter" data-level="0.2.1" data-path="introduction.html"><a href="introduction.html#intro-2nd-order"><i class="fa fa-check"></i><b>0.2.1</b> Second-order cognition</a></li>
+<li class="chapter" data-level="0.2.2" data-path="introduction.html"><a href="introduction.html#detectionmodels"><i class="fa fa-check"></i><b>0.2.2</b> Computational models of detection</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#htm"><i class="fa fa-check"></i>The High-Threshold model</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sdt"><i class="fa fa-check"></i>Signal Detection Theory</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="introduction.html"><a href="introduction.html#detection-i-would-have-noticed-it"><i class="fa fa-check"></i><b>0.3</b> Detection: “I would have noticed it”</a></li>
+<li class="chapter" data-level="0.4" data-path="introduction.html"><a href="introduction.html#intro:search"><i class="fa fa-check"></i><b>0.4</b> Visual search: “I would have found it”</a></li>
+<li class="chapter" data-level="0.5" data-path="introduction.html"><a href="introduction.html#memory-i-would-have-remembered-it"><i class="fa fa-check"></i><b>0.5</b> Memory: “I would have remembered it”</a></li>
+<li class="chapter" data-level="0.6" data-path="introduction.html"><a href="introduction.html#the-development-of-a-self-model"><i class="fa fa-check"></i><b>0.6</b> The development of a self-model</a></li>
+<li class="chapter" data-level="0.7" data-path="introduction.html"><a href="introduction.html#this-thesis"><i class="fa fa-check"></i><b>0.7</b> This thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="ch-termination.html"><a href="ch-termination.html"><i class="fa fa-check"></i><b>1</b> Efficient search termination without task experience: the role of second-order knowledge about visual search</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="ch-termination.html"><a href="ch-termination.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="ch-termination.html"><a href="ch-termination.html#experiment-1"><i class="fa fa-check"></i><b>1.2</b> Experiment 1</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="ch-termination.html"><a href="ch-termination.html#participants"><i class="fa fa-check"></i><b>1.2.1</b> Participants</a></li>
+<li class="chapter" data-level="1.2.2" data-path="ch-termination.html"><a href="ch-termination.html#procedure"><i class="fa fa-check"></i><b>1.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.2.3" data-path="ch-termination.html"><a href="ch-termination.html#randomization"><i class="fa fa-check"></i><b>1.2.3</b> Randomization</a></li>
+<li class="chapter" data-level="1.2.4" data-path="ch-termination.html"><a href="ch-termination.html#data-analysis"><i class="fa fa-check"></i><b>1.2.4</b> Data analysis</a></li>
+<li class="chapter" data-level="1.2.5" data-path="ch-termination.html"><a href="ch-termination.html#results"><i class="fa fa-check"></i><b>1.2.5</b> Results</a></li>
+<li class="chapter" data-level="1.2.6" data-path="ch-termination.html"><a href="ch-termination.html#additional-analysis-first-trial-only"><i class="fa fa-check"></i><b>1.2.6</b> Additional analysis: first trial only</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="ch-termination.html"><a href="ch-termination.html#experiment-2"><i class="fa fa-check"></i><b>1.3</b> Experiment 2</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="ch-termination.html"><a href="ch-termination.html#participants-1"><i class="fa fa-check"></i><b>1.3.1</b> Participants</a></li>
+<li class="chapter" data-level="1.3.2" data-path="ch-termination.html"><a href="ch-termination.html#procedure-1"><i class="fa fa-check"></i><b>1.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="1.3.3" data-path="ch-termination.html"><a href="ch-termination.html#results-1"><i class="fa fa-check"></i><b>1.3.3</b> Results</a></li>
+<li class="chapter" data-level="1.3.4" data-path="ch-termination.html"><a href="ch-termination.html#additional-analyses"><i class="fa fa-check"></i><b>1.3.4</b> Additional Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="ch-termination.html"><a href="ch-termination.html#discussion"><i class="fa fa-check"></i><b>1.4</b> Discussion</a></li>
+<li class="chapter" data-level="1.5" data-path="ch-termination.html"><a href="ch-termination.html#conclusion"><i class="fa fa-check"></i><b>1.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ch-MVS.html"><a href="ch-MVS.html"><i class="fa fa-check"></i><b>2</b> Internal models of visual search are rich, person-specific, and mostly accurate</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ch-MVS.html"><a href="ch-MVS.html#introduction-2"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="ch-MVS.html"><a href="ch-MVS.html#experiments-1-and-2-shape-orientation-and-color"><i class="fa fa-check"></i><b>2.2</b> Experiments 1 and 2: shape, orientation, and color</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="ch-MVS.html"><a href="ch-MVS.html#participants-2"><i class="fa fa-check"></i><b>2.2.1</b> Participants</a></li>
+<li class="chapter" data-level="2.2.2" data-path="ch-MVS.html"><a href="ch-MVS.html#procedure-2"><i class="fa fa-check"></i><b>2.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="2.2.3" data-path="ch-MVS.html"><a href="ch-MVS.html#results-2"><i class="fa fa-check"></i><b>2.2.3</b> Results</a></li>
+<li class="chapter" data-level="" data-path="ch-MVS.html"><a href="ch-MVS.html#estimation-accuracy"><i class="fa fa-check"></i>Estimation accuracy</a></li>
+<li class="chapter" data-level="" data-path="ch-MVS.html"><a href="ch-MVS.html#a-graded-representation-of-search-efficiency"><i class="fa fa-check"></i>A graded representation of search efficiency</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="ch-MVS.html"><a href="ch-MVS.html#experiments-3-and-4-complex-unfamiliar-stimuli"><i class="fa fa-check"></i><b>2.3</b> Experiments 3 and 4: complex, unfamiliar stimuli</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ch-MVS.html"><a href="ch-MVS.html#participants-3"><i class="fa fa-check"></i><b>2.3.1</b> Participants</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ch-MVS.html"><a href="ch-MVS.html#procedure-3"><i class="fa fa-check"></i><b>2.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="2.3.3" data-path="ch-MVS.html"><a href="ch-MVS.html#results-3"><i class="fa fa-check"></i><b>2.3.3</b> Results</a></li>
+<li class="chapter" data-level="" data-path="ch-MVS.html"><a href="ch-MVS.html#estimation-time"><i class="fa fa-check"></i>Estimation time</a></li>
+<li class="chapter" data-level="" data-path="ch-MVS.html"><a href="ch-MVS.html#asymmetry"><i class="fa fa-check"></i>Visual search asymmetry</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ch-MVS.html"><a href="ch-MVS.html#discussion-1"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ch-RC.html"><a href="ch-RC.html"><i class="fa fa-check"></i><b>3</b> Evidence weightings in confidence judgments for detection and discrimination</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ch-RC.html"><a href="ch-RC.html#introduction-3"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="ch-RC.html"><a href="ch-RC.html#experiment-1-1"><i class="fa fa-check"></i><b>3.2</b> Experiment 1</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="ch-RC.html"><a href="ch-RC.html#methods"><i class="fa fa-check"></i><b>3.2.1</b> Methods</a></li>
+<li class="chapter" data-level="3.2.2" data-path="ch-RC.html"><a href="ch-RC.html#randomization-1"><i class="fa fa-check"></i><b>3.2.2</b> Randomization</a></li>
+<li class="chapter" data-level="3.2.3" data-path="ch-RC.html"><a href="ch-RC.html#analysis"><i class="fa fa-check"></i><b>3.2.3</b> Analysis</a></li>
+<li class="chapter" data-level="3.2.4" data-path="ch-RC.html"><a href="ch-RC.html#results-4"><i class="fa fa-check"></i><b>3.2.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="ch-RC.html"><a href="ch-RC.html#experiment-2-1"><i class="fa fa-check"></i><b>3.3</b> Experiment 2</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="ch-RC.html"><a href="ch-RC.html#methods-1"><i class="fa fa-check"></i><b>3.3.1</b> Methods</a></li>
+<li class="chapter" data-level="3.3.2" data-path="ch-RC.html"><a href="ch-RC.html#randomization-2"><i class="fa fa-check"></i><b>3.3.2</b> Randomization</a></li>
+<li class="chapter" data-level="3.3.3" data-path="ch-RC.html"><a href="ch-RC.html#results-5"><i class="fa fa-check"></i><b>3.3.3</b> Results</a></li>
+<li class="chapter" data-level="3.3.4" data-path="ch-RC.html"><a href="ch-RC.html#detection-signal-trials-1"><i class="fa fa-check"></i><b>3.3.4</b> Detection signal trials</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="ch-RC.html"><a href="ch-RC.html#experiment-3"><i class="fa fa-check"></i><b>3.4</b> Experiment 3</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="ch-RC.html"><a href="ch-RC.html#methods-2"><i class="fa fa-check"></i><b>3.4.1</b> Methods</a></li>
+<li class="chapter" data-level="3.4.2" data-path="ch-RC.html"><a href="ch-RC.html#results-6"><i class="fa fa-check"></i><b>3.4.2</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="ch-RC.html"><a href="ch-RC.html#discussion-2"><i class="fa fa-check"></i><b>3.5</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ch-fMRI.html"><a href="ch-fMRI.html"><i class="fa fa-check"></i><b>4</b> Distinct neural contributions to metacognition for detecting (but not discriminating) visual stimuli</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ch-fMRI.html"><a href="ch-fMRI.html#introduction-4"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="ch-fMRI.html"><a href="ch-fMRI.html#methods-and-materials"><i class="fa fa-check"></i><b>4.2</b> Methods and Materials</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="ch-fMRI.html"><a href="ch-fMRI.html#participants-7"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="ch-fMRI.html"><a href="ch-fMRI.html#design-and-procedure"><i class="fa fa-check"></i><b>4.2.2</b> Design and procedure</a></li>
+<li class="chapter" data-level="4.2.3" data-path="ch-fMRI.html"><a href="ch-fMRI.html#scanning-parameters"><i class="fa fa-check"></i><b>4.2.3</b> Scanning parameters</a></li>
+<li class="chapter" data-level="4.2.4" data-path="ch-fMRI.html"><a href="ch-fMRI.html#analysis-1"><i class="fa fa-check"></i><b>4.2.4</b> Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="ch-fMRI.html"><a href="ch-fMRI.html#results-7"><i class="fa fa-check"></i><b>4.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="ch-fMRI.html"><a href="ch-fMRI.html#behavioural-results"><i class="fa fa-check"></i><b>4.3.1</b> Behavioural results</a></li>
+<li class="chapter" data-level="4.3.2" data-path="ch-fMRI.html"><a href="ch-fMRI.html#imaging-results"><i class="fa fa-check"></i><b>4.3.2</b> Imaging results</a></li>
+<li class="chapter" data-level="4.3.3" data-path="ch-fMRI.html"><a href="ch-fMRI.html#computational-models"><i class="fa fa-check"></i><b>4.3.3</b> Computational models</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="ch-fMRI.html"><a href="ch-fMRI.html#discussion-3"><i class="fa fa-check"></i><b>4.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html"><i class="fa fa-check"></i><b>5</b> Metacognitive asymmetries in visual perception</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#introduction-5"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#methods-3"><i class="fa fa-check"></i><b>5.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#participants-8"><i class="fa fa-check"></i><b>5.2.1</b> Participants</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#procedure-4"><i class="fa fa-check"></i><b>5.2.2</b> Procedure</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#data-analysis-1"><i class="fa fa-check"></i><b>5.2.3</b> Data analysis</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#analysis-plan"><i class="fa fa-check"></i><b>5.2.4</b> Dependent variables and analysis plan</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#statistical-power"><i class="fa fa-check"></i><b>5.2.5</b> Statistical power</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#data-availability"><i class="fa fa-check"></i><b>5.3</b> Data availability</a></li>
+<li class="chapter" data-level="5.4" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#code-availability"><i class="fa fa-check"></i><b>5.4</b> Code availability</a></li>
+<li class="chapter" data-level="5.5" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#deviations"><i class="fa fa-check"></i><b>5.5</b> Deviations from pre-registration</a></li>
+<li class="chapter" data-level="5.6" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#results-8"><i class="fa fa-check"></i><b>5.6</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-1-q-vs.-o"><i class="fa fa-check"></i><b>5.6.1</b> Experiment 1: <em>Q</em> vs. <em>O</em></a></li>
+<li class="chapter" data-level="5.6.2" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-2-c-vs.-o"><i class="fa fa-check"></i><b>5.6.2</b> Experiment 2: C vs. O</a></li>
+<li class="chapter" data-level="5.6.3" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-3-tilted-vs.-vertical-lines"><i class="fa fa-check"></i><b>5.6.3</b> Experiment 3: tilted vs. vertical lines</a></li>
+<li class="chapter" data-level="5.6.4" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-4-curved-vs.-straight-lines"><i class="fa fa-check"></i><b>5.6.4</b> Experiment 4: curved vs. straight lines</a></li>
+<li class="chapter" data-level="5.6.5" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-5-upward-tilted-vs.-downward-tilted-cubes"><i class="fa fa-check"></i><b>5.6.5</b> Experiment 5: upward-tilted vs. downward-tilted cubes</a></li>
+<li class="chapter" data-level="5.6.6" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-6-flipped-vs.-normal-letters"><i class="fa fa-check"></i><b>5.6.6</b> Experiment 6: flipped vs. normal letters</a></li>
+<li class="chapter" data-level="5.6.7" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#asymmetry-summary"><i class="fa fa-check"></i><b>5.6.7</b> Experiments 1-6: summary</a></li>
+<li class="chapter" data-level="5.6.8" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#experiment-7-exploratory-grating-vs.-noise"><i class="fa fa-check"></i><b>5.6.8</b> Experiment 7 (exploratory): grating vs. noise</a></li>
+<li class="chapter" data-level="5.6.9" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#exploratory-analysis"><i class="fa fa-check"></i><b>5.6.9</b> Exploratory analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#discussion-4"><i class="fa fa-check"></i><b>5.7</b> Discussion</a></li>
+<li class="chapter" data-level="5.8" data-path="ch-asymmetry.html"><a href="ch-asymmetry.html#conclusion-1"><i class="fa fa-check"></i><b>5.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i>General Discussion</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#didnotfind"><i class="fa fa-check"></i>What I didn’t find</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-1-no-correlation-with-explicit-metacognition"><i class="fa fa-check"></i>Chapter 1: no correlation with explicit metacognition</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-3-no-effect-of-confidence-in-signal-presence"><i class="fa fa-check"></i>Chapter 3: no effect of confidence in signal presence</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-4-only-minor-differences-in-brain-activity-between-inference-about-absence-and-presence"><i class="fa fa-check"></i>Chapter 4: only minor differences in brain activity between inference about absence and presence</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#chapter-5-no-metacognitive-asymmetry-between-default-complying-and-default-violating-signals"><i class="fa fa-check"></i>Chapter 5: no metacognitive asymmetry between default-complying and default-violating signals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#withoutselfmodel"><i class="fa fa-check"></i>Inference about absence without self-modelling</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#patch"><i class="fa fa-check"></i>Patch-leaving in foraging</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#absenceperception"><i class="fa fa-check"></i>Direct perception</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#future-directions"><i class="fa fa-check"></i>Future directions</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#failures"><i class="fa fa-check"></i>Failures of a self-model</a></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#inference-about-asbence-in-multi-dimensional-and-hierarchical-representational-spaces"><i class="fa fa-check"></i>Inference about asbence in multi-dimensional and hierarchical representational spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-discussion.html"><a href="general-discussion.html#conclusion-2"><i class="fa fa-check"></i>Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="app1-SDT.html"><a href="app1-SDT.html"><i class="fa fa-check"></i><b>A</b> Signal Detection Theory</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="app1-SDT.html"><a href="app1-SDT.html#app1-ROC"><i class="fa fa-check"></i><b>A.1</b> ROC and zROC curves</a></li>
+<li class="chapter" data-level="A.2" data-path="app1-SDT.html"><a href="app1-SDT.html#app1-uvSDT"><i class="fa fa-check"></i><b>A.2</b> Unequal-variance (uv) SDT</a></li>
+<li class="chapter" data-level="A.3" data-path="app1-SDT.html"><a href="app1-SDT.html#app1-mc"><i class="fa fa-check"></i><b>A.3</b> SDT Measures for Metacognition</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="app1-RT.html"><a href="app1-RT.html"><i class="fa fa-check"></i><b>B</b> Supp. materials for ch. 1</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="app1-RT.html"><a href="app1-RT.html#effect-of-rt-based-trial-exclusion"><i class="fa fa-check"></i><b>B.1</b> Effect of RT-based trial exclusion</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="app1-RT.html"><a href="app1-RT.html#experiment-1-2"><i class="fa fa-check"></i><b>B.1.1</b> Experiment 1</a></li>
+<li class="chapter" data-level="B.1.2" data-path="app1-RT.html"><a href="app1-RT.html#experiment-2-2"><i class="fa fa-check"></i><b>B.1.2</b> Experiment 2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="supp.-materials-for-ch.-2.html"><a href="supp.-materials-for-ch.-2.html"><i class="fa fa-check"></i><b>C</b> Supp. materials for ch. 2</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="supp.-materials-for-ch.-2.html"><a href="supp.-materials-for-ch.-2.html#app2-bonus"><i class="fa fa-check"></i><b>C.1</b> Bonus structure</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="appRC-everything.html"><a href="appRC-everything.html"><i class="fa fa-check"></i><b>D</b> Supp. materials for ch. 3</a>
+<ul>
+<li class="chapter" data-level="D.1" data-path="appRC-everything.html"><a href="appRC-everything.html#additional-analyses-exp.-1"><i class="fa fa-check"></i><b>D.1</b> Additional analyses: Exp. 1</a>
+<ul>
+<li class="chapter" data-level="D.1.1" data-path="appRC-everything.html"><a href="appRC-everything.html#appRC-asymmetries1"><i class="fa fa-check"></i><b>D.1.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.1.2" data-path="appRC-everything.html"><a href="appRC-everything.html#zroc-curves"><i class="fa fa-check"></i><b>D.1.2</b> zROC curves</a></li>
+<li class="chapter" data-level="D.1.3" data-path="appRC-everything.html"><a href="appRC-everything.html#confidence-response-time-alignment"><i class="fa fa-check"></i><b>D.1.3</b> Confidence response-time alignment</a></li>
+<li class="chapter" data-level="D.1.4" data-path="appRC-everything.html"><a href="appRC-everything.html#global-metacognitive-estimates"><i class="fa fa-check"></i><b>D.1.4</b> Global metacognitive estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="D.2" data-path="appRC-everything.html"><a href="appRC-everything.html#additional-analyses-exp.-2"><i class="fa fa-check"></i><b>D.2</b> Additional analyses: Exp. 2</a>
+<ul>
+<li class="chapter" data-level="D.2.1" data-path="appRC-everything.html"><a href="appRC-everything.html#appRC-asymmetries2"><i class="fa fa-check"></i><b>D.2.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.2.2" data-path="appRC-everything.html"><a href="appRC-everything.html#zroc-curves-1"><i class="fa fa-check"></i><b>D.2.2</b> zROC curves</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="appRC-everything.html"><a href="appRC-everything.html#additional-analyses-exp.-3"><i class="fa fa-check"></i><b>D.3</b> Additional analyses: Exp. 3</a>
+<ul>
+<li class="chapter" data-level="D.3.1" data-path="appRC-everything.html"><a href="appRC-everything.html#appRC-asymmetries3"><i class="fa fa-check"></i><b>D.3.1</b> Response time, confidence, and metacognitive sensitivity differences</a></li>
+<li class="chapter" data-level="D.3.2" data-path="appRC-everything.html"><a href="appRC-everything.html#appRC-standardonly"><i class="fa fa-check"></i><b>D.3.2</b> Reverse correlation analysis of standard trials only</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="appRC-everything.html"><a href="appRC-everything.html#appRC-PDRC"><i class="fa fa-check"></i><b>D.4</b> Pseudo-discrimination analysis</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="appRC-everything.html"><a href="appRC-everything.html#exp.-1"><i class="fa fa-check"></i><b>D.4.1</b> Exp. 1</a></li>
+<li class="chapter" data-level="D.4.2" data-path="appRC-everything.html"><a href="appRC-everything.html#exp.-2"><i class="fa fa-check"></i><b>D.4.2</b> Exp. 2</a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="appRC-everything.html"><a href="appRC-everything.html#app2-simulation"><i class="fa fa-check"></i><b>D.5</b> Stimulus-dependent noise model</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="appRC-everything.html"><a href="appRC-everything.html#discrimination"><i class="fa fa-check"></i><b>D.5.1</b> Discrimination</a></li>
+<li class="chapter" data-level="D.5.2" data-path="appRC-everything.html"><a href="appRC-everything.html#detection-2"><i class="fa fa-check"></i><b>D.5.2</b> Detection</a></li>
+<li class="chapter" data-level="D.5.3" data-path="appRC-everything.html"><a href="appRC-everything.html#effects-of-evidence-on-decision-and-confidence-exp.-2-and-3"><i class="fa fa-check"></i><b>D.5.3</b> Effects of evidence on decision and confidence: Exp. 2 and 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html"><i class="fa fa-check"></i><b>E</b> Supp. materials for ch. 4</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-buttonpresses"><i class="fa fa-check"></i><b>E.1</b> Confidence button presses</a></li>
+<li class="chapter" data-level="E.2" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-zROC"><i class="fa fa-check"></i><b>E.2</b> zROC curves</a></li>
+<li class="chapter" data-level="E.3" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-GC-DM"><i class="fa fa-check"></i><b>E.3</b> Global confidence design matrix</a></li>
+<li class="chapter" data-level="E.4" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-ROIconf"><i class="fa fa-check"></i><b>E.4</b> Effect of confidence in our pre-specified ROIs</a></li>
+<li class="chapter" data-level="E.5" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-varianceRat"><i class="fa fa-check"></i><b>E.5</b> SDT variance ratio correlation with the quadratic confidence effect</a></li>
+<li class="chapter" data-level="E.6" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-efficiency"><i class="fa fa-check"></i><b>E.6</b> Correlation of metacognitive efficiency with linear and quadratic confidence effects</a></li>
+<li class="chapter" data-level="E.7" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-cross"><i class="fa fa-check"></i><b>E.7</b> Confidence-decision cross classification</a></li>
+<li class="chapter" data-level="E.8" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-SDT"><i class="fa fa-check"></i><b>E.8</b> Static Signal Detection Theory</a>
+<ul>
+<li class="chapter" data-level="E.8.1" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#discrimination-1"><i class="fa fa-check"></i><b>E.8.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.8.2" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#detection-3"><i class="fa fa-check"></i><b>E.8.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="E.9" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-Dynamic"><i class="fa fa-check"></i><b>E.9</b> Dynamic Criterion</a>
+<ul>
+<li class="chapter" data-level="E.9.1" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#discrimination-2"><i class="fa fa-check"></i><b>E.9.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.9.2" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#detection-4"><i class="fa fa-check"></i><b>E.9.2</b> Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="E.10" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#app3-Monitoring"><i class="fa fa-check"></i><b>E.10</b> Attention Monitoring</a>
+<ul>
+<li class="chapter" data-level="E.10.1" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#discrimination-3"><i class="fa fa-check"></i><b>E.10.1</b> Discrimination</a></li>
+<li class="chapter" data-level="E.10.2" data-path="supp.-materials-for-ch.-4.html"><a href="supp.-materials-for-ch.-4.html#detection-5"><i class="fa fa-check"></i><b>E.10.2</b> Detection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="supp.-materials-for-ch.-5.html"><a href="supp.-materials-for-ch.-5.html"><i class="fa fa-check"></i><b>F</b> Supp. materials for ch. 5</a>
+<ul>
+<li class="chapter" data-level="F.1" data-path="supp.-materials-for-ch.-5.html"><a href="supp.-materials-for-ch.-5.html#robustness-region"><i class="fa fa-check"></i><b>F.1</b> Robustness Region</a></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="reproducibility-receipt.html"><a href="reproducibility-receipt.html"><i class="fa fa-check"></i><b>G</b> Reproducibility receipt</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Self-Modelling in Inference about Absence</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ch-termination" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Efficient search termination without task experience: the role of second-order knowledge about visual search</h1>
+<div id="matan-mazor-stephen-m.-fleming" class="section level4 unnumbered">
+<h4>Matan Mazor &amp; Stephen M. Fleming</h4>
+<p>As a general rule, if it is easy to detect a target in a visual scene, it is also easy to detect its absence. To account for this, models of visual search explain search termination as resulting either from counterfactual reasoning over second-order representations of search efficiency, automatic extraction of ensemble statistics of a display, or heuristic adjustment of a search termination strategy based on previous trials. Traditional few-subjects/many-trials lab-based experiments render it impossible to disentangle the unique contribution of these different processes to absence pop-out - the immediate recognition that a feature is missing from a display. In two pre-registered large-scale online experiments (N1=1187, N2=887) we show that search termination times are already aligned with target identification times in the very first trials of the experiment, before any experience with target presence. Exploratory analysis reveals that second-order knowledge about search efficiency can be used to guide decisions about search termination even if it is not available for explicit report. We conclude that for basic stimulus properties, efficient inference about absence is independent of task experience, and relies instead on implicit second-order knowledge.</p>
+</div>
+<div id="introduction-1" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Introduction</h2>
+<p>Searching for the only blue letter in an array of yellow letters is easy, but searching for the only blue X in an array of yellow Xs and blue Ts is much harder <span class="citation">(A. M. Treisman &amp; Gelade, 1980)</span>. This difference manifests in the time taken to find the target letter, but also in the time taken to conclude that the target letter is missing. In other words, easier searches not only make it easier to detect the presence of a target, but also to infer its absence. Differences in the speed of detecting the presence of a target have been attributed to pre-attentional mechanisms <span class="citation">(A. M. Treisman &amp; Gelade, 1980)</span> and guiding signals <span class="citation">(J. M. Wolfe, 2021; J. M. Wolfe &amp; Gray, 2007)</span> that can sometimes make the target item ‘pop out’ immediately without any attentional effort. In target-absent trials, however, there is nothing in the display to pop out. This raises a fundamental question: what makes some decisions about target absence easier than others?</p>
+<p>Models of search termination offer three classes of answers to this question, based on counterfactual reasoning, ensemble perception, and task heuristics. According to counterfactual models, decisions about target absence are guided by prior beliefs about search efficiency (“If it were present, I would have found the red book by now”). These comprise beliefs about regularities in the environment (“it it were present, the book would have been on this shelf”), and second-order beliefs about one’s own perception and attention (“the red cover would have immediately drawn my attention”). In recent versions of the Guided Search model <span class="citation">(J. M. Wolfe, 2012, 2021)</span>, for example, search termination is triggered by a noisy quitting signal accumulator reaching a <em>quitting threshold</em>, which can be adapted to maximize long-time search efficiency, and be affected by prior second-order beliefs about the effects of set size and crowding on search difficulty <span class="citation">(J. M. Wolfe, 2012)</span>. Similarly, in Competitive Guided Search, the probability of terminating a search is a function of several factors, including a free parameter that indexes counterfactual beliefs about finding a target, had it been present <span class="citation">(Moran, Zehetleitner, Müller, &amp; Usher, 2013)</span>. Finally, in a fixation-based model of visual search, the number of items that are concurrently scanned within a single fixation (the <em>functional visual field</em>) depends on the expected difficulty of finding a hypothetical target: with more items for easy searches and fewer items for more difficult ones <span class="citation">(Hulleman &amp; Olivers, 2017)</span>.</p>
+<p>Ensemble perception accounts of visual search postulate that some global properties of a display can be extracted automatically and immediately, and that in some cases these global properties are sufficient to conclude that a target is absent. For example, according to Feature Integration Theory, pre-attentive activation in <em>feature maps</em> can provide participants with information about the presence or absence of a feature in the display <span class="citation">(A. M. Treisman &amp; Gelade, 1980)</span>. The absence of a relevant feature is then sufficient to make an immediate ‘target absent’ decision, without processing any individual stimulus.</p>
+<p>Finally, heuristic-based models suggest that quitting parameters are acquired by participants as they perform a task, sometimes by following very simple rules. For example, in one model, an internal <em>activation threshold</em> decreases following incorrect and increases following correct ‘no’ responses <span class="citation">(Chun &amp; Wolfe, 1996)</span>. A higher activation threshold results in the scanning of less distractors, giving rise to shorter search times for easier searches. This simple heuristic provides an excellent fit to data from a visual search task with hundreds of trials, and does so without requiring that subjects hold any prior knowledge or expectations about search efficiency.</p>
+<p>In traditional visual search experiments, where participants perform hundreds of trials of similar searches, it is impossible to disentangle the contributions of these three putative mechanisms to search termination. Yet, the three accounts make different predictions for the earliest trials of a visual search experiment, where participants encounter the stimuli for the first time. In these trials, quitting time cannot reflect the adaptive adjustment of a threshold based on previous trials, or the statistical learning of regularities in the experiment. Instead, efficient search termination without task experience must rely on an immediate perception of ensemble properties of the display, prior second-order knowledge about one’s own search efficiency, or a combination of both.</p>
+<!-- . This makes search time in the first few trials of a task a critical window into participants’ metacognitive knowledge about attention and visual search. Furthermore, participants' ability to learn from positive examples (target-present trials), and their ability to generalize their knowledge across stimulus types and displays, offers an opportunity to study the structure of this simplified metacognitive knowledge, its building blocks, and the inductive biases that guide its acquisition. In this study, we use target-absent trials in visual search to ask what participants know about their spatial attention before engaging with the visual search task, and how this knowledge is built and expanded based on experience. -->
+<p>In two pre-registered experiments we focus on feature search for colour and shape. Focusing on the first four trials of the task, we ask whether prior experience with the task and stimuli is necessary for efficient search termination in feature searches. Unlike typical visual search experiments that comprise hundreds or thousands of trials, here we collect only a handful of trials from a large pool of online participants. This unusual design allows us to reliably identify search time patterns in the first trials of the experiment. By making sure that the first displays do not include the target stimulus, we are able to ask what knowledge is available to participants about their expected search efficiency prior to engaging with the task.</p>
+<p>To anticipate our results, we find that efficient search termination for single features does not depend on task experience. In an exploratory analysis on a subset of participants, we further show that efficient search termination is also independent of explicit metacognitive knowledge about the task. We argue that without second-order knowledge about one’s own perception and attention, ensemble perception alone is not sufficient for efficient search termination, and interpret our results as revealing a role for implicit second-order knowledge of search efficiency in search termination.</p>
+<!-- We dub this approach *zero-shot search termination* in a tribute to the study of 'zero-shot learning' in machine learning: the ability to classify unseen categories of stimuli, based on generalizable knowledge from other categories [@xian2017zero]. Efficient (i.e., fast and accurate) quitting in target-absent trials prior to any target-present trials would indicate that knowledge about the salience of a divergent color or shape is available at some form in the cognitive system, and that this knowledge can flexibly be put to use for counterfactual reasoning in the process of inference about absence. Conversely, inefficient search in these first trials would mean that positive experience is necessary for this knowledge to be acquired, or to be expressed.  -->
+<!-- In the experiments outlines below, target-present trials are used as learning samples (where subjects observe how efficiently they can find a target), and target-absent trials are used as test trials (where subjects terminate the search when they believe a target would have been found). By testing participants' prior knowledge state, and their ability to learn and generalize from a few positive samples, we lay the groundwork for building a model of the Visual Search Schema. -->
+</div>
+<div id="experiment-1" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Experiment 1</h2>
+<p>In Experiment 1, we examined search termination in the case of colour search. When searching for a deviant colour, the number of distractors has virtually no effect on search time <span class="citation">(<em>colour pop-out</em>; e.g., D’Zmura, 1991)</span>, for both ‘target present’ and ‘target absent’ responses. Here we asked whether efficient quitting in colour search (<em>color absence pop-out</em>) is dependent on task experience. A detailed pre-registration document for Experiment 1 can be accessed at <a href="osf.io/yh82v/">osf.io/yh82v/</a>.</p>
+<div id="participants" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Participants</h3>
+<p>The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 1187 Participants (median reported age: 33; range: [18-81]) were recruited via Prolific, and gave their informed consent prior to their participation. They were selected based on their acceptance rate (&gt;95%) and for being native English speakers. Following our pre-registration, we collected data until we reached 320 included participants for each of our pre-registered hypotheses (after applying our pre-registered exclusion criteria). The entire experiment took around 3 minutes to complete (median completion time: 3.19 minutes). Participants were paid £0.38 for their participation, equivalent to an hourly wage of £ 7.14.</p>
+</div>
+<div id="procedure" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Procedure</h3>
+<p>A static version of Experiment 1 can be accessed on <a href="matanmazor.github.io/termination/experiments/demos/exp1/">matanmazor.github.io/termination</a>. Participants were first instructed about the visual search task. Specifically, that their task is to report, as accurately and quickly as possible, whether a target stimulus was present (press ‘J’) or absent (press ‘F’). Then, practice trials were delivered, in which the target stimulus was a rotated <em>T</em>, and distractors rotated <em>L</em>s. The purpose of the practice trials was to familiarize participants with the structure of the task. For these practice trials the number of items was always 3. Practice trials were delivered in short blocks of 6 trials each, and the main part of the experiment started only once participants responded correctly on at least five trials in a block (see Figure <a href="ch-termination.html#fig:termination-design">1.1</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:termination-design"></span>
+<img src="figure/termination/designExp1.png" alt="Experimental design. Top panel: each visual search trial started with a screen indicating the target stimulus. The search display remained visible until a response was recorded. To motivate accurate responses, the feedback screen remained visible for one second following correct responses and for four seconds following errors. Middle panel: after reading the instructions, participants practiced the visual search task in blocks of 6 trials, until they had reached an accuracy level of 0.83 correct or higher (at most one error in a block of 6 trials). Bottom panel: the main part of the experiment comprised 12 trials only, in which the target was a red dot. Unbeknown to subjects, only trials 5-8 (Block 2) were target-present trials, and the remaining trials were target-absent trials. Each 4-trial block followed a 2 by 2 design, with factors being set size (4 or 8) and distractor type (color or conjunction; blue dots only or blue dots and red squares, respectively)." width="60%" />
+<p class="caption">
+Figure 1.1: Experimental design. Top panel: each visual search trial started with a screen indicating the target stimulus. The search display remained visible until a response was recorded. To motivate accurate responses, the feedback screen remained visible for one second following correct responses and for four seconds following errors. Middle panel: after reading the instructions, participants practiced the visual search task in blocks of 6 trials, until they had reached an accuracy level of 0.83 correct or higher (at most one error in a block of 6 trials). Bottom panel: the main part of the experiment comprised 12 trials only, in which the target was a red dot. Unbeknown to subjects, only trials 5-8 (Block 2) were target-present trials, and the remaining trials were target-absent trials. Each 4-trial block followed a 2 by 2 design, with factors being set size (4 or 8) and distractor type (color or conjunction; blue dots only or blue dots and red squares, respectively).
+</p>
+</div>
+<p>In the main part of the experiment, participants searched for a red dot among blue dots or a mixed array of blue dots and red squares. Set size was set to 4 or 8, resulting in a 2-by-2 design (search type: color or color<span class="math inline">\(\times\)</span>shape, by set size: 4 or 8). Critically, and unbeknown to subjects, the first four trials were always target-absent trials (one of each set-size <span class="math inline">\(\times\)</span> search-type combination), presented in randomized order. These trials were followed by the four corresponding target-present trials, presented in randomized order. The final four trials were again target-absent trials, presented in randomized order.</p>
+</div>
+<div id="randomization" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Randomization</h3>
+<p>The order and timing of experimental events was determined pseudo-randomly by the Mersenne Twister pseudorandom number generator, initialized in a way that ensures registration time-locking <span class="citation">(Mazor, Mazor, &amp; Mukamel, 2019)</span>.</p>
+</div>
+<div id="data-analysis" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Data analysis</h3>
+<div id="rejection-criteria" class="section level4" number="1.2.4.1">
+<h4><span class="header-section-number">1.2.4.1</span> Rejection criteria</h4>
+<p>Participants were excluded for making more than one error in the main part of the experiment, or for having extremely fast or slow reaction times in one or more of the tasks (below 250 milliseconds or above 5 seconds in more than 25% of the trials).</p>
+<p>Error trials, and trials with response times below 250 milliseconds or above 1 second were excluded from the response-time analysis. All pre-registered analyses without RT-based exclusion are reported in appendix <a href="app1-RT.html#app1-RT">B</a>.</p>
+</div>
+<div id="data-preprocessing" class="section level4" number="1.2.4.2">
+<h4><span class="header-section-number">1.2.4.2</span> Data preprocessing</h4>
+<p>To control for within-block trial order effects, a linear regression model was fitted separately for each block and participant, predicting search time as a function of trial serial order within the block (<span class="math inline">\(RT \sim \beta_0+\beta_1i\)</span>, with <span class="math inline">\(i\)</span> denoting the mean-centered serial position within a block). Search times were corrected by subtracting the product of the slope and the mean-centered serial position, in a block-wise manner.</p>
+<p>Subject-wise search slopes were then extracted for each combination of search type (color or conjunction) and block number by fitting a linear regression model to the reaction time data with one intercept and one set-size term.</p>
+</div>
+<div id="hypotheses-and-analysis-plan" class="section level4" number="1.2.4.3">
+<h4><span class="header-section-number">1.2.4.3</span> Hypotheses and analysis plan</h4>
+<p>Experiment 1 was designed to test several hypotheses about the contribution of metacognitive knowledge to search termination, the state of this knowledge prior to engaging with the task, and the effect of experience on this metacognitive knowledge. The specifics of our pre-registered analysis can be accessed in the following link: <a href="https://osf.io/ea385">https://osf.io/ea385</a>. We outline some possible search time patterns and their pre-registered interpretation in Fig. <a href="ch-termination.html#fig:termination-models">1.2</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:termination-models"></span>
+<img src="figure/termination/models.png" alt="Visualization of Hypotheses. Top left: typical search times in visual search experiments with many trials (where TP = Target Present responses; TA = Target Absent responses). Set size (x axis) affects search time in conjunction search, but much less so in color search. However, it is unclear whether this pattern also holds in the first target-absent trials in an experiment. Different models make different predictions about target-absent search times in the first block of the experiment. Top right: one possibility is that the same qualitative pattern will be observed in our design, with an overall decrease in response time as a function of trial number. This would suggest that the second-order knowledge necessary to support efficient inference about absence was already in place before engaging with the task. Bottom left: an alternative pattern is that the same qualitative pattern will be observed for blocks 2 and 3, but not in block 1. This would suggest that for inference about absence to be efficient, participants had to first experience some target-present trials. Bottom right: alternatively, some degree of second-order knowledge may be available prior to engaging with the task, with some being acquired by subsequent exposure to target-present trials. This would manifest as different slopes for conjunction and color searches in blocks 1 and a learning effect for color search between blocks 1 and 3." width="100%" />
+<p class="caption">
+Figure 1.2: Visualization of Hypotheses. Top left: typical search times in visual search experiments with many trials (where TP = Target Present responses; TA = Target Absent responses). Set size (x axis) affects search time in conjunction search, but much less so in color search. However, it is unclear whether this pattern also holds in the first target-absent trials in an experiment. Different models make different predictions about target-absent search times in the first block of the experiment. Top right: one possibility is that the same qualitative pattern will be observed in our design, with an overall decrease in response time as a function of trial number. This would suggest that the second-order knowledge necessary to support efficient inference about absence was already in place before engaging with the task. Bottom left: an alternative pattern is that the same qualitative pattern will be observed for blocks 2 and 3, but not in block 1. This would suggest that for inference about absence to be efficient, participants had to first experience some target-present trials. Bottom right: alternatively, some degree of second-order knowledge may be available prior to engaging with the task, with some being acquired by subsequent exposure to target-present trials. This would manifest as different slopes for conjunction and color searches in blocks 1 and a learning effect for color search between blocks 1 and 3.
+</p>
+</div>
+<p>Analysis comprised a positive control based on target-present trials, a test of the presence of a pop-out effect for target-absent color search in block 1, and a test for the change in slope for target-absent color search between blocks 1 and 3. All hypotheses were tested using a within-subject t-test, with a significance level of 0.05.
+Given the fact that we only have one trial per cell, one excluded trial is sufficient to make some hypotheses impossible to test on a given participant. For this reason, for each hypothesis separately, participants were included only if all necessary trials met our inclusion criteria. This meant that some hypotheses were tested on different subsets of participants.</p>
+</div>
+<div id="transparency-and-openness" class="section level4" number="1.2.4.4">
+<h4><span class="header-section-number">1.2.4.4</span> Transparency and Openness</h4>
+<p>We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. We used R [Version 4.0.5; <span class="citation">R Core Team (2019)</span>] and the R-packages <em>BayesFactor</em> [Version 0.9.12.4.2; <span class="citation">Richard D. Morey &amp; Rouder (2018)</span>], <em>cowplot</em> [Version 1.1.1; <span class="citation">Wilke (2019)</span>], <em>dplyr</em> [Version 1.0.7; <span class="citation">Wickham, François, Henry, &amp; Müller (2020)</span>], <em>ggplot2</em> [Version 3.3.5; <span class="citation">Wickham (2016)</span>], <em>jsonlite</em> [Version 1.7.2; <span class="citation">Ooms (2014)</span>], <em>lsr</em> [Version 0.5; <span class="citation">Navarro (2015)</span>], <em>MESS</em> [Version 0.5.7; <span class="citation">Ekstrøm (2019)</span>], <em>papaja</em> [Version 0.1.0.9997; <span class="citation">Aust &amp; Barth (2020)</span>], <em>pwr</em> [Version 1.3.0; <span class="citation">Champely (2020)</span>], <em>reticulate</em> [Version 1.20; <span class="citation">Ushey, Allaire, &amp; Tang (2020)</span>], and <em>tidyr</em> [Version 1.1.3; <span class="citation">Wickham &amp; Henry (2020)</span>] for all our analyses. A detailed pre-registration document for Experiment 1 can be accessed at <a href="osf.io/yh82v/">osf.io/yh82v/</a>. All analysis scripts and anonymized data are available at <a href="github.com/matanmazor/termination">github.com/matanmazor/termination</a>.</p>
+</div>
+</div>
+<div id="results" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Results</h3>
+<p>Overall mean accuracy was 0.95 (standard deviation =0.06). Median reaction time was 623.98 ms (median absolute deviation = 127.37). In all further analyses, only correct trials with response times between 250 and 1000 ms are included.</p>
+<p><em>Hypothesis 1 (positive control)</em>: Search times in block 2 (target-present) followed the expected pattern, with a steep slope for conjunction search (<span class="math inline">\(M = 12.52\)</span>, 95% CI <span class="math inline">\([10.08\)</span>, <span class="math inline">\(14.95]\)</span>) and a shallow slope for color search (<span class="math inline">\(M = 3.91\)</span>, 95% CI <span class="math inline">\([2.13\)</span>, <span class="math inline">\(5.70]\)</span>; see middle panel in Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>A). Color search slope was significantly lower than 10 ms/item and thus met our criterion for being considered ‘pop-out’ (<span class="math inline">\(t(961) = -6.69\)</span>, <span class="math inline">\(p &lt; .001\)</span>). Furthermore, the difference between the slopes was significant (<span class="math inline">\(t(749) = 6.50\)</span>, <span class="math inline">\(p &lt; .001\)</span>). This positive control served to validate our method of using two trials per participant for obtaining reliable group-level estimates of search slopes.</p>
+<p><em>Hypothesis 2</em>: Our central focus was on results from block 1 (target-absent). Here participants didn’t yet have experience with searching for the red dot. Similar to the second block, conjunction search slope was steep (<span class="math inline">\(M = 18.41\)</span>, 95% CI <span class="math inline">\([14.95\)</span>, <span class="math inline">\(21.87]\)</span>). A clear pop-out effect for color absence was also evident (<span class="math inline">\(M = 0.15\)</span>, 95% CI <span class="math inline">\([-\infty\)</span>, <span class="math inline">\(2.31]\)</span>, <span class="math inline">\(t(886) = -7.51\)</span>, <span class="math inline">\(p &lt; .001\)</span>). Furthermore, the average search slope for color search in this first block was significantly different from that of the conjunction search (<span class="math inline">\(t(413) = 6.55\)</span>, <span class="math inline">\(p &lt; .001\)</span>; see leftmost panel in Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>A), indicating that a color-absence pop-out is already in place prior to direct task experience. This result is in line with the <em>prior-knowledge only</em> model (see Fig. <a href="ch-termination.html#fig:termination-models">1.2</a>), in which participants have valid expectations for efficient color search, prior to engaging with a task.</p>
+<p>Pre-registered hypotheses 3-5 were designed to test for a learning effect between blocks 1 and 3, before and after experience with observing a red target among blue distractors. Given the overwhelming pop-out effect for target-absent trials in block 1, not much room for additional learning remained. Indeed, results from these tests support a prior-knowledge only model.</p>
+<p><em>Hypothesis 3</em>: Like in the first block, in the third block color search complied with our criterion for ‘pop-out’ (<span class="math inline">\(M = 2.27\)</span>, 95% CI <span class="math inline">\([-\infty\)</span>, <span class="math inline">\(3.86]\)</span>, <span class="math inline">\(t(979) = -7.98\)</span>, <span class="math inline">\(p &lt; .001\)</span>), and was significantly different from the conjunction search slope (<span class="math inline">\(t(745) = 11.16\)</span>, <span class="math inline">\(p &lt; .001\)</span>; see rightmost panel in Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>A). This result is not surprising, given that a pop-out effect was already observed in block 1.</p>
+<p><em>Hypothesis 4</em>: To quantify the learning effect for color search, we directly contrasted the search slope for color search in blocks 1 and 3. We find no evidence for a learning effect (<span class="math inline">\(t(799) = -1.15\)</span>, <span class="math inline">\(p = .250\)</span>). Furthermore, a Bayesian t-test with a scaled Cauchy prior for effect sizes (r=0.707) provided strong evidence in favour of the absence of a learning effect (<span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 12.98\)</span>).</p>
+<p><em>Hypothesis 5</em>: In case of a learning effect for pop-out search, Hypothesis 5 was designed to test the specificity of this effect to color pop-out by computing an interaction between block number and search type. Given that no learning effect was observed, this test makes little sense. For completeness, we report that the change in slope between blocks 1 and 3 was similar for color and conjunction search (<span class="math inline">\(M = -3.58\)</span>, 95% CI <span class="math inline">\([-10.52\)</span>, <span class="math inline">\(3.36]\)</span>, <span class="math inline">\(t(320) = -1.01\)</span>, <span class="math inline">\(p = .311\)</span>).</p>
+
+<div class="figure"><span style="display:block;" id="fig:termination-resultsMain"></span>
+<img src="figure/termination/Exps1_2.png" alt="Main Results for Expeiments 1 (A) and 2 (B). Upper panel: median search time by distractor set size for the two search tasks across the three blocks (12 trials per participant). Correct responses only. Lower panel: accuracy as a function of block, set size and search type. Error bars represent the standard error of the median (estimated with bootstrapping). Significance stars correspond to the difference in slope between conjunction and feature search within a block. *: p&lt;0.5, * * : p&lt;0.01, * * * : p&lt;0.001" width="\textwidth" />
+<p class="caption">
+Figure 1.3: Main Results for Expeiments 1 (A) and 2 (B). Upper panel: median search time by distractor set size for the two search tasks across the three blocks (12 trials per participant). Correct responses only. Lower panel: accuracy as a function of block, set size and search type. Error bars represent the standard error of the median (estimated with bootstrapping). Significance stars correspond to the difference in slope between conjunction and feature search within a block. *: p&lt;0.5, * * : p&lt;0.01, * * * : p&lt;0.001
+</p>
+</div>
+</div>
+<div id="additional-analysis-first-trial-only" class="section level3" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> Additional analysis: first trial only</h3>
+<p>We considered the possibility that our results do not reflect true absence pop-out without task experience, but instead might reflect participants’ ability to rapidly adjust their termination times based on feedback from previous trials, even within the four trials of the first block. To rule out such within-block learning effects, we tested whether participants showed a color-absence pop-out effect on the very first trial of the experiment. To this end, we analyzed first trial response times as a function of search type (conjunction or color) and set-size. Since these first trials were slower overall (median RT in the first trial: 881.30 ms compared to 630.34 ms in the last trial), for this exploratory analysis we did not exclude trials based on response times.</p>
+<p>Even in this between-subject analysis, with only one trial per participant, we found a significant positive search slope for conjunction search (23.31 ms/item, <span class="math inline">\(p&lt;0.01\)</span>), but not for color search (-5.13 ms/item, <span class="math inline">\(p=.43\)</span>; note that this negative slope is not apparent in Fig. <a href="ch-termination.html#fig:termination-firstTrial">1.4</a>A because the figure presents median reaction times, rather than means). The difference in slopes between conjunction and color, quantified as the interaction between set size and search type in a two-way between-subject analysis of variance, was also significant (<span class="math inline">\(F(1, 1,041) = 6.74\)</span>, <span class="math inline">\(\mathit{MSE} = 466,761.60\)</span>, <span class="math inline">\(p = .010\)</span>, <span class="math inline">\(\hat{\eta}^2_G = .006\)</span>; see Fig. <a href="ch-termination.html#fig:termination-firstTrial">1.4</a>A). In other words, a color-absence pop-out was already detectable in the very first trial of the experiment.</p>
+
+<div class="figure"><span style="display:block;" id="fig:termination-firstTrial"></span>
+<img src="figure/termination/results_first_trials_with_stars.png" alt="Median search time by distractor set size for Experiments 1 and 2, looking at the first trial of each participant only. Same conventions as in Fig. 1.3." width="100%" />
+<p class="caption">
+Figure 1.4: Median search time by distractor set size for Experiments 1 and 2, looking at the first trial of each participant only. Same conventions as in Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="experiment-2" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Experiment 2</h2>
+<p>Experiment 1 provided unequivocal evidence that color-absence pop-out occurs prior to experiencing color pop-out in the context of the same task. Experiment 2 was designed to extend these findings to another stimulus feature that is also found to efficiently guide attention: shape. Unlike colour space, which spans three dimensions only, the space of possible shapes is relatively unconstrained such that having prior knowledge of the expected effect of different shapes on attention might require a richer mental model of attentional processes. Furthermore, colour is agreed to be a ‘guiding attribute of attention,’ while it is unclear which shape features guide attention <span class="citation">(J. M. Wolfe &amp; Horowitz, 2017)</span>. In this experiment we also included an additional control for prior experience with visual search tasks, and asked if knowledge about search efficiency is available for explicit metacognitive report.</p>
+<div id="participants-1" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Participants</h3>
+<p>The research complied with all relevant ethical regulations, and was approved by the Research Ethics Committee of University College London (study ID number 1260/003). 887 participants (median reported age: 33; range: [18-75]) were recruited via Prolific, and gave their informed consent prior to their participation. They were selected based on their acceptance rate (&gt;95%) and for being native English speakers. We collected data until we reached 320 included participants for hypotheses 1-4 (after applying our pre-registered exclusion criteria). The entire experiment took around 4 minutes to complete (median completion time in our pilot data: 3.93 minutes). Participants were paid £0.51 for their participation, equivalent to an hourly wage of £7.78.</p>
+</div>
+<div id="procedure-1" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Procedure</h3>
+<p>A static version of Experiment 2 can be accessed on <a href="matanmazor.github.io/termination/experiments/demos/exp1/">matanmazor.github.io/termination</a>. Experiment 2 was identical to Experiment 1 with the following exceptions. First, instead of color search trials, we included shape search trials, where the red dot target is present or absent in an array of red squares. Second, to minimize the similarity between conjunction and shape searches, conjunction trials included blue dots and red triangles as distractors. Third, to test participants’ explicit metacognition about their visual search behaviour, upon completing the main part of the task participants were presented with the four target-absent displays (shape and conjunction displays with 4 or 8 items), and were asked to sort them from fastest to slowest. Finally, participants reported whether they had participated in a similar experiment before, where they were asked to search for shapes on the screen. Participants who responded ‘yes’ were asked to tell us more about this previous experiment. This question was included in order to examine whether efficient target-absent search in trial 1 reflects prior experience with similar visual search experiments.</p>
+<p>Our pre-registered analysis plan for Experiment 2, including rejection criteria and data preprocessing, was identical to our analysis plan for Experiment 1, and can be accessed in the following link: <a href="https://osf.io/v6mnb">https://osf.io/v6mnb</a>.</p>
+</div>
+<div id="results-1" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Results</h3>
+<p>Overall mean accuracy was 0.96 (standard deviation =0.06). Median reaction time was 644.60 ms (median absolute deviation = 123.89). In all further analyses, only correct trials with response times between 250 and 1000 ms are included.</p>
+<p><em>Hypothesis 1 (positive control)</em>: Search times in block 2 (target-present) followed the expected pattern, with a steep slope for conjunction search (<span class="math inline">\(M = 15.08\)</span>, 95% CI <span class="math inline">\([12.34\)</span>, <span class="math inline">\(17.83]\)</span>) and a shallow slope for shape search (<span class="math inline">\(M = 5.84\)</span>, 95% CI <span class="math inline">\([3.90\)</span>, <span class="math inline">\(7.78]\)</span>; see middle panel of Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>B). The slope for shape search was significantly lower than 10 ms/item and thus met our criterion for being considered ‘pop-out’ (<span class="math inline">\(t(754) = -4.21\)</span>, <span class="math inline">\(p &lt; .001\)</span>). Furthermore, the difference between the slopes was significant (<span class="math inline">\(t(584) = 4.98\)</span>, <span class="math inline">\(p &lt; .001\)</span>).</p>
+<p><em>Hypothesis 2</em>: Our central focus was on results from block 1 (target-absent). Here participants didn’t yet have experience with finding the red dot. Similar to the second block, the slope for conjunction search was steep (<span class="math inline">\(M = 19.53\)</span>, 95% CI <span class="math inline">\([16.03\)</span>, <span class="math inline">\(23.04]\)</span>). The slope for shape search was numerically lower than 10 ms/item, but not significantly so (<span class="math inline">\(M = 8.03\)</span>, 95% CI <span class="math inline">\([-\infty\)</span>, <span class="math inline">\(10.50]\)</span>, <span class="math inline">\(t(608) = -1.31\)</span>, <span class="math inline">\(p = .095\)</span>). Still, the average search slope for shape search in this first block was significantly different from that of the conjunction search (<span class="math inline">\(t(326) = 2.77\)</span>, <span class="math inline">\(p = .006\)</span>; see leftmost panel of Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>B), indicating that a processing advantage for detecting the absence of a shape compared to the absence of shape-color conjunction was already in place before experience with target presence.</p>
+<p>Moreover, this processing advantage was not different from what is expected based on shape search slope in block 2 (target presence). A conservative estimate for the ratio between target absence and target presence search slopes is 2 <span class="citation">(J. M. Wolfe, 1998)</span>. Based on this ratio of 2 and the observed target-presence search slope of 6 ms/item, target absence search slope is expected to be 12 ms/item, or higher. Indeed, search slope for shape absence was not significantly different from, and numerically lower than, twice the search slope for shape presence as measured in block 2 (<span class="math inline">\(t(548) = -1.16\)</span>, <span class="math inline">\(p = .246\)</span>; <span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 10.66\)</span>). In other words, our failure to find a pop-out effect for shape absence was not due to participants being suboptimal in their quitting times, but because finding a red dot among red squares is truly more difficult than finding a red dot among blue dots.</p>
+<p><em>Hypothesis 3</em>: As in the first block, in the third block the slope for shape search was numerically lower than 10 ms/item, but not significantly so (<span class="math inline">\(M = 8.85\)</span>, 95% CI <span class="math inline">\([-\infty\)</span>, <span class="math inline">\(10.68]\)</span>, <span class="math inline">\(t(723) = -1.03\)</span>, <span class="math inline">\(p = .151\)</span>). Importantly, the slope for shape search in block 3 was significantly different from the slope for conjunction search (<span class="math inline">\(t(565) = 6.02\)</span>, <span class="math inline">\(p &lt; .001\)</span>) and not significantly different from twice the search slope for shape presence (<span class="math inline">\(t(653) = 1.04\)</span>, <span class="math inline">\(p = .299\)</span>; <span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 13.29\)</span>; see rightmost panel of Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>B).</p>
+<p><em>Hypothesis 4</em>: To quantify a potential learning effect for shape search between blocks 1 and 3, we directly contrasted the search slope for shape search in these two ‘target-absent’ blocks. We find no evidence for a learning effect (<span class="math inline">\(t(542) = -0.03\)</span>, <span class="math inline">\(p = .974\)</span>). Furthermore, a Bayesian t-test with a scaled Cauchy prior for effect sizes (r=0.707) provided strong evidence against a learning effect (<span class="math inline">\(\mathrm{BF}_{\textrm{01}} = 20.72\)</span>). Like in Experiment 1, these results are most consistent with a <em>prior-knowledge only</em> model (see Fig. <a href="ch-termination.html#fig:termination-models">1.2</a>), in which participants already know to expect that shape search should be easier than conjunction search, prior to having direct experience with target-present trials.</p>
+</div>
+<div id="additional-analyses" class="section level3" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Additional Analyses</h3>
+<div id="first-trial-only" class="section level4 unnumbered">
+<h4>First trial only</h4>
+<p>As in Exp. 1, here we also extended our pre-registered analysis with an exploratory between-subject analysis, focusing on the first trial of the experiment. Here too, we observed a significant positive search slope for conjunction search (43.65 ms/item, <span class="math inline">\(p&lt;0.001\)</span>), but not for shape search (9.80 ms/item, <span class="math inline">\(p=.40\)</span>). The difference in slopes between conjunction and shape, quantified as the interaction between set size and search type in a two-way betwee-subject analysis of variance, was significant (<span class="math inline">\(F(1, 781) = 4.25\)</span>, <span class="math inline">\(\mathit{MSE} = 209,989.78\)</span>, <span class="math inline">\(p = .040\)</span>, <span class="math inline">\(\hat{\eta}^2_G = .005\)</span>; see Fig. <a href="ch-termination.html#fig:termination-firstTrial">1.4</a>B). This result reveals that efficient recognition of shape absence is already detectable in the very first trial of the experiment.</p>
+</div>
+<div id="task-experience" class="section level4 unnumbered">
+<h4>Task experience</h4>
+<p>At the end of the experiment, participants were asked if they have ever participated in a similar experiment before, where they were asked to search for a target item. 796 out of 887 participants answered ‘no’ to this question. For those participants, a highly efficient search for a distinct shape in the first trials of the experiment, if found, cannot be due to prior experience of performing a visual search task with similar stimuli. Notably, however, participants who reported having no prior experience with a visual search task still showed efficient search termination for shape distractors (<span class="math inline">\(M = 7.32\)</span>, 95% CI <span class="math inline">\([4.21\)</span>, <span class="math inline">\(10.43]\)</span>), and were significantly more efficient in terminating shape search than conjunction search in the first 4 target-absent trials (<span class="math inline">\(t(296) = 2.68\)</span>, <span class="math inline">\(p = .008\)</span>). Efficient search termination for shape search is therefore not dependent on prior visual search trials, neither within the same experiment nor in previous ones.</p>
+</div>
+<div id="search-time-estimates" class="section level4 unnumbered">
+<h4>Search time estimates</h4>
+
+<div class="figure"><span style="display:block;" id="fig:termination-estimates"></span>
+<img src="figure/termination/metacognitive_ratings.png" alt="A: After completing the visual search component of Experiment 2, participants were asked to position the four searches (shape and conjunction searches with 4 or 8 distractors) on a perceived difficulty axis. B. As a group, participants’ estimates revealed metacognitive knowledge of the set size effect and of the fact that shape search is harder. C. A subset of 84 participants erroneously believed that shape search was more difficult than conjunction search. D. Even among these participants, search slopes in target-absence blocks followed the typical pattern, with a steeper slope for conjunction search. Same plotting conventions as Fig. 1.3." width="\textwidth" />
+<p class="caption">
+Figure 1.5: A: After completing the visual search component of Experiment 2, participants were asked to position the four searches (shape and conjunction searches with 4 or 8 distractors) on a perceived difficulty axis. B. As a group, participants’ estimates revealed metacognitive knowledge of the set size effect and of the fact that shape search is harder. C. A subset of 84 participants erroneously believed that shape search was more difficult than conjunction search. D. Even among these participants, search slopes in target-absence blocks followed the typical pattern, with a steeper slope for conjunction search. Same plotting conventions as Fig. <a href="ch-termination.html#fig:termination-resultsMain">1.3</a>.
+</p>
+</div>
+<p>Upon completing the main part of Experiment 2, participants positioned the four search arrays (shape and conjunction searches with 4 or 8 distractors) on a perceived difficulty axis (see Fig. <a href="ch-termination.html#fig:termination-estimates">1.5</a>A). We used these difficulty ratings to ask whether the advantage for detecting the absence of a distinct shape over the absence of a shape/color conjunction depended on explicit access to metacognitive knowledge about search difficulty. The decision to quit early in shape-absent trials may depend on an internal belief that the target shape would have drawn attention immediately, but this belief may be inaccessible to introspection. If introspective access is not a necessary condition for efficient quitting in visual search, some participants may not be able to reliably introspect about the difficulty of different searches but still be able to quit efficiently in shape search.</p>
+<p>For this analysis, we only considered the ratings of participants who engaged with the array-sorting trial, and moved some of the arrays before continuing to the next trial (N=789). Searches with 8 distractors were rated as more difficult than searches with 4 distractors, in line with the set-size effect (<span class="math inline">\(t(788) = 31.62\)</span>, <span class="math inline">\(p &lt; .001\)</span>). Furthermore, conjunction searches were rated as more difficult than shape searches (<span class="math inline">\(t(788) = 5.11\)</span>, <span class="math inline">\(p &lt; .001\)</span>). Finally, we fitted single-subject linear regression models to the two search types, predicting search-time estimates (the position of each condition on a continuous perceived difficulty scale) as a function of set size. Similar to actual search slopes, these slopes derived from subjective estimates were also shallower for shape than for conjunction search, reflecting a belief that the effect of set size in shape search is not as strong as the effect of set size in conjunction search (<span class="math inline">\(M = 6.45\)</span>, 95% CI <span class="math inline">\([2.81\)</span>, <span class="math inline">\(10.08]\)</span>, <span class="math inline">\(t(788) = 3.48\)</span>, <span class="math inline">\(p = .001\)</span>; see Fig. <a href="ch-termination.html#fig:termination-estimates">1.5</a>B).</p>
+<p>Subjective search time estimates revealed that by the end of the experiment, the average participant considered the slope of shape search to be shallower than that of conjunction search. This suggests that at least some participants had introspective access to their visual search behaviour. But were those participants whose estimates reflected a shallow slope for shape search the same ones that were more efficient in detecting the absence of a shape in the display? The slopes of retrospective estimates for shape search were not reliably correlated with actual search slopes for shape absence in block 1 (<span class="math inline">\(r = .08\)</span>, 95% CI <span class="math inline">\([-.06\)</span>, <span class="math inline">\(.22]\)</span>) or 2 (<span class="math inline">\(r = .02\)</span>, 95% CI <span class="math inline">\([-.12\)</span>, <span class="math inline">\(.16]\)</span>). However, this result should be interpreted carefully in light of the low reliability of single subject estimates that are derived from one trial per cell. Indeed, search slopes for shape absence in blocks 1 and 3 were not reliably correlated themselves (<span class="math inline">\(r = .05\)</span>, 95% CI <span class="math inline">\([-.10\)</span>, <span class="math inline">\(.19]\)</span>).</p>
+<p>To answer this question using a more severe test <span class="citation">(Mayo, 2018)</span>, we focused on the subset of participants whose difficulty orderings reflected the erroneous belief that shape search was more difficult than conjunction search (<span class="math inline">\(N=\)</span> 83; see Fig. <a href="ch-termination.html#fig:termination-estimates">1.5</a>C). If efficient search termination depends on accurate explicit metacognitive knowledge about search efficiency, search termination in this subset of participants is not expected to be more efficient in shape compared to conjunction search, and is even expected to show the opposite pattern. In contrast with this prediction, search slopes for shape-absence trials were shallower than for conjunction-absence trials (<span class="math inline">\(M_d = 12.45\)</span>, 95% CI <span class="math inline">\([5.21\)</span>, <span class="math inline">\(19.69]\)</span>, <span class="math inline">\(t(82) = 3.42\)</span>, <span class="math inline">\(p = .001\)</span>; see Fig. <a href="ch-termination.html#fig:termination-estimates">1.5</a>D). This indicates that efficient identification of shape absence is not dependent on explicit metacognitive knowledge about search efficiency.</p>
+</div>
+</div>
+</div>
+<div id="discussion" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Discussion</h2>
+<p>How do people decide that a target is absent from a visual scene? In this study we considered three candidate answers to this question: counterfactual reasoning (“I would have detected the target if it were present”), ensemble perception (“I immediately see that the target is missing”) and task heuristics (“Based on previous trials, responding now would balance accuracy and response time”). The third option is different from the first two: while a heuristic calibration of a termination rule may shape search behaviour in classic lab-based experiments comprised of many repetitive trials, it is not available to subjects in one-shot searches in their everyday lives, nor is it available to them in the first trial of the experiment.</p>
+<p>To isolate the effect of previous trials on search termination, we focused on the first trials of a visual search task, before participants experience finding the target. Across two experiments, we found that no prior experience with color or shape pop-out in previous trials was needed for participants to be able to terminate the search early when a target would have been found immediately. In other words, participants were sensitive to the counterfactual efficiency with which a hypothetical target would have been detected even in the first trials of the experiment. This result rules out a purely heuristic-based account of search termination and suggests that in these first few trials, participants are relying on prior second-order knowledge about visual attention (e.g., ‘red pops out,’ or ‘a dot would catch my attention’), on a pre-attentional identification of target absence via ensemble statistics, or on a combination of the two.</p>
+<p>Do participants employ a counterfactual heuristic, drawing on implicit metacognitive knowledge about search efficiency, or instead immediately perceive the absence of a target via ensemble scene statistics? We suggest that without second-order knowledge of their own perception and attention, ensemble perception alone is not sufficient to account for absence pop-out. Ensemble perception allows observers to extract summary statistical information from sets of similar stimuli, without directly perceiving any single stimulus <span class="citation">(Whitney &amp; Yamanashi Leib, 2018)</span>. According to this account, if participants immediately perceive that the search array comprises only squares, they might not need to rely on any counterfactual thinking or self-knowledge to conclude that no circle was present. Importantly, however, for the global statistical property ‘the array comprises only squares’ to be extracted from a display without representing individual squares, the visual system must represent, explicitly or implicitly, that a non-square item would have been detected by the visual system if they had been present. This second-order representation can be implemented, for example, as a threshold on curvature-sensitive neurons (‘a round object would have induced a higher firing rate in this neuron population’), or more generally as a likelihood function going from polygons to firing patterns (‘The perceived input is most likely under a world state where the display includes only polygons’).</p>
+<p>As an illustration, assume that Sarah, a participant in our experiment, does not know that a red item would immediately catch her attention in an array of blue distractors. Not only can Sarah not report this fact, this knowledge is not represented and cannot influence her cognitive system. Sarah is now searching for a red dot, and sees a uniform array of blue dots. How can she know that she hasn’t missed a red dot? In the absence of second-order knowledge about search efficiency, Sarah would have to scan the dots one by one before committing to a ‘target absent’ response. Therefore, whether or not ensemble perception plays a role in absence pop-out, second-order knowledge about search efficiency is necessary to exlain the effects we observe.</p>
+<p>Should this second-order knowledge be considered metacognitive? We argue that it should, and note that it is not a prerequisite for metacognitive knowledge to be accessible to consciousness. Metacognitive knowledge was originally assumed by Flavell <span class="citation">(1979)</span> to mostly affect cognition without accessing consciousness at all (i.e. without inducing a ‘metacognitive experience’). Different aspects of metacognitive monitoring, including an immediate <em>Feeling of Knowing</em> when presented with a problem, have been attributed to implicit metacognitive mechanisms that share a conceptual similarity with the ones described in the previous paragraph <span class="citation">(Reder &amp; Schunn, 1996)</span>. Indeed, metacognitive knowledge is sometimes measured as an ability to flexibly adapt information gathering thresholds: similar to a decision to terminate a search, the decision to stop gathering more information is widely accepted to be guided by metacognitive factors in developmental <span class="citation">(Leckey et al., 2020; Siegel, Magid, Pelz, Tenenbaum, &amp; Schulz, 2021)</span> and comparative <span class="citation">(Watanabe, Grodzinski, &amp; Clayton, 2014)</span> psychology.</p>
+<p>Our findings complement and extend previous work in which participants had introspective awareness of attentional capture <span class="citation">(Adams &amp; Gaspelin, 2020, 2021)</span>: our results suggest that on top of the ability to monitor attention, people also hold valid second-order knowledge about attentional processes, that allows them to make predictions and guide their information gathering decisions. A schematic model of attention has been suggested to be implemented in the brains of many animal species, including all mammals and birds, and to facilitate attention control and monitoring <span class="citation">(Graziano, 2013)</span>. This kind of implicit second-order knowledge, perhaps together with a capacity to extract ensemble statistics from a display, may be crucial for representing the <em>absence</em> of objects. The critical difference between inferring <em>X is absent</em> and simply lacking the belief <em>X is present</em> is a counterfactual belief that <em>X</em> would have been detected, had it been presented <span class="citation">(Mazor, 2021; Mazor &amp; Fleming, 2020)</span>. In turn, studying the processes underpinning efficient inference about absence can shed light on the role of higher-order representations in perception - because such counterfactual beliefs rest on representing, perhaps implicitly, how one’s own perceptual system might respond under various conditions.</p>
+</div>
+<div id="conclusion" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Conclusion</h2>
+<p>Our findings reveal that some knowledge about search efficiency is available to participants already in the first trials of the experiment, before engaging with the task or knowing what distractors to expect. These results reflect the same qualitative response time patterns as those commonly obtained in typical (few subjects/many trials) visual search experiments. Given that no target was present in these trials, participants must have been sensitive to the counterfactual likelihood of them finding the target, had it been present. In Experiment 2 we showed that this second-order knowledge about search difficulty was often accessible to report, but that this was not a necessary condition for efficient search termination. We conclude that efficient inference about absence is critically dependent on implicit second-order knowledge about visual search. In the next chapter I look more closely at participants’ explicit second-order knowledge of their visual search behaviour, by asking for prospective search-time estimates for unfamiliar, complex stimuli.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ch-MVS.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
